@@ -1,0 +1,314 @@
+\hypertarget{structgame_1_1data_1_1ButtonDefine}{}\doxysection{game\+::data\+::Button\+Define Struct Reference}
+\label{structgame_1_1data_1_1ButtonDefine}\index{game::data::ButtonDefine@{game::data::ButtonDefine}}
+
+
+data structure to hold button data  
+
+
+
+
+{\ttfamily \#include $<$Button\+Define.\+h$>$}
+
+
+
+Inheritance diagram for game\+::data\+::Button\+Define\+:
+% FIG 0
+
+
+Collaboration diagram for game\+::data\+::Button\+Define\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structgame_1_1data_1_1ButtonDefine_a8e47155bd08a34cee65867dd82ed8da9}{Button\+Define}} (const rapidjson\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structgame_1_1data_1_1ButtonDefine}{Button\+Define}} constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structgame_1_1data_1_1ButtonDefine_a02081a7aac9b3eab21a3315d7ce85001}\label{structgame_1_1data_1_1ButtonDefine_a02081a7aac9b3eab21a3315d7ce85001}} 
+{\bfseries Button\+Define} (const \mbox{\hyperlink{structgame_1_1data_1_1ButtonDefine}{Button\+Define}} \&other)=delete
+\item 
+\mbox{\Hypertarget{structgame_1_1data_1_1ButtonDefine_ab8ee9d3c6b5bb8fc24a8306952fb8e2d}\label{structgame_1_1data_1_1ButtonDefine_ab8ee9d3c6b5bb8fc24a8306952fb8e2d}} 
+\mbox{\hyperlink{structgame_1_1data_1_1ButtonDefine}{Button\+Define}} \& {\bfseries operator=} (const \mbox{\hyperlink{structgame_1_1data_1_1ButtonDefine}{Button\+Define}} \&other)=delete
+\item 
+void \mbox{\hyperlink{structgame_1_1data_1_1ButtonDefine_ac3edb69535e2f4e00d1ea8457c9dd8cf}{from\+Json}} (const rapidjson\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em deserialize c++ data structure from json object \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structgame_1_1data_1_1ButtonDefine_a46a057a6578d4ca68ea2006f45a408f2}{to\+Json}} (rapidjson\+::\+Writer$<$ rapidjson\+::\+String\+Buffer $>$ $\ast$writer) override
+\begin{DoxyCompactList}\small\item\em serialize a c++ data structure to a json object \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{structgame_1_1data_1_1ButtonDefine_ac4c9df0532292b408a39109e9658b3eb}{t\+ID}}
+\item 
+int \mbox{\hyperlink{structgame_1_1data_1_1ButtonDefine_a2a08896c84d593ca8f52aac635407071}{texture\+ID}}
+\item 
+float \mbox{\hyperlink{structgame_1_1data_1_1ButtonDefine_a137eb8f3eb6dd0df1db5080e995904b1}{scale}}
+\item 
+bool \mbox{\hyperlink{structgame_1_1data_1_1ButtonDefine_a90fc227bce3827d44cec74ec862f0c37}{is\+Sprite\+Sheet}}
+\item 
+int \mbox{\hyperlink{structgame_1_1data_1_1ButtonDefine_ab21c1f7cd06181608287fce51fc4c313}{offsetX}}
+\item 
+int \mbox{\hyperlink{structgame_1_1data_1_1ButtonDefine_abd446d4feff7dc05a058dc3d272c565d}{offsetY}}
+\item 
+int \mbox{\hyperlink{structgame_1_1data_1_1ButtonDefine_a3feeead562520ff1c2ad7fd25884f666}{width}}
+\item 
+int \mbox{\hyperlink{structgame_1_1data_1_1ButtonDefine_a3f601da29257357c93a303699d2b264d}{height}}
+\item 
+bool \mbox{\hyperlink{structgame_1_1data_1_1ButtonDefine_a1880412b0a038703342d5a5d55ef5e7d}{has\+Pressed\+Sprite}}
+\item 
+int \mbox{\hyperlink{structgame_1_1data_1_1ButtonDefine_a9368bcf0dafc07ae6cc71f267ff26665}{pressed\+\_\+texture\+ID}}
+\item 
+bool \mbox{\hyperlink{structgame_1_1data_1_1ButtonDefine_a0eea78651316afafd891f061efecda43}{pressed\+\_\+is\+Sprite\+Sheet}}
+\item 
+int \mbox{\hyperlink{structgame_1_1data_1_1ButtonDefine_a81a0cfc905d2784c91dff52002c09717}{pressed\+\_\+offsetX}}
+\item 
+int \mbox{\hyperlink{structgame_1_1data_1_1ButtonDefine_a973e872c43f2193c15ee7e82eb8f0fc3}{pressed\+\_\+offsetY}}
+\item 
+int \mbox{\hyperlink{structgame_1_1data_1_1ButtonDefine_ad2dda1e57c83b8f128353ce61c103eea}{pressed\+\_\+width}}
+\item 
+int \mbox{\hyperlink{structgame_1_1data_1_1ButtonDefine_a4bf18e50b6e6b4411d96ce98c3222466}{pressed\+\_\+height}}
+\item 
+bool \mbox{\hyperlink{structgame_1_1data_1_1ButtonDefine_af222a879b638bc58ce1f5ee638997b0d}{has\+Text}}
+\item 
+int \mbox{\hyperlink{structgame_1_1data_1_1ButtonDefine_aed4d82d89faaddf98fae314dfa76edb9}{font\+ID}}
+\item 
+std\+::string \mbox{\hyperlink{structgame_1_1data_1_1ButtonDefine_aaf30d4c0405b94ace242c86bb2912b78}{text}}
+\item 
+int \mbox{\hyperlink{structgame_1_1data_1_1ButtonDefine_a4e6c1a383f85af0fc5c3d7bec0df3b98}{text\+Size}}
+\item 
+int \mbox{\hyperlink{structgame_1_1data_1_1ButtonDefine_ae68d397427dae0d0d2d8d88d313b9d96}{text\+OffsetX}}
+\item 
+int \mbox{\hyperlink{structgame_1_1data_1_1ButtonDefine_ad42c2092ff87a254b976eb22b5512768}{text\+OffsetY}}
+\item 
+int \mbox{\hyperlink{structgame_1_1data_1_1ButtonDefine_ade3b837bd5d194384e8ac059af8f6ae5}{pressed\+\_\+text\+OffsetX}}
+\item 
+int \mbox{\hyperlink{structgame_1_1data_1_1ButtonDefine_a26abf46f0791a2456d4b139ff05ab3e5}{pressed\+\_\+text\+OffsetY}}
+\item 
+int \mbox{\hyperlink{structgame_1_1data_1_1ButtonDefine_a9c67d089a50798ac4315378b89fa79d8}{sfx\+\_\+onclick}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+data structure to hold button data 
+
+this is the data structure to hold button data defined in Button\+Define.\+json
+
+\begin{DoxyAuthor}{Author}
+Zheng Yang 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structgame_1_1data_1_1ButtonDefine_a8e47155bd08a34cee65867dd82ed8da9}\label{structgame_1_1data_1_1ButtonDefine_a8e47155bd08a34cee65867dd82ed8da9}} 
+\index{game::data::ButtonDefine@{game::data::ButtonDefine}!ButtonDefine@{ButtonDefine}}
+\index{ButtonDefine@{ButtonDefine}!game::data::ButtonDefine@{game::data::ButtonDefine}}
+\doxysubsubsection{\texorpdfstring{ButtonDefine()}{ButtonDefine()}}
+{\footnotesize\ttfamily game\+::data\+::\+Button\+Define\+::\+Button\+Define (\begin{DoxyParamCaption}\item[{const rapidjson\+::\+Value \&}]{json }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{structgame_1_1data_1_1ButtonDefine}{Button\+Define}} constructor. 
+
+\mbox{\hyperlink{structgame_1_1data_1_1ButtonDefine}{Button\+Define}} constructor which deserializes a json object
+
+
+\begin{DoxyParams}{Parameters}
+{\em json} & object of the button data \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structgame_1_1data_1_1ButtonDefine_ac3edb69535e2f4e00d1ea8457c9dd8cf}\label{structgame_1_1data_1_1ButtonDefine_ac3edb69535e2f4e00d1ea8457c9dd8cf}} 
+\index{game::data::ButtonDefine@{game::data::ButtonDefine}!fromJson@{fromJson}}
+\index{fromJson@{fromJson}!game::data::ButtonDefine@{game::data::ButtonDefine}}
+\doxysubsubsection{\texorpdfstring{fromJson()}{fromJson()}}
+{\footnotesize\ttfamily void game\+::data\+::\+Button\+Define\+::from\+Json (\begin{DoxyParamCaption}\item[{const rapidjson\+::\+Value \&}]{json }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+deserialize c++ data structure from json object 
+
+this function takes a json object, and deserialize c++ data structure from it
+
+
+\begin{DoxyParams}{Parameters}
+{\em json} & serialized json object \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classgame_1_1data_1_1JsonBase_ad71ccf1cdfa32f5100ba32d208afbffa}{game\+::data\+::\+Json\+Base}}.
+
+\mbox{\Hypertarget{structgame_1_1data_1_1ButtonDefine_a46a057a6578d4ca68ea2006f45a408f2}\label{structgame_1_1data_1_1ButtonDefine_a46a057a6578d4ca68ea2006f45a408f2}} 
+\index{game::data::ButtonDefine@{game::data::ButtonDefine}!toJson@{toJson}}
+\index{toJson@{toJson}!game::data::ButtonDefine@{game::data::ButtonDefine}}
+\doxysubsubsection{\texorpdfstring{toJson()}{toJson()}}
+{\footnotesize\ttfamily void game\+::data\+::\+Button\+Define\+::to\+Json (\begin{DoxyParamCaption}\item[{rapidjson\+::\+Writer$<$ rapidjson\+::\+String\+Buffer $>$ $\ast$}]{writer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+serialize a c++ data structure to a json object 
+
+this function takes a json writer, and serialize c++ data structure to it
+
+
+\begin{DoxyParams}{Parameters}
+{\em writer} & json writer \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classgame_1_1data_1_1JsonBase_a9b0277fdcf438ded476fe08d07c2ed2d}{game\+::data\+::\+Json\+Base}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structgame_1_1data_1_1ButtonDefine_aed4d82d89faaddf98fae314dfa76edb9}\label{structgame_1_1data_1_1ButtonDefine_aed4d82d89faaddf98fae314dfa76edb9}} 
+\index{game::data::ButtonDefine@{game::data::ButtonDefine}!fontID@{fontID}}
+\index{fontID@{fontID}!game::data::ButtonDefine@{game::data::ButtonDefine}}
+\doxysubsubsection{\texorpdfstring{fontID}{fontID}}
+{\footnotesize\ttfamily int game\+::data\+::\+Button\+Define\+::font\+ID}
+
+text font id \mbox{\Hypertarget{structgame_1_1data_1_1ButtonDefine_a1880412b0a038703342d5a5d55ef5e7d}\label{structgame_1_1data_1_1ButtonDefine_a1880412b0a038703342d5a5d55ef5e7d}} 
+\index{game::data::ButtonDefine@{game::data::ButtonDefine}!hasPressedSprite@{hasPressedSprite}}
+\index{hasPressedSprite@{hasPressedSprite}!game::data::ButtonDefine@{game::data::ButtonDefine}}
+\doxysubsubsection{\texorpdfstring{hasPressedSprite}{hasPressedSprite}}
+{\footnotesize\ttfamily bool game\+::data\+::\+Button\+Define\+::has\+Pressed\+Sprite}
+
+does button have unique pressed sprite \mbox{\Hypertarget{structgame_1_1data_1_1ButtonDefine_af222a879b638bc58ce1f5ee638997b0d}\label{structgame_1_1data_1_1ButtonDefine_af222a879b638bc58ce1f5ee638997b0d}} 
+\index{game::data::ButtonDefine@{game::data::ButtonDefine}!hasText@{hasText}}
+\index{hasText@{hasText}!game::data::ButtonDefine@{game::data::ButtonDefine}}
+\doxysubsubsection{\texorpdfstring{hasText}{hasText}}
+{\footnotesize\ttfamily bool game\+::data\+::\+Button\+Define\+::has\+Text}
+
+does button have text \mbox{\Hypertarget{structgame_1_1data_1_1ButtonDefine_a3f601da29257357c93a303699d2b264d}\label{structgame_1_1data_1_1ButtonDefine_a3f601da29257357c93a303699d2b264d}} 
+\index{game::data::ButtonDefine@{game::data::ButtonDefine}!height@{height}}
+\index{height@{height}!game::data::ButtonDefine@{game::data::ButtonDefine}}
+\doxysubsubsection{\texorpdfstring{height}{height}}
+{\footnotesize\ttfamily int game\+::data\+::\+Button\+Define\+::height}
+
+height of texture in sheet \mbox{\Hypertarget{structgame_1_1data_1_1ButtonDefine_a90fc227bce3827d44cec74ec862f0c37}\label{structgame_1_1data_1_1ButtonDefine_a90fc227bce3827d44cec74ec862f0c37}} 
+\index{game::data::ButtonDefine@{game::data::ButtonDefine}!isSpriteSheet@{isSpriteSheet}}
+\index{isSpriteSheet@{isSpriteSheet}!game::data::ButtonDefine@{game::data::ButtonDefine}}
+\doxysubsubsection{\texorpdfstring{isSpriteSheet}{isSpriteSheet}}
+{\footnotesize\ttfamily bool game\+::data\+::\+Button\+Define\+::is\+Sprite\+Sheet}
+
+is texture in a sprite sheet \mbox{\Hypertarget{structgame_1_1data_1_1ButtonDefine_ab21c1f7cd06181608287fce51fc4c313}\label{structgame_1_1data_1_1ButtonDefine_ab21c1f7cd06181608287fce51fc4c313}} 
+\index{game::data::ButtonDefine@{game::data::ButtonDefine}!offsetX@{offsetX}}
+\index{offsetX@{offsetX}!game::data::ButtonDefine@{game::data::ButtonDefine}}
+\doxysubsubsection{\texorpdfstring{offsetX}{offsetX}}
+{\footnotesize\ttfamily int game\+::data\+::\+Button\+Define\+::offsetX}
+
+x axis offset of sprite in sheet \mbox{\Hypertarget{structgame_1_1data_1_1ButtonDefine_abd446d4feff7dc05a058dc3d272c565d}\label{structgame_1_1data_1_1ButtonDefine_abd446d4feff7dc05a058dc3d272c565d}} 
+\index{game::data::ButtonDefine@{game::data::ButtonDefine}!offsetY@{offsetY}}
+\index{offsetY@{offsetY}!game::data::ButtonDefine@{game::data::ButtonDefine}}
+\doxysubsubsection{\texorpdfstring{offsetY}{offsetY}}
+{\footnotesize\ttfamily int game\+::data\+::\+Button\+Define\+::offsetY}
+
+y axis offset of sprite in sheet \mbox{\Hypertarget{structgame_1_1data_1_1ButtonDefine_a4bf18e50b6e6b4411d96ce98c3222466}\label{structgame_1_1data_1_1ButtonDefine_a4bf18e50b6e6b4411d96ce98c3222466}} 
+\index{game::data::ButtonDefine@{game::data::ButtonDefine}!pressed\_height@{pressed\_height}}
+\index{pressed\_height@{pressed\_height}!game::data::ButtonDefine@{game::data::ButtonDefine}}
+\doxysubsubsection{\texorpdfstring{pressed\_height}{pressed\_height}}
+{\footnotesize\ttfamily int game\+::data\+::\+Button\+Define\+::pressed\+\_\+height}
+
+height of texture in sheet \mbox{\Hypertarget{structgame_1_1data_1_1ButtonDefine_a0eea78651316afafd891f061efecda43}\label{structgame_1_1data_1_1ButtonDefine_a0eea78651316afafd891f061efecda43}} 
+\index{game::data::ButtonDefine@{game::data::ButtonDefine}!pressed\_isSpriteSheet@{pressed\_isSpriteSheet}}
+\index{pressed\_isSpriteSheet@{pressed\_isSpriteSheet}!game::data::ButtonDefine@{game::data::ButtonDefine}}
+\doxysubsubsection{\texorpdfstring{pressed\_isSpriteSheet}{pressed\_isSpriteSheet}}
+{\footnotesize\ttfamily bool game\+::data\+::\+Button\+Define\+::pressed\+\_\+is\+Sprite\+Sheet}
+
+is texture in a sprite sheet \mbox{\Hypertarget{structgame_1_1data_1_1ButtonDefine_a81a0cfc905d2784c91dff52002c09717}\label{structgame_1_1data_1_1ButtonDefine_a81a0cfc905d2784c91dff52002c09717}} 
+\index{game::data::ButtonDefine@{game::data::ButtonDefine}!pressed\_offsetX@{pressed\_offsetX}}
+\index{pressed\_offsetX@{pressed\_offsetX}!game::data::ButtonDefine@{game::data::ButtonDefine}}
+\doxysubsubsection{\texorpdfstring{pressed\_offsetX}{pressed\_offsetX}}
+{\footnotesize\ttfamily int game\+::data\+::\+Button\+Define\+::pressed\+\_\+offsetX}
+
+x axis offset of sprite in sheet \mbox{\Hypertarget{structgame_1_1data_1_1ButtonDefine_a973e872c43f2193c15ee7e82eb8f0fc3}\label{structgame_1_1data_1_1ButtonDefine_a973e872c43f2193c15ee7e82eb8f0fc3}} 
+\index{game::data::ButtonDefine@{game::data::ButtonDefine}!pressed\_offsetY@{pressed\_offsetY}}
+\index{pressed\_offsetY@{pressed\_offsetY}!game::data::ButtonDefine@{game::data::ButtonDefine}}
+\doxysubsubsection{\texorpdfstring{pressed\_offsetY}{pressed\_offsetY}}
+{\footnotesize\ttfamily int game\+::data\+::\+Button\+Define\+::pressed\+\_\+offsetY}
+
+y axis offset of sprite in sheet \mbox{\Hypertarget{structgame_1_1data_1_1ButtonDefine_ade3b837bd5d194384e8ac059af8f6ae5}\label{structgame_1_1data_1_1ButtonDefine_ade3b837bd5d194384e8ac059af8f6ae5}} 
+\index{game::data::ButtonDefine@{game::data::ButtonDefine}!pressed\_textOffsetX@{pressed\_textOffsetX}}
+\index{pressed\_textOffsetX@{pressed\_textOffsetX}!game::data::ButtonDefine@{game::data::ButtonDefine}}
+\doxysubsubsection{\texorpdfstring{pressed\_textOffsetX}{pressed\_textOffsetX}}
+{\footnotesize\ttfamily int game\+::data\+::\+Button\+Define\+::pressed\+\_\+text\+OffsetX}
+
+text offset in x axis when pressed \mbox{\Hypertarget{structgame_1_1data_1_1ButtonDefine_a26abf46f0791a2456d4b139ff05ab3e5}\label{structgame_1_1data_1_1ButtonDefine_a26abf46f0791a2456d4b139ff05ab3e5}} 
+\index{game::data::ButtonDefine@{game::data::ButtonDefine}!pressed\_textOffsetY@{pressed\_textOffsetY}}
+\index{pressed\_textOffsetY@{pressed\_textOffsetY}!game::data::ButtonDefine@{game::data::ButtonDefine}}
+\doxysubsubsection{\texorpdfstring{pressed\_textOffsetY}{pressed\_textOffsetY}}
+{\footnotesize\ttfamily int game\+::data\+::\+Button\+Define\+::pressed\+\_\+text\+OffsetY}
+
+text offset in y axis when pressed ~\newline
+ \mbox{\Hypertarget{structgame_1_1data_1_1ButtonDefine_a9368bcf0dafc07ae6cc71f267ff26665}\label{structgame_1_1data_1_1ButtonDefine_a9368bcf0dafc07ae6cc71f267ff26665}} 
+\index{game::data::ButtonDefine@{game::data::ButtonDefine}!pressed\_textureID@{pressed\_textureID}}
+\index{pressed\_textureID@{pressed\_textureID}!game::data::ButtonDefine@{game::data::ButtonDefine}}
+\doxysubsubsection{\texorpdfstring{pressed\_textureID}{pressed\_textureID}}
+{\footnotesize\ttfamily int game\+::data\+::\+Button\+Define\+::pressed\+\_\+texture\+ID}
+
+referenced pressed texture id \mbox{\Hypertarget{structgame_1_1data_1_1ButtonDefine_ad2dda1e57c83b8f128353ce61c103eea}\label{structgame_1_1data_1_1ButtonDefine_ad2dda1e57c83b8f128353ce61c103eea}} 
+\index{game::data::ButtonDefine@{game::data::ButtonDefine}!pressed\_width@{pressed\_width}}
+\index{pressed\_width@{pressed\_width}!game::data::ButtonDefine@{game::data::ButtonDefine}}
+\doxysubsubsection{\texorpdfstring{pressed\_width}{pressed\_width}}
+{\footnotesize\ttfamily int game\+::data\+::\+Button\+Define\+::pressed\+\_\+width}
+
+width of texture in sheet \mbox{\Hypertarget{structgame_1_1data_1_1ButtonDefine_a137eb8f3eb6dd0df1db5080e995904b1}\label{structgame_1_1data_1_1ButtonDefine_a137eb8f3eb6dd0df1db5080e995904b1}} 
+\index{game::data::ButtonDefine@{game::data::ButtonDefine}!scale@{scale}}
+\index{scale@{scale}!game::data::ButtonDefine@{game::data::ButtonDefine}}
+\doxysubsubsection{\texorpdfstring{scale}{scale}}
+{\footnotesize\ttfamily float game\+::data\+::\+Button\+Define\+::scale}
+
+scale of button sprite \mbox{\Hypertarget{structgame_1_1data_1_1ButtonDefine_a9c67d089a50798ac4315378b89fa79d8}\label{structgame_1_1data_1_1ButtonDefine_a9c67d089a50798ac4315378b89fa79d8}} 
+\index{game::data::ButtonDefine@{game::data::ButtonDefine}!sfx\_onclick@{sfx\_onclick}}
+\index{sfx\_onclick@{sfx\_onclick}!game::data::ButtonDefine@{game::data::ButtonDefine}}
+\doxysubsubsection{\texorpdfstring{sfx\_onclick}{sfx\_onclick}}
+{\footnotesize\ttfamily int game\+::data\+::\+Button\+Define\+::sfx\+\_\+onclick}
+
+sound effect of button when pressed ~\newline
+ \mbox{\Hypertarget{structgame_1_1data_1_1ButtonDefine_aaf30d4c0405b94ace242c86bb2912b78}\label{structgame_1_1data_1_1ButtonDefine_aaf30d4c0405b94ace242c86bb2912b78}} 
+\index{game::data::ButtonDefine@{game::data::ButtonDefine}!text@{text}}
+\index{text@{text}!game::data::ButtonDefine@{game::data::ButtonDefine}}
+\doxysubsubsection{\texorpdfstring{text}{text}}
+{\footnotesize\ttfamily std\+::string game\+::data\+::\+Button\+Define\+::text}
+
+default text \mbox{\Hypertarget{structgame_1_1data_1_1ButtonDefine_ae68d397427dae0d0d2d8d88d313b9d96}\label{structgame_1_1data_1_1ButtonDefine_ae68d397427dae0d0d2d8d88d313b9d96}} 
+\index{game::data::ButtonDefine@{game::data::ButtonDefine}!textOffsetX@{textOffsetX}}
+\index{textOffsetX@{textOffsetX}!game::data::ButtonDefine@{game::data::ButtonDefine}}
+\doxysubsubsection{\texorpdfstring{textOffsetX}{textOffsetX}}
+{\footnotesize\ttfamily int game\+::data\+::\+Button\+Define\+::text\+OffsetX}
+
+text offset in x axis in button \mbox{\Hypertarget{structgame_1_1data_1_1ButtonDefine_ad42c2092ff87a254b976eb22b5512768}\label{structgame_1_1data_1_1ButtonDefine_ad42c2092ff87a254b976eb22b5512768}} 
+\index{game::data::ButtonDefine@{game::data::ButtonDefine}!textOffsetY@{textOffsetY}}
+\index{textOffsetY@{textOffsetY}!game::data::ButtonDefine@{game::data::ButtonDefine}}
+\doxysubsubsection{\texorpdfstring{textOffsetY}{textOffsetY}}
+{\footnotesize\ttfamily int game\+::data\+::\+Button\+Define\+::text\+OffsetY}
+
+text offset in y axis in button \mbox{\Hypertarget{structgame_1_1data_1_1ButtonDefine_a4e6c1a383f85af0fc5c3d7bec0df3b98}\label{structgame_1_1data_1_1ButtonDefine_a4e6c1a383f85af0fc5c3d7bec0df3b98}} 
+\index{game::data::ButtonDefine@{game::data::ButtonDefine}!textSize@{textSize}}
+\index{textSize@{textSize}!game::data::ButtonDefine@{game::data::ButtonDefine}}
+\doxysubsubsection{\texorpdfstring{textSize}{textSize}}
+{\footnotesize\ttfamily int game\+::data\+::\+Button\+Define\+::text\+Size}
+
+text size \mbox{\Hypertarget{structgame_1_1data_1_1ButtonDefine_a2a08896c84d593ca8f52aac635407071}\label{structgame_1_1data_1_1ButtonDefine_a2a08896c84d593ca8f52aac635407071}} 
+\index{game::data::ButtonDefine@{game::data::ButtonDefine}!textureID@{textureID}}
+\index{textureID@{textureID}!game::data::ButtonDefine@{game::data::ButtonDefine}}
+\doxysubsubsection{\texorpdfstring{textureID}{textureID}}
+{\footnotesize\ttfamily int game\+::data\+::\+Button\+Define\+::texture\+ID}
+
+referenced texture id \mbox{\Hypertarget{structgame_1_1data_1_1ButtonDefine_ac4c9df0532292b408a39109e9658b3eb}\label{structgame_1_1data_1_1ButtonDefine_ac4c9df0532292b408a39109e9658b3eb}} 
+\index{game::data::ButtonDefine@{game::data::ButtonDefine}!tID@{tID}}
+\index{tID@{tID}!game::data::ButtonDefine@{game::data::ButtonDefine}}
+\doxysubsubsection{\texorpdfstring{tID}{tID}}
+{\footnotesize\ttfamily int game\+::data\+::\+Button\+Define\+::t\+ID}
+
+unique identifier \mbox{\Hypertarget{structgame_1_1data_1_1ButtonDefine_a3feeead562520ff1c2ad7fd25884f666}\label{structgame_1_1data_1_1ButtonDefine_a3feeead562520ff1c2ad7fd25884f666}} 
+\index{game::data::ButtonDefine@{game::data::ButtonDefine}!width@{width}}
+\index{width@{width}!game::data::ButtonDefine@{game::data::ButtonDefine}}
+\doxysubsubsection{\texorpdfstring{width}{width}}
+{\footnotesize\ttfamily int game\+::data\+::\+Button\+Define\+::width}
+
+width of texture in sheet 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Data/Button\+Define.\+h\end{DoxyCompactItemize}

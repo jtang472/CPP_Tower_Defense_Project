@@ -1,0 +1,243 @@
+\hypertarget{classgame_1_1states_1_1ShopState}{}\doxysection{game\+::states\+::Shop\+State Class Reference}
+\label{classgame_1_1states_1_1ShopState}\index{game::states::ShopState@{game::states::ShopState}}
+
+
+shop state  
+
+
+
+
+{\ttfamily \#include $<$Shop\+State.\+h$>$}
+
+
+
+Inheritance diagram for game\+::states\+::Shop\+State\+:
+% FIG 0
+
+
+Collaboration diagram for game\+::states\+::Shop\+State\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgame_1_1states_1_1ShopState_ad1d721f9b57b646feb71e60099448f6d}{Shop\+State}} (\mbox{\hyperlink{classgame_1_1states_1_1StateMachine}{State\+Machine}} $\ast$owner)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classgame_1_1states_1_1ShopState}{Shop\+State}} constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classgame_1_1states_1_1ShopState_a1db8ca0a5f7de000dc0d339a3ec3f927}{$\sim$\+Shop\+State}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classgame_1_1states_1_1ShopState}{Shop\+State}} destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1states_1_1ShopState_a5ec49c9f022f9a1477a0f95fbee25c22}{init}} () override
+\begin{DoxyCompactList}\small\item\em initialization of state \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1states_1_1ShopState_a1461aacbeb6239d32d6d52d6412eeca8}{on\+Item\+Select}} (const \mbox{\hyperlink{structgame_1_1data_1_1ShopItemDefine}{data\+::\+Shop\+Item\+Define}} $\ast$data)
+\begin{DoxyCompactList}\small\item\em callback for item selected event \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1states_1_1ShopState_a1ed4555c81d7aeac73682a707b6107f6}{on\+Buy\+Button\+Click}} ()
+\begin{DoxyCompactList}\small\item\em callback for buy button click event \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1states_1_1ShopState_a76e45d22b4ca647443cc5128db02ad95}{on\+Back\+Button\+Click}} ()
+\begin{DoxyCompactList}\small\item\em callback for back button click event \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1states_1_1ShopState_a20736ae5f7333cfdb38172499ba9b205}{check\+Validity}} ()
+\begin{DoxyCompactList}\small\item\em check if purchase is valid \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{structgame_1_1data_1_1ShopItemDefine}{data\+::\+Shop\+Item\+Define}} $\ast$ \mbox{\hyperlink{classgame_1_1states_1_1ShopState_a9749dbcd19fea95710a85c89502e211d}{m\+Current\+Selected}}
+\item 
+\mbox{\hyperlink{classgame_1_1components_1_1Button}{game\+::components\+::\+Button}} $\ast$ \mbox{\hyperlink{classgame_1_1states_1_1ShopState_ac2622d13d518cf73f48e0223220038b4}{m\+Purchase\+Button}}
+\item 
+\mbox{\hyperlink{classgame_1_1components_1_1Text}{game\+::components\+::\+Text}} $\ast$ \mbox{\hyperlink{classgame_1_1states_1_1ShopState_aea6adcd21446eb261957cc95942bdd86}{m\+Current\+Name}}
+\item 
+\mbox{\hyperlink{classgame_1_1components_1_1Sprite}{game\+::components\+::\+Sprite}} $\ast$ \mbox{\hyperlink{classgame_1_1states_1_1ShopState_ad2aecbd84553ad0c7619dede7d364a12}{m\+Current\+Icon}}
+\item 
+\mbox{\hyperlink{classgame_1_1components_1_1Text}{game\+::components\+::\+Text}} $\ast$ \mbox{\hyperlink{classgame_1_1states_1_1ShopState_a000c22005dc20f51a6570d4b168886c0}{m\+Current\+Description}}
+\item 
+\mbox{\hyperlink{classgame_1_1components_1_1Text}{game\+::components\+::\+Text}} $\ast$ \mbox{\hyperlink{classgame_1_1states_1_1ShopState_a57287fb97c74cbb16618a76d64b8c9ea}{m\+Current\+Cost}}
+\item 
+\mbox{\hyperlink{classgame_1_1components_1_1Text}{game\+::components\+::\+Text}} $\ast$ \mbox{\hyperlink{classgame_1_1states_1_1ShopState_a31238f8c140caf0218d5149afde011c0}{m\+Current\+Gold}}
+\item 
+\mbox{\hyperlink{classgame_1_1components_1_1Text}{game\+::components\+::\+Text}} $\ast$ \mbox{\hyperlink{classgame_1_1states_1_1ShopState_aba52c2586e195fcf66e32c9393a08d8b}{m\+Item\+Owned}}
+\item 
+\mbox{\hyperlink{classgame_1_1components_1_1Text}{game\+::components\+::\+Text}} $\ast$ \mbox{\hyperlink{classgame_1_1states_1_1ShopState_afbf5e2d9dc796b9b99dfbb046b5fdbed}{m\+Not\+Enough\+Gold}}
+\item 
+boost\+::signals2\+::connection \mbox{\hyperlink{classgame_1_1states_1_1ShopState_aad8e4bd60bbb6dcb28d8df7520da83f5}{m\+Buy\+Button\+Listener}}
+\item 
+boost\+::signals2\+::connection \mbox{\hyperlink{classgame_1_1states_1_1ShopState_a492aac2bc05738401cf75d8c462f182d}{m\+Back\+Button\+Listener}}
+\item 
+\mbox{\Hypertarget{classgame_1_1states_1_1ShopState_a30dae59291bf2cdf7d2fe90e7b870585}\label{classgame_1_1states_1_1ShopState_a30dae59291bf2cdf7d2fe90e7b870585}} 
+\mbox{\hyperlink{classgame_1_1core_1_1PlayerState}{core\+::\+Player\+State}} $\ast$ {\bfseries m\+Player\+State}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+shop state 
+
+this state will be pushed to state machine when player goes to the shop menu
+
+\begin{DoxyAuthor}{Author}
+Zheng Yang 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgame_1_1states_1_1ShopState_ad1d721f9b57b646feb71e60099448f6d}\label{classgame_1_1states_1_1ShopState_ad1d721f9b57b646feb71e60099448f6d}} 
+\index{game::states::ShopState@{game::states::ShopState}!ShopState@{ShopState}}
+\index{ShopState@{ShopState}!game::states::ShopState@{game::states::ShopState}}
+\doxysubsubsection{\texorpdfstring{ShopState()}{ShopState()}}
+{\footnotesize\ttfamily game\+::states\+::\+Shop\+State\+::\+Shop\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgame_1_1states_1_1StateMachine}{State\+Machine}} $\ast$}]{owner }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classgame_1_1states_1_1ShopState}{Shop\+State}} constructor. 
+
+\mbox{\hyperlink{classgame_1_1states_1_1ShopState}{Shop\+State}} constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em owner} & state machine \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1states_1_1ShopState_a1db8ca0a5f7de000dc0d339a3ec3f927}\label{classgame_1_1states_1_1ShopState_a1db8ca0a5f7de000dc0d339a3ec3f927}} 
+\index{game::states::ShopState@{game::states::ShopState}!````~ShopState@{$\sim$ShopState}}
+\index{````~ShopState@{$\sim$ShopState}!game::states::ShopState@{game::states::ShopState}}
+\doxysubsubsection{\texorpdfstring{$\sim$ShopState()}{~ShopState()}}
+{\footnotesize\ttfamily game\+::states\+::\+Shop\+State\+::$\sim$\+Shop\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classgame_1_1states_1_1ShopState}{Shop\+State}} destructor. 
+
+\mbox{\hyperlink{classgame_1_1states_1_1ShopState}{Shop\+State}} destructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgame_1_1states_1_1ShopState_a20736ae5f7333cfdb38172499ba9b205}\label{classgame_1_1states_1_1ShopState_a20736ae5f7333cfdb38172499ba9b205}} 
+\index{game::states::ShopState@{game::states::ShopState}!checkValidity@{checkValidity}}
+\index{checkValidity@{checkValidity}!game::states::ShopState@{game::states::ShopState}}
+\doxysubsubsection{\texorpdfstring{checkValidity()}{checkValidity()}}
+{\footnotesize\ttfamily void game\+::states\+::\+Shop\+State\+::check\+Validity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+check if purchase is valid 
+
+check if purchase is valid when player tries to buy an item \mbox{\Hypertarget{classgame_1_1states_1_1ShopState_a5ec49c9f022f9a1477a0f95fbee25c22}\label{classgame_1_1states_1_1ShopState_a5ec49c9f022f9a1477a0f95fbee25c22}} 
+\index{game::states::ShopState@{game::states::ShopState}!init@{init}}
+\index{init@{init}!game::states::ShopState@{game::states::ShopState}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void game\+::states\+::\+Shop\+State\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+initialization of state 
+
+initialization of state, called by state machine after state is created and put to the stack 
+
+Reimplemented from \mbox{\hyperlink{classgame_1_1states_1_1State_ab8464551e311a0621bd80f2a21a7cb4a}{game\+::states\+::\+State}}.
+
+\mbox{\Hypertarget{classgame_1_1states_1_1ShopState_a76e45d22b4ca647443cc5128db02ad95}\label{classgame_1_1states_1_1ShopState_a76e45d22b4ca647443cc5128db02ad95}} 
+\index{game::states::ShopState@{game::states::ShopState}!onBackButtonClick@{onBackButtonClick}}
+\index{onBackButtonClick@{onBackButtonClick}!game::states::ShopState@{game::states::ShopState}}
+\doxysubsubsection{\texorpdfstring{onBackButtonClick()}{onBackButtonClick()}}
+{\footnotesize\ttfamily void game\+::states\+::\+Shop\+State\+::on\+Back\+Button\+Click (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+callback for back button click event 
+
+callback function for back button click event \mbox{\Hypertarget{classgame_1_1states_1_1ShopState_a1ed4555c81d7aeac73682a707b6107f6}\label{classgame_1_1states_1_1ShopState_a1ed4555c81d7aeac73682a707b6107f6}} 
+\index{game::states::ShopState@{game::states::ShopState}!onBuyButtonClick@{onBuyButtonClick}}
+\index{onBuyButtonClick@{onBuyButtonClick}!game::states::ShopState@{game::states::ShopState}}
+\doxysubsubsection{\texorpdfstring{onBuyButtonClick()}{onBuyButtonClick()}}
+{\footnotesize\ttfamily void game\+::states\+::\+Shop\+State\+::on\+Buy\+Button\+Click (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+callback for buy button click event 
+
+callback function for buy button click event \mbox{\Hypertarget{classgame_1_1states_1_1ShopState_a1461aacbeb6239d32d6d52d6412eeca8}\label{classgame_1_1states_1_1ShopState_a1461aacbeb6239d32d6d52d6412eeca8}} 
+\index{game::states::ShopState@{game::states::ShopState}!onItemSelect@{onItemSelect}}
+\index{onItemSelect@{onItemSelect}!game::states::ShopState@{game::states::ShopState}}
+\doxysubsubsection{\texorpdfstring{onItemSelect()}{onItemSelect()}}
+{\footnotesize\ttfamily void game\+::states\+::\+Shop\+State\+::on\+Item\+Select (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structgame_1_1data_1_1ShopItemDefine}{data\+::\+Shop\+Item\+Define}} $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+callback for item selected event 
+
+callback function for item selected event
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & item data \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classgame_1_1states_1_1ShopState_a492aac2bc05738401cf75d8c462f182d}\label{classgame_1_1states_1_1ShopState_a492aac2bc05738401cf75d8c462f182d}} 
+\index{game::states::ShopState@{game::states::ShopState}!mBackButtonListener@{mBackButtonListener}}
+\index{mBackButtonListener@{mBackButtonListener}!game::states::ShopState@{game::states::ShopState}}
+\doxysubsubsection{\texorpdfstring{mBackButtonListener}{mBackButtonListener}}
+{\footnotesize\ttfamily boost\+::signals2\+::connection game\+::states\+::\+Shop\+State\+::m\+Back\+Button\+Listener\hspace{0.3cm}{\ttfamily [private]}}
+
+back button listener \mbox{\Hypertarget{classgame_1_1states_1_1ShopState_aad8e4bd60bbb6dcb28d8df7520da83f5}\label{classgame_1_1states_1_1ShopState_aad8e4bd60bbb6dcb28d8df7520da83f5}} 
+\index{game::states::ShopState@{game::states::ShopState}!mBuyButtonListener@{mBuyButtonListener}}
+\index{mBuyButtonListener@{mBuyButtonListener}!game::states::ShopState@{game::states::ShopState}}
+\doxysubsubsection{\texorpdfstring{mBuyButtonListener}{mBuyButtonListener}}
+{\footnotesize\ttfamily boost\+::signals2\+::connection game\+::states\+::\+Shop\+State\+::m\+Buy\+Button\+Listener\hspace{0.3cm}{\ttfamily [private]}}
+
+buy button listener \mbox{\Hypertarget{classgame_1_1states_1_1ShopState_a57287fb97c74cbb16618a76d64b8c9ea}\label{classgame_1_1states_1_1ShopState_a57287fb97c74cbb16618a76d64b8c9ea}} 
+\index{game::states::ShopState@{game::states::ShopState}!mCurrentCost@{mCurrentCost}}
+\index{mCurrentCost@{mCurrentCost}!game::states::ShopState@{game::states::ShopState}}
+\doxysubsubsection{\texorpdfstring{mCurrentCost}{mCurrentCost}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgame_1_1components_1_1Text}{game\+::components\+::\+Text}}$\ast$ game\+::states\+::\+Shop\+State\+::m\+Current\+Cost\hspace{0.3cm}{\ttfamily [private]}}
+
+item cost text \mbox{\Hypertarget{classgame_1_1states_1_1ShopState_a000c22005dc20f51a6570d4b168886c0}\label{classgame_1_1states_1_1ShopState_a000c22005dc20f51a6570d4b168886c0}} 
+\index{game::states::ShopState@{game::states::ShopState}!mCurrentDescription@{mCurrentDescription}}
+\index{mCurrentDescription@{mCurrentDescription}!game::states::ShopState@{game::states::ShopState}}
+\doxysubsubsection{\texorpdfstring{mCurrentDescription}{mCurrentDescription}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgame_1_1components_1_1Text}{game\+::components\+::\+Text}}$\ast$ game\+::states\+::\+Shop\+State\+::m\+Current\+Description\hspace{0.3cm}{\ttfamily [private]}}
+
+item description text \mbox{\Hypertarget{classgame_1_1states_1_1ShopState_a31238f8c140caf0218d5149afde011c0}\label{classgame_1_1states_1_1ShopState_a31238f8c140caf0218d5149afde011c0}} 
+\index{game::states::ShopState@{game::states::ShopState}!mCurrentGold@{mCurrentGold}}
+\index{mCurrentGold@{mCurrentGold}!game::states::ShopState@{game::states::ShopState}}
+\doxysubsubsection{\texorpdfstring{mCurrentGold}{mCurrentGold}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgame_1_1components_1_1Text}{game\+::components\+::\+Text}}$\ast$ game\+::states\+::\+Shop\+State\+::m\+Current\+Gold\hspace{0.3cm}{\ttfamily [private]}}
+
+player gold text \mbox{\Hypertarget{classgame_1_1states_1_1ShopState_ad2aecbd84553ad0c7619dede7d364a12}\label{classgame_1_1states_1_1ShopState_ad2aecbd84553ad0c7619dede7d364a12}} 
+\index{game::states::ShopState@{game::states::ShopState}!mCurrentIcon@{mCurrentIcon}}
+\index{mCurrentIcon@{mCurrentIcon}!game::states::ShopState@{game::states::ShopState}}
+\doxysubsubsection{\texorpdfstring{mCurrentIcon}{mCurrentIcon}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgame_1_1components_1_1Sprite}{game\+::components\+::\+Sprite}}$\ast$ game\+::states\+::\+Shop\+State\+::m\+Current\+Icon\hspace{0.3cm}{\ttfamily [private]}}
+
+item icon sprite \mbox{\Hypertarget{classgame_1_1states_1_1ShopState_aea6adcd21446eb261957cc95942bdd86}\label{classgame_1_1states_1_1ShopState_aea6adcd21446eb261957cc95942bdd86}} 
+\index{game::states::ShopState@{game::states::ShopState}!mCurrentName@{mCurrentName}}
+\index{mCurrentName@{mCurrentName}!game::states::ShopState@{game::states::ShopState}}
+\doxysubsubsection{\texorpdfstring{mCurrentName}{mCurrentName}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgame_1_1components_1_1Text}{game\+::components\+::\+Text}}$\ast$ game\+::states\+::\+Shop\+State\+::m\+Current\+Name\hspace{0.3cm}{\ttfamily [private]}}
+
+item name text \mbox{\Hypertarget{classgame_1_1states_1_1ShopState_a9749dbcd19fea95710a85c89502e211d}\label{classgame_1_1states_1_1ShopState_a9749dbcd19fea95710a85c89502e211d}} 
+\index{game::states::ShopState@{game::states::ShopState}!mCurrentSelected@{mCurrentSelected}}
+\index{mCurrentSelected@{mCurrentSelected}!game::states::ShopState@{game::states::ShopState}}
+\doxysubsubsection{\texorpdfstring{mCurrentSelected}{mCurrentSelected}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structgame_1_1data_1_1ShopItemDefine}{data\+::\+Shop\+Item\+Define}}$\ast$ game\+::states\+::\+Shop\+State\+::m\+Current\+Selected\hspace{0.3cm}{\ttfamily [private]}}
+
+currently selected item \mbox{\Hypertarget{classgame_1_1states_1_1ShopState_aba52c2586e195fcf66e32c9393a08d8b}\label{classgame_1_1states_1_1ShopState_aba52c2586e195fcf66e32c9393a08d8b}} 
+\index{game::states::ShopState@{game::states::ShopState}!mItemOwned@{mItemOwned}}
+\index{mItemOwned@{mItemOwned}!game::states::ShopState@{game::states::ShopState}}
+\doxysubsubsection{\texorpdfstring{mItemOwned}{mItemOwned}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgame_1_1components_1_1Text}{game\+::components\+::\+Text}}$\ast$ game\+::states\+::\+Shop\+State\+::m\+Item\+Owned\hspace{0.3cm}{\ttfamily [private]}}
+
+item owned text \mbox{\Hypertarget{classgame_1_1states_1_1ShopState_afbf5e2d9dc796b9b99dfbb046b5fdbed}\label{classgame_1_1states_1_1ShopState_afbf5e2d9dc796b9b99dfbb046b5fdbed}} 
+\index{game::states::ShopState@{game::states::ShopState}!mNotEnoughGold@{mNotEnoughGold}}
+\index{mNotEnoughGold@{mNotEnoughGold}!game::states::ShopState@{game::states::ShopState}}
+\doxysubsubsection{\texorpdfstring{mNotEnoughGold}{mNotEnoughGold}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgame_1_1components_1_1Text}{game\+::components\+::\+Text}}$\ast$ game\+::states\+::\+Shop\+State\+::m\+Not\+Enough\+Gold\hspace{0.3cm}{\ttfamily [private]}}
+
+not enough gold text \mbox{\Hypertarget{classgame_1_1states_1_1ShopState_ac2622d13d518cf73f48e0223220038b4}\label{classgame_1_1states_1_1ShopState_ac2622d13d518cf73f48e0223220038b4}} 
+\index{game::states::ShopState@{game::states::ShopState}!mPurchaseButton@{mPurchaseButton}}
+\index{mPurchaseButton@{mPurchaseButton}!game::states::ShopState@{game::states::ShopState}}
+\doxysubsubsection{\texorpdfstring{mPurchaseButton}{mPurchaseButton}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgame_1_1components_1_1Button}{game\+::components\+::\+Button}}$\ast$ game\+::states\+::\+Shop\+State\+::m\+Purchase\+Button\hspace{0.3cm}{\ttfamily [private]}}
+
+purchase button 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+States/Shop\+State.\+h\end{DoxyCompactItemize}

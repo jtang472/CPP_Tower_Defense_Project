@@ -1,0 +1,345 @@
+\hypertarget{classgame_1_1components_1_1EnemySpawner}{}\doxysection{game\+::components\+::Enemy\+Spawner Class Reference}
+\label{classgame_1_1components_1_1EnemySpawner}\index{game::components::EnemySpawner@{game::components::EnemySpawner}}
+
+
+enemy spawner class used to generate new enemies during gameplay  
+
+
+
+
+{\ttfamily \#include $<$Enemy\+Spawner.\+h$>$}
+
+
+
+Inheritance diagram for game\+::components\+::Enemy\+Spawner\+:
+% FIG 0
+
+
+Collaboration diagram for game\+::components\+::Enemy\+Spawner\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgame_1_1components_1_1EnemySpawner_aa9c60e651731064a0eacda181592b0b0}{Enemy\+Spawner}} (\mbox{\hyperlink{classgame_1_1components_1_1GameObject}{Game\+Object}} \&owner, \mbox{\hyperlink{classgame_1_1grid_1_1GridSystem}{grid\+::\+Grid\+System}} $\ast$grid\+System)
+\begin{DoxyCompactList}\small\item\em enemy spawner constructor \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classgame_1_1components_1_1EnemySpawner_a3b28147087b64be8dd392929fd26b5fc}{$\sim$\+Enemy\+Spawner}} ()
+\begin{DoxyCompactList}\small\item\em enemy spawner destructor \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1EnemySpawner_a9d552ba5ec9fa15c1443d7ecacc287f7}{on\+Enable}} () override
+\begin{DoxyCompactList}\small\item\em component lifecycle function \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1EnemySpawner_ae6dad73d8e920666de9f675ee370f09e}{on\+Disable}} () override
+\begin{DoxyCompactList}\small\item\em component lifecycle function \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1EnemySpawner_a9ee73cd00ef28490cd047add1f3312be}{tick}} (float delta\+Time) override
+\begin{DoxyCompactList}\small\item\em component lifecycle function \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1EnemySpawner_a4ecf9f7b2c1cf6861b8441f5f4c726ba}{load\+Level}} (const ldtk\+::\+Level $\ast$level)
+\begin{DoxyCompactList}\small\item\em load the necessary information of enemies in a certain game level \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1EnemySpawner_a61663c72002861e573b9c4d4b15f5044}{Spawn}} ()
+\begin{DoxyCompactList}\small\item\em call this API to start spawning enemies \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classgame_1_1components_1_1EnemySpawner_a1fc99bef35fa9c534f7b49416e80b340}{has\+More\+Fights}} () const
+\begin{DoxyCompactList}\small\item\em check if the fights are over \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classgame_1_1components_1_1EnemySpawner_aea21a3dd6b435b9613c5517050f86937}{get\+Current\+Fight\+Index}} () const
+\begin{DoxyCompactList}\small\item\em get the current fight number \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classgame_1_1components_1_1EnemySpawner_a939d1dfdf0340b2676f78c73280c7b2d}{get\+Total\+Fights}} () const
+\begin{DoxyCompactList}\small\item\em get total number of fights in current game level \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Enemy\+Spawned\+Delegate \mbox{\hyperlink{classgame_1_1components_1_1EnemySpawner_a56f7f8e632f52c21b7af899a777fa17c}{on\+Enemy\+Spawned}}
+\item 
+All\+Enemies\+Spawned\+Delegate \mbox{\hyperlink{classgame_1_1components_1_1EnemySpawner_ad0ed7679691812bf04596cdee4266296}{on\+All\+Enemies\+Spawned}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{structgame_1_1data_1_1EnemySpawnRuleDefine}{data\+::\+Enemy\+Spawn\+Rule\+Define}} $\ast$ \mbox{\hyperlink{classgame_1_1components_1_1EnemySpawner_a504bb18b15331f2df8c56fff48a61ca1}{m\+Data}}
+\item 
+const ldtk\+::\+Level $\ast$ \mbox{\hyperlink{classgame_1_1components_1_1EnemySpawner_ac7453dfe61b6a9cdee3a7ff7a7175c89}{m\+Game\+Level}}
+\item 
+\mbox{\hyperlink{classgame_1_1grid_1_1GridSystem}{grid\+::\+Grid\+System}} $\ast$ \mbox{\hyperlink{classgame_1_1components_1_1EnemySpawner_a7e0bbb86967e3ccff1ccf29c19f5cf3d}{m\+Grid\+System}}
+\item 
+std\+::vector$<$ const \mbox{\hyperlink{structgame_1_1data_1_1EnemyDefine}{data\+::\+Enemy\+Define}} $\ast$ $>$ \mbox{\hyperlink{classgame_1_1components_1_1EnemySpawner_a73d408416fcb55604480e2777b0466b9}{m\+Regular\+Enemy\+Types}}
+\item 
+std\+::vector$<$ const \mbox{\hyperlink{structgame_1_1data_1_1EnemyDefine}{data\+::\+Enemy\+Define}} $\ast$ $>$ \mbox{\hyperlink{classgame_1_1components_1_1EnemySpawner_acc809f94780714e472355c0656d728a9}{m\+Elite\+Enemy\+Types}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classgame_1_1components_1_1Enemy}{Enemy}} $\ast$ $>$ \mbox{\hyperlink{classgame_1_1components_1_1EnemySpawner_a9179be069fb9c3414a16b3961d1a1f57}{m\+Enemies}}
+\item 
+std\+::vector$<$ std\+::vector$<$ sf\+::\+Vector2i $>$ $>$ \mbox{\hyperlink{classgame_1_1components_1_1EnemySpawner_ab3675a9133ee2972ae6a123abce787bc}{m\+Enemy\+Paths}}
+\item 
+int \mbox{\hyperlink{classgame_1_1components_1_1EnemySpawner_aa378b4c14a78e64ddc4ba414213bc022}{m\+Current\+Fight\+Index}}
+\item 
+float \mbox{\hyperlink{classgame_1_1components_1_1EnemySpawner_a45b9433e6ca6ac1448a804c507d71812}{m\+Time\+Elapsed\+After\+Last\+Spawn}}
+\item 
+float \mbox{\hyperlink{classgame_1_1components_1_1EnemySpawner_a656fbb065020a3aa81e9d76e6adf5f3a}{m\+Time\+To\+Spawn\+Next\+Enemy}}
+\item 
+int \mbox{\hyperlink{classgame_1_1components_1_1EnemySpawner_ac25517f401808fb94fb24b83ac1229ba}{m\+Total\+Regular\+Enemy\+To\+Spawn}}
+\item 
+int \mbox{\hyperlink{classgame_1_1components_1_1EnemySpawner_a23efcd736a93922618128634ccad2581}{m\+Total\+Elite\+Enemy\+To\+Spawn}}
+\item 
+bool \mbox{\hyperlink{classgame_1_1components_1_1EnemySpawner_a231d74aaff59b4c40098f3d9e7573a96}{m\+Is\+Spawning}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+enemy spawner class used to generate new enemies during gameplay 
+
+this class handles enemy generation \& initialization when player hit the generate button
+
+\begin{DoxyAuthor}{Author}
+Zheng Yang 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgame_1_1components_1_1EnemySpawner_aa9c60e651731064a0eacda181592b0b0}\label{classgame_1_1components_1_1EnemySpawner_aa9c60e651731064a0eacda181592b0b0}} 
+\index{game::components::EnemySpawner@{game::components::EnemySpawner}!EnemySpawner@{EnemySpawner}}
+\index{EnemySpawner@{EnemySpawner}!game::components::EnemySpawner@{game::components::EnemySpawner}}
+\doxysubsubsection{\texorpdfstring{EnemySpawner()}{EnemySpawner()}}
+{\footnotesize\ttfamily game\+::components\+::\+Enemy\+Spawner\+::\+Enemy\+Spawner (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgame_1_1components_1_1GameObject}{Game\+Object}} \&}]{owner,  }\item[{\mbox{\hyperlink{classgame_1_1grid_1_1GridSystem}{grid\+::\+Grid\+System}} $\ast$}]{grid\+System }\end{DoxyParamCaption})}
+
+
+
+enemy spawner constructor 
+
+enemy spawner constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em owner} & owner of the component \\
+\hline
+{\em world} & the game world data \\
+\hline
+{\em grid\+System} & the grid system on where enemies are put \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1components_1_1EnemySpawner_a3b28147087b64be8dd392929fd26b5fc}\label{classgame_1_1components_1_1EnemySpawner_a3b28147087b64be8dd392929fd26b5fc}} 
+\index{game::components::EnemySpawner@{game::components::EnemySpawner}!````~EnemySpawner@{$\sim$EnemySpawner}}
+\index{````~EnemySpawner@{$\sim$EnemySpawner}!game::components::EnemySpawner@{game::components::EnemySpawner}}
+\doxysubsubsection{\texorpdfstring{$\sim$EnemySpawner()}{~EnemySpawner()}}
+{\footnotesize\ttfamily game\+::components\+::\+Enemy\+Spawner\+::$\sim$\+Enemy\+Spawner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+enemy spawner destructor 
+
+enemy spawner destructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgame_1_1components_1_1EnemySpawner_aea21a3dd6b435b9613c5517050f86937}\label{classgame_1_1components_1_1EnemySpawner_aea21a3dd6b435b9613c5517050f86937}} 
+\index{game::components::EnemySpawner@{game::components::EnemySpawner}!getCurrentFightIndex@{getCurrentFightIndex}}
+\index{getCurrentFightIndex@{getCurrentFightIndex}!game::components::EnemySpawner@{game::components::EnemySpawner}}
+\doxysubsubsection{\texorpdfstring{getCurrentFightIndex()}{getCurrentFightIndex()}}
+{\footnotesize\ttfamily int game\+::components\+::\+Enemy\+Spawner\+::get\+Current\+Fight\+Index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get the current fight number 
+
+get the current fight number
+
+\begin{DoxyReturn}{Returns}
+current fight number 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgame_1_1components_1_1EnemySpawner_a939d1dfdf0340b2676f78c73280c7b2d}\label{classgame_1_1components_1_1EnemySpawner_a939d1dfdf0340b2676f78c73280c7b2d}} 
+\index{game::components::EnemySpawner@{game::components::EnemySpawner}!getTotalFights@{getTotalFights}}
+\index{getTotalFights@{getTotalFights}!game::components::EnemySpawner@{game::components::EnemySpawner}}
+\doxysubsubsection{\texorpdfstring{getTotalFights()}{getTotalFights()}}
+{\footnotesize\ttfamily int game\+::components\+::\+Enemy\+Spawner\+::get\+Total\+Fights (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get total number of fights in current game level 
+
+get total number of fights in current game level
+
+\begin{DoxyReturn}{Returns}
+total number of fights in current game level 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgame_1_1components_1_1EnemySpawner_a1fc99bef35fa9c534f7b49416e80b340}\label{classgame_1_1components_1_1EnemySpawner_a1fc99bef35fa9c534f7b49416e80b340}} 
+\index{game::components::EnemySpawner@{game::components::EnemySpawner}!hasMoreFights@{hasMoreFights}}
+\index{hasMoreFights@{hasMoreFights}!game::components::EnemySpawner@{game::components::EnemySpawner}}
+\doxysubsubsection{\texorpdfstring{hasMoreFights()}{hasMoreFights()}}
+{\footnotesize\ttfamily bool game\+::components\+::\+Enemy\+Spawner\+::has\+More\+Fights (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+check if the fights are over 
+
+check if the fights are over
+
+\begin{DoxyReturn}{Returns}
+true if fights are over, otherwise false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgame_1_1components_1_1EnemySpawner_a4ecf9f7b2c1cf6861b8441f5f4c726ba}\label{classgame_1_1components_1_1EnemySpawner_a4ecf9f7b2c1cf6861b8441f5f4c726ba}} 
+\index{game::components::EnemySpawner@{game::components::EnemySpawner}!loadLevel@{loadLevel}}
+\index{loadLevel@{loadLevel}!game::components::EnemySpawner@{game::components::EnemySpawner}}
+\doxysubsubsection{\texorpdfstring{loadLevel()}{loadLevel()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Enemy\+Spawner\+::load\+Level (\begin{DoxyParamCaption}\item[{const ldtk\+::\+Level $\ast$}]{level }\end{DoxyParamCaption})}
+
+
+
+load the necessary information of enemies in a certain game level 
+
+load the necessary information (path, hp modifier) of enemies in a certain game level
+
+
+\begin{DoxyParams}{Parameters}
+{\em level} & the new game level \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1components_1_1EnemySpawner_ae6dad73d8e920666de9f675ee370f09e}\label{classgame_1_1components_1_1EnemySpawner_ae6dad73d8e920666de9f675ee370f09e}} 
+\index{game::components::EnemySpawner@{game::components::EnemySpawner}!onDisable@{onDisable}}
+\index{onDisable@{onDisable}!game::components::EnemySpawner@{game::components::EnemySpawner}}
+\doxysubsubsection{\texorpdfstring{onDisable()}{onDisable()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Enemy\+Spawner\+::on\+Disable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+component lifecycle function 
+
+component lifecycle function, gets called automatically when component is disabled 
+
+Reimplemented from \mbox{\hyperlink{classgame_1_1components_1_1Component_ac79cec6fc53b00f36bbde8e8f7e23c05}{game\+::components\+::\+Component}}.
+
+\mbox{\Hypertarget{classgame_1_1components_1_1EnemySpawner_a9d552ba5ec9fa15c1443d7ecacc287f7}\label{classgame_1_1components_1_1EnemySpawner_a9d552ba5ec9fa15c1443d7ecacc287f7}} 
+\index{game::components::EnemySpawner@{game::components::EnemySpawner}!onEnable@{onEnable}}
+\index{onEnable@{onEnable}!game::components::EnemySpawner@{game::components::EnemySpawner}}
+\doxysubsubsection{\texorpdfstring{onEnable()}{onEnable()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Enemy\+Spawner\+::on\+Enable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+component lifecycle function 
+
+component lifecycle function, gets called automatically when component is enabled 
+
+Reimplemented from \mbox{\hyperlink{classgame_1_1components_1_1Component_a333e4242c1594bfdc5713cddafae6a23}{game\+::components\+::\+Component}}.
+
+\mbox{\Hypertarget{classgame_1_1components_1_1EnemySpawner_a61663c72002861e573b9c4d4b15f5044}\label{classgame_1_1components_1_1EnemySpawner_a61663c72002861e573b9c4d4b15f5044}} 
+\index{game::components::EnemySpawner@{game::components::EnemySpawner}!Spawn@{Spawn}}
+\index{Spawn@{Spawn}!game::components::EnemySpawner@{game::components::EnemySpawner}}
+\doxysubsubsection{\texorpdfstring{Spawn()}{Spawn()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Enemy\+Spawner\+::\+Spawn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+call this API to start spawning enemies 
+
+call this API to start spawning enemies, enemies are not generated all together at once, the actual generation is done in \mbox{\hyperlink{classgame_1_1components_1_1EnemySpawner_a9ee73cd00ef28490cd047add1f3312be}{tick()}} \mbox{\Hypertarget{classgame_1_1components_1_1EnemySpawner_a9ee73cd00ef28490cd047add1f3312be}\label{classgame_1_1components_1_1EnemySpawner_a9ee73cd00ef28490cd047add1f3312be}} 
+\index{game::components::EnemySpawner@{game::components::EnemySpawner}!tick@{tick}}
+\index{tick@{tick}!game::components::EnemySpawner@{game::components::EnemySpawner}}
+\doxysubsubsection{\texorpdfstring{tick()}{tick()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Enemy\+Spawner\+::tick (\begin{DoxyParamCaption}\item[{float}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+component lifecycle function 
+
+component lifecycle function, gets called automatically every frame. This is where every component in the game gets updated
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & the time elpased between now and last frame \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classgame_1_1components_1_1Component_ac85cd99e8109eb32a97549bf437ea5ce}{game\+::components\+::\+Component}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classgame_1_1components_1_1EnemySpawner_aa378b4c14a78e64ddc4ba414213bc022}\label{classgame_1_1components_1_1EnemySpawner_aa378b4c14a78e64ddc4ba414213bc022}} 
+\index{game::components::EnemySpawner@{game::components::EnemySpawner}!mCurrentFightIndex@{mCurrentFightIndex}}
+\index{mCurrentFightIndex@{mCurrentFightIndex}!game::components::EnemySpawner@{game::components::EnemySpawner}}
+\doxysubsubsection{\texorpdfstring{mCurrentFightIndex}{mCurrentFightIndex}}
+{\footnotesize\ttfamily int game\+::components\+::\+Enemy\+Spawner\+::m\+Current\+Fight\+Index\hspace{0.3cm}{\ttfamily [private]}}
+
+index of current fight \mbox{\Hypertarget{classgame_1_1components_1_1EnemySpawner_a504bb18b15331f2df8c56fff48a61ca1}\label{classgame_1_1components_1_1EnemySpawner_a504bb18b15331f2df8c56fff48a61ca1}} 
+\index{game::components::EnemySpawner@{game::components::EnemySpawner}!mData@{mData}}
+\index{mData@{mData}!game::components::EnemySpawner@{game::components::EnemySpawner}}
+\doxysubsubsection{\texorpdfstring{mData}{mData}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structgame_1_1data_1_1EnemySpawnRuleDefine}{data\+::\+Enemy\+Spawn\+Rule\+Define}}$\ast$ game\+::components\+::\+Enemy\+Spawner\+::m\+Data\hspace{0.3cm}{\ttfamily [private]}}
+
+spawn rule data \mbox{\Hypertarget{classgame_1_1components_1_1EnemySpawner_acc809f94780714e472355c0656d728a9}\label{classgame_1_1components_1_1EnemySpawner_acc809f94780714e472355c0656d728a9}} 
+\index{game::components::EnemySpawner@{game::components::EnemySpawner}!mEliteEnemyTypes@{mEliteEnemyTypes}}
+\index{mEliteEnemyTypes@{mEliteEnemyTypes}!game::components::EnemySpawner@{game::components::EnemySpawner}}
+\doxysubsubsection{\texorpdfstring{mEliteEnemyTypes}{mEliteEnemyTypes}}
+{\footnotesize\ttfamily std\+::vector$<$const \mbox{\hyperlink{structgame_1_1data_1_1EnemyDefine}{data\+::\+Enemy\+Define}}$\ast$$>$ game\+::components\+::\+Enemy\+Spawner\+::m\+Elite\+Enemy\+Types\hspace{0.3cm}{\ttfamily [private]}}
+
+all types of elite enemies can be genrated in this level \mbox{\Hypertarget{classgame_1_1components_1_1EnemySpawner_a9179be069fb9c3414a16b3961d1a1f57}\label{classgame_1_1components_1_1EnemySpawner_a9179be069fb9c3414a16b3961d1a1f57}} 
+\index{game::components::EnemySpawner@{game::components::EnemySpawner}!mEnemies@{mEnemies}}
+\index{mEnemies@{mEnemies}!game::components::EnemySpawner@{game::components::EnemySpawner}}
+\doxysubsubsection{\texorpdfstring{mEnemies}{mEnemies}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classgame_1_1components_1_1Enemy}{Enemy}}$\ast$$>$ game\+::components\+::\+Enemy\+Spawner\+::m\+Enemies\hspace{0.3cm}{\ttfamily [private]}}
+
+all enemies generated \mbox{\Hypertarget{classgame_1_1components_1_1EnemySpawner_ab3675a9133ee2972ae6a123abce787bc}\label{classgame_1_1components_1_1EnemySpawner_ab3675a9133ee2972ae6a123abce787bc}} 
+\index{game::components::EnemySpawner@{game::components::EnemySpawner}!mEnemyPaths@{mEnemyPaths}}
+\index{mEnemyPaths@{mEnemyPaths}!game::components::EnemySpawner@{game::components::EnemySpawner}}
+\doxysubsubsection{\texorpdfstring{mEnemyPaths}{mEnemyPaths}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::vector$<$sf\+::\+Vector2i$>$ $>$ game\+::components\+::\+Enemy\+Spawner\+::m\+Enemy\+Paths\hspace{0.3cm}{\ttfamily [private]}}
+
+enemy patrol paths \mbox{\Hypertarget{classgame_1_1components_1_1EnemySpawner_ac7453dfe61b6a9cdee3a7ff7a7175c89}\label{classgame_1_1components_1_1EnemySpawner_ac7453dfe61b6a9cdee3a7ff7a7175c89}} 
+\index{game::components::EnemySpawner@{game::components::EnemySpawner}!mGameLevel@{mGameLevel}}
+\index{mGameLevel@{mGameLevel}!game::components::EnemySpawner@{game::components::EnemySpawner}}
+\doxysubsubsection{\texorpdfstring{mGameLevel}{mGameLevel}}
+{\footnotesize\ttfamily const ldtk\+::\+Level$\ast$ game\+::components\+::\+Enemy\+Spawner\+::m\+Game\+Level\hspace{0.3cm}{\ttfamily [private]}}
+
+cached game world data \mbox{\Hypertarget{classgame_1_1components_1_1EnemySpawner_a7e0bbb86967e3ccff1ccf29c19f5cf3d}\label{classgame_1_1components_1_1EnemySpawner_a7e0bbb86967e3ccff1ccf29c19f5cf3d}} 
+\index{game::components::EnemySpawner@{game::components::EnemySpawner}!mGridSystem@{mGridSystem}}
+\index{mGridSystem@{mGridSystem}!game::components::EnemySpawner@{game::components::EnemySpawner}}
+\doxysubsubsection{\texorpdfstring{mGridSystem}{mGridSystem}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgame_1_1grid_1_1GridSystem}{grid\+::\+Grid\+System}}$\ast$ game\+::components\+::\+Enemy\+Spawner\+::m\+Grid\+System\hspace{0.3cm}{\ttfamily [private]}}
+
+cached grid system \mbox{\Hypertarget{classgame_1_1components_1_1EnemySpawner_a231d74aaff59b4c40098f3d9e7573a96}\label{classgame_1_1components_1_1EnemySpawner_a231d74aaff59b4c40098f3d9e7573a96}} 
+\index{game::components::EnemySpawner@{game::components::EnemySpawner}!mIsSpawning@{mIsSpawning}}
+\index{mIsSpawning@{mIsSpawning}!game::components::EnemySpawner@{game::components::EnemySpawner}}
+\doxysubsubsection{\texorpdfstring{mIsSpawning}{mIsSpawning}}
+{\footnotesize\ttfamily bool game\+::components\+::\+Enemy\+Spawner\+::m\+Is\+Spawning\hspace{0.3cm}{\ttfamily [private]}}
+
+spawner state flag \mbox{\Hypertarget{classgame_1_1components_1_1EnemySpawner_a73d408416fcb55604480e2777b0466b9}\label{classgame_1_1components_1_1EnemySpawner_a73d408416fcb55604480e2777b0466b9}} 
+\index{game::components::EnemySpawner@{game::components::EnemySpawner}!mRegularEnemyTypes@{mRegularEnemyTypes}}
+\index{mRegularEnemyTypes@{mRegularEnemyTypes}!game::components::EnemySpawner@{game::components::EnemySpawner}}
+\doxysubsubsection{\texorpdfstring{mRegularEnemyTypes}{mRegularEnemyTypes}}
+{\footnotesize\ttfamily std\+::vector$<$const \mbox{\hyperlink{structgame_1_1data_1_1EnemyDefine}{data\+::\+Enemy\+Define}}$\ast$$>$ game\+::components\+::\+Enemy\+Spawner\+::m\+Regular\+Enemy\+Types\hspace{0.3cm}{\ttfamily [private]}}
+
+all types of regular enemies can be generated in this level \mbox{\Hypertarget{classgame_1_1components_1_1EnemySpawner_a45b9433e6ca6ac1448a804c507d71812}\label{classgame_1_1components_1_1EnemySpawner_a45b9433e6ca6ac1448a804c507d71812}} 
+\index{game::components::EnemySpawner@{game::components::EnemySpawner}!mTimeElapsedAfterLastSpawn@{mTimeElapsedAfterLastSpawn}}
+\index{mTimeElapsedAfterLastSpawn@{mTimeElapsedAfterLastSpawn}!game::components::EnemySpawner@{game::components::EnemySpawner}}
+\doxysubsubsection{\texorpdfstring{mTimeElapsedAfterLastSpawn}{mTimeElapsedAfterLastSpawn}}
+{\footnotesize\ttfamily float game\+::components\+::\+Enemy\+Spawner\+::m\+Time\+Elapsed\+After\+Last\+Spawn\hspace{0.3cm}{\ttfamily [private]}}
+
+time elpased after generating last enemy \mbox{\Hypertarget{classgame_1_1components_1_1EnemySpawner_a656fbb065020a3aa81e9d76e6adf5f3a}\label{classgame_1_1components_1_1EnemySpawner_a656fbb065020a3aa81e9d76e6adf5f3a}} 
+\index{game::components::EnemySpawner@{game::components::EnemySpawner}!mTimeToSpawnNextEnemy@{mTimeToSpawnNextEnemy}}
+\index{mTimeToSpawnNextEnemy@{mTimeToSpawnNextEnemy}!game::components::EnemySpawner@{game::components::EnemySpawner}}
+\doxysubsubsection{\texorpdfstring{mTimeToSpawnNextEnemy}{mTimeToSpawnNextEnemy}}
+{\footnotesize\ttfamily float game\+::components\+::\+Enemy\+Spawner\+::m\+Time\+To\+Spawn\+Next\+Enemy\hspace{0.3cm}{\ttfamily [private]}}
+
+duration between generate two enemies \mbox{\Hypertarget{classgame_1_1components_1_1EnemySpawner_a23efcd736a93922618128634ccad2581}\label{classgame_1_1components_1_1EnemySpawner_a23efcd736a93922618128634ccad2581}} 
+\index{game::components::EnemySpawner@{game::components::EnemySpawner}!mTotalEliteEnemyToSpawn@{mTotalEliteEnemyToSpawn}}
+\index{mTotalEliteEnemyToSpawn@{mTotalEliteEnemyToSpawn}!game::components::EnemySpawner@{game::components::EnemySpawner}}
+\doxysubsubsection{\texorpdfstring{mTotalEliteEnemyToSpawn}{mTotalEliteEnemyToSpawn}}
+{\footnotesize\ttfamily int game\+::components\+::\+Enemy\+Spawner\+::m\+Total\+Elite\+Enemy\+To\+Spawn\hspace{0.3cm}{\ttfamily [private]}}
+
+total number of elite enemies in current fight \mbox{\Hypertarget{classgame_1_1components_1_1EnemySpawner_ac25517f401808fb94fb24b83ac1229ba}\label{classgame_1_1components_1_1EnemySpawner_ac25517f401808fb94fb24b83ac1229ba}} 
+\index{game::components::EnemySpawner@{game::components::EnemySpawner}!mTotalRegularEnemyToSpawn@{mTotalRegularEnemyToSpawn}}
+\index{mTotalRegularEnemyToSpawn@{mTotalRegularEnemyToSpawn}!game::components::EnemySpawner@{game::components::EnemySpawner}}
+\doxysubsubsection{\texorpdfstring{mTotalRegularEnemyToSpawn}{mTotalRegularEnemyToSpawn}}
+{\footnotesize\ttfamily int game\+::components\+::\+Enemy\+Spawner\+::m\+Total\+Regular\+Enemy\+To\+Spawn\hspace{0.3cm}{\ttfamily [private]}}
+
+total number of regular enemies in current fight \mbox{\Hypertarget{classgame_1_1components_1_1EnemySpawner_ad0ed7679691812bf04596cdee4266296}\label{classgame_1_1components_1_1EnemySpawner_ad0ed7679691812bf04596cdee4266296}} 
+\index{game::components::EnemySpawner@{game::components::EnemySpawner}!onAllEnemiesSpawned@{onAllEnemiesSpawned}}
+\index{onAllEnemiesSpawned@{onAllEnemiesSpawned}!game::components::EnemySpawner@{game::components::EnemySpawner}}
+\doxysubsubsection{\texorpdfstring{onAllEnemiesSpawned}{onAllEnemiesSpawned}}
+{\footnotesize\ttfamily All\+Enemies\+Spawned\+Delegate game\+::components\+::\+Enemy\+Spawner\+::on\+All\+Enemies\+Spawned}
+
+all enemy in current fight spawned event \mbox{\Hypertarget{classgame_1_1components_1_1EnemySpawner_a56f7f8e632f52c21b7af899a777fa17c}\label{classgame_1_1components_1_1EnemySpawner_a56f7f8e632f52c21b7af899a777fa17c}} 
+\index{game::components::EnemySpawner@{game::components::EnemySpawner}!onEnemySpawned@{onEnemySpawned}}
+\index{onEnemySpawned@{onEnemySpawned}!game::components::EnemySpawner@{game::components::EnemySpawner}}
+\doxysubsubsection{\texorpdfstring{onEnemySpawned}{onEnemySpawned}}
+{\footnotesize\ttfamily Enemy\+Spawned\+Delegate game\+::components\+::\+Enemy\+Spawner\+::on\+Enemy\+Spawned}
+
+enemy spawned event 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Components/\+Game\+Play/Enemy\+Spawner.\+h\end{DoxyCompactItemize}

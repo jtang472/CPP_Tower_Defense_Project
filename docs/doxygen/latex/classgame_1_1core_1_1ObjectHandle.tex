@@ -1,0 +1,183 @@
+\hypertarget{classgame_1_1core_1_1ObjectHandle}{}\doxysection{game\+::core\+::Object\+Handle$<$ TObject $>$ Class Template Reference}
+\label{classgame_1_1core_1_1ObjectHandle}\index{game::core::ObjectHandle$<$ TObject $>$@{game::core::ObjectHandle$<$ TObject $>$}}
+
+
+object reference handle  
+
+
+
+
+{\ttfamily \#include $<$Object\+Handle.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classgame_1_1core_1_1ObjectHandle_ae287b6913a46669f9ab320f85bdf708c}\label{classgame_1_1core_1_1ObjectHandle_ae287b6913a46669f9ab320f85bdf708c}} 
+typedef std\+::vector$<$ \mbox{\hyperlink{structgame_1_1core_1_1ObjectWrapper}{Object\+Wrapper}}$<$ TObject $>$ $>$ {\bfseries Lookup\+Table}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgame_1_1core_1_1ObjectHandle_ad4a0a6efcf7db055af303aef65f034e0}{Object\+Handle}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classgame_1_1core_1_1ObjectHandle}{Object\+Handle}} default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classgame_1_1core_1_1ObjectHandle_ab3287ad7164db0e61c2f35aec2e864bb}{Object\+Handle}} (Lookup\+Table $\ast$lookup, uint32\+\_\+t guid)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classgame_1_1core_1_1ObjectHandle}{Object\+Handle}} constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1core_1_1ObjectHandle_a86557da5ff0cfe2f4802a9275a9d2b03}{update\+GUID}} (GUID new\+ID)
+\begin{DoxyCompactList}\small\item\em update guid of the object \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1core_1_1ObjectHandle_a4750df4b3aaaabddcf4afac8224088bd}{reset}} ()
+\begin{DoxyCompactList}\small\item\em reset object handle to empty \end{DoxyCompactList}\item 
+TObject $\ast$ \mbox{\hyperlink{classgame_1_1core_1_1ObjectHandle_a0cd72c93272fe9ed3d340a041291af7a}{get}} () const
+\begin{DoxyCompactList}\small\item\em get the actual object handled by this object handle \end{DoxyCompactList}\item 
+TObject $\ast$ \mbox{\hyperlink{classgame_1_1core_1_1ObjectHandle_a1808153103f63ba9d7d8646d2dab679b}{operator-\/$>$}} () const
+\begin{DoxyCompactList}\small\item\em overload -\/$>$ operator \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classgame_1_1core_1_1ObjectHandle_ad98bb66a0a1ee119352bf7f3308132c6}{operator bool}} () const
+\begin{DoxyCompactList}\small\item\em overload bool conversion \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Lookup\+Table $\ast$ \mbox{\hyperlink{classgame_1_1core_1_1ObjectHandle_abbde99dbbdb322f020e950472c24895f}{m\+Lookup}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classgame_1_1core_1_1ObjectHandle_aeac7fc09cba9d603792bcce670dc57ec}{m\+GUID}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class TObject$>$\newline
+class game\+::core\+::\+Object\+Handle$<$ TObject $>$}
+
+object reference handle 
+
+this class is an alternative / more efficient solution compared to std\+::shared\+\_\+ptr \& std\+::weak\+\_\+ptr, instead of storing the actual object reference, this class caches the object guid and the index of the object in a global lookup table. To get the actual object reference from the object handle, it query the global look up table and compare the two guids. If guids are equal, then the object handle is still valid and we return object reference to caller, otherwise the object is invalid and we return nullptr
+
+\begin{DoxyAuthor}{Author}
+Zheng Yang 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgame_1_1core_1_1ObjectHandle_ad4a0a6efcf7db055af303aef65f034e0}\label{classgame_1_1core_1_1ObjectHandle_ad4a0a6efcf7db055af303aef65f034e0}} 
+\index{game::core::ObjectHandle$<$ TObject $>$@{game::core::ObjectHandle$<$ TObject $>$}!ObjectHandle@{ObjectHandle}}
+\index{ObjectHandle@{ObjectHandle}!game::core::ObjectHandle$<$ TObject $>$@{game::core::ObjectHandle$<$ TObject $>$}}
+\doxysubsubsection{\texorpdfstring{ObjectHandle()}{ObjectHandle()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class TObject $>$ \\
+\mbox{\hyperlink{classgame_1_1core_1_1ObjectHandle}{game\+::core\+::\+Object\+Handle}}$<$ TObject $>$\+::\mbox{\hyperlink{classgame_1_1core_1_1ObjectHandle}{Object\+Handle}}}
+
+
+
+\mbox{\hyperlink{classgame_1_1core_1_1ObjectHandle}{Object\+Handle}} default constructor. 
+
+\mbox{\hyperlink{classgame_1_1core_1_1ObjectHandle}{Object\+Handle}} default constructor \mbox{\Hypertarget{classgame_1_1core_1_1ObjectHandle_ab3287ad7164db0e61c2f35aec2e864bb}\label{classgame_1_1core_1_1ObjectHandle_ab3287ad7164db0e61c2f35aec2e864bb}} 
+\index{game::core::ObjectHandle$<$ TObject $>$@{game::core::ObjectHandle$<$ TObject $>$}!ObjectHandle@{ObjectHandle}}
+\index{ObjectHandle@{ObjectHandle}!game::core::ObjectHandle$<$ TObject $>$@{game::core::ObjectHandle$<$ TObject $>$}}
+\doxysubsubsection{\texorpdfstring{ObjectHandle()}{ObjectHandle()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class TObject $>$ \\
+\mbox{\hyperlink{classgame_1_1core_1_1ObjectHandle}{game\+::core\+::\+Object\+Handle}}$<$ TObject $>$\+::\mbox{\hyperlink{classgame_1_1core_1_1ObjectHandle}{Object\+Handle}} (\begin{DoxyParamCaption}\item[{Lookup\+Table $\ast$}]{lookup,  }\item[{uint32\+\_\+t}]{guid }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classgame_1_1core_1_1ObjectHandle}{Object\+Handle}} constructor. 
+
+\mbox{\hyperlink{classgame_1_1core_1_1ObjectHandle}{Object\+Handle}} constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em lookup} & global lookup table \\
+\hline
+{\em guid} & guid of the object it reference to \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgame_1_1core_1_1ObjectHandle_a0cd72c93272fe9ed3d340a041291af7a}\label{classgame_1_1core_1_1ObjectHandle_a0cd72c93272fe9ed3d340a041291af7a}} 
+\index{game::core::ObjectHandle$<$ TObject $>$@{game::core::ObjectHandle$<$ TObject $>$}!get@{get}}
+\index{get@{get}!game::core::ObjectHandle$<$ TObject $>$@{game::core::ObjectHandle$<$ TObject $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily template$<$class TObject $>$ \\
+TObject $\ast$ \mbox{\hyperlink{classgame_1_1core_1_1ObjectHandle}{game\+::core\+::\+Object\+Handle}}$<$ TObject $>$\+::get}
+
+
+
+get the actual object handled by this object handle 
+
+get the actual object handled by this object handle \begin{DoxyReturn}{Returns}
+actual object if it is still valid, otherwise return nullptr 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgame_1_1core_1_1ObjectHandle_ad98bb66a0a1ee119352bf7f3308132c6}\label{classgame_1_1core_1_1ObjectHandle_ad98bb66a0a1ee119352bf7f3308132c6}} 
+\index{game::core::ObjectHandle$<$ TObject $>$@{game::core::ObjectHandle$<$ TObject $>$}!operator bool@{operator bool}}
+\index{operator bool@{operator bool}!game::core::ObjectHandle$<$ TObject $>$@{game::core::ObjectHandle$<$ TObject $>$}}
+\doxysubsubsection{\texorpdfstring{operator bool()}{operator bool()}}
+{\footnotesize\ttfamily template$<$class TObject $>$ \\
+\mbox{\hyperlink{classgame_1_1core_1_1ObjectHandle}{game\+::core\+::\+Object\+Handle}}$<$ TObject $>$\+::operator bool}
+
+
+
+overload bool conversion 
+
+overload bool conversion
+
+\begin{DoxyReturn}{Returns}
+true if object reference is still valid, otherwise false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgame_1_1core_1_1ObjectHandle_a1808153103f63ba9d7d8646d2dab679b}\label{classgame_1_1core_1_1ObjectHandle_a1808153103f63ba9d7d8646d2dab679b}} 
+\index{game::core::ObjectHandle$<$ TObject $>$@{game::core::ObjectHandle$<$ TObject $>$}!operator-\/$>$@{operator-\/$>$}}
+\index{operator-\/$>$@{operator-\/$>$}!game::core::ObjectHandle$<$ TObject $>$@{game::core::ObjectHandle$<$ TObject $>$}}
+\doxysubsubsection{\texorpdfstring{operator-\/$>$()}{operator->()}}
+{\footnotesize\ttfamily template$<$class TObject $>$ \\
+TObject $\ast$ \mbox{\hyperlink{classgame_1_1core_1_1ObjectHandle}{game\+::core\+::\+Object\+Handle}}$<$ TObject $>$\+::operator-\/$>$}
+
+
+
+overload -\/$>$ operator 
+
+overload -\/$>$ operator \mbox{\Hypertarget{classgame_1_1core_1_1ObjectHandle_a4750df4b3aaaabddcf4afac8224088bd}\label{classgame_1_1core_1_1ObjectHandle_a4750df4b3aaaabddcf4afac8224088bd}} 
+\index{game::core::ObjectHandle$<$ TObject $>$@{game::core::ObjectHandle$<$ TObject $>$}!reset@{reset}}
+\index{reset@{reset}!game::core::ObjectHandle$<$ TObject $>$@{game::core::ObjectHandle$<$ TObject $>$}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily template$<$class TObject $>$ \\
+void \mbox{\hyperlink{classgame_1_1core_1_1ObjectHandle}{game\+::core\+::\+Object\+Handle}}$<$ TObject $>$\+::reset}
+
+
+
+reset object handle to empty 
+
+reset object handle to empty \mbox{\Hypertarget{classgame_1_1core_1_1ObjectHandle_a86557da5ff0cfe2f4802a9275a9d2b03}\label{classgame_1_1core_1_1ObjectHandle_a86557da5ff0cfe2f4802a9275a9d2b03}} 
+\index{game::core::ObjectHandle$<$ TObject $>$@{game::core::ObjectHandle$<$ TObject $>$}!updateGUID@{updateGUID}}
+\index{updateGUID@{updateGUID}!game::core::ObjectHandle$<$ TObject $>$@{game::core::ObjectHandle$<$ TObject $>$}}
+\doxysubsubsection{\texorpdfstring{updateGUID()}{updateGUID()}}
+{\footnotesize\ttfamily template$<$class TObject $>$ \\
+void \mbox{\hyperlink{classgame_1_1core_1_1ObjectHandle}{game\+::core\+::\+Object\+Handle}}$<$ TObject $>$\+::update\+GUID (\begin{DoxyParamCaption}\item[{GUID}]{new\+ID }\end{DoxyParamCaption})}
+
+
+
+update guid of the object 
+
+update guid of the object
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+ID} & new guid \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classgame_1_1core_1_1ObjectHandle_aeac7fc09cba9d603792bcce670dc57ec}\label{classgame_1_1core_1_1ObjectHandle_aeac7fc09cba9d603792bcce670dc57ec}} 
+\index{game::core::ObjectHandle$<$ TObject $>$@{game::core::ObjectHandle$<$ TObject $>$}!mGUID@{mGUID}}
+\index{mGUID@{mGUID}!game::core::ObjectHandle$<$ TObject $>$@{game::core::ObjectHandle$<$ TObject $>$}}
+\doxysubsubsection{\texorpdfstring{mGUID}{mGUID}}
+{\footnotesize\ttfamily template$<$class TObject $>$ \\
+uint32\+\_\+t \mbox{\hyperlink{classgame_1_1core_1_1ObjectHandle}{game\+::core\+::\+Object\+Handle}}$<$ TObject $>$\+::m\+GUID\hspace{0.3cm}{\ttfamily [private]}}
+
+guid of the object \mbox{\Hypertarget{classgame_1_1core_1_1ObjectHandle_abbde99dbbdb322f020e950472c24895f}\label{classgame_1_1core_1_1ObjectHandle_abbde99dbbdb322f020e950472c24895f}} 
+\index{game::core::ObjectHandle$<$ TObject $>$@{game::core::ObjectHandle$<$ TObject $>$}!mLookup@{mLookup}}
+\index{mLookup@{mLookup}!game::core::ObjectHandle$<$ TObject $>$@{game::core::ObjectHandle$<$ TObject $>$}}
+\doxysubsubsection{\texorpdfstring{mLookup}{mLookup}}
+{\footnotesize\ttfamily template$<$class TObject $>$ \\
+Lookup\+Table$\ast$ \mbox{\hyperlink{classgame_1_1core_1_1ObjectHandle}{game\+::core\+::\+Object\+Handle}}$<$ TObject $>$\+::m\+Lookup\hspace{0.3cm}{\ttfamily [private]}}
+
+cached reference to global lookup table 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Core/Object\+Handle.\+h\end{DoxyCompactItemize}

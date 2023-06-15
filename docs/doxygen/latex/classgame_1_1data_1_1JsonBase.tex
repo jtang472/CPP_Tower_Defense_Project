@@ -1,0 +1,63 @@
+\hypertarget{classgame_1_1data_1_1JsonBase}{}\doxysection{game\+::data\+::Json\+Base Class Reference}
+\label{classgame_1_1data_1_1JsonBase}\index{game::data::JsonBase@{game::data::JsonBase}}
+
+
+Inheritance diagram for game\+::data\+::Json\+Base\+:
+% FIG 0
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classgame_1_1data_1_1JsonBase_ad71ccf1cdfa32f5100ba32d208afbffa}{from\+Json}} (const rapidjson\+::\+Value \&json)=0
+\begin{DoxyCompactList}\small\item\em deserialize c++ data structure from json object \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classgame_1_1data_1_1JsonBase_a9b0277fdcf438ded476fe08d07c2ed2d}{to\+Json}} (rapidjson\+::\+Writer$<$ rapidjson\+::\+String\+Buffer $>$ $\ast$writer)=0
+\begin{DoxyCompactList}\small\item\em serialize a c++ data structure to a json object \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgame_1_1data_1_1JsonBase_ad71ccf1cdfa32f5100ba32d208afbffa}\label{classgame_1_1data_1_1JsonBase_ad71ccf1cdfa32f5100ba32d208afbffa}} 
+\index{game::data::JsonBase@{game::data::JsonBase}!fromJson@{fromJson}}
+\index{fromJson@{fromJson}!game::data::JsonBase@{game::data::JsonBase}}
+\doxysubsubsection{\texorpdfstring{fromJson()}{fromJson()}}
+{\footnotesize\ttfamily virtual void game\+::data\+::\+Json\+Base\+::from\+Json (\begin{DoxyParamCaption}\item[{const rapidjson\+::\+Value \&}]{json }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [pure virtual]}}
+
+
+
+deserialize c++ data structure from json object 
+
+this function takes a json object, and deserialize c++ data structure from it
+
+
+\begin{DoxyParams}{Parameters}
+{\em json} & serialized json object \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{structgame_1_1data_1_1TowerDefine_a87236856ec0a94093f29d85bdbedae87}{game\+::data\+::\+Tower\+Define}}, \mbox{\hyperlink{structgame_1_1data_1_1TowerAnimDefine_aa74d8aa4d8d6230b56f1e76d3a685145}{game\+::data\+::\+Tower\+Anim\+Define}}, \mbox{\hyperlink{structgame_1_1data_1_1ProjectionDefine_a81a40918217ecb53dff988392f0345a1}{game\+::data\+::\+Projection\+Define}}, \mbox{\hyperlink{structgame_1_1data_1_1ProjectionAnimDefine_a158484a74e73a1f3108c1c0f37f4f7c7}{game\+::data\+::\+Projection\+Anim\+Define}}, \mbox{\hyperlink{structgame_1_1data_1_1EnemySpawnRuleDefine_ae67957502032e0c3181e5fff6132af58}{game\+::data\+::\+Enemy\+Spawn\+Rule\+Define}}, \mbox{\hyperlink{structgame_1_1data_1_1FightRuleDefine_a95fad0c652946ce9e9dcbf888d6828ff}{game\+::data\+::\+Fight\+Rule\+Define}}, \mbox{\hyperlink{structgame_1_1data_1_1EnemyDefine_ad2a0e6110bbec570d731a3bbcc011136}{game\+::data\+::\+Enemy\+Define}}, \mbox{\hyperlink{structgame_1_1data_1_1EnemyAnimDefine_a5b8b88f5d3d4cda23b3166bde8873183}{game\+::data\+::\+Enemy\+Anim\+Define}}, \mbox{\hyperlink{structgame_1_1data_1_1AnimDefine_a963ea38dd8e53ef2b3edecba3fc72d28}{game\+::data\+::\+Anim\+Define}}, \mbox{\hyperlink{structgame_1_1data_1_1ShopItemDefine_a35a0d92ee4e309a4f17328868c077e22}{game\+::data\+::\+Shop\+Item\+Define}}, \mbox{\hyperlink{structgame_1_1data_1_1PlayerData_a28e5986b22b7a319b29c61774e6ba176}{game\+::data\+::\+Player\+Data}}, and \mbox{\hyperlink{structgame_1_1data_1_1ButtonDefine_ac3edb69535e2f4e00d1ea8457c9dd8cf}{game\+::data\+::\+Button\+Define}}.
+
+\mbox{\Hypertarget{classgame_1_1data_1_1JsonBase_a9b0277fdcf438ded476fe08d07c2ed2d}\label{classgame_1_1data_1_1JsonBase_a9b0277fdcf438ded476fe08d07c2ed2d}} 
+\index{game::data::JsonBase@{game::data::JsonBase}!toJson@{toJson}}
+\index{toJson@{toJson}!game::data::JsonBase@{game::data::JsonBase}}
+\doxysubsubsection{\texorpdfstring{toJson()}{toJson()}}
+{\footnotesize\ttfamily virtual void game\+::data\+::\+Json\+Base\+::to\+Json (\begin{DoxyParamCaption}\item[{rapidjson\+::\+Writer$<$ rapidjson\+::\+String\+Buffer $>$ $\ast$}]{writer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [pure virtual]}}
+
+
+
+serialize a c++ data structure to a json object 
+
+this function takes a json writer, and serialize c++ data structure to it
+
+
+\begin{DoxyParams}{Parameters}
+{\em writer} & json writer \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{structgame_1_1data_1_1TowerDefine_a3dba007c6bde5396ffa77fbb22494754}{game\+::data\+::\+Tower\+Define}}, \mbox{\hyperlink{structgame_1_1data_1_1TowerAnimDefine_a6caf8fe45578e32d0879e78448106f9b}{game\+::data\+::\+Tower\+Anim\+Define}}, \mbox{\hyperlink{structgame_1_1data_1_1ShopItemDefine_a647591e538cfd095d45b4391d6998c6f}{game\+::data\+::\+Shop\+Item\+Define}}, \mbox{\hyperlink{structgame_1_1data_1_1ProjectionDefine_ac5f073b30399c935e5e5acba2df9e0cf}{game\+::data\+::\+Projection\+Define}}, \mbox{\hyperlink{structgame_1_1data_1_1ProjectionAnimDefine_a529c6bdeffb817629ae78509b50c680b}{game\+::data\+::\+Projection\+Anim\+Define}}, \mbox{\hyperlink{structgame_1_1data_1_1EnemySpawnRuleDefine_ac0d5e0920fcd1a6d2a0b1c1ea7ea7181}{game\+::data\+::\+Enemy\+Spawn\+Rule\+Define}}, \mbox{\hyperlink{structgame_1_1data_1_1FightRuleDefine_a8ff6a49b073ffab741ae52c06af234e3}{game\+::data\+::\+Fight\+Rule\+Define}}, \mbox{\hyperlink{structgame_1_1data_1_1EnemyDefine_a863278202b70b236d3aa4dd0ce69a50c}{game\+::data\+::\+Enemy\+Define}}, \mbox{\hyperlink{structgame_1_1data_1_1EnemyAnimDefine_a56cef7ab36f7f8d442ad1e3e81e6d6fd}{game\+::data\+::\+Enemy\+Anim\+Define}}, \mbox{\hyperlink{structgame_1_1data_1_1ButtonDefine_a46a057a6578d4ca68ea2006f45a408f2}{game\+::data\+::\+Button\+Define}}, \mbox{\hyperlink{structgame_1_1data_1_1AnimDefine_a35722e332733fb1be15c3d6a96932afd}{game\+::data\+::\+Anim\+Define}}, and \mbox{\hyperlink{structgame_1_1data_1_1PlayerData_a6436bb1da11817eb98b4feca5bf265e5}{game\+::data\+::\+Player\+Data}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Data/Json\+Base.\+h\end{DoxyCompactItemize}

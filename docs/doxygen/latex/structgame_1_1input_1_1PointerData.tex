@@ -1,0 +1,108 @@
+\hypertarget{structgame_1_1input_1_1PointerData}{}\doxysection{game\+::input\+::Pointer\+Data Struct Reference}
+\label{structgame_1_1input_1_1PointerData}\index{game::input::PointerData@{game::input::PointerData}}
+
+
+bookkeeping class for pointer data in the current frame  
+
+
+
+
+{\ttfamily \#include $<$Pointer\+Data.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structgame_1_1input_1_1PointerData_a1b4fd9057991bfe850732b3d11018051}{Pointer\+Data}} (Mouse\+Button id)
+\begin{DoxyCompactList}\small\item\em pointer data constructor \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structgame_1_1input_1_1PointerData_a761cc6a41e943c8d646c83fab53d4836}\label{structgame_1_1input_1_1PointerData_a761cc6a41e943c8d646c83fab53d4836}} 
+{\bfseries Pointer\+Data} (\mbox{\hyperlink{structgame_1_1input_1_1PointerData}{Pointer\+Data}} \&)=delete
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Mouse\+Button \mbox{\hyperlink{structgame_1_1input_1_1PointerData_a32d1b80476a463a6af6fcd2a18366c95}{button\+ID}}
+\item 
+sf\+::\+Vector2i \mbox{\hyperlink{structgame_1_1input_1_1PointerData_aa1409e63bc192d1e97bb9d4eafb3235c}{pos}}
+\item 
+sf\+::\+Vector2i \mbox{\hyperlink{structgame_1_1input_1_1PointerData_a3b0b4379a5aebce0a8ffade475923f87}{delta\+Pos}}
+\item 
+bool \mbox{\hyperlink{structgame_1_1input_1_1PointerData_a0de3a3f165ec21c686e161554e4ef379}{pressed\+This\+Frame}}
+\item 
+\mbox{\hyperlink{classgame_1_1core_1_1ObjectHandle}{core\+::\+Go\+Handle}} \mbox{\hyperlink{structgame_1_1input_1_1PointerData_ae412fb929ea15f5431cf7097b9543e5b}{pointer\+Enter}}
+\item 
+\mbox{\hyperlink{classgame_1_1core_1_1ObjectHandle}{core\+::\+Go\+Handle}} \mbox{\hyperlink{structgame_1_1input_1_1PointerData_a18be7f8542bfc0e44cbad355bc02ef28}{pointer\+Pressed}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+bookkeeping class for pointer data in the current frame 
+
+this class bookkeeps all the relevant pointer data in the current frame, and it is updated by input manager every frame
+
+\begin{DoxyAuthor}{Author}
+Zheng Yang 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structgame_1_1input_1_1PointerData_a1b4fd9057991bfe850732b3d11018051}\label{structgame_1_1input_1_1PointerData_a1b4fd9057991bfe850732b3d11018051}} 
+\index{game::input::PointerData@{game::input::PointerData}!PointerData@{PointerData}}
+\index{PointerData@{PointerData}!game::input::PointerData@{game::input::PointerData}}
+\doxysubsubsection{\texorpdfstring{PointerData()}{PointerData()}}
+{\footnotesize\ttfamily game\+::input\+::\+Pointer\+Data\+::\+Pointer\+Data (\begin{DoxyParamCaption}\item[{Mouse\+Button}]{id }\end{DoxyParamCaption})}
+
+
+
+pointer data constructor 
+
+pointer data constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & button id of the pointer data \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structgame_1_1input_1_1PointerData_a32d1b80476a463a6af6fcd2a18366c95}\label{structgame_1_1input_1_1PointerData_a32d1b80476a463a6af6fcd2a18366c95}} 
+\index{game::input::PointerData@{game::input::PointerData}!buttonID@{buttonID}}
+\index{buttonID@{buttonID}!game::input::PointerData@{game::input::PointerData}}
+\doxysubsubsection{\texorpdfstring{buttonID}{buttonID}}
+{\footnotesize\ttfamily Mouse\+Button game\+::input\+::\+Pointer\+Data\+::button\+ID}
+
+button id \mbox{\Hypertarget{structgame_1_1input_1_1PointerData_a3b0b4379a5aebce0a8ffade475923f87}\label{structgame_1_1input_1_1PointerData_a3b0b4379a5aebce0a8ffade475923f87}} 
+\index{game::input::PointerData@{game::input::PointerData}!deltaPos@{deltaPos}}
+\index{deltaPos@{deltaPos}!game::input::PointerData@{game::input::PointerData}}
+\doxysubsubsection{\texorpdfstring{deltaPos}{deltaPos}}
+{\footnotesize\ttfamily sf\+::\+Vector2i game\+::input\+::\+Pointer\+Data\+::delta\+Pos}
+
+how much the pointer moved after last frame \mbox{\Hypertarget{structgame_1_1input_1_1PointerData_ae412fb929ea15f5431cf7097b9543e5b}\label{structgame_1_1input_1_1PointerData_ae412fb929ea15f5431cf7097b9543e5b}} 
+\index{game::input::PointerData@{game::input::PointerData}!pointerEnter@{pointerEnter}}
+\index{pointerEnter@{pointerEnter}!game::input::PointerData@{game::input::PointerData}}
+\doxysubsubsection{\texorpdfstring{pointerEnter}{pointerEnter}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgame_1_1core_1_1ObjectHandle}{core\+::\+Go\+Handle}} game\+::input\+::\+Pointer\+Data\+::pointer\+Enter}
+
+the gameobject that gets entered \mbox{\Hypertarget{structgame_1_1input_1_1PointerData_a18be7f8542bfc0e44cbad355bc02ef28}\label{structgame_1_1input_1_1PointerData_a18be7f8542bfc0e44cbad355bc02ef28}} 
+\index{game::input::PointerData@{game::input::PointerData}!pointerPressed@{pointerPressed}}
+\index{pointerPressed@{pointerPressed}!game::input::PointerData@{game::input::PointerData}}
+\doxysubsubsection{\texorpdfstring{pointerPressed}{pointerPressed}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgame_1_1core_1_1ObjectHandle}{core\+::\+Go\+Handle}} game\+::input\+::\+Pointer\+Data\+::pointer\+Pressed}
+
+the gameobject that gets pressed last frame or earlier \mbox{\Hypertarget{structgame_1_1input_1_1PointerData_aa1409e63bc192d1e97bb9d4eafb3235c}\label{structgame_1_1input_1_1PointerData_aa1409e63bc192d1e97bb9d4eafb3235c}} 
+\index{game::input::PointerData@{game::input::PointerData}!pos@{pos}}
+\index{pos@{pos}!game::input::PointerData@{game::input::PointerData}}
+\doxysubsubsection{\texorpdfstring{pos}{pos}}
+{\footnotesize\ttfamily sf\+::\+Vector2i game\+::input\+::\+Pointer\+Data\+::pos}
+
+pointer position \mbox{\Hypertarget{structgame_1_1input_1_1PointerData_a0de3a3f165ec21c686e161554e4ef379}\label{structgame_1_1input_1_1PointerData_a0de3a3f165ec21c686e161554e4ef379}} 
+\index{game::input::PointerData@{game::input::PointerData}!pressedThisFrame@{pressedThisFrame}}
+\index{pressedThisFrame@{pressedThisFrame}!game::input::PointerData@{game::input::PointerData}}
+\doxysubsubsection{\texorpdfstring{pressedThisFrame}{pressedThisFrame}}
+{\footnotesize\ttfamily bool game\+::input\+::\+Pointer\+Data\+::pressed\+This\+Frame}
+
+does the pointer get pressed this frame 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Input/Pointer\+Data.\+h\end{DoxyCompactItemize}

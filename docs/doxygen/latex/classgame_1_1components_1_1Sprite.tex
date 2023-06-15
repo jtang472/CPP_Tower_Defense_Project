@@ -1,0 +1,318 @@
+\hypertarget{classgame_1_1components_1_1Sprite}{}\doxysection{game\+::components\+::Sprite Class Reference}
+\label{classgame_1_1components_1_1Sprite}\index{game::components::Sprite@{game::components::Sprite}}
+
+
+wrapper class for sf\+::sprite  
+
+
+
+
+{\ttfamily \#include $<$Sprite.\+h$>$}
+
+
+
+Inheritance diagram for game\+::components\+::Sprite\+:
+% FIG 0
+
+
+Collaboration diagram for game\+::components\+::Sprite\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgame_1_1components_1_1Sprite_a277675fe6da9d07ce1203f21bd69ff44}{Sprite}} (\mbox{\hyperlink{classgame_1_1components_1_1GameObject}{Game\+Object}} \&owner, renderer\+::\+Render\+Layer layer, int depth)
+\begin{DoxyCompactList}\small\item\em sprite constructor \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classgame_1_1components_1_1Sprite_ac4b3cf6f2d25bb87f22b024906fbbdbe}{$\sim$\+Sprite}} () override
+\begin{DoxyCompactList}\small\item\em sprite destructor \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1Sprite_a02adea1e91692ef699ca30280645c634}{draw}} (sf\+::\+Render\+Window \&window) override
+\begin{DoxyCompactList}\small\item\em draw quad to screen \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1Sprite_a3bdd897230710c2d78b5518464bdebae}{set\+Texture}} (sf\+::\+Texture $\ast$texture)
+\begin{DoxyCompactList}\small\item\em set the referenced texture \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1Sprite_afebb19dfbd6e2ae9e5ce8c8dfc72839c}{set\+Texture}} (int tid)
+\begin{DoxyCompactList}\small\item\em set the referenced texture by using its unique identifier \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1Sprite_ae0a2e931187b4ab5d7de21fca1a04ebf}{set\+Texture\+Rect}} (int offsetX, int offsetY, int width, int height)
+\begin{DoxyCompactList}\small\item\em set the texture coordinates of referenced texture \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1Sprite_a390c0b2804e7cc785e857d1df9254881}{set\+Sprite\+Native\+Size}} ()
+\begin{DoxyCompactList}\small\item\em set the size of the sprite to follow its native size \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1Sprite_afd29e4bf3b2c21e0b888cc4cc524f68c}{on\+Enable}} () override
+\begin{DoxyCompactList}\small\item\em component lifecycle function \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1Sprite_a64178747ff0ede0f1f5492da87c7e5c6}{on\+Disable}} () override
+\begin{DoxyCompactList}\small\item\em component lifecycle function \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classgame_1_1components_1_1Sprite_a548af69b4a9e0f1160e2fe737de89c70}{is\+Raycastable}} () override
+\begin{DoxyCompactList}\small\item\em determines if a render component can be detected by input system and block pointer \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1Sprite_ad6b407e8697d0ee1fea542f2d43d6b0e}{set\+Alpha}} (float alpha) override
+\begin{DoxyCompactList}\small\item\em set the alpha value of the drawable \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1Sprite_af51cccdfaf198ad706dcdbd978102a00}{set\+Color}} (sf\+::\+Color color)
+\begin{DoxyCompactList}\small\item\em set the color of the drawable \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Sprite \mbox{\hyperlink{classgame_1_1components_1_1Sprite_af2d9979c5cd048e1643c70c8afaa6cac}{m\+Sprite}}
+\item 
+sf\+::\+Texture $\ast$ \mbox{\hyperlink{classgame_1_1components_1_1Sprite_a81e0f1f5c32ec9f38533a343e625e220}{m\+Referenced\+Texture}}
+\item 
+sf\+::\+Int\+Rect \mbox{\hyperlink{classgame_1_1components_1_1Sprite_a85eefc963774baccf809d065f265e5a5}{m\+Texture\+Rect}}
+\item 
+Pivot \mbox{\hyperlink{classgame_1_1components_1_1Sprite_a85e58f97e3c58806e0dd91f3724a3aeb}{m\+Pivot}}
+\item 
+sf\+::\+Vector2f \mbox{\hyperlink{classgame_1_1components_1_1Sprite_a1ac4c32063fc878715fc2029ae070fd6}{m\+Size}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+wrapper class for sf\+::sprite 
+
+if you want to draw something to the game window with a local texture, use this class must set up a referenced texture before it can be properly render to the game window
+
+\begin{DoxyAuthor}{Author}
+Zheng Yang 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgame_1_1components_1_1Sprite_a277675fe6da9d07ce1203f21bd69ff44}\label{classgame_1_1components_1_1Sprite_a277675fe6da9d07ce1203f21bd69ff44}} 
+\index{game::components::Sprite@{game::components::Sprite}!Sprite@{Sprite}}
+\index{Sprite@{Sprite}!game::components::Sprite@{game::components::Sprite}}
+\doxysubsubsection{\texorpdfstring{Sprite()}{Sprite()}}
+{\footnotesize\ttfamily game\+::components\+::\+Sprite\+::\+Sprite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgame_1_1components_1_1GameObject}{Game\+Object}} \&}]{owner,  }\item[{renderer\+::\+Render\+Layer}]{layer,  }\item[{int}]{depth }\end{DoxyParamCaption})}
+
+
+
+sprite constructor 
+
+sprite constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em owner} & owner of the component \\
+\hline
+{\em layer} & render layer of quad \\
+\hline
+{\em depth} & render depth of quad \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1components_1_1Sprite_ac4b3cf6f2d25bb87f22b024906fbbdbe}\label{classgame_1_1components_1_1Sprite_ac4b3cf6f2d25bb87f22b024906fbbdbe}} 
+\index{game::components::Sprite@{game::components::Sprite}!````~Sprite@{$\sim$Sprite}}
+\index{````~Sprite@{$\sim$Sprite}!game::components::Sprite@{game::components::Sprite}}
+\doxysubsubsection{\texorpdfstring{$\sim$Sprite()}{~Sprite()}}
+{\footnotesize\ttfamily game\+::components\+::\+Sprite\+::$\sim$\+Sprite (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+sprite destructor 
+
+sprite destructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgame_1_1components_1_1Sprite_a02adea1e91692ef699ca30280645c634}\label{classgame_1_1components_1_1Sprite_a02adea1e91692ef699ca30280645c634}} 
+\index{game::components::Sprite@{game::components::Sprite}!draw@{draw}}
+\index{draw@{draw}!game::components::Sprite@{game::components::Sprite}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Sprite\+::draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+draw quad to screen 
+
+do not call it -\/ this function should only be called by game renderer every frame this is where drawable components actually gets drawed to the screen
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & the game window to render the quad on \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classgame_1_1components_1_1RenderComponent_ada17983becaa14156fc793e915f34653}{game\+::components\+::\+Render\+Component}}.
+
+\mbox{\Hypertarget{classgame_1_1components_1_1Sprite_a548af69b4a9e0f1160e2fe737de89c70}\label{classgame_1_1components_1_1Sprite_a548af69b4a9e0f1160e2fe737de89c70}} 
+\index{game::components::Sprite@{game::components::Sprite}!isRaycastable@{isRaycastable}}
+\index{isRaycastable@{isRaycastable}!game::components::Sprite@{game::components::Sprite}}
+\doxysubsubsection{\texorpdfstring{isRaycastable()}{isRaycastable()}}
+{\footnotesize\ttfamily bool game\+::components\+::\+Sprite\+::is\+Raycastable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+determines if a render component can be detected by input system and block pointer 
+
+determines if a render component can be detected by input system
+
+\begin{DoxyReturn}{Returns}
+true if drawable can be detected by pointer, false otherwise 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classgame_1_1components_1_1RenderComponent_af1c7b4976870146d22a226b3ff6bf19c}{game\+::components\+::\+Render\+Component}}.
+
+\mbox{\Hypertarget{classgame_1_1components_1_1Sprite_a64178747ff0ede0f1f5492da87c7e5c6}\label{classgame_1_1components_1_1Sprite_a64178747ff0ede0f1f5492da87c7e5c6}} 
+\index{game::components::Sprite@{game::components::Sprite}!onDisable@{onDisable}}
+\index{onDisable@{onDisable}!game::components::Sprite@{game::components::Sprite}}
+\doxysubsubsection{\texorpdfstring{onDisable()}{onDisable()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Sprite\+::on\+Disable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+component lifecycle function 
+
+component lifecycle function, gets called automatically when component is disabled 
+
+Reimplemented from \mbox{\hyperlink{classgame_1_1components_1_1RenderComponent_a92315d762c58050ed67ef88b804426a5}{game\+::components\+::\+Render\+Component}}.
+
+\mbox{\Hypertarget{classgame_1_1components_1_1Sprite_afd29e4bf3b2c21e0b888cc4cc524f68c}\label{classgame_1_1components_1_1Sprite_afd29e4bf3b2c21e0b888cc4cc524f68c}} 
+\index{game::components::Sprite@{game::components::Sprite}!onEnable@{onEnable}}
+\index{onEnable@{onEnable}!game::components::Sprite@{game::components::Sprite}}
+\doxysubsubsection{\texorpdfstring{onEnable()}{onEnable()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Sprite\+::on\+Enable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+component lifecycle function 
+
+component lifecycle function, gets called automatically when component is enabled 
+
+Reimplemented from \mbox{\hyperlink{classgame_1_1components_1_1RenderComponent_ae4fac2917f13cd029ab46cae876d14e3}{game\+::components\+::\+Render\+Component}}.
+
+\mbox{\Hypertarget{classgame_1_1components_1_1Sprite_ad6b407e8697d0ee1fea542f2d43d6b0e}\label{classgame_1_1components_1_1Sprite_ad6b407e8697d0ee1fea542f2d43d6b0e}} 
+\index{game::components::Sprite@{game::components::Sprite}!setAlpha@{setAlpha}}
+\index{setAlpha@{setAlpha}!game::components::Sprite@{game::components::Sprite}}
+\doxysubsubsection{\texorpdfstring{setAlpha()}{setAlpha()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Sprite\+::set\+Alpha (\begin{DoxyParamCaption}\item[{float}]{alpha }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+set the alpha value of the drawable 
+
+set the alpha value of the drawable
+
+
+\begin{DoxyParams}{Parameters}
+{\em alpha} & 1 means entirely opaque, 0 means entirely transparent \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classgame_1_1components_1_1RenderComponent_a6038b2c4967df6ef5885d5b562e97f5a}{game\+::components\+::\+Render\+Component}}.
+
+\mbox{\Hypertarget{classgame_1_1components_1_1Sprite_af51cccdfaf198ad706dcdbd978102a00}\label{classgame_1_1components_1_1Sprite_af51cccdfaf198ad706dcdbd978102a00}} 
+\index{game::components::Sprite@{game::components::Sprite}!setColor@{setColor}}
+\index{setColor@{setColor}!game::components::Sprite@{game::components::Sprite}}
+\doxysubsubsection{\texorpdfstring{setColor()}{setColor()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Sprite\+::set\+Color (\begin{DoxyParamCaption}\item[{sf\+::\+Color}]{color }\end{DoxyParamCaption})}
+
+
+
+set the color of the drawable 
+
+set the color of the drawable
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & new color \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1components_1_1Sprite_a390c0b2804e7cc785e857d1df9254881}\label{classgame_1_1components_1_1Sprite_a390c0b2804e7cc785e857d1df9254881}} 
+\index{game::components::Sprite@{game::components::Sprite}!setSpriteNativeSize@{setSpriteNativeSize}}
+\index{setSpriteNativeSize@{setSpriteNativeSize}!game::components::Sprite@{game::components::Sprite}}
+\doxysubsubsection{\texorpdfstring{setSpriteNativeSize()}{setSpriteNativeSize()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Sprite\+::set\+Sprite\+Native\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+set the size of the sprite to follow its native size 
+
+set the size of the sprite to follow its native size (size of the texture, or the region of the texture to be displayed) \mbox{\Hypertarget{classgame_1_1components_1_1Sprite_afebb19dfbd6e2ae9e5ce8c8dfc72839c}\label{classgame_1_1components_1_1Sprite_afebb19dfbd6e2ae9e5ce8c8dfc72839c}} 
+\index{game::components::Sprite@{game::components::Sprite}!setTexture@{setTexture}}
+\index{setTexture@{setTexture}!game::components::Sprite@{game::components::Sprite}}
+\doxysubsubsection{\texorpdfstring{setTexture()}{setTexture()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void game\+::components\+::\+Sprite\+::set\+Texture (\begin{DoxyParamCaption}\item[{int}]{tid }\end{DoxyParamCaption})}
+
+
+
+set the referenced texture by using its unique identifier 
+
+set the texture to be used by sprite object -\/ texture must exist as long as the sprite uses it
+
+
+\begin{DoxyParams}{Parameters}
+{\em texture} & unique identifier of the new texture \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1components_1_1Sprite_a3bdd897230710c2d78b5518464bdebae}\label{classgame_1_1components_1_1Sprite_a3bdd897230710c2d78b5518464bdebae}} 
+\index{game::components::Sprite@{game::components::Sprite}!setTexture@{setTexture}}
+\index{setTexture@{setTexture}!game::components::Sprite@{game::components::Sprite}}
+\doxysubsubsection{\texorpdfstring{setTexture()}{setTexture()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void game\+::components\+::\+Sprite\+::set\+Texture (\begin{DoxyParamCaption}\item[{sf\+::\+Texture $\ast$}]{texture }\end{DoxyParamCaption})}
+
+
+
+set the referenced texture 
+
+set the texture to be used by sprite object -\/ texture must exist as long as the sprite uses it
+
+
+\begin{DoxyParams}{Parameters}
+{\em texture} & new texture \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1components_1_1Sprite_ae0a2e931187b4ab5d7de21fca1a04ebf}\label{classgame_1_1components_1_1Sprite_ae0a2e931187b4ab5d7de21fca1a04ebf}} 
+\index{game::components::Sprite@{game::components::Sprite}!setTextureRect@{setTextureRect}}
+\index{setTextureRect@{setTextureRect}!game::components::Sprite@{game::components::Sprite}}
+\doxysubsubsection{\texorpdfstring{setTextureRect()}{setTextureRect()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Sprite\+::set\+Texture\+Rect (\begin{DoxyParamCaption}\item[{int}]{offsetX,  }\item[{int}]{offsetY,  }\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})}
+
+
+
+set the texture coordinates of referenced texture 
+
+set the texture coordinates of referenced texture, this defines the region of the texture to be displayed
+
+
+\begin{DoxyParams}{Parameters}
+{\em offsetX} & x position \\
+\hline
+{\em offsetY} & y position \\
+\hline
+{\em width} & width of the region of texture to be displayed \\
+\hline
+{\em height} & height of the region of texture to be displayed \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classgame_1_1components_1_1Sprite_a85e58f97e3c58806e0dd91f3724a3aeb}\label{classgame_1_1components_1_1Sprite_a85e58f97e3c58806e0dd91f3724a3aeb}} 
+\index{game::components::Sprite@{game::components::Sprite}!mPivot@{mPivot}}
+\index{mPivot@{mPivot}!game::components::Sprite@{game::components::Sprite}}
+\doxysubsubsection{\texorpdfstring{mPivot}{mPivot}}
+{\footnotesize\ttfamily Pivot game\+::components\+::\+Sprite\+::m\+Pivot\hspace{0.3cm}{\ttfamily [private]}}
+
+my cached pivot \mbox{\Hypertarget{classgame_1_1components_1_1Sprite_a81e0f1f5c32ec9f38533a343e625e220}\label{classgame_1_1components_1_1Sprite_a81e0f1f5c32ec9f38533a343e625e220}} 
+\index{game::components::Sprite@{game::components::Sprite}!mReferencedTexture@{mReferencedTexture}}
+\index{mReferencedTexture@{mReferencedTexture}!game::components::Sprite@{game::components::Sprite}}
+\doxysubsubsection{\texorpdfstring{mReferencedTexture}{mReferencedTexture}}
+{\footnotesize\ttfamily sf\+::\+Texture$\ast$ game\+::components\+::\+Sprite\+::m\+Referenced\+Texture\hspace{0.3cm}{\ttfamily [private]}}
+
+my referenced texture \mbox{\Hypertarget{classgame_1_1components_1_1Sprite_a1ac4c32063fc878715fc2029ae070fd6}\label{classgame_1_1components_1_1Sprite_a1ac4c32063fc878715fc2029ae070fd6}} 
+\index{game::components::Sprite@{game::components::Sprite}!mSize@{mSize}}
+\index{mSize@{mSize}!game::components::Sprite@{game::components::Sprite}}
+\doxysubsubsection{\texorpdfstring{mSize}{mSize}}
+{\footnotesize\ttfamily sf\+::\+Vector2f game\+::components\+::\+Sprite\+::m\+Size\hspace{0.3cm}{\ttfamily [private]}}
+
+my cached size \mbox{\Hypertarget{classgame_1_1components_1_1Sprite_af2d9979c5cd048e1643c70c8afaa6cac}\label{classgame_1_1components_1_1Sprite_af2d9979c5cd048e1643c70c8afaa6cac}} 
+\index{game::components::Sprite@{game::components::Sprite}!mSprite@{mSprite}}
+\index{mSprite@{mSprite}!game::components::Sprite@{game::components::Sprite}}
+\doxysubsubsection{\texorpdfstring{mSprite}{mSprite}}
+{\footnotesize\ttfamily sf\+::\+Sprite game\+::components\+::\+Sprite\+::m\+Sprite\hspace{0.3cm}{\ttfamily [private]}}
+
+the actual sprite provided by sfml \mbox{\Hypertarget{classgame_1_1components_1_1Sprite_a85eefc963774baccf809d065f265e5a5}\label{classgame_1_1components_1_1Sprite_a85eefc963774baccf809d065f265e5a5}} 
+\index{game::components::Sprite@{game::components::Sprite}!mTextureRect@{mTextureRect}}
+\index{mTextureRect@{mTextureRect}!game::components::Sprite@{game::components::Sprite}}
+\doxysubsubsection{\texorpdfstring{mTextureRect}{mTextureRect}}
+{\footnotesize\ttfamily sf\+::\+Int\+Rect game\+::components\+::\+Sprite\+::m\+Texture\+Rect\hspace{0.3cm}{\ttfamily [private]}}
+
+the rigion of the texture to be displayed 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Components/\+Drawables/Sprite.\+h\end{DoxyCompactItemize}

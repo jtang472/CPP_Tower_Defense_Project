@@ -1,0 +1,511 @@
+\hypertarget{classgame_1_1core_1_1PlayerState}{}\doxysection{game\+::core\+::Player\+State Class Reference}
+\label{classgame_1_1core_1_1PlayerState}\index{game::core::PlayerState@{game::core::PlayerState}}
+
+
+data structure for player state during gameplay  
+
+
+
+
+{\ttfamily \#include $<$Player\+State.\+h$>$}
+
+
+
+Inheritance diagram for game\+::core\+::Player\+State\+:
+% FIG 0
+
+
+Collaboration diagram for game\+::core\+::Player\+State\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgame_1_1core_1_1PlayerState_adbcbc0367deea861cc48130544b54b53}{Player\+State}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classgame_1_1core_1_1PlayerState}{Player\+State}} constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1core_1_1PlayerState_ab1a4412a86cbbe5f32454532ee952f52}{load}} (\mbox{\hyperlink{structgame_1_1data_1_1PlayerData}{data\+::\+Player\+Data}} $\ast$data)
+\begin{DoxyCompactList}\small\item\em load player state from save file \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1core_1_1PlayerState_a30e0a7ca539b6f7ad53d0c510345181c}{save}} (\mbox{\hyperlink{structgame_1_1data_1_1PlayerData}{data\+::\+Player\+Data}} $\ast$data)
+\begin{DoxyCompactList}\small\item\em save player state to game save file \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classgame_1_1core_1_1PlayerState_a4f5b5f513ff9d07733e98baf4001ab3e}{get\+Game\+Level}} () const
+\begin{DoxyCompactList}\small\item\em get current game level \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1core_1_1PlayerState_a8dc3b8016100866da0fdfe97549d5e56}{set\+Game\+Level}} (int new\+Level)
+\begin{DoxyCompactList}\small\item\em set current game level \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classgame_1_1core_1_1PlayerState_aa15c51e1a683a31636164182bd09706b}{get\+Current\+HP}} () const
+\begin{DoxyCompactList}\small\item\em get current player hp \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1core_1_1PlayerState_a044f84c2206ae1618205fc958d7d53b5}{set\+HP}} (int new\+HP)
+\begin{DoxyCompactList}\small\item\em set current player hp \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1core_1_1PlayerState_ac0028b77a845c15df065e99d963d1a2a}{heal}} (int heal\+Amount)
+\begin{DoxyCompactList}\small\item\em heal player hp \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1core_1_1PlayerState_ad4b5934a1f1f429e7fe3d2bea85b214b}{damage}} (int damage\+Amount)
+\begin{DoxyCompactList}\small\item\em decrease player hp \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classgame_1_1core_1_1PlayerState_ab17ebd4e25e380f7c30c88fc206083e1}{get\+Current\+Point}} () const
+\begin{DoxyCompactList}\small\item\em get current player point \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1core_1_1PlayerState_abad83c77bfdd8df4a4da16aaffa44648}{set\+Point}} (int new\+Point)
+\begin{DoxyCompactList}\small\item\em set current player point \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1core_1_1PlayerState_ae014d93be288fbe01f9cf15ad3764ca0}{change\+Point}} (int changed\+Amount)
+\begin{DoxyCompactList}\small\item\em change player point with a certain amount \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classgame_1_1core_1_1PlayerState_adaf91d79b91b609b41822ce37f7c2c62}{get\+Current\+Gold}} () const
+\begin{DoxyCompactList}\small\item\em get current player gold \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1core_1_1PlayerState_aa677e30012873abc3bb77ed63354c19d}{change\+Gold}} (int changed\+Amount)
+\begin{DoxyCompactList}\small\item\em change player gold with a certain amount \end{DoxyCompactList}\item 
+const std\+::vector$<$ int $>$ \& \mbox{\hyperlink{classgame_1_1core_1_1PlayerState_a79936bd83f09cd530f2a86647b394a38}{get\+Current\+Power\+Ups}} () const
+\begin{DoxyCompactList}\small\item\em get current player gold \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1core_1_1PlayerState_a62994727e2f48bd43af37092a6188e50}{add\+Power\+Up}} (int id)
+\begin{DoxyCompactList}\small\item\em add new powerup item to player storage \end{DoxyCompactList}\item 
+const std\+::vector$<$ int $>$ \& \mbox{\hyperlink{classgame_1_1core_1_1PlayerState_adb909be75350ea86439d551518f08b10}{get\+Current\+Locked\+Towers}} () const
+\begin{DoxyCompactList}\small\item\em get current locked towers \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1core_1_1PlayerState_af4b4346d280b90e3b3689bf009cd39f1}{unlock\+Tower}} (int id)
+\begin{DoxyCompactList}\small\item\em add new tower to player collection \end{DoxyCompactList}\item 
+const std\+::vector$<$ int $>$ \& \mbox{\hyperlink{classgame_1_1core_1_1PlayerState_af0957e40cde8a7f366ac2686a461a077}{get\+Current\+Completed\+Achievements}} () const
+\begin{DoxyCompactList}\small\item\em get current player completed achievements \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1core_1_1PlayerState_aeb6c351286b8b590832d463be4e52ba1}{complete\+Achievement}} (int id)
+\begin{DoxyCompactList}\small\item\em complete a achievement by its id \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1core_1_1PlayerState_a81327ffd2919d2ae44053ec74b24ae5a}{reset}} ()
+\begin{DoxyCompactList}\small\item\em reset player to initial state \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Player\+Hp\+Change\+Delegate \mbox{\hyperlink{classgame_1_1core_1_1PlayerState_a38d1d614ae42e6f0814d95d2cdc579ee}{player\+Hp\+Change\+Event}}
+\item 
+Player\+Dead\+Delegate \mbox{\hyperlink{classgame_1_1core_1_1PlayerState_a890e35aff48fcf3dc380fa811612f5dd}{player\+Dead\+Event}}
+\item 
+Player\+Gold\+Change\+Delegate \mbox{\hyperlink{classgame_1_1core_1_1PlayerState_ac615b3328e7b5359f27cc351d5ad4440}{player\+Gold\+Change\+Event}}
+\item 
+Player\+Point\+Change\+Delegate \mbox{\hyperlink{classgame_1_1core_1_1PlayerState_a038a07624491542e6ab6b6f0e97f71a5}{player\+Point\+Change\+Event}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classgame_1_1core_1_1PlayerState_a491b634042e0ad873297167c94f1bb88}{m\+Game\+Level}}
+\item 
+int \mbox{\hyperlink{classgame_1_1core_1_1PlayerState_af5a83b1d01e684138f9e7f2cc1dd1696}{m\+Hp}}
+\item 
+int \mbox{\hyperlink{classgame_1_1core_1_1PlayerState_ab32bdc3a425e8d7212a7f6874063a0ce}{m\+Point}}
+\item 
+int \mbox{\hyperlink{classgame_1_1core_1_1PlayerState_a4193aa436c67034fa0949758f1cc00f6}{m\+Current\+Gold}}
+\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{classgame_1_1core_1_1PlayerState_a1256a206d1ad17986ff68357bcd54185}{m\+Power\+Ups}}
+\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{classgame_1_1core_1_1PlayerState_a5fbcfd3c2f4d8c414c1e75065f9994fb}{m\+Unlocked\+Towers}}
+\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{classgame_1_1core_1_1PlayerState_aa183c76cc13b06b71d5d333310203ae9}{m\+Completed\+Achievements}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+data structure for player state during gameplay 
+
+this class maintains and updates player state during gameplay, and it offers some convinient APIs to easily write/read player state to/from save file
+
+\begin{DoxyAuthor}{Author}
+Zheng Yang 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgame_1_1core_1_1PlayerState_adbcbc0367deea861cc48130544b54b53}\label{classgame_1_1core_1_1PlayerState_adbcbc0367deea861cc48130544b54b53}} 
+\index{game::core::PlayerState@{game::core::PlayerState}!PlayerState@{PlayerState}}
+\index{PlayerState@{PlayerState}!game::core::PlayerState@{game::core::PlayerState}}
+\doxysubsubsection{\texorpdfstring{PlayerState()}{PlayerState()}}
+{\footnotesize\ttfamily game\+::core\+::\+Player\+State\+::\+Player\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classgame_1_1core_1_1PlayerState}{Player\+State}} constructor. 
+
+\mbox{\hyperlink{classgame_1_1core_1_1PlayerState}{Player\+State}} constructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgame_1_1core_1_1PlayerState_a62994727e2f48bd43af37092a6188e50}\label{classgame_1_1core_1_1PlayerState_a62994727e2f48bd43af37092a6188e50}} 
+\index{game::core::PlayerState@{game::core::PlayerState}!addPowerUp@{addPowerUp}}
+\index{addPowerUp@{addPowerUp}!game::core::PlayerState@{game::core::PlayerState}}
+\doxysubsubsection{\texorpdfstring{addPowerUp()}{addPowerUp()}}
+{\footnotesize\ttfamily void game\+::core\+::\+Player\+State\+::add\+Power\+Up (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+add new powerup item to player storage 
+
+add new powerup item to player storage
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & unique id of the new item \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1core_1_1PlayerState_aa677e30012873abc3bb77ed63354c19d}\label{classgame_1_1core_1_1PlayerState_aa677e30012873abc3bb77ed63354c19d}} 
+\index{game::core::PlayerState@{game::core::PlayerState}!changeGold@{changeGold}}
+\index{changeGold@{changeGold}!game::core::PlayerState@{game::core::PlayerState}}
+\doxysubsubsection{\texorpdfstring{changeGold()}{changeGold()}}
+{\footnotesize\ttfamily void game\+::core\+::\+Player\+State\+::change\+Gold (\begin{DoxyParamCaption}\item[{int}]{changed\+Amount }\end{DoxyParamCaption})}
+
+
+
+change player gold with a certain amount 
+
+change player gold with a certain amount
+
+
+\begin{DoxyParams}{Parameters}
+{\em changed\+Amount} & change amount \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1core_1_1PlayerState_ae014d93be288fbe01f9cf15ad3764ca0}\label{classgame_1_1core_1_1PlayerState_ae014d93be288fbe01f9cf15ad3764ca0}} 
+\index{game::core::PlayerState@{game::core::PlayerState}!changePoint@{changePoint}}
+\index{changePoint@{changePoint}!game::core::PlayerState@{game::core::PlayerState}}
+\doxysubsubsection{\texorpdfstring{changePoint()}{changePoint()}}
+{\footnotesize\ttfamily void game\+::core\+::\+Player\+State\+::change\+Point (\begin{DoxyParamCaption}\item[{int}]{changed\+Amount }\end{DoxyParamCaption})}
+
+
+
+change player point with a certain amount 
+
+change player point with a certain amount
+
+
+\begin{DoxyParams}{Parameters}
+{\em changed\+Amount} & change amount \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1core_1_1PlayerState_aeb6c351286b8b590832d463be4e52ba1}\label{classgame_1_1core_1_1PlayerState_aeb6c351286b8b590832d463be4e52ba1}} 
+\index{game::core::PlayerState@{game::core::PlayerState}!completeAchievement@{completeAchievement}}
+\index{completeAchievement@{completeAchievement}!game::core::PlayerState@{game::core::PlayerState}}
+\doxysubsubsection{\texorpdfstring{completeAchievement()}{completeAchievement()}}
+{\footnotesize\ttfamily void game\+::core\+::\+Player\+State\+::complete\+Achievement (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+complete a achievement by its id 
+
+complete a achievement by its id
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & unique id of the achievement \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1core_1_1PlayerState_ad4b5934a1f1f429e7fe3d2bea85b214b}\label{classgame_1_1core_1_1PlayerState_ad4b5934a1f1f429e7fe3d2bea85b214b}} 
+\index{game::core::PlayerState@{game::core::PlayerState}!damage@{damage}}
+\index{damage@{damage}!game::core::PlayerState@{game::core::PlayerState}}
+\doxysubsubsection{\texorpdfstring{damage()}{damage()}}
+{\footnotesize\ttfamily void game\+::core\+::\+Player\+State\+::damage (\begin{DoxyParamCaption}\item[{int}]{damage\+Amount }\end{DoxyParamCaption})}
+
+
+
+decrease player hp 
+
+decrease player hp
+
+
+\begin{DoxyParams}{Parameters}
+{\em damage\+Amount} & damage amount \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1core_1_1PlayerState_af0957e40cde8a7f366ac2686a461a077}\label{classgame_1_1core_1_1PlayerState_af0957e40cde8a7f366ac2686a461a077}} 
+\index{game::core::PlayerState@{game::core::PlayerState}!getCurrentCompletedAchievements@{getCurrentCompletedAchievements}}
+\index{getCurrentCompletedAchievements@{getCurrentCompletedAchievements}!game::core::PlayerState@{game::core::PlayerState}}
+\doxysubsubsection{\texorpdfstring{getCurrentCompletedAchievements()}{getCurrentCompletedAchievements()}}
+{\footnotesize\ttfamily const std\+::vector$<$int$>$\& game\+::core\+::\+Player\+State\+::get\+Current\+Completed\+Achievements (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get current player completed achievements 
+
+get current player completed achievements
+
+\begin{DoxyReturn}{Returns}
+current player completed achievements 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgame_1_1core_1_1PlayerState_adaf91d79b91b609b41822ce37f7c2c62}\label{classgame_1_1core_1_1PlayerState_adaf91d79b91b609b41822ce37f7c2c62}} 
+\index{game::core::PlayerState@{game::core::PlayerState}!getCurrentGold@{getCurrentGold}}
+\index{getCurrentGold@{getCurrentGold}!game::core::PlayerState@{game::core::PlayerState}}
+\doxysubsubsection{\texorpdfstring{getCurrentGold()}{getCurrentGold()}}
+{\footnotesize\ttfamily int game\+::core\+::\+Player\+State\+::get\+Current\+Gold (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get current player gold 
+
+get current player gold
+
+\begin{DoxyReturn}{Returns}
+current player gold 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgame_1_1core_1_1PlayerState_aa15c51e1a683a31636164182bd09706b}\label{classgame_1_1core_1_1PlayerState_aa15c51e1a683a31636164182bd09706b}} 
+\index{game::core::PlayerState@{game::core::PlayerState}!getCurrentHP@{getCurrentHP}}
+\index{getCurrentHP@{getCurrentHP}!game::core::PlayerState@{game::core::PlayerState}}
+\doxysubsubsection{\texorpdfstring{getCurrentHP()}{getCurrentHP()}}
+{\footnotesize\ttfamily int game\+::core\+::\+Player\+State\+::get\+Current\+HP (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get current player hp 
+
+get current player hp
+
+\begin{DoxyReturn}{Returns}
+current player hp 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgame_1_1core_1_1PlayerState_adb909be75350ea86439d551518f08b10}\label{classgame_1_1core_1_1PlayerState_adb909be75350ea86439d551518f08b10}} 
+\index{game::core::PlayerState@{game::core::PlayerState}!getCurrentLockedTowers@{getCurrentLockedTowers}}
+\index{getCurrentLockedTowers@{getCurrentLockedTowers}!game::core::PlayerState@{game::core::PlayerState}}
+\doxysubsubsection{\texorpdfstring{getCurrentLockedTowers()}{getCurrentLockedTowers()}}
+{\footnotesize\ttfamily const std\+::vector$<$int$>$\& game\+::core\+::\+Player\+State\+::get\+Current\+Locked\+Towers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get current locked towers 
+
+get current player locked towers
+
+\begin{DoxyReturn}{Returns}
+current player locked towers 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgame_1_1core_1_1PlayerState_ab17ebd4e25e380f7c30c88fc206083e1}\label{classgame_1_1core_1_1PlayerState_ab17ebd4e25e380f7c30c88fc206083e1}} 
+\index{game::core::PlayerState@{game::core::PlayerState}!getCurrentPoint@{getCurrentPoint}}
+\index{getCurrentPoint@{getCurrentPoint}!game::core::PlayerState@{game::core::PlayerState}}
+\doxysubsubsection{\texorpdfstring{getCurrentPoint()}{getCurrentPoint()}}
+{\footnotesize\ttfamily int game\+::core\+::\+Player\+State\+::get\+Current\+Point (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get current player point 
+
+get current player point
+
+\begin{DoxyReturn}{Returns}
+current player point 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgame_1_1core_1_1PlayerState_a79936bd83f09cd530f2a86647b394a38}\label{classgame_1_1core_1_1PlayerState_a79936bd83f09cd530f2a86647b394a38}} 
+\index{game::core::PlayerState@{game::core::PlayerState}!getCurrentPowerUps@{getCurrentPowerUps}}
+\index{getCurrentPowerUps@{getCurrentPowerUps}!game::core::PlayerState@{game::core::PlayerState}}
+\doxysubsubsection{\texorpdfstring{getCurrentPowerUps()}{getCurrentPowerUps()}}
+{\footnotesize\ttfamily const std\+::vector$<$int$>$\& game\+::core\+::\+Player\+State\+::get\+Current\+Power\+Ups (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get current player gold 
+
+get current player gold
+
+\begin{DoxyReturn}{Returns}
+current player gold 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgame_1_1core_1_1PlayerState_a4f5b5f513ff9d07733e98baf4001ab3e}\label{classgame_1_1core_1_1PlayerState_a4f5b5f513ff9d07733e98baf4001ab3e}} 
+\index{game::core::PlayerState@{game::core::PlayerState}!getGameLevel@{getGameLevel}}
+\index{getGameLevel@{getGameLevel}!game::core::PlayerState@{game::core::PlayerState}}
+\doxysubsubsection{\texorpdfstring{getGameLevel()}{getGameLevel()}}
+{\footnotesize\ttfamily int game\+::core\+::\+Player\+State\+::get\+Game\+Level (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get current game level 
+
+get current game level
+
+\begin{DoxyReturn}{Returns}
+current game level 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgame_1_1core_1_1PlayerState_ac0028b77a845c15df065e99d963d1a2a}\label{classgame_1_1core_1_1PlayerState_ac0028b77a845c15df065e99d963d1a2a}} 
+\index{game::core::PlayerState@{game::core::PlayerState}!heal@{heal}}
+\index{heal@{heal}!game::core::PlayerState@{game::core::PlayerState}}
+\doxysubsubsection{\texorpdfstring{heal()}{heal()}}
+{\footnotesize\ttfamily void game\+::core\+::\+Player\+State\+::heal (\begin{DoxyParamCaption}\item[{int}]{heal\+Amount }\end{DoxyParamCaption})}
+
+
+
+heal player hp 
+
+heal player hp
+
+
+\begin{DoxyParams}{Parameters}
+{\em heal\+Amount} & heal amount \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1core_1_1PlayerState_ab1a4412a86cbbe5f32454532ee952f52}\label{classgame_1_1core_1_1PlayerState_ab1a4412a86cbbe5f32454532ee952f52}} 
+\index{game::core::PlayerState@{game::core::PlayerState}!load@{load}}
+\index{load@{load}!game::core::PlayerState@{game::core::PlayerState}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily void game\+::core\+::\+Player\+State\+::load (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structgame_1_1data_1_1PlayerData}{data\+::\+Player\+Data}} $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+load player state from save file 
+
+load player state from save file
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & player save file data \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1core_1_1PlayerState_a81327ffd2919d2ae44053ec74b24ae5a}\label{classgame_1_1core_1_1PlayerState_a81327ffd2919d2ae44053ec74b24ae5a}} 
+\index{game::core::PlayerState@{game::core::PlayerState}!reset@{reset}}
+\index{reset@{reset}!game::core::PlayerState@{game::core::PlayerState}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void game\+::core\+::\+Player\+State\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+reset player to initial state 
+
+reset player to initial state \mbox{\Hypertarget{classgame_1_1core_1_1PlayerState_a30e0a7ca539b6f7ad53d0c510345181c}\label{classgame_1_1core_1_1PlayerState_a30e0a7ca539b6f7ad53d0c510345181c}} 
+\index{game::core::PlayerState@{game::core::PlayerState}!save@{save}}
+\index{save@{save}!game::core::PlayerState@{game::core::PlayerState}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily void game\+::core\+::\+Player\+State\+::save (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structgame_1_1data_1_1PlayerData}{data\+::\+Player\+Data}} $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+save player state to game save file 
+
+save player state to game save file
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & player save file data \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1core_1_1PlayerState_a8dc3b8016100866da0fdfe97549d5e56}\label{classgame_1_1core_1_1PlayerState_a8dc3b8016100866da0fdfe97549d5e56}} 
+\index{game::core::PlayerState@{game::core::PlayerState}!setGameLevel@{setGameLevel}}
+\index{setGameLevel@{setGameLevel}!game::core::PlayerState@{game::core::PlayerState}}
+\doxysubsubsection{\texorpdfstring{setGameLevel()}{setGameLevel()}}
+{\footnotesize\ttfamily void game\+::core\+::\+Player\+State\+::set\+Game\+Level (\begin{DoxyParamCaption}\item[{int}]{new\+Level }\end{DoxyParamCaption})}
+
+
+
+set current game level 
+
+set current game level
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Level} & new game level \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1core_1_1PlayerState_a044f84c2206ae1618205fc958d7d53b5}\label{classgame_1_1core_1_1PlayerState_a044f84c2206ae1618205fc958d7d53b5}} 
+\index{game::core::PlayerState@{game::core::PlayerState}!setHP@{setHP}}
+\index{setHP@{setHP}!game::core::PlayerState@{game::core::PlayerState}}
+\doxysubsubsection{\texorpdfstring{setHP()}{setHP()}}
+{\footnotesize\ttfamily void game\+::core\+::\+Player\+State\+::set\+HP (\begin{DoxyParamCaption}\item[{int}]{new\+HP }\end{DoxyParamCaption})}
+
+
+
+set current player hp 
+
+set current player hp
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+HP} & new player hp \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1core_1_1PlayerState_abad83c77bfdd8df4a4da16aaffa44648}\label{classgame_1_1core_1_1PlayerState_abad83c77bfdd8df4a4da16aaffa44648}} 
+\index{game::core::PlayerState@{game::core::PlayerState}!setPoint@{setPoint}}
+\index{setPoint@{setPoint}!game::core::PlayerState@{game::core::PlayerState}}
+\doxysubsubsection{\texorpdfstring{setPoint()}{setPoint()}}
+{\footnotesize\ttfamily void game\+::core\+::\+Player\+State\+::set\+Point (\begin{DoxyParamCaption}\item[{int}]{new\+Point }\end{DoxyParamCaption})}
+
+
+
+set current player point 
+
+set current player point
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Point} & new player point \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1core_1_1PlayerState_af4b4346d280b90e3b3689bf009cd39f1}\label{classgame_1_1core_1_1PlayerState_af4b4346d280b90e3b3689bf009cd39f1}} 
+\index{game::core::PlayerState@{game::core::PlayerState}!unlockTower@{unlockTower}}
+\index{unlockTower@{unlockTower}!game::core::PlayerState@{game::core::PlayerState}}
+\doxysubsubsection{\texorpdfstring{unlockTower()}{unlockTower()}}
+{\footnotesize\ttfamily void game\+::core\+::\+Player\+State\+::unlock\+Tower (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+add new tower to player collection 
+
+add new tower to player collection
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & unique id of the new tower \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classgame_1_1core_1_1PlayerState_aa183c76cc13b06b71d5d333310203ae9}\label{classgame_1_1core_1_1PlayerState_aa183c76cc13b06b71d5d333310203ae9}} 
+\index{game::core::PlayerState@{game::core::PlayerState}!mCompletedAchievements@{mCompletedAchievements}}
+\index{mCompletedAchievements@{mCompletedAchievements}!game::core::PlayerState@{game::core::PlayerState}}
+\doxysubsubsection{\texorpdfstring{mCompletedAchievements}{mCompletedAchievements}}
+{\footnotesize\ttfamily std\+::vector$<$int$>$ game\+::core\+::\+Player\+State\+::m\+Completed\+Achievements\hspace{0.3cm}{\ttfamily [private]}}
+
+all completed achievements \mbox{\Hypertarget{classgame_1_1core_1_1PlayerState_a4193aa436c67034fa0949758f1cc00f6}\label{classgame_1_1core_1_1PlayerState_a4193aa436c67034fa0949758f1cc00f6}} 
+\index{game::core::PlayerState@{game::core::PlayerState}!mCurrentGold@{mCurrentGold}}
+\index{mCurrentGold@{mCurrentGold}!game::core::PlayerState@{game::core::PlayerState}}
+\doxysubsubsection{\texorpdfstring{mCurrentGold}{mCurrentGold}}
+{\footnotesize\ttfamily int game\+::core\+::\+Player\+State\+::m\+Current\+Gold\hspace{0.3cm}{\ttfamily [private]}}
+
+current player gold \mbox{\Hypertarget{classgame_1_1core_1_1PlayerState_a491b634042e0ad873297167c94f1bb88}\label{classgame_1_1core_1_1PlayerState_a491b634042e0ad873297167c94f1bb88}} 
+\index{game::core::PlayerState@{game::core::PlayerState}!mGameLevel@{mGameLevel}}
+\index{mGameLevel@{mGameLevel}!game::core::PlayerState@{game::core::PlayerState}}
+\doxysubsubsection{\texorpdfstring{mGameLevel}{mGameLevel}}
+{\footnotesize\ttfamily int game\+::core\+::\+Player\+State\+::m\+Game\+Level\hspace{0.3cm}{\ttfamily [private]}}
+
+current game level \mbox{\Hypertarget{classgame_1_1core_1_1PlayerState_af5a83b1d01e684138f9e7f2cc1dd1696}\label{classgame_1_1core_1_1PlayerState_af5a83b1d01e684138f9e7f2cc1dd1696}} 
+\index{game::core::PlayerState@{game::core::PlayerState}!mHp@{mHp}}
+\index{mHp@{mHp}!game::core::PlayerState@{game::core::PlayerState}}
+\doxysubsubsection{\texorpdfstring{mHp}{mHp}}
+{\footnotesize\ttfamily int game\+::core\+::\+Player\+State\+::m\+Hp\hspace{0.3cm}{\ttfamily [private]}}
+
+current player hp \mbox{\Hypertarget{classgame_1_1core_1_1PlayerState_ab32bdc3a425e8d7212a7f6874063a0ce}\label{classgame_1_1core_1_1PlayerState_ab32bdc3a425e8d7212a7f6874063a0ce}} 
+\index{game::core::PlayerState@{game::core::PlayerState}!mPoint@{mPoint}}
+\index{mPoint@{mPoint}!game::core::PlayerState@{game::core::PlayerState}}
+\doxysubsubsection{\texorpdfstring{mPoint}{mPoint}}
+{\footnotesize\ttfamily int game\+::core\+::\+Player\+State\+::m\+Point\hspace{0.3cm}{\ttfamily [private]}}
+
+current player point \mbox{\Hypertarget{classgame_1_1core_1_1PlayerState_a1256a206d1ad17986ff68357bcd54185}\label{classgame_1_1core_1_1PlayerState_a1256a206d1ad17986ff68357bcd54185}} 
+\index{game::core::PlayerState@{game::core::PlayerState}!mPowerUps@{mPowerUps}}
+\index{mPowerUps@{mPowerUps}!game::core::PlayerState@{game::core::PlayerState}}
+\doxysubsubsection{\texorpdfstring{mPowerUps}{mPowerUps}}
+{\footnotesize\ttfamily std\+::vector$<$int$>$ game\+::core\+::\+Player\+State\+::m\+Power\+Ups\hspace{0.3cm}{\ttfamily [private]}}
+
+current powerup items \mbox{\Hypertarget{classgame_1_1core_1_1PlayerState_a5fbcfd3c2f4d8c414c1e75065f9994fb}\label{classgame_1_1core_1_1PlayerState_a5fbcfd3c2f4d8c414c1e75065f9994fb}} 
+\index{game::core::PlayerState@{game::core::PlayerState}!mUnlockedTowers@{mUnlockedTowers}}
+\index{mUnlockedTowers@{mUnlockedTowers}!game::core::PlayerState@{game::core::PlayerState}}
+\doxysubsubsection{\texorpdfstring{mUnlockedTowers}{mUnlockedTowers}}
+{\footnotesize\ttfamily std\+::vector$<$int$>$ game\+::core\+::\+Player\+State\+::m\+Unlocked\+Towers\hspace{0.3cm}{\ttfamily [private]}}
+
+current towers \mbox{\Hypertarget{classgame_1_1core_1_1PlayerState_a890e35aff48fcf3dc380fa811612f5dd}\label{classgame_1_1core_1_1PlayerState_a890e35aff48fcf3dc380fa811612f5dd}} 
+\index{game::core::PlayerState@{game::core::PlayerState}!playerDeadEvent@{playerDeadEvent}}
+\index{playerDeadEvent@{playerDeadEvent}!game::core::PlayerState@{game::core::PlayerState}}
+\doxysubsubsection{\texorpdfstring{playerDeadEvent}{playerDeadEvent}}
+{\footnotesize\ttfamily Player\+Dead\+Delegate game\+::core\+::\+Player\+State\+::player\+Dead\+Event}
+
+player dead event \mbox{\Hypertarget{classgame_1_1core_1_1PlayerState_ac615b3328e7b5359f27cc351d5ad4440}\label{classgame_1_1core_1_1PlayerState_ac615b3328e7b5359f27cc351d5ad4440}} 
+\index{game::core::PlayerState@{game::core::PlayerState}!playerGoldChangeEvent@{playerGoldChangeEvent}}
+\index{playerGoldChangeEvent@{playerGoldChangeEvent}!game::core::PlayerState@{game::core::PlayerState}}
+\doxysubsubsection{\texorpdfstring{playerGoldChangeEvent}{playerGoldChangeEvent}}
+{\footnotesize\ttfamily Player\+Gold\+Change\+Delegate game\+::core\+::\+Player\+State\+::player\+Gold\+Change\+Event}
+
+player gold change event \mbox{\Hypertarget{classgame_1_1core_1_1PlayerState_a38d1d614ae42e6f0814d95d2cdc579ee}\label{classgame_1_1core_1_1PlayerState_a38d1d614ae42e6f0814d95d2cdc579ee}} 
+\index{game::core::PlayerState@{game::core::PlayerState}!playerHpChangeEvent@{playerHpChangeEvent}}
+\index{playerHpChangeEvent@{playerHpChangeEvent}!game::core::PlayerState@{game::core::PlayerState}}
+\doxysubsubsection{\texorpdfstring{playerHpChangeEvent}{playerHpChangeEvent}}
+{\footnotesize\ttfamily Player\+Hp\+Change\+Delegate game\+::core\+::\+Player\+State\+::player\+Hp\+Change\+Event}
+
+player hp change event \mbox{\Hypertarget{classgame_1_1core_1_1PlayerState_a038a07624491542e6ab6b6f0e97f71a5}\label{classgame_1_1core_1_1PlayerState_a038a07624491542e6ab6b6f0e97f71a5}} 
+\index{game::core::PlayerState@{game::core::PlayerState}!playerPointChangeEvent@{playerPointChangeEvent}}
+\index{playerPointChangeEvent@{playerPointChangeEvent}!game::core::PlayerState@{game::core::PlayerState}}
+\doxysubsubsection{\texorpdfstring{playerPointChangeEvent}{playerPointChangeEvent}}
+{\footnotesize\ttfamily Player\+Point\+Change\+Delegate game\+::core\+::\+Player\+State\+::player\+Point\+Change\+Event}
+
+player point change event 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Core/Player\+State.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,122 @@
+\hypertarget{classgame_1_1resource_1_1Localization}{}\doxysection{game\+::resource\+::Localization Class Reference}
+\label{classgame_1_1resource_1_1Localization}\index{game::resource::Localization@{game::resource::Localization}}
+
+
+game text localization manager  
+
+
+
+
+{\ttfamily \#include $<$Localization.\+h$>$}
+
+
+
+Inheritance diagram for game\+::resource\+::Localization\+:
+% FIG 0
+
+
+Collaboration diagram for game\+::resource\+::Localization\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classgame_1_1resource_1_1Localization_a19e458795875c1ed2a05e85ab67f0e3e}{init}} ()
+\begin{DoxyCompactList}\small\item\em localization manager initialization \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1resource_1_1Localization_a18bc77513847de14324d1c232f1c4485}{load\+Master\+Text}} ()
+\begin{DoxyCompactList}\small\item\em load game master text \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classgame_1_1resource_1_1Localization_a639a4b93134052e14972e0629476527c}{get}} (std\+::string text\+ID)
+\begin{DoxyCompactList}\small\item\em get game text by its referenced id \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgame_1_1resource_1_1Localization_acac976e1b4ba4849bb8449ec2a6cc08c}{Localization}} ()
+\begin{DoxyCompactList}\small\item\em private constructor \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, std\+::string $>$ \mbox{\hyperlink{classgame_1_1resource_1_1Localization_acbe8e167ed6b620160ba05e3c121ca46}{m\+Lookup}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classgame_1_1resource_1_1Localization_a10a8d53983c16e2832da6929b8754f23}\label{classgame_1_1resource_1_1Localization_a10a8d53983c16e2832da6929b8754f23}} 
+class {\bfseries utils\+::\+Singleton$<$ Localization $>$}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+game text localization manager 
+
+this class maintains a mapping between in-\/game text reference ids and the actual texts, which are defined in the master text file in csv format
+
+\begin{DoxyAuthor}{Author}
+Zheng Yang 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgame_1_1resource_1_1Localization_acac976e1b4ba4849bb8449ec2a6cc08c}\label{classgame_1_1resource_1_1Localization_acac976e1b4ba4849bb8449ec2a6cc08c}} 
+\index{game::resource::Localization@{game::resource::Localization}!Localization@{Localization}}
+\index{Localization@{Localization}!game::resource::Localization@{game::resource::Localization}}
+\doxysubsubsection{\texorpdfstring{Localization()}{Localization()}}
+{\footnotesize\ttfamily game\+::resource\+::\+Localization\+::\+Localization (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+private constructor 
+
+private constructor to ensure singleton pattern 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgame_1_1resource_1_1Localization_a639a4b93134052e14972e0629476527c}\label{classgame_1_1resource_1_1Localization_a639a4b93134052e14972e0629476527c}} 
+\index{game::resource::Localization@{game::resource::Localization}!get@{get}}
+\index{get@{get}!game::resource::Localization@{game::resource::Localization}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily std\+::string game\+::resource\+::\+Localization\+::get (\begin{DoxyParamCaption}\item[{std\+::string}]{text\+ID }\end{DoxyParamCaption})}
+
+
+
+get game text by its referenced id 
+
+get game text by its referenced id
+
+
+\begin{DoxyParams}{Parameters}
+{\em text\+ID} & text reference id \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1resource_1_1Localization_a19e458795875c1ed2a05e85ab67f0e3e}\label{classgame_1_1resource_1_1Localization_a19e458795875c1ed2a05e85ab67f0e3e}} 
+\index{game::resource::Localization@{game::resource::Localization}!init@{init}}
+\index{init@{init}!game::resource::Localization@{game::resource::Localization}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void game\+::resource\+::\+Localization\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+localization manager initialization 
+
+call this function to initialization localization manager before using any of its APIs \mbox{\Hypertarget{classgame_1_1resource_1_1Localization_a18bc77513847de14324d1c232f1c4485}\label{classgame_1_1resource_1_1Localization_a18bc77513847de14324d1c232f1c4485}} 
+\index{game::resource::Localization@{game::resource::Localization}!loadMasterText@{loadMasterText}}
+\index{loadMasterText@{loadMasterText}!game::resource::Localization@{game::resource::Localization}}
+\doxysubsubsection{\texorpdfstring{loadMasterText()}{loadMasterText()}}
+{\footnotesize\ttfamily void game\+::resource\+::\+Localization\+::load\+Master\+Text (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+load game master text 
+
+load game master text from project directory, the master text is defined in csv format 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classgame_1_1resource_1_1Localization_acbe8e167ed6b620160ba05e3c121ca46}\label{classgame_1_1resource_1_1Localization_acbe8e167ed6b620160ba05e3c121ca46}} 
+\index{game::resource::Localization@{game::resource::Localization}!mLookup@{mLookup}}
+\index{mLookup@{mLookup}!game::resource::Localization@{game::resource::Localization}}
+\doxysubsubsection{\texorpdfstring{mLookup}{mLookup}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, std\+::string$>$ game\+::resource\+::\+Localization\+::m\+Lookup\hspace{0.3cm}{\ttfamily [private]}}
+
+ref id to text mapping 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Resource/Localization.\+h\end{DoxyCompactItemize}

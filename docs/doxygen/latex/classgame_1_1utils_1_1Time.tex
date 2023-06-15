@@ -1,0 +1,103 @@
+\hypertarget{classgame_1_1utils_1_1Time}{}\doxysection{game\+::utils\+::Time Class Reference}
+\label{classgame_1_1utils_1_1Time}\index{game::utils::Time@{game::utils::Time}}
+
+
+a static class to deal with in-\/game time  
+
+
+
+
+{\ttfamily \#include $<$Time.\+h$>$}
+
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string \mbox{\hyperlink{classgame_1_1utils_1_1Time_af0712b4468d0aa6c10b2ee26023d2797}{get\+Current\+Time}} ()
+\begin{DoxyCompactList}\small\item\em get current local time \end{DoxyCompactList}\item 
+static float \mbox{\hyperlink{classgame_1_1utils_1_1Time_a9953954d748a8137e3666f56127b60de}{get\+Delta\+Time}} ()
+\begin{DoxyCompactList}\small\item\em get the time elapsed from last frame to current frame \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classgame_1_1utils_1_1Time_ac9e2f0d6306c13d9af180cdbefce95c5}{set\+Delta\+Time}} (float time)
+\begin{DoxyCompactList}\small\item\em set the time elapsed from last frame to current frame \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static float \mbox{\hyperlink{classgame_1_1utils_1_1Time_a126f4fe7b12c191529af86bf6fb6d944}{delta\+Time}}
+\begin{DoxyCompactList}\small\item\em time elapsed between frames \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+a static class to deal with in-\/game time 
+
+This class is pure static and is meant to deal with time-\/related values in game
+
+\begin{DoxyAuthor}{Author}
+Zheng Yang 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgame_1_1utils_1_1Time_af0712b4468d0aa6c10b2ee26023d2797}\label{classgame_1_1utils_1_1Time_af0712b4468d0aa6c10b2ee26023d2797}} 
+\index{game::utils::Time@{game::utils::Time}!getCurrentTime@{getCurrentTime}}
+\index{getCurrentTime@{getCurrentTime}!game::utils::Time@{game::utils::Time}}
+\doxysubsubsection{\texorpdfstring{getCurrentTime()}{getCurrentTime()}}
+{\footnotesize\ttfamily static std\+::string game\+::utils\+::\+Time\+::get\+Current\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+get current local time 
+
+this function returns the current local time to the function caller
+
+\begin{DoxyReturn}{Returns}
+the current local time 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgame_1_1utils_1_1Time_a9953954d748a8137e3666f56127b60de}\label{classgame_1_1utils_1_1Time_a9953954d748a8137e3666f56127b60de}} 
+\index{game::utils::Time@{game::utils::Time}!getDeltaTime@{getDeltaTime}}
+\index{getDeltaTime@{getDeltaTime}!game::utils::Time@{game::utils::Time}}
+\doxysubsubsection{\texorpdfstring{getDeltaTime()}{getDeltaTime()}}
+{\footnotesize\ttfamily static float game\+::utils\+::\+Time\+::get\+Delta\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+get the time elapsed from last frame to current frame 
+
+this function returns the time elapsed from last frame to current frame
+
+\begin{DoxyReturn}{Returns}
+the time elapsed from last frame to current frame 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgame_1_1utils_1_1Time_ac9e2f0d6306c13d9af180cdbefce95c5}\label{classgame_1_1utils_1_1Time_ac9e2f0d6306c13d9af180cdbefce95c5}} 
+\index{game::utils::Time@{game::utils::Time}!setDeltaTime@{setDeltaTime}}
+\index{setDeltaTime@{setDeltaTime}!game::utils::Time@{game::utils::Time}}
+\doxysubsubsection{\texorpdfstring{setDeltaTime()}{setDeltaTime()}}
+{\footnotesize\ttfamily static void game\+::utils\+::\+Time\+::set\+Delta\+Time (\begin{DoxyParamCaption}\item[{float}]{time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+set the time elapsed from last frame to current frame 
+
+this function set the time elapsed from last frame to current frame
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & the time elapsed from last frame to current frame \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classgame_1_1utils_1_1Time_a126f4fe7b12c191529af86bf6fb6d944}\label{classgame_1_1utils_1_1Time_a126f4fe7b12c191529af86bf6fb6d944}} 
+\index{game::utils::Time@{game::utils::Time}!deltaTime@{deltaTime}}
+\index{deltaTime@{deltaTime}!game::utils::Time@{game::utils::Time}}
+\doxysubsubsection{\texorpdfstring{deltaTime}{deltaTime}}
+{\footnotesize\ttfamily float game\+::utils\+::\+Time\+::delta\+Time\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+time elapsed between frames 
+
+this is the cached time elapsed from last frame to this frame 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Utils/Time.\+h\end{DoxyCompactItemize}

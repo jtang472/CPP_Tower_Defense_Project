@@ -1,0 +1,195 @@
+\hypertarget{classgame_1_1prefabs_1_1PlayerHudPrefab}{}\doxysection{game\+::prefabs\+::Player\+Hud\+Prefab Class Reference}
+\label{classgame_1_1prefabs_1_1PlayerHudPrefab}\index{game::prefabs::PlayerHudPrefab@{game::prefabs::PlayerHudPrefab}}
+
+
+predefined player HUD menu  
+
+
+
+
+{\ttfamily \#include $<$Player\+Hud\+Prefab.\+h$>$}
+
+
+
+Inheritance diagram for game\+::prefabs\+::Player\+Hud\+Prefab\+:
+% FIG 0
+
+
+Collaboration diagram for game\+::prefabs\+::Player\+Hud\+Prefab\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgame_1_1prefabs_1_1PlayerHudPrefab_a7383e9b20e9eb97bc434737b473c8ab5}{Player\+Hud\+Prefab}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classgame_1_1prefabs_1_1PlayerHudPrefab}{Player\+Hud\+Prefab}} constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classgame_1_1core_1_1ObjectHandle}{core\+::\+Go\+Handle}} \mbox{\hyperlink{classgame_1_1prefabs_1_1PlayerHudPrefab_a27ef76b389b667c9481d89635ff9130a}{get\+Go\+Handle}} () override
+\begin{DoxyCompactList}\small\item\em root gameobject getter \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1prefabs_1_1PlayerHudPrefab_acf506c4023c68906f3ee76a88d286aa3}{set\+HP}} (int new\+HP)
+\begin{DoxyCompactList}\small\item\em player hp text setter \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1prefabs_1_1PlayerHudPrefab_ad9181fad8b3bff316d2dd4c98e62e0d6}{set\+Point}} (int new\+Money)
+\begin{DoxyCompactList}\small\item\em player point text setter \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1prefabs_1_1PlayerHudPrefab_aa06d57946760daca6aa3a713c618300e}{set\+Time\+Elapsed}} (int time\+In\+Seconds)
+\begin{DoxyCompactList}\small\item\em time elapsed from game start text setter \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classgame_1_1prefabs_1_1PlayerHudPrefab_abcd3fa88d751e0f537d0e8db030b34f0}{re\+Calculate\+Bg\+Size}} ()
+\begin{DoxyCompactList}\small\item\em recalculate size of HUD frame when texts changes \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgame_1_1core_1_1ObjectHandle}{core\+::\+Go\+Handle}} \mbox{\hyperlink{classgame_1_1prefabs_1_1PlayerHudPrefab_a8faf900a33c9b8255ee1814c6984d97c}{m\+Root}}
+\item 
+\mbox{\hyperlink{classgame_1_1components_1_1GameObject}{components\+::\+Game\+Object}} $\ast$ \mbox{\hyperlink{classgame_1_1prefabs_1_1PlayerHudPrefab_a0a3b68fa69f537831eb99cbab2d4a0ee}{m\+Top\+Left\+GO}}
+\item 
+\mbox{\hyperlink{classgame_1_1components_1_1Text}{components\+::\+Text}} $\ast$ \mbox{\hyperlink{classgame_1_1prefabs_1_1PlayerHudPrefab_a478cff92110a15c62a98c77a347b43da}{m\+Hp\+Text}}
+\item 
+\mbox{\hyperlink{classgame_1_1components_1_1Text}{components\+::\+Text}} $\ast$ \mbox{\hyperlink{classgame_1_1prefabs_1_1PlayerHudPrefab_ad1b6c75d260228bb18532b8add34146c}{m\+Point\+Text}}
+\item 
+\mbox{\hyperlink{classgame_1_1components_1_1Text}{components\+::\+Text}} $\ast$ \mbox{\hyperlink{classgame_1_1prefabs_1_1PlayerHudPrefab_ab0083a0599489accfb3b63138d78e980}{m\+Time\+Elapsed\+Text}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+predefined player HUD menu 
+
+this class is the predefined player HUD menu that can be reused in different game states
+
+\begin{DoxyAuthor}{Author}
+Zheng Yang 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgame_1_1prefabs_1_1PlayerHudPrefab_a7383e9b20e9eb97bc434737b473c8ab5}\label{classgame_1_1prefabs_1_1PlayerHudPrefab_a7383e9b20e9eb97bc434737b473c8ab5}} 
+\index{game::prefabs::PlayerHudPrefab@{game::prefabs::PlayerHudPrefab}!PlayerHudPrefab@{PlayerHudPrefab}}
+\index{PlayerHudPrefab@{PlayerHudPrefab}!game::prefabs::PlayerHudPrefab@{game::prefabs::PlayerHudPrefab}}
+\doxysubsubsection{\texorpdfstring{PlayerHudPrefab()}{PlayerHudPrefab()}}
+{\footnotesize\ttfamily game\+::prefabs\+::\+Player\+Hud\+Prefab\+::\+Player\+Hud\+Prefab (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classgame_1_1prefabs_1_1PlayerHudPrefab}{Player\+Hud\+Prefab}} constructor. 
+
+\mbox{\hyperlink{classgame_1_1prefabs_1_1PlayerHudPrefab}{Player\+Hud\+Prefab}} constructor -\/ it initializes all the gameobjects and components for the player HUD window 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgame_1_1prefabs_1_1PlayerHudPrefab_a27ef76b389b667c9481d89635ff9130a}\label{classgame_1_1prefabs_1_1PlayerHudPrefab_a27ef76b389b667c9481d89635ff9130a}} 
+\index{game::prefabs::PlayerHudPrefab@{game::prefabs::PlayerHudPrefab}!getGoHandle@{getGoHandle}}
+\index{getGoHandle@{getGoHandle}!game::prefabs::PlayerHudPrefab@{game::prefabs::PlayerHudPrefab}}
+\doxysubsubsection{\texorpdfstring{getGoHandle()}{getGoHandle()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgame_1_1core_1_1ObjectHandle}{core\+::\+Go\+Handle}} game\+::prefabs\+::\+Player\+Hud\+Prefab\+::get\+Go\+Handle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+root gameobject getter 
+
+get the root gameobject handle of the prefab
+
+\begin{DoxyReturn}{Returns}
+root gameobject handle 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classgame_1_1prefabs_1_1IPrefab_a793868503af0391f6abc1e4a5a36ab25}{game\+::prefabs\+::\+IPrefab}}.
+
+\mbox{\Hypertarget{classgame_1_1prefabs_1_1PlayerHudPrefab_abcd3fa88d751e0f537d0e8db030b34f0}\label{classgame_1_1prefabs_1_1PlayerHudPrefab_abcd3fa88d751e0f537d0e8db030b34f0}} 
+\index{game::prefabs::PlayerHudPrefab@{game::prefabs::PlayerHudPrefab}!reCalculateBgSize@{reCalculateBgSize}}
+\index{reCalculateBgSize@{reCalculateBgSize}!game::prefabs::PlayerHudPrefab@{game::prefabs::PlayerHudPrefab}}
+\doxysubsubsection{\texorpdfstring{reCalculateBgSize()}{reCalculateBgSize()}}
+{\footnotesize\ttfamily void game\+::prefabs\+::\+Player\+Hud\+Prefab\+::re\+Calculate\+Bg\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+recalculate size of HUD frame when texts changes 
+
+recalculate size of HUD frame when texts changes \mbox{\Hypertarget{classgame_1_1prefabs_1_1PlayerHudPrefab_acf506c4023c68906f3ee76a88d286aa3}\label{classgame_1_1prefabs_1_1PlayerHudPrefab_acf506c4023c68906f3ee76a88d286aa3}} 
+\index{game::prefabs::PlayerHudPrefab@{game::prefabs::PlayerHudPrefab}!setHP@{setHP}}
+\index{setHP@{setHP}!game::prefabs::PlayerHudPrefab@{game::prefabs::PlayerHudPrefab}}
+\doxysubsubsection{\texorpdfstring{setHP()}{setHP()}}
+{\footnotesize\ttfamily void game\+::prefabs\+::\+Player\+Hud\+Prefab\+::set\+HP (\begin{DoxyParamCaption}\item[{int}]{new\+HP }\end{DoxyParamCaption})}
+
+
+
+player hp text setter 
+
+set player hp text
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+HP} & new hp \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1prefabs_1_1PlayerHudPrefab_ad9181fad8b3bff316d2dd4c98e62e0d6}\label{classgame_1_1prefabs_1_1PlayerHudPrefab_ad9181fad8b3bff316d2dd4c98e62e0d6}} 
+\index{game::prefabs::PlayerHudPrefab@{game::prefabs::PlayerHudPrefab}!setPoint@{setPoint}}
+\index{setPoint@{setPoint}!game::prefabs::PlayerHudPrefab@{game::prefabs::PlayerHudPrefab}}
+\doxysubsubsection{\texorpdfstring{setPoint()}{setPoint()}}
+{\footnotesize\ttfamily void game\+::prefabs\+::\+Player\+Hud\+Prefab\+::set\+Point (\begin{DoxyParamCaption}\item[{int}]{new\+Money }\end{DoxyParamCaption})}
+
+
+
+player point text setter 
+
+set player point text
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Money} & new point \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1prefabs_1_1PlayerHudPrefab_aa06d57946760daca6aa3a713c618300e}\label{classgame_1_1prefabs_1_1PlayerHudPrefab_aa06d57946760daca6aa3a713c618300e}} 
+\index{game::prefabs::PlayerHudPrefab@{game::prefabs::PlayerHudPrefab}!setTimeElapsed@{setTimeElapsed}}
+\index{setTimeElapsed@{setTimeElapsed}!game::prefabs::PlayerHudPrefab@{game::prefabs::PlayerHudPrefab}}
+\doxysubsubsection{\texorpdfstring{setTimeElapsed()}{setTimeElapsed()}}
+{\footnotesize\ttfamily void game\+::prefabs\+::\+Player\+Hud\+Prefab\+::set\+Time\+Elapsed (\begin{DoxyParamCaption}\item[{int}]{time\+In\+Seconds }\end{DoxyParamCaption})}
+
+
+
+time elapsed from game start text setter 
+
+set time elapsed from game start text
+
+
+\begin{DoxyParams}{Parameters}
+{\em time\+In\+Seconds} & new time \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classgame_1_1prefabs_1_1PlayerHudPrefab_a478cff92110a15c62a98c77a347b43da}\label{classgame_1_1prefabs_1_1PlayerHudPrefab_a478cff92110a15c62a98c77a347b43da}} 
+\index{game::prefabs::PlayerHudPrefab@{game::prefabs::PlayerHudPrefab}!mHpText@{mHpText}}
+\index{mHpText@{mHpText}!game::prefabs::PlayerHudPrefab@{game::prefabs::PlayerHudPrefab}}
+\doxysubsubsection{\texorpdfstring{mHpText}{mHpText}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgame_1_1components_1_1Text}{components\+::\+Text}}$\ast$ game\+::prefabs\+::\+Player\+Hud\+Prefab\+::m\+Hp\+Text\hspace{0.3cm}{\ttfamily [private]}}
+
+cached hp text \mbox{\Hypertarget{classgame_1_1prefabs_1_1PlayerHudPrefab_ad1b6c75d260228bb18532b8add34146c}\label{classgame_1_1prefabs_1_1PlayerHudPrefab_ad1b6c75d260228bb18532b8add34146c}} 
+\index{game::prefabs::PlayerHudPrefab@{game::prefabs::PlayerHudPrefab}!mPointText@{mPointText}}
+\index{mPointText@{mPointText}!game::prefabs::PlayerHudPrefab@{game::prefabs::PlayerHudPrefab}}
+\doxysubsubsection{\texorpdfstring{mPointText}{mPointText}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgame_1_1components_1_1Text}{components\+::\+Text}}$\ast$ game\+::prefabs\+::\+Player\+Hud\+Prefab\+::m\+Point\+Text\hspace{0.3cm}{\ttfamily [private]}}
+
+cached point text \mbox{\Hypertarget{classgame_1_1prefabs_1_1PlayerHudPrefab_a8faf900a33c9b8255ee1814c6984d97c}\label{classgame_1_1prefabs_1_1PlayerHudPrefab_a8faf900a33c9b8255ee1814c6984d97c}} 
+\index{game::prefabs::PlayerHudPrefab@{game::prefabs::PlayerHudPrefab}!mRoot@{mRoot}}
+\index{mRoot@{mRoot}!game::prefabs::PlayerHudPrefab@{game::prefabs::PlayerHudPrefab}}
+\doxysubsubsection{\texorpdfstring{mRoot}{mRoot}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgame_1_1core_1_1ObjectHandle}{core\+::\+Go\+Handle}} game\+::prefabs\+::\+Player\+Hud\+Prefab\+::m\+Root\hspace{0.3cm}{\ttfamily [private]}}
+
+root gameobject handle \mbox{\Hypertarget{classgame_1_1prefabs_1_1PlayerHudPrefab_ab0083a0599489accfb3b63138d78e980}\label{classgame_1_1prefabs_1_1PlayerHudPrefab_ab0083a0599489accfb3b63138d78e980}} 
+\index{game::prefabs::PlayerHudPrefab@{game::prefabs::PlayerHudPrefab}!mTimeElapsedText@{mTimeElapsedText}}
+\index{mTimeElapsedText@{mTimeElapsedText}!game::prefabs::PlayerHudPrefab@{game::prefabs::PlayerHudPrefab}}
+\doxysubsubsection{\texorpdfstring{mTimeElapsedText}{mTimeElapsedText}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgame_1_1components_1_1Text}{components\+::\+Text}}$\ast$ game\+::prefabs\+::\+Player\+Hud\+Prefab\+::m\+Time\+Elapsed\+Text\hspace{0.3cm}{\ttfamily [private]}}
+
+cached time elapsed text \mbox{\Hypertarget{classgame_1_1prefabs_1_1PlayerHudPrefab_a0a3b68fa69f537831eb99cbab2d4a0ee}\label{classgame_1_1prefabs_1_1PlayerHudPrefab_a0a3b68fa69f537831eb99cbab2d4a0ee}} 
+\index{game::prefabs::PlayerHudPrefab@{game::prefabs::PlayerHudPrefab}!mTopLeftGO@{mTopLeftGO}}
+\index{mTopLeftGO@{mTopLeftGO}!game::prefabs::PlayerHudPrefab@{game::prefabs::PlayerHudPrefab}}
+\doxysubsubsection{\texorpdfstring{mTopLeftGO}{mTopLeftGO}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgame_1_1components_1_1GameObject}{components\+::\+Game\+Object}}$\ast$ game\+::prefabs\+::\+Player\+Hud\+Prefab\+::m\+Top\+Left\+GO\hspace{0.3cm}{\ttfamily [private]}}
+
+cached top left frame ~\newline
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Prefabs/Player\+Hud\+Prefab.\+h\end{DoxyCompactItemize}

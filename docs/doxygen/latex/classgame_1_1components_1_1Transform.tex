@@ -1,0 +1,631 @@
+\hypertarget{classgame_1_1components_1_1Transform}{}\doxysection{game\+::components\+::Transform Class Reference}
+\label{classgame_1_1components_1_1Transform}\index{game::components::Transform@{game::components::Transform}}
+
+
+transform component of a gameobject  
+
+
+
+
+{\ttfamily \#include $<$Transform.\+h$>$}
+
+
+
+Inheritance diagram for game\+::components\+::Transform\+:
+% FIG 0
+
+
+Collaboration diagram for game\+::components\+::Transform\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgame_1_1components_1_1Transform_a2091e621e08fa56578b8ea555ebeba66}{$\sim$\+Transform}} ()
+\begin{DoxyCompactList}\small\item\em transform destructor \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1Transform_aabf2de88fe93d9464b1c040610934c46}{set\+Parent}} (\mbox{\hyperlink{classgame_1_1components_1_1Transform}{Transform}} $\ast$owner)
+\begin{DoxyCompactList}\small\item\em set parent of current transform \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classgame_1_1components_1_1Transform}{Transform}} $\ast$ \mbox{\hyperlink{classgame_1_1components_1_1Transform_a029c6cfbf3fde83a82ecc9379b66bc69}{get\+Parent}} () const
+\begin{DoxyCompactList}\small\item\em get parent of current transform \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1Transform_ad352790adf31ebd0b1bf8a8ae86e815f}{set\+Local\+Position}} (sf\+::\+Vector2f new\+Pos)
+\begin{DoxyCompactList}\small\item\em set local position of current transform \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1Transform_a5c00dcabc06313972ea728dc5fa70730}{set\+Local\+Position}} (float x, float y)
+\begin{DoxyCompactList}\small\item\em set local position of current transform \end{DoxyCompactList}\item 
+sf\+::\+Vector2f \mbox{\hyperlink{classgame_1_1components_1_1Transform_acd6832ed9630b3265e25b69a7bf00d8f}{get\+Local\+Position}} () const
+\begin{DoxyCompactList}\small\item\em get local position of current transform \end{DoxyCompactList}\item 
+sf\+::\+Vector2f \mbox{\hyperlink{classgame_1_1components_1_1Transform_a3c3d58aa12a638e9b72dcf5e6994fe42}{get\+World\+Position}} ()
+\begin{DoxyCompactList}\small\item\em get world position of current transform \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1Transform_a8ae205f29caf0e03251cb31b0ddad824}{set\+Anchor}} (Anchor new\+Anchor)
+\begin{DoxyCompactList}\small\item\em set anchor of the transform \end{DoxyCompactList}\item 
+Anchor \mbox{\hyperlink{classgame_1_1components_1_1Transform_a80a17de30da599c5e9407e39d8100aba}{get\+Anchor}} () const
+\begin{DoxyCompactList}\small\item\em get anchor of current transform \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1Transform_a8511a06cf7ce53a766a5432cbacf52aa}{set\+Pivot}} (Pivot new\+Pivot)
+\begin{DoxyCompactList}\small\item\em set pivot of the transform \end{DoxyCompactList}\item 
+Pivot \mbox{\hyperlink{classgame_1_1components_1_1Transform_a69086297c1bba1988d0f3e3cd9e90d3c}{get\+Pivot}} () const
+\begin{DoxyCompactList}\small\item\em get pivot of current transform \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1Transform_ab435dc0407326650075eb7ef2143818a}{set\+Size}} (sf\+::\+Vector2f new\+Size)
+\begin{DoxyCompactList}\small\item\em set size of the transform \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1Transform_a44aa4af87114a06bb03b08336922aff7}{set\+Size}} (float width, float height)
+\begin{DoxyCompactList}\small\item\em set size of the transform \end{DoxyCompactList}\item 
+sf\+::\+Vector2f \mbox{\hyperlink{classgame_1_1components_1_1Transform_a12f1926558e10a87b28f88cf26ad7ed6}{get\+Size}} () const
+\begin{DoxyCompactList}\small\item\em get size of current transform \end{DoxyCompactList}\item 
+sf\+::\+Vector2f \mbox{\hyperlink{classgame_1_1components_1_1Transform_a86d71df6ee0c2b9eea2a576e93058ef2}{get\+Scale}} () const
+\begin{DoxyCompactList}\small\item\em get scale of current transform \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1Transform_acf1af07bce4470fe05aacc7fc1be027c}{set\+Scale}} (float x, float y)
+\begin{DoxyCompactList}\small\item\em set scale of the transform \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1Transform_ac3fab965853e68200b6ff80cd053fc03}{match\+Parent}} ()
+\begin{DoxyCompactList}\small\item\em set the size and position of the current transform to match its parent \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1Transform_a158717b6ed57ca12ee5186860827ea77}{move}} (float width, float height)
+\begin{DoxyCompactList}\small\item\em move a transform from its current position \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1Transform_a023e9e39e68313c073b86308fe70b165}{set\+Rotate}} (float angle)
+\begin{DoxyCompactList}\small\item\em set rotation of the transform \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1Transform_a786e24330351d0b1047ef7017b036663}{rotate}} (float angle)
+\begin{DoxyCompactList}\small\item\em rotate transform for a certain angle \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classgame_1_1components_1_1Transform_a6326228cc12a8be3227694d754f67504}{get\+Rotate}} () const
+\begin{DoxyCompactList}\small\item\em get rotation of current transform \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classgame_1_1components_1_1Transform_a7c3b4ce8b79607a0596931101a37d5b8}{get\+Children\+Count}} () const
+\begin{DoxyCompactList}\small\item\em get number of children in current transform \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgame_1_1components_1_1Transform_a8b64d82a13f3f3d93b26ccbe956c9bb8}{Transform}} (\mbox{\hyperlink{classgame_1_1components_1_1GameObject}{Game\+Object}} \&owner)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classgame_1_1components_1_1Transform}{Transform}} constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1Transform_a00c9b4a4ee234f7ccfe418e7a6dad189}{on\+Enable}} ()
+\begin{DoxyCompactList}\small\item\em component lifecycle function \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1Transform_aa4ac6f8c5aef31b47a82a0832fecb989}{on\+Disable}} ()
+\begin{DoxyCompactList}\small\item\em component lifecycle function \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1Transform_a9d0e1763f68f68babdd0a360cb873636}{tick}} (float delta\+Time)
+\begin{DoxyCompactList}\small\item\em component lifecycle function \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1Transform_ab904faa36b54cbc6b8c81b891427dbb0}{set\+Dirty}} ()
+\begin{DoxyCompactList}\small\item\em set the dirty flag of current transform \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1Transform_a9081b4fe824d8b7d278d124a6d96a7f3}{attach\+Child}} (\mbox{\hyperlink{classgame_1_1components_1_1Transform}{Transform}} $\ast$child)
+\begin{DoxyCompactList}\small\item\em add a child for current transform \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1Transform_a3b7e0625a6fec12c9bb90c25d7462288}{detach\+Child}} (const \mbox{\hyperlink{classgame_1_1components_1_1Transform}{Transform}} $\ast$child)
+\begin{DoxyCompactList}\small\item\em remove a child from child list \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1Transform_a9d124641bfbf297961806b891ed51e5e}{reset}} ()
+\begin{DoxyCompactList}\small\item\em reset transform \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgame_1_1components_1_1Transform}{Transform}} $\ast$ \mbox{\hyperlink{classgame_1_1components_1_1Transform_a557f44f15fba50a02043a29328203655}{m\+Parent}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classgame_1_1components_1_1Transform}{Transform}} $\ast$ $>$ \mbox{\hyperlink{classgame_1_1components_1_1Transform_a9170a68b5c3770d6f1504fe488876775}{m\+Children}}
+\item 
+bool \mbox{\hyperlink{classgame_1_1components_1_1Transform_a93152041059b4594fc7dac5eb351b55f}{m\+Is\+Dirty}}
+\item 
+sf\+::\+Vector2f \mbox{\hyperlink{classgame_1_1components_1_1Transform_a9e836a0f9d384410d43b32f38cf3cfc4}{m\+Size}}
+\item 
+sf\+::\+Vector2f \mbox{\hyperlink{classgame_1_1components_1_1Transform_a15de66a3ea23fd4fea0b4a8d5325785f}{m\+Local\+Position}}
+\item 
+sf\+::\+Vector2f \mbox{\hyperlink{classgame_1_1components_1_1Transform_a50ce28983bf7d0d86c8356f6f57d206f}{m\+Cached\+World\+Position}}
+\item 
+float \mbox{\hyperlink{classgame_1_1components_1_1Transform_a024a0f647e54f1ca766ab1b8fde4d752}{m\+Rotate}}
+\item 
+sf\+::\+Vector2f \mbox{\hyperlink{classgame_1_1components_1_1Transform_a48baa5cafbadae458825c6d8b5835342}{m\+Scale}}
+\item 
+Anchor \mbox{\hyperlink{classgame_1_1components_1_1Transform_a92de33632ea49d3081da61d232b51449}{m\+Anchor}}
+\item 
+Pivot \mbox{\hyperlink{classgame_1_1components_1_1Transform_a9f7e6ac8e7f81dcd6b9c9afbfd049485}{m\+Pivot}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classgame_1_1components_1_1Transform_a00df87c957d8f7ee0fc51f07a0542f4a}\label{classgame_1_1components_1_1Transform_a00df87c957d8f7ee0fc51f07a0542f4a}} 
+class {\bfseries Game\+Object}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+transform component of a gameobject 
+
+this class defines the size, position, rotation and scale of a gameobject in the game world it also defines a hierarchy system of gameobjects -\/ a transform can be set to be the parent of other transforms, this set the origin of the local positions of its child to be the position of the current transform
+
+\begin{DoxyAuthor}{Author}
+Zheng Yang 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgame_1_1components_1_1Transform_a2091e621e08fa56578b8ea555ebeba66}\label{classgame_1_1components_1_1Transform_a2091e621e08fa56578b8ea555ebeba66}} 
+\index{game::components::Transform@{game::components::Transform}!````~Transform@{$\sim$Transform}}
+\index{````~Transform@{$\sim$Transform}!game::components::Transform@{game::components::Transform}}
+\doxysubsubsection{\texorpdfstring{$\sim$Transform()}{~Transform()}}
+{\footnotesize\ttfamily game\+::components\+::\+Transform\+::$\sim$\+Transform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+transform destructor 
+
+transform destructor \mbox{\Hypertarget{classgame_1_1components_1_1Transform_a8b64d82a13f3f3d93b26ccbe956c9bb8}\label{classgame_1_1components_1_1Transform_a8b64d82a13f3f3d93b26ccbe956c9bb8}} 
+\index{game::components::Transform@{game::components::Transform}!Transform@{Transform}}
+\index{Transform@{Transform}!game::components::Transform@{game::components::Transform}}
+\doxysubsubsection{\texorpdfstring{Transform()}{Transform()}}
+{\footnotesize\ttfamily game\+::components\+::\+Transform\+::\+Transform (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgame_1_1components_1_1GameObject}{Game\+Object}} \&}]{owner }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{classgame_1_1components_1_1Transform}{Transform}} constructor. 
+
+\mbox{\hyperlink{classgame_1_1components_1_1Transform}{Transform}} constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em owner} & owner of the component \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgame_1_1components_1_1Transform_a9081b4fe824d8b7d278d124a6d96a7f3}\label{classgame_1_1components_1_1Transform_a9081b4fe824d8b7d278d124a6d96a7f3}} 
+\index{game::components::Transform@{game::components::Transform}!attachChild@{attachChild}}
+\index{attachChild@{attachChild}!game::components::Transform@{game::components::Transform}}
+\doxysubsubsection{\texorpdfstring{attachChild()}{attachChild()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Transform\+::attach\+Child (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgame_1_1components_1_1Transform}{Transform}} $\ast$}]{child }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+add a child for current transform 
+
+add a child for current transform, also set the parent of the child as current transform
+
+
+\begin{DoxyParams}{Parameters}
+{\em child} & new child \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1components_1_1Transform_a3b7e0625a6fec12c9bb90c25d7462288}\label{classgame_1_1components_1_1Transform_a3b7e0625a6fec12c9bb90c25d7462288}} 
+\index{game::components::Transform@{game::components::Transform}!detachChild@{detachChild}}
+\index{detachChild@{detachChild}!game::components::Transform@{game::components::Transform}}
+\doxysubsubsection{\texorpdfstring{detachChild()}{detachChild()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Transform\+::detach\+Child (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgame_1_1components_1_1Transform}{Transform}} $\ast$}]{child }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+remove a child from child list 
+
+remove a child from child list, also set the parent of the child as nullptr
+
+
+\begin{DoxyParams}{Parameters}
+{\em child} & child to be removed \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1components_1_1Transform_a80a17de30da599c5e9407e39d8100aba}\label{classgame_1_1components_1_1Transform_a80a17de30da599c5e9407e39d8100aba}} 
+\index{game::components::Transform@{game::components::Transform}!getAnchor@{getAnchor}}
+\index{getAnchor@{getAnchor}!game::components::Transform@{game::components::Transform}}
+\doxysubsubsection{\texorpdfstring{getAnchor()}{getAnchor()}}
+{\footnotesize\ttfamily Anchor game\+::components\+::\+Transform\+::get\+Anchor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get anchor of current transform 
+
+get anchor of current transform \begin{DoxyReturn}{Returns}
+anchor 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgame_1_1components_1_1Transform_a7c3b4ce8b79607a0596931101a37d5b8}\label{classgame_1_1components_1_1Transform_a7c3b4ce8b79607a0596931101a37d5b8}} 
+\index{game::components::Transform@{game::components::Transform}!getChildrenCount@{getChildrenCount}}
+\index{getChildrenCount@{getChildrenCount}!game::components::Transform@{game::components::Transform}}
+\doxysubsubsection{\texorpdfstring{getChildrenCount()}{getChildrenCount()}}
+{\footnotesize\ttfamily int game\+::components\+::\+Transform\+::get\+Children\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get number of children in current transform 
+
+get number of children in current transform \begin{DoxyReturn}{Returns}
+number of children in current transform 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgame_1_1components_1_1Transform_acd6832ed9630b3265e25b69a7bf00d8f}\label{classgame_1_1components_1_1Transform_acd6832ed9630b3265e25b69a7bf00d8f}} 
+\index{game::components::Transform@{game::components::Transform}!getLocalPosition@{getLocalPosition}}
+\index{getLocalPosition@{getLocalPosition}!game::components::Transform@{game::components::Transform}}
+\doxysubsubsection{\texorpdfstring{getLocalPosition()}{getLocalPosition()}}
+{\footnotesize\ttfamily sf\+::\+Vector2f game\+::components\+::\+Transform\+::get\+Local\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get local position of current transform 
+
+get local position of current transform \begin{DoxyReturn}{Returns}
+local position 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgame_1_1components_1_1Transform_a029c6cfbf3fde83a82ecc9379b66bc69}\label{classgame_1_1components_1_1Transform_a029c6cfbf3fde83a82ecc9379b66bc69}} 
+\index{game::components::Transform@{game::components::Transform}!getParent@{getParent}}
+\index{getParent@{getParent}!game::components::Transform@{game::components::Transform}}
+\doxysubsubsection{\texorpdfstring{getParent()}{getParent()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgame_1_1components_1_1Transform}{Transform}}$\ast$ game\+::components\+::\+Transform\+::get\+Parent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get parent of current transform 
+
+get parent of current transform \begin{DoxyReturn}{Returns}
+parent transform 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgame_1_1components_1_1Transform_a69086297c1bba1988d0f3e3cd9e90d3c}\label{classgame_1_1components_1_1Transform_a69086297c1bba1988d0f3e3cd9e90d3c}} 
+\index{game::components::Transform@{game::components::Transform}!getPivot@{getPivot}}
+\index{getPivot@{getPivot}!game::components::Transform@{game::components::Transform}}
+\doxysubsubsection{\texorpdfstring{getPivot()}{getPivot()}}
+{\footnotesize\ttfamily Pivot game\+::components\+::\+Transform\+::get\+Pivot (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get pivot of current transform 
+
+get pivot of current transform \begin{DoxyReturn}{Returns}
+pivot 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgame_1_1components_1_1Transform_a6326228cc12a8be3227694d754f67504}\label{classgame_1_1components_1_1Transform_a6326228cc12a8be3227694d754f67504}} 
+\index{game::components::Transform@{game::components::Transform}!getRotate@{getRotate}}
+\index{getRotate@{getRotate}!game::components::Transform@{game::components::Transform}}
+\doxysubsubsection{\texorpdfstring{getRotate()}{getRotate()}}
+{\footnotesize\ttfamily float game\+::components\+::\+Transform\+::get\+Rotate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get rotation of current transform 
+
+get rotation of current transform \begin{DoxyReturn}{Returns}
+rotation 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgame_1_1components_1_1Transform_a86d71df6ee0c2b9eea2a576e93058ef2}\label{classgame_1_1components_1_1Transform_a86d71df6ee0c2b9eea2a576e93058ef2}} 
+\index{game::components::Transform@{game::components::Transform}!getScale@{getScale}}
+\index{getScale@{getScale}!game::components::Transform@{game::components::Transform}}
+\doxysubsubsection{\texorpdfstring{getScale()}{getScale()}}
+{\footnotesize\ttfamily sf\+::\+Vector2f game\+::components\+::\+Transform\+::get\+Scale (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get scale of current transform 
+
+get scale of current transform \begin{DoxyReturn}{Returns}
+scale 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgame_1_1components_1_1Transform_a12f1926558e10a87b28f88cf26ad7ed6}\label{classgame_1_1components_1_1Transform_a12f1926558e10a87b28f88cf26ad7ed6}} 
+\index{game::components::Transform@{game::components::Transform}!getSize@{getSize}}
+\index{getSize@{getSize}!game::components::Transform@{game::components::Transform}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily sf\+::\+Vector2f game\+::components\+::\+Transform\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get size of current transform 
+
+get size of current transform \begin{DoxyReturn}{Returns}
+size 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgame_1_1components_1_1Transform_a3c3d58aa12a638e9b72dcf5e6994fe42}\label{classgame_1_1components_1_1Transform_a3c3d58aa12a638e9b72dcf5e6994fe42}} 
+\index{game::components::Transform@{game::components::Transform}!getWorldPosition@{getWorldPosition}}
+\index{getWorldPosition@{getWorldPosition}!game::components::Transform@{game::components::Transform}}
+\doxysubsubsection{\texorpdfstring{getWorldPosition()}{getWorldPosition()}}
+{\footnotesize\ttfamily sf\+::\+Vector2f game\+::components\+::\+Transform\+::get\+World\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get world position of current transform 
+
+get world position of current transform \begin{DoxyReturn}{Returns}
+world position 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgame_1_1components_1_1Transform_ac3fab965853e68200b6ff80cd053fc03}\label{classgame_1_1components_1_1Transform_ac3fab965853e68200b6ff80cd053fc03}} 
+\index{game::components::Transform@{game::components::Transform}!matchParent@{matchParent}}
+\index{matchParent@{matchParent}!game::components::Transform@{game::components::Transform}}
+\doxysubsubsection{\texorpdfstring{matchParent()}{matchParent()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Transform\+::match\+Parent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+set the size and position of the current transform to match its parent 
+
+set the size and position of the current transform to match its parent \mbox{\Hypertarget{classgame_1_1components_1_1Transform_a158717b6ed57ca12ee5186860827ea77}\label{classgame_1_1components_1_1Transform_a158717b6ed57ca12ee5186860827ea77}} 
+\index{game::components::Transform@{game::components::Transform}!move@{move}}
+\index{move@{move}!game::components::Transform@{game::components::Transform}}
+\doxysubsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Transform\+::move (\begin{DoxyParamCaption}\item[{float}]{width,  }\item[{float}]{height }\end{DoxyParamCaption})}
+
+
+
+move a transform from its current position 
+
+move a transform from its current position for a certain distance
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & translation of transform in x axis \\
+\hline
+{\em height} & translation of transform in y axis \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1components_1_1Transform_aa4ac6f8c5aef31b47a82a0832fecb989}\label{classgame_1_1components_1_1Transform_aa4ac6f8c5aef31b47a82a0832fecb989}} 
+\index{game::components::Transform@{game::components::Transform}!onDisable@{onDisable}}
+\index{onDisable@{onDisable}!game::components::Transform@{game::components::Transform}}
+\doxysubsubsection{\texorpdfstring{onDisable()}{onDisable()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Transform\+::on\+Disable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+component lifecycle function 
+
+component lifecycle function, gets called automatically when component is disabled 
+
+Reimplemented from \mbox{\hyperlink{classgame_1_1components_1_1Component_ac79cec6fc53b00f36bbde8e8f7e23c05}{game\+::components\+::\+Component}}.
+
+\mbox{\Hypertarget{classgame_1_1components_1_1Transform_a00c9b4a4ee234f7ccfe418e7a6dad189}\label{classgame_1_1components_1_1Transform_a00c9b4a4ee234f7ccfe418e7a6dad189}} 
+\index{game::components::Transform@{game::components::Transform}!onEnable@{onEnable}}
+\index{onEnable@{onEnable}!game::components::Transform@{game::components::Transform}}
+\doxysubsubsection{\texorpdfstring{onEnable()}{onEnable()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Transform\+::on\+Enable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+component lifecycle function 
+
+component lifecycle function, gets called automatically when component is enabled 
+
+Reimplemented from \mbox{\hyperlink{classgame_1_1components_1_1Component_a333e4242c1594bfdc5713cddafae6a23}{game\+::components\+::\+Component}}.
+
+\mbox{\Hypertarget{classgame_1_1components_1_1Transform_a9d124641bfbf297961806b891ed51e5e}\label{classgame_1_1components_1_1Transform_a9d124641bfbf297961806b891ed51e5e}} 
+\index{game::components::Transform@{game::components::Transform}!reset@{reset}}
+\index{reset@{reset}!game::components::Transform@{game::components::Transform}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Transform\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+reset transform 
+
+reset transform to a default state \mbox{\Hypertarget{classgame_1_1components_1_1Transform_a786e24330351d0b1047ef7017b036663}\label{classgame_1_1components_1_1Transform_a786e24330351d0b1047ef7017b036663}} 
+\index{game::components::Transform@{game::components::Transform}!rotate@{rotate}}
+\index{rotate@{rotate}!game::components::Transform@{game::components::Transform}}
+\doxysubsubsection{\texorpdfstring{rotate()}{rotate()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Transform\+::rotate (\begin{DoxyParamCaption}\item[{float}]{angle }\end{DoxyParamCaption})}
+
+
+
+rotate transform for a certain angle 
+
+rotate transform for a certain angle 
+\begin{DoxyParams}{Parameters}
+{\em angle} & rotate angle \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1components_1_1Transform_a8ae205f29caf0e03251cb31b0ddad824}\label{classgame_1_1components_1_1Transform_a8ae205f29caf0e03251cb31b0ddad824}} 
+\index{game::components::Transform@{game::components::Transform}!setAnchor@{setAnchor}}
+\index{setAnchor@{setAnchor}!game::components::Transform@{game::components::Transform}}
+\doxysubsubsection{\texorpdfstring{setAnchor()}{setAnchor()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Transform\+::set\+Anchor (\begin{DoxyParamCaption}\item[{Anchor}]{new\+Anchor }\end{DoxyParamCaption})}
+
+
+
+set anchor of the transform 
+
+set anchor of the transform 
+\begin{DoxyParams}{Parameters}
+{\em new\+Anchor} & new anchor \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1components_1_1Transform_ab904faa36b54cbc6b8c81b891427dbb0}\label{classgame_1_1components_1_1Transform_ab904faa36b54cbc6b8c81b891427dbb0}} 
+\index{game::components::Transform@{game::components::Transform}!setDirty@{setDirty}}
+\index{setDirty@{setDirty}!game::components::Transform@{game::components::Transform}}
+\doxysubsubsection{\texorpdfstring{setDirty()}{setDirty()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Transform\+::set\+Dirty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+set the dirty flag of current transform 
+
+set the dirty flag of current transform -\/ this function can be called recursively if the transform has a parent this-\/$>$setdirty() =$>$ parent-\/$>$setdirty() =$>$ parent-\/$>$parent-\/$>$set\+Dirty =$>$ ... \mbox{\Hypertarget{classgame_1_1components_1_1Transform_a5c00dcabc06313972ea728dc5fa70730}\label{classgame_1_1components_1_1Transform_a5c00dcabc06313972ea728dc5fa70730}} 
+\index{game::components::Transform@{game::components::Transform}!setLocalPosition@{setLocalPosition}}
+\index{setLocalPosition@{setLocalPosition}!game::components::Transform@{game::components::Transform}}
+\doxysubsubsection{\texorpdfstring{setLocalPosition()}{setLocalPosition()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void game\+::components\+::\+Transform\+::set\+Local\+Position (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y }\end{DoxyParamCaption})}
+
+
+
+set local position of current transform 
+
+set local position of current transform 
+\begin{DoxyParams}{Parameters}
+{\em x} & new position in x axis \\
+\hline
+{\em y} & new position in y axis \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1components_1_1Transform_ad352790adf31ebd0b1bf8a8ae86e815f}\label{classgame_1_1components_1_1Transform_ad352790adf31ebd0b1bf8a8ae86e815f}} 
+\index{game::components::Transform@{game::components::Transform}!setLocalPosition@{setLocalPosition}}
+\index{setLocalPosition@{setLocalPosition}!game::components::Transform@{game::components::Transform}}
+\doxysubsubsection{\texorpdfstring{setLocalPosition()}{setLocalPosition()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void game\+::components\+::\+Transform\+::set\+Local\+Position (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{new\+Pos }\end{DoxyParamCaption})}
+
+
+
+set local position of current transform 
+
+set local position of current transform 
+\begin{DoxyParams}{Parameters}
+{\em new\+Pos} & new local position \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1components_1_1Transform_aabf2de88fe93d9464b1c040610934c46}\label{classgame_1_1components_1_1Transform_aabf2de88fe93d9464b1c040610934c46}} 
+\index{game::components::Transform@{game::components::Transform}!setParent@{setParent}}
+\index{setParent@{setParent}!game::components::Transform@{game::components::Transform}}
+\doxysubsubsection{\texorpdfstring{setParent()}{setParent()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Transform\+::set\+Parent (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgame_1_1components_1_1Transform}{Transform}} $\ast$}]{owner }\end{DoxyParamCaption})}
+
+
+
+set parent of current transform 
+
+set parent of current transform 
+\begin{DoxyParams}{Parameters}
+{\em owner} & new parent \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1components_1_1Transform_a8511a06cf7ce53a766a5432cbacf52aa}\label{classgame_1_1components_1_1Transform_a8511a06cf7ce53a766a5432cbacf52aa}} 
+\index{game::components::Transform@{game::components::Transform}!setPivot@{setPivot}}
+\index{setPivot@{setPivot}!game::components::Transform@{game::components::Transform}}
+\doxysubsubsection{\texorpdfstring{setPivot()}{setPivot()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Transform\+::set\+Pivot (\begin{DoxyParamCaption}\item[{Pivot}]{new\+Pivot }\end{DoxyParamCaption})}
+
+
+
+set pivot of the transform 
+
+set pivot of the transform 
+\begin{DoxyParams}{Parameters}
+{\em new\+Pivot} & new pivot \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1components_1_1Transform_a023e9e39e68313c073b86308fe70b165}\label{classgame_1_1components_1_1Transform_a023e9e39e68313c073b86308fe70b165}} 
+\index{game::components::Transform@{game::components::Transform}!setRotate@{setRotate}}
+\index{setRotate@{setRotate}!game::components::Transform@{game::components::Transform}}
+\doxysubsubsection{\texorpdfstring{setRotate()}{setRotate()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Transform\+::set\+Rotate (\begin{DoxyParamCaption}\item[{float}]{angle }\end{DoxyParamCaption})}
+
+
+
+set rotation of the transform 
+
+set rotation of the transform 
+\begin{DoxyParams}{Parameters}
+{\em angle} & new angle \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1components_1_1Transform_acf1af07bce4470fe05aacc7fc1be027c}\label{classgame_1_1components_1_1Transform_acf1af07bce4470fe05aacc7fc1be027c}} 
+\index{game::components::Transform@{game::components::Transform}!setScale@{setScale}}
+\index{setScale@{setScale}!game::components::Transform@{game::components::Transform}}
+\doxysubsubsection{\texorpdfstring{setScale()}{setScale()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Transform\+::set\+Scale (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y }\end{DoxyParamCaption})}
+
+
+
+set scale of the transform 
+
+set scale of the transform 
+\begin{DoxyParams}{Parameters}
+{\em x} & new scale in x axis \\
+\hline
+{\em y} & new scale in y axis \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1components_1_1Transform_a44aa4af87114a06bb03b08336922aff7}\label{classgame_1_1components_1_1Transform_a44aa4af87114a06bb03b08336922aff7}} 
+\index{game::components::Transform@{game::components::Transform}!setSize@{setSize}}
+\index{setSize@{setSize}!game::components::Transform@{game::components::Transform}}
+\doxysubsubsection{\texorpdfstring{setSize()}{setSize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void game\+::components\+::\+Transform\+::set\+Size (\begin{DoxyParamCaption}\item[{float}]{width,  }\item[{float}]{height }\end{DoxyParamCaption})}
+
+
+
+set size of the transform 
+
+set size of the transform 
+\begin{DoxyParams}{Parameters}
+{\em width} & new width \\
+\hline
+{\em height} & new height \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1components_1_1Transform_ab435dc0407326650075eb7ef2143818a}\label{classgame_1_1components_1_1Transform_ab435dc0407326650075eb7ef2143818a}} 
+\index{game::components::Transform@{game::components::Transform}!setSize@{setSize}}
+\index{setSize@{setSize}!game::components::Transform@{game::components::Transform}}
+\doxysubsubsection{\texorpdfstring{setSize()}{setSize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void game\+::components\+::\+Transform\+::set\+Size (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{new\+Size }\end{DoxyParamCaption})}
+
+
+
+set size of the transform 
+
+set size of the transform 
+\begin{DoxyParams}{Parameters}
+{\em new\+Size} & new size \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1components_1_1Transform_a9d0e1763f68f68babdd0a360cb873636}\label{classgame_1_1components_1_1Transform_a9d0e1763f68f68babdd0a360cb873636}} 
+\index{game::components::Transform@{game::components::Transform}!tick@{tick}}
+\index{tick@{tick}!game::components::Transform@{game::components::Transform}}
+\doxysubsubsection{\texorpdfstring{tick()}{tick()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Transform\+::tick (\begin{DoxyParamCaption}\item[{float}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+component lifecycle function 
+
+component lifecycle function, gets called automatically every frame. This is where every component in the game gets updated
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & the time elpased between now and last frame \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classgame_1_1components_1_1Component_ac85cd99e8109eb32a97549bf437ea5ce}{game\+::components\+::\+Component}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classgame_1_1components_1_1Transform_a92de33632ea49d3081da61d232b51449}\label{classgame_1_1components_1_1Transform_a92de33632ea49d3081da61d232b51449}} 
+\index{game::components::Transform@{game::components::Transform}!mAnchor@{mAnchor}}
+\index{mAnchor@{mAnchor}!game::components::Transform@{game::components::Transform}}
+\doxysubsubsection{\texorpdfstring{mAnchor}{mAnchor}}
+{\footnotesize\ttfamily Anchor game\+::components\+::\+Transform\+::m\+Anchor\hspace{0.3cm}{\ttfamily [private]}}
+
+my anchor \mbox{\Hypertarget{classgame_1_1components_1_1Transform_a50ce28983bf7d0d86c8356f6f57d206f}\label{classgame_1_1components_1_1Transform_a50ce28983bf7d0d86c8356f6f57d206f}} 
+\index{game::components::Transform@{game::components::Transform}!mCachedWorldPosition@{mCachedWorldPosition}}
+\index{mCachedWorldPosition@{mCachedWorldPosition}!game::components::Transform@{game::components::Transform}}
+\doxysubsubsection{\texorpdfstring{mCachedWorldPosition}{mCachedWorldPosition}}
+{\footnotesize\ttfamily sf\+::\+Vector2f game\+::components\+::\+Transform\+::m\+Cached\+World\+Position\hspace{0.3cm}{\ttfamily [private]}}
+
+my cached world position \mbox{\Hypertarget{classgame_1_1components_1_1Transform_a9170a68b5c3770d6f1504fe488876775}\label{classgame_1_1components_1_1Transform_a9170a68b5c3770d6f1504fe488876775}} 
+\index{game::components::Transform@{game::components::Transform}!mChildren@{mChildren}}
+\index{mChildren@{mChildren}!game::components::Transform@{game::components::Transform}}
+\doxysubsubsection{\texorpdfstring{mChildren}{mChildren}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classgame_1_1components_1_1Transform}{Transform}}$\ast$$>$ game\+::components\+::\+Transform\+::m\+Children\hspace{0.3cm}{\ttfamily [private]}}
+
+my children list \mbox{\Hypertarget{classgame_1_1components_1_1Transform_a93152041059b4594fc7dac5eb351b55f}\label{classgame_1_1components_1_1Transform_a93152041059b4594fc7dac5eb351b55f}} 
+\index{game::components::Transform@{game::components::Transform}!mIsDirty@{mIsDirty}}
+\index{mIsDirty@{mIsDirty}!game::components::Transform@{game::components::Transform}}
+\doxysubsubsection{\texorpdfstring{mIsDirty}{mIsDirty}}
+{\footnotesize\ttfamily bool game\+::components\+::\+Transform\+::m\+Is\+Dirty\hspace{0.3cm}{\ttfamily [private]}}
+
+my dirty flag \mbox{\Hypertarget{classgame_1_1components_1_1Transform_a15de66a3ea23fd4fea0b4a8d5325785f}\label{classgame_1_1components_1_1Transform_a15de66a3ea23fd4fea0b4a8d5325785f}} 
+\index{game::components::Transform@{game::components::Transform}!mLocalPosition@{mLocalPosition}}
+\index{mLocalPosition@{mLocalPosition}!game::components::Transform@{game::components::Transform}}
+\doxysubsubsection{\texorpdfstring{mLocalPosition}{mLocalPosition}}
+{\footnotesize\ttfamily sf\+::\+Vector2f game\+::components\+::\+Transform\+::m\+Local\+Position\hspace{0.3cm}{\ttfamily [private]}}
+
+my local position \mbox{\Hypertarget{classgame_1_1components_1_1Transform_a557f44f15fba50a02043a29328203655}\label{classgame_1_1components_1_1Transform_a557f44f15fba50a02043a29328203655}} 
+\index{game::components::Transform@{game::components::Transform}!mParent@{mParent}}
+\index{mParent@{mParent}!game::components::Transform@{game::components::Transform}}
+\doxysubsubsection{\texorpdfstring{mParent}{mParent}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgame_1_1components_1_1Transform}{Transform}}$\ast$ game\+::components\+::\+Transform\+::m\+Parent\hspace{0.3cm}{\ttfamily [private]}}
+
+my parent transform \mbox{\Hypertarget{classgame_1_1components_1_1Transform_a9f7e6ac8e7f81dcd6b9c9afbfd049485}\label{classgame_1_1components_1_1Transform_a9f7e6ac8e7f81dcd6b9c9afbfd049485}} 
+\index{game::components::Transform@{game::components::Transform}!mPivot@{mPivot}}
+\index{mPivot@{mPivot}!game::components::Transform@{game::components::Transform}}
+\doxysubsubsection{\texorpdfstring{mPivot}{mPivot}}
+{\footnotesize\ttfamily Pivot game\+::components\+::\+Transform\+::m\+Pivot\hspace{0.3cm}{\ttfamily [private]}}
+
+my pivot \mbox{\Hypertarget{classgame_1_1components_1_1Transform_a024a0f647e54f1ca766ab1b8fde4d752}\label{classgame_1_1components_1_1Transform_a024a0f647e54f1ca766ab1b8fde4d752}} 
+\index{game::components::Transform@{game::components::Transform}!mRotate@{mRotate}}
+\index{mRotate@{mRotate}!game::components::Transform@{game::components::Transform}}
+\doxysubsubsection{\texorpdfstring{mRotate}{mRotate}}
+{\footnotesize\ttfamily float game\+::components\+::\+Transform\+::m\+Rotate\hspace{0.3cm}{\ttfamily [private]}}
+
+my rotation \mbox{\Hypertarget{classgame_1_1components_1_1Transform_a48baa5cafbadae458825c6d8b5835342}\label{classgame_1_1components_1_1Transform_a48baa5cafbadae458825c6d8b5835342}} 
+\index{game::components::Transform@{game::components::Transform}!mScale@{mScale}}
+\index{mScale@{mScale}!game::components::Transform@{game::components::Transform}}
+\doxysubsubsection{\texorpdfstring{mScale}{mScale}}
+{\footnotesize\ttfamily sf\+::\+Vector2f game\+::components\+::\+Transform\+::m\+Scale\hspace{0.3cm}{\ttfamily [private]}}
+
+my scale \mbox{\Hypertarget{classgame_1_1components_1_1Transform_a9e836a0f9d384410d43b32f38cf3cfc4}\label{classgame_1_1components_1_1Transform_a9e836a0f9d384410d43b32f38cf3cfc4}} 
+\index{game::components::Transform@{game::components::Transform}!mSize@{mSize}}
+\index{mSize@{mSize}!game::components::Transform@{game::components::Transform}}
+\doxysubsubsection{\texorpdfstring{mSize}{mSize}}
+{\footnotesize\ttfamily sf\+::\+Vector2f game\+::components\+::\+Transform\+::m\+Size\hspace{0.3cm}{\ttfamily [private]}}
+
+my size 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Components/Transform.\+h\end{DoxyCompactItemize}

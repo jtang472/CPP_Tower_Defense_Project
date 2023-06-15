@@ -1,0 +1,177 @@
+\hypertarget{classgame_1_1core_1_1AsyncTask}{}\doxysection{game\+::core\+::Async\+Task Class Reference}
+\label{classgame_1_1core_1_1AsyncTask}\index{game::core::AsyncTask@{game::core::AsyncTask}}
+
+
+asynchronous task executer and handler  
+
+
+
+
+{\ttfamily \#include $<$Async\+Task.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgame_1_1core_1_1AsyncTask_ad4ae1741198900536239044b19913e63}{Async\+Task}} (Loading\+Task task)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classgame_1_1core_1_1AsyncTask}{Async\+Task}} constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classgame_1_1core_1_1AsyncTask_a3442f3c974848aaf96896cb7852c1bbb}{$\sim$\+Async\+Task}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classgame_1_1core_1_1AsyncTask}{Async\+Task}} destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1core_1_1AsyncTask_a126dea6a87a18acb265147ff3b71338d}{execute}} ()
+\begin{DoxyCompactList}\small\item\em start executing the asynchronous task \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1core_1_1AsyncTask_ab18a13c245326da8e9db2bc68233ed14}{tick}} ()
+\begin{DoxyCompactList}\small\item\em called every frame to check the current state of the asynchronous task \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1core_1_1AsyncTask_aa50d4d2839003098ede69940af64d58d}{join}} ()
+\begin{DoxyCompactList}\small\item\em join the async task thread to the main thread \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Task\+Complete\+Delegate \mbox{\hyperlink{classgame_1_1core_1_1AsyncTask_abffd102fa5df21db0464a17d4813cb0d}{on\+Task\+Completed}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classgame_1_1core_1_1AsyncTask_a1d0a596fea6ec33086e9e3209b344b85}{run\+Task}} ()
+\begin{DoxyCompactList}\small\item\em start running the asynchronous task \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Loading\+Task \mbox{\hyperlink{classgame_1_1core_1_1AsyncTask_a7fed512328a3f7ff95107f59244a19f8}{m\+Task}}
+\item 
+std\+::thread $\ast$ \mbox{\hyperlink{classgame_1_1core_1_1AsyncTask_a26fcbdefff0fe9e61ea1eeb27805e8a5}{m\+Thread}}
+\item 
+bool \mbox{\hyperlink{classgame_1_1core_1_1AsyncTask_a5ad69451fe56d71df87c653d358d80ee}{m\+Is\+Running}}
+\item 
+bool \mbox{\hyperlink{classgame_1_1core_1_1AsyncTask_a0c5d05b45dd2e22521ba1d6933f6d5c5}{m\+Finished}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::mutex \mbox{\hyperlink{classgame_1_1core_1_1AsyncTask_a7a34c096f8cce2d7140943ca947c5069}{Lock}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+asynchronous task executer and handler 
+
+this class takes a time-\/consuming loading task as a asynchronous task, runs it using a std\+::thread and execute a task completion event when the task is completed
+
+\begin{DoxyAuthor}{Author}
+Zheng Yang 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgame_1_1core_1_1AsyncTask_ad4ae1741198900536239044b19913e63}\label{classgame_1_1core_1_1AsyncTask_ad4ae1741198900536239044b19913e63}} 
+\index{game::core::AsyncTask@{game::core::AsyncTask}!AsyncTask@{AsyncTask}}
+\index{AsyncTask@{AsyncTask}!game::core::AsyncTask@{game::core::AsyncTask}}
+\doxysubsubsection{\texorpdfstring{AsyncTask()}{AsyncTask()}}
+{\footnotesize\ttfamily game\+::core\+::\+Async\+Task\+::\+Async\+Task (\begin{DoxyParamCaption}\item[{Loading\+Task}]{task }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classgame_1_1core_1_1AsyncTask}{Async\+Task}} constructor. 
+
+\mbox{\hyperlink{classgame_1_1core_1_1AsyncTask}{Async\+Task}} constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em task} & asynchronous task \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1core_1_1AsyncTask_a3442f3c974848aaf96896cb7852c1bbb}\label{classgame_1_1core_1_1AsyncTask_a3442f3c974848aaf96896cb7852c1bbb}} 
+\index{game::core::AsyncTask@{game::core::AsyncTask}!````~AsyncTask@{$\sim$AsyncTask}}
+\index{````~AsyncTask@{$\sim$AsyncTask}!game::core::AsyncTask@{game::core::AsyncTask}}
+\doxysubsubsection{\texorpdfstring{$\sim$AsyncTask()}{~AsyncTask()}}
+{\footnotesize\ttfamily game\+::core\+::\+Async\+Task\+::$\sim$\+Async\+Task (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classgame_1_1core_1_1AsyncTask}{Async\+Task}} destructor. 
+
+\mbox{\hyperlink{classgame_1_1core_1_1AsyncTask}{Async\+Task}} destructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgame_1_1core_1_1AsyncTask_a126dea6a87a18acb265147ff3b71338d}\label{classgame_1_1core_1_1AsyncTask_a126dea6a87a18acb265147ff3b71338d}} 
+\index{game::core::AsyncTask@{game::core::AsyncTask}!execute@{execute}}
+\index{execute@{execute}!game::core::AsyncTask@{game::core::AsyncTask}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily void game\+::core\+::\+Async\+Task\+::execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+start executing the asynchronous task 
+
+start executing the asynchronous task \mbox{\Hypertarget{classgame_1_1core_1_1AsyncTask_aa50d4d2839003098ede69940af64d58d}\label{classgame_1_1core_1_1AsyncTask_aa50d4d2839003098ede69940af64d58d}} 
+\index{game::core::AsyncTask@{game::core::AsyncTask}!join@{join}}
+\index{join@{join}!game::core::AsyncTask@{game::core::AsyncTask}}
+\doxysubsubsection{\texorpdfstring{join()}{join()}}
+{\footnotesize\ttfamily void game\+::core\+::\+Async\+Task\+::join (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+join the async task thread to the main thread 
+
+join the async task thread to the main thread \mbox{\Hypertarget{classgame_1_1core_1_1AsyncTask_a1d0a596fea6ec33086e9e3209b344b85}\label{classgame_1_1core_1_1AsyncTask_a1d0a596fea6ec33086e9e3209b344b85}} 
+\index{game::core::AsyncTask@{game::core::AsyncTask}!runTask@{runTask}}
+\index{runTask@{runTask}!game::core::AsyncTask@{game::core::AsyncTask}}
+\doxysubsubsection{\texorpdfstring{runTask()}{runTask()}}
+{\footnotesize\ttfamily void game\+::core\+::\+Async\+Task\+::run\+Task (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+start running the asynchronous task 
+
+start running the asynchronous task \mbox{\Hypertarget{classgame_1_1core_1_1AsyncTask_ab18a13c245326da8e9db2bc68233ed14}\label{classgame_1_1core_1_1AsyncTask_ab18a13c245326da8e9db2bc68233ed14}} 
+\index{game::core::AsyncTask@{game::core::AsyncTask}!tick@{tick}}
+\index{tick@{tick}!game::core::AsyncTask@{game::core::AsyncTask}}
+\doxysubsubsection{\texorpdfstring{tick()}{tick()}}
+{\footnotesize\ttfamily void game\+::core\+::\+Async\+Task\+::tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+called every frame to check the current state of the asynchronous task 
+
+called every frame to check the current state of the asynchronous task, close the task if the asynchronous task has been completed 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classgame_1_1core_1_1AsyncTask_a7a34c096f8cce2d7140943ca947c5069}\label{classgame_1_1core_1_1AsyncTask_a7a34c096f8cce2d7140943ca947c5069}} 
+\index{game::core::AsyncTask@{game::core::AsyncTask}!Lock@{Lock}}
+\index{Lock@{Lock}!game::core::AsyncTask@{game::core::AsyncTask}}
+\doxysubsubsection{\texorpdfstring{Lock}{Lock}}
+{\footnotesize\ttfamily std\+::mutex game\+::core\+::\+Async\+Task\+::\+Lock\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+mutual lock object \mbox{\Hypertarget{classgame_1_1core_1_1AsyncTask_a0c5d05b45dd2e22521ba1d6933f6d5c5}\label{classgame_1_1core_1_1AsyncTask_a0c5d05b45dd2e22521ba1d6933f6d5c5}} 
+\index{game::core::AsyncTask@{game::core::AsyncTask}!mFinished@{mFinished}}
+\index{mFinished@{mFinished}!game::core::AsyncTask@{game::core::AsyncTask}}
+\doxysubsubsection{\texorpdfstring{mFinished}{mFinished}}
+{\footnotesize\ttfamily bool game\+::core\+::\+Async\+Task\+::m\+Finished\hspace{0.3cm}{\ttfamily [private]}}
+
+true if async task is finished, otherwise false \mbox{\Hypertarget{classgame_1_1core_1_1AsyncTask_a5ad69451fe56d71df87c653d358d80ee}\label{classgame_1_1core_1_1AsyncTask_a5ad69451fe56d71df87c653d358d80ee}} 
+\index{game::core::AsyncTask@{game::core::AsyncTask}!mIsRunning@{mIsRunning}}
+\index{mIsRunning@{mIsRunning}!game::core::AsyncTask@{game::core::AsyncTask}}
+\doxysubsubsection{\texorpdfstring{mIsRunning}{mIsRunning}}
+{\footnotesize\ttfamily bool game\+::core\+::\+Async\+Task\+::m\+Is\+Running\hspace{0.3cm}{\ttfamily [private]}}
+
+async task state flag \mbox{\Hypertarget{classgame_1_1core_1_1AsyncTask_a7fed512328a3f7ff95107f59244a19f8}\label{classgame_1_1core_1_1AsyncTask_a7fed512328a3f7ff95107f59244a19f8}} 
+\index{game::core::AsyncTask@{game::core::AsyncTask}!mTask@{mTask}}
+\index{mTask@{mTask}!game::core::AsyncTask@{game::core::AsyncTask}}
+\doxysubsubsection{\texorpdfstring{mTask}{mTask}}
+{\footnotesize\ttfamily Loading\+Task game\+::core\+::\+Async\+Task\+::m\+Task\hspace{0.3cm}{\ttfamily [private]}}
+
+my async task \mbox{\Hypertarget{classgame_1_1core_1_1AsyncTask_a26fcbdefff0fe9e61ea1eeb27805e8a5}\label{classgame_1_1core_1_1AsyncTask_a26fcbdefff0fe9e61ea1eeb27805e8a5}} 
+\index{game::core::AsyncTask@{game::core::AsyncTask}!mThread@{mThread}}
+\index{mThread@{mThread}!game::core::AsyncTask@{game::core::AsyncTask}}
+\doxysubsubsection{\texorpdfstring{mThread}{mThread}}
+{\footnotesize\ttfamily std\+::thread$\ast$ game\+::core\+::\+Async\+Task\+::m\+Thread\hspace{0.3cm}{\ttfamily [private]}}
+
+thread that the async task is running on \mbox{\Hypertarget{classgame_1_1core_1_1AsyncTask_abffd102fa5df21db0464a17d4813cb0d}\label{classgame_1_1core_1_1AsyncTask_abffd102fa5df21db0464a17d4813cb0d}} 
+\index{game::core::AsyncTask@{game::core::AsyncTask}!onTaskCompleted@{onTaskCompleted}}
+\index{onTaskCompleted@{onTaskCompleted}!game::core::AsyncTask@{game::core::AsyncTask}}
+\doxysubsubsection{\texorpdfstring{onTaskCompleted}{onTaskCompleted}}
+{\footnotesize\ttfamily Task\+Complete\+Delegate game\+::core\+::\+Async\+Task\+::on\+Task\+Completed}
+
+async task complete event 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Core/Async\+Task.\+h\end{DoxyCompactItemize}

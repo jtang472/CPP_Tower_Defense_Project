@@ -1,0 +1,193 @@
+\hypertarget{classgame_1_1components_1_1Component}{}\doxysection{game\+::components\+::Component Class Reference}
+\label{classgame_1_1components_1_1Component}\index{game::components::Component@{game::components::Component}}
+
+
+base class for all components  
+
+
+
+
+{\ttfamily \#include $<$Component.\+h$>$}
+
+
+
+Inheritance diagram for game\+::components\+::Component\+:
+% FIG 0
+
+
+Collaboration diagram for game\+::components\+::Component\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgame_1_1components_1_1GameObject}{Game\+Object}} \& \mbox{\hyperlink{classgame_1_1components_1_1Component_a733d91a1ec73b732d58da258754e48bd}{get\+Game\+Object}} ()
+\begin{DoxyCompactList}\small\item\em get component owner \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classgame_1_1components_1_1Component_a71d4b2e6419718cadb5ae49fb299dd4b}{$\sim$\+Component}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classgame_1_1components_1_1Component}{Component}} constructor. \end{DoxyCompactList}\item 
+GUID \mbox{\hyperlink{classgame_1_1components_1_1Component_a6123e7067b5ee2297cf6a4ddc7ed0738}{get\+GUID}} () const
+\begin{DoxyCompactList}\small\item\em get owner guid \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgame_1_1components_1_1Component_a6f3a069ba18d41cb51176f58112b7e50}{Component}} (\mbox{\hyperlink{classgame_1_1components_1_1GameObject}{Game\+Object}} \&owner)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classgame_1_1components_1_1Component}{Component}} constructor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classgame_1_1components_1_1Component_a333e4242c1594bfdc5713cddafae6a23}{on\+Enable}} ()
+\begin{DoxyCompactList}\small\item\em component lifecycle function \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classgame_1_1components_1_1Component_ac85cd99e8109eb32a97549bf437ea5ce}{tick}} (float delta\+Time)
+\begin{DoxyCompactList}\small\item\em component lifecycle function \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classgame_1_1components_1_1Component_ac79cec6fc53b00f36bbde8e8f7e23c05}{on\+Disable}} ()
+\begin{DoxyCompactList}\small\item\em component lifecycle function \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgame_1_1components_1_1GameObject}{Game\+Object}} \& \mbox{\hyperlink{classgame_1_1components_1_1Component_aa24070627bb7266a123299a320e9fcf7}{m\+Owner}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classgame_1_1components_1_1Component_a00df87c957d8f7ee0fc51f07a0542f4a}\label{classgame_1_1components_1_1Component_a00df87c957d8f7ee0fc51f07a0542f4a}} 
+class {\bfseries Game\+Object}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+base class for all components 
+
+this is the base class for all derived components. It defines a series of life cycle functions that gets called at a certain point of a component\textquotesingle{}s lifetime. All components are managed by gameobjects. lifetime design\+: construct -\/$>$ onenable -\/$>$ tick$^\wedge$$\ast$ -\/$>$ ondisable -\/$>$ destruct component can be enabled and disabled before destruct to restart its lifetime
+
+\begin{DoxyAuthor}{Author}
+Zheng Yang 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgame_1_1components_1_1Component_a71d4b2e6419718cadb5ae49fb299dd4b}\label{classgame_1_1components_1_1Component_a71d4b2e6419718cadb5ae49fb299dd4b}} 
+\index{game::components::Component@{game::components::Component}!````~Component@{$\sim$Component}}
+\index{````~Component@{$\sim$Component}!game::components::Component@{game::components::Component}}
+\doxysubsubsection{\texorpdfstring{$\sim$Component()}{~Component()}}
+{\footnotesize\ttfamily virtual game\+::components\+::\+Component\+::$\sim$\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{classgame_1_1components_1_1Component}{Component}} constructor. 
+
+\mbox{\hyperlink{classgame_1_1components_1_1Component}{Component}} constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em owner} & owner of the component \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1components_1_1Component_a6f3a069ba18d41cb51176f58112b7e50}\label{classgame_1_1components_1_1Component_a6f3a069ba18d41cb51176f58112b7e50}} 
+\index{game::components::Component@{game::components::Component}!Component@{Component}}
+\index{Component@{Component}!game::components::Component@{game::components::Component}}
+\doxysubsubsection{\texorpdfstring{Component()}{Component()}}
+{\footnotesize\ttfamily game\+::components\+::\+Component\+::\+Component (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgame_1_1components_1_1GameObject}{Game\+Object}} \&}]{owner }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\mbox{\hyperlink{classgame_1_1components_1_1Component}{Component}} constructor. 
+
+\mbox{\hyperlink{classgame_1_1components_1_1Component}{Component}} constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em owner} & owner of the component \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgame_1_1components_1_1Component_a733d91a1ec73b732d58da258754e48bd}\label{classgame_1_1components_1_1Component_a733d91a1ec73b732d58da258754e48bd}} 
+\index{game::components::Component@{game::components::Component}!getGameObject@{getGameObject}}
+\index{getGameObject@{getGameObject}!game::components::Component@{game::components::Component}}
+\doxysubsubsection{\texorpdfstring{getGameObject()}{getGameObject()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgame_1_1components_1_1GameObject}{Game\+Object}}\& game\+::components\+::\+Component\+::get\+Game\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get component owner 
+
+get component owner
+
+\begin{DoxyReturn}{Returns}
+owner of the component 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgame_1_1components_1_1Component_a6123e7067b5ee2297cf6a4ddc7ed0738}\label{classgame_1_1components_1_1Component_a6123e7067b5ee2297cf6a4ddc7ed0738}} 
+\index{game::components::Component@{game::components::Component}!getGUID@{getGUID}}
+\index{getGUID@{getGUID}!game::components::Component@{game::components::Component}}
+\doxysubsubsection{\texorpdfstring{getGUID()}{getGUID()}}
+{\footnotesize\ttfamily GUID game\+::components\+::\+Component\+::get\+GUID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get owner guid 
+
+get owner guid
+
+\begin{DoxyReturn}{Returns}
+owner guid 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgame_1_1components_1_1Component_ac79cec6fc53b00f36bbde8e8f7e23c05}\label{classgame_1_1components_1_1Component_ac79cec6fc53b00f36bbde8e8f7e23c05}} 
+\index{game::components::Component@{game::components::Component}!onDisable@{onDisable}}
+\index{onDisable@{onDisable}!game::components::Component@{game::components::Component}}
+\doxysubsubsection{\texorpdfstring{onDisable()}{onDisable()}}
+{\footnotesize\ttfamily virtual void game\+::components\+::\+Component\+::on\+Disable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+component lifecycle function 
+
+component lifecycle function, gets called automatically when component is disabled 
+
+Reimplemented in \mbox{\hyperlink{classgame_1_1components_1_1SimpleButton_ae4e912e512e7da4dac71b894cea1fd8a}{game\+::components\+::\+Simple\+Button}}, \mbox{\hyperlink{classgame_1_1components_1_1ShopItem_abd7a9c5b0befefd4d201f17d512210da}{game\+::components\+::\+Shop\+Item}}, \mbox{\hyperlink{classgame_1_1components_1_1SaveSlot_a1007a9a4de1a83c18393143485ce6428}{game\+::components\+::\+Save\+Slot}}, \mbox{\hyperlink{classgame_1_1components_1_1Projection_af8f2160d9d8950c3ea64ecf5cd0fc5bd}{game\+::components\+::\+Projection}}, \mbox{\hyperlink{classgame_1_1components_1_1PlayerHud_ad236e68593e6304796471fea02ae0dbd}{game\+::components\+::\+Player\+Hud}}, \mbox{\hyperlink{classgame_1_1components_1_1GridEntity_a6e8e8c1938b666c34e70b502f88ea282}{game\+::components\+::\+Grid\+Entity}}, \mbox{\hyperlink{classgame_1_1components_1_1EnemySpawner_ae6dad73d8e920666de9f675ee370f09e}{game\+::components\+::\+Enemy\+Spawner}}, \mbox{\hyperlink{classgame_1_1components_1_1Enemy_ae25fb56f69861e597fbc1cfe82d1c945}{game\+::components\+::\+Enemy}}, \mbox{\hyperlink{classgame_1_1components_1_1Text_ab81a6af4abb8f7157fa484da8908082e}{game\+::components\+::\+Text}}, \mbox{\hyperlink{classgame_1_1components_1_1Sprite_a64178747ff0ede0f1f5492da87c7e5c6}{game\+::components\+::\+Sprite}}, \mbox{\hyperlink{classgame_1_1components_1_1Shape_aac068e629480ea4d3d7eea3c14505216}{game\+::components\+::\+Shape}}, \mbox{\hyperlink{classgame_1_1components_1_1RenderComponent_a92315d762c58050ed67ef88b804426a5}{game\+::components\+::\+Render\+Component}}, \mbox{\hyperlink{classgame_1_1components_1_1Quad_aa563f38bbdec291dea227db1b329dbb9}{game\+::components\+::\+Quad}}, \mbox{\hyperlink{classgame_1_1components_1_1Button_a3e5c724baba4143560b9dfd2b814d542}{game\+::components\+::\+Button}}, \mbox{\hyperlink{classgame_1_1components_1_1Animator_a947ecf1262dffa129d05a3e570d776be}{game\+::components\+::\+Animator}}, and \mbox{\hyperlink{classgame_1_1components_1_1Transform_aa4ac6f8c5aef31b47a82a0832fecb989}{game\+::components\+::\+Transform}}.
+
+\mbox{\Hypertarget{classgame_1_1components_1_1Component_a333e4242c1594bfdc5713cddafae6a23}\label{classgame_1_1components_1_1Component_a333e4242c1594bfdc5713cddafae6a23}} 
+\index{game::components::Component@{game::components::Component}!onEnable@{onEnable}}
+\index{onEnable@{onEnable}!game::components::Component@{game::components::Component}}
+\doxysubsubsection{\texorpdfstring{onEnable()}{onEnable()}}
+{\footnotesize\ttfamily virtual void game\+::components\+::\+Component\+::on\+Enable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+component lifecycle function 
+
+component lifecycle function, gets called automatically when component is enabled 
+
+Reimplemented in \mbox{\hyperlink{classgame_1_1components_1_1SimpleButton_a6f799773b9a5206e3eb2560700f8e938}{game\+::components\+::\+Simple\+Button}}, \mbox{\hyperlink{classgame_1_1components_1_1GridLayout_a718263cfb84c0da1cafd1f36fb6bacb9}{game\+::components\+::\+Grid\+Layout}}, \mbox{\hyperlink{classgame_1_1components_1_1ShopItem_a1083b683ec404e71ab86cbe79112635b}{game\+::components\+::\+Shop\+Item}}, \mbox{\hyperlink{classgame_1_1components_1_1SaveSlot_a63154f3eaca51d2da478b765253e854d}{game\+::components\+::\+Save\+Slot}}, \mbox{\hyperlink{classgame_1_1components_1_1Projection_a0b404be917ca9c1babc4e3f23474486c}{game\+::components\+::\+Projection}}, \mbox{\hyperlink{classgame_1_1components_1_1PlayerHud_a0e473e7408b808568ab16004bace68ae}{game\+::components\+::\+Player\+Hud}}, \mbox{\hyperlink{classgame_1_1components_1_1GridEntity_ab772204547b6622e106cf88dd6c4addd}{game\+::components\+::\+Grid\+Entity}}, \mbox{\hyperlink{classgame_1_1components_1_1EnemySpawner_a9d552ba5ec9fa15c1443d7ecacc287f7}{game\+::components\+::\+Enemy\+Spawner}}, \mbox{\hyperlink{classgame_1_1components_1_1Enemy_a0b1312635bdf2f12add96110e652ff65}{game\+::components\+::\+Enemy}}, \mbox{\hyperlink{classgame_1_1components_1_1Text_a8e8f3f7099fce97ff45f1fd26015a0cc}{game\+::components\+::\+Text}}, \mbox{\hyperlink{classgame_1_1components_1_1Sprite_afd29e4bf3b2c21e0b888cc4cc524f68c}{game\+::components\+::\+Sprite}}, \mbox{\hyperlink{classgame_1_1components_1_1Shape_af8417d3e7bf5bbe8d501484972da10ac}{game\+::components\+::\+Shape}}, \mbox{\hyperlink{classgame_1_1components_1_1RenderComponent_ae4fac2917f13cd029ab46cae876d14e3}{game\+::components\+::\+Render\+Component}}, \mbox{\hyperlink{classgame_1_1components_1_1Quad_a933aa629a4055223c907583215ad2b42}{game\+::components\+::\+Quad}}, \mbox{\hyperlink{classgame_1_1components_1_1Button_a7c8fdc9cdc1bb32d787f700c982a4aae}{game\+::components\+::\+Button}}, \mbox{\hyperlink{classgame_1_1components_1_1Animator_af2ad977c229ef07561d4950dd7726dda}{game\+::components\+::\+Animator}}, and \mbox{\hyperlink{classgame_1_1components_1_1Transform_a00c9b4a4ee234f7ccfe418e7a6dad189}{game\+::components\+::\+Transform}}.
+
+\mbox{\Hypertarget{classgame_1_1components_1_1Component_ac85cd99e8109eb32a97549bf437ea5ce}\label{classgame_1_1components_1_1Component_ac85cd99e8109eb32a97549bf437ea5ce}} 
+\index{game::components::Component@{game::components::Component}!tick@{tick}}
+\index{tick@{tick}!game::components::Component@{game::components::Component}}
+\doxysubsubsection{\texorpdfstring{tick()}{tick()}}
+{\footnotesize\ttfamily virtual void game\+::components\+::\+Component\+::tick (\begin{DoxyParamCaption}\item[{float}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+component lifecycle function 
+
+component lifecycle function, gets called automatically every frame. This is where every component in the game gets updated
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & the time elpased between now and last frame \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classgame_1_1components_1_1TowerShop_ad1813469d417be059df1cbd094b9eefc}{game\+::components\+::\+Tower\+Shop}}, \mbox{\hyperlink{classgame_1_1components_1_1Tower_aa5b527261d5455e5d01e4eda16f1bcc9}{game\+::components\+::\+Tower}}, \mbox{\hyperlink{classgame_1_1components_1_1Projection_aa3724edf958323567ea6f35dc0672ddc}{game\+::components\+::\+Projection}}, \mbox{\hyperlink{classgame_1_1components_1_1PlayerHud_a09c12fa5c3ce99ecfd89c116aeb8f2e8}{game\+::components\+::\+Player\+Hud}}, \mbox{\hyperlink{classgame_1_1components_1_1EnemySpawner_a9ee73cd00ef28490cd047add1f3312be}{game\+::components\+::\+Enemy\+Spawner}}, \mbox{\hyperlink{classgame_1_1components_1_1Enemy_ab8a5168e77e423638f462a11ebdb1db8}{game\+::components\+::\+Enemy}}, \mbox{\hyperlink{classgame_1_1components_1_1RotateAnimator_ab8f197c1fdb77c72c8192f7a14f2b8f2}{game\+::components\+::\+Rotate\+Animator}}, \mbox{\hyperlink{classgame_1_1components_1_1FadeInOutAnimator_a3f84492323d7b10459b7c81587cf1517}{game\+::components\+::\+Fade\+In\+Out\+Animator}}, \mbox{\hyperlink{classgame_1_1components_1_1CharacterAnimator_a16ac773f8653a1760509512f438a1a31}{game\+::components\+::\+Character\+Animator}}, and \mbox{\hyperlink{classgame_1_1components_1_1Transform_a9d0e1763f68f68babdd0a360cb873636}{game\+::components\+::\+Transform}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classgame_1_1components_1_1Component_aa24070627bb7266a123299a320e9fcf7}\label{classgame_1_1components_1_1Component_aa24070627bb7266a123299a320e9fcf7}} 
+\index{game::components::Component@{game::components::Component}!mOwner@{mOwner}}
+\index{mOwner@{mOwner}!game::components::Component@{game::components::Component}}
+\doxysubsubsection{\texorpdfstring{mOwner}{mOwner}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgame_1_1components_1_1GameObject}{Game\+Object}}\& game\+::components\+::\+Component\+::m\+Owner\hspace{0.3cm}{\ttfamily [protected]}}
+
+my owner 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Components/Component.\+h\end{DoxyCompactItemize}

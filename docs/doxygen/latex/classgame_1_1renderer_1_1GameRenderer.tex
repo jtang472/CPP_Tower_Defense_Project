@@ -1,0 +1,270 @@
+\hypertarget{classgame_1_1renderer_1_1GameRenderer}{}\doxysection{game\+::renderer\+::Game\+Renderer Class Reference}
+\label{classgame_1_1renderer_1_1GameRenderer}\index{game::renderer::GameRenderer@{game::renderer::GameRenderer}}
+
+
+game drawable renderer  
+
+
+
+
+{\ttfamily \#include $<$Game\+Renderer.\+h$>$}
+
+
+
+Inheritance diagram for game\+::renderer\+::Game\+Renderer\+:
+% FIG 0
+
+
+Collaboration diagram for game\+::renderer\+::Game\+Renderer\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgame_1_1renderer_1_1GameRenderer_af0ffb93c09ff6e80ab775034883a8a44}{Game\+Renderer}} (sf\+::\+Render\+Window \&window, sf\+::\+View \&ui\+View, sf\+::\+View \&game\+View)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classgame_1_1renderer_1_1GameRenderer}{Game\+Renderer}} constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classgame_1_1renderer_1_1GameRenderer_a73868f6df9067fc18aa094c024788fa8}{$\sim$\+Game\+Renderer}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classgame_1_1renderer_1_1GameRenderer}{Game\+Renderer}} destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1renderer_1_1GameRenderer_a6109e9794495e6a410e1ffe73bc02df9}{init}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classgame_1_1renderer_1_1GameRenderer}{Game\+Renderer}} initializer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1renderer_1_1GameRenderer_a342a4a2f760e496fe38897a912fa19ed}{draw}} ()
+\begin{DoxyCompactList}\small\item\em called every frame to render active drawables to game window \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1renderer_1_1GameRenderer_aa5a6025cd7c73a860ab2c904e0b0242f}{register\+Drawable}} (\mbox{\hyperlink{classgame_1_1components_1_1RenderComponent}{components\+::\+Render\+Component}} $\ast$drawable)
+\begin{DoxyCompactList}\small\item\em register a drawable component \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1renderer_1_1GameRenderer_ac5ed16b66b9d7cbf1fdab9fe0044f7e3}{unregister\+Drawable}} (\mbox{\hyperlink{classgame_1_1components_1_1RenderComponent}{components\+::\+Render\+Component}} $\ast$drawable)
+\begin{DoxyCompactList}\small\item\em unregister a drawable component \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1renderer_1_1GameRenderer_a8683fb5fff2c2287caf6c76ff8a64a40}{clear}} ()
+\begin{DoxyCompactList}\small\item\em clear render queue \end{DoxyCompactList}\item 
+const std\+::vector$<$ \mbox{\hyperlink{classgame_1_1components_1_1RenderComponent}{components\+::\+Render\+Component}} $\ast$ $>$ \& \mbox{\hyperlink{classgame_1_1renderer_1_1GameRenderer_abac636b631288745206556685fbb5183}{get\+Current\+Drawables}} () const
+\begin{DoxyCompactList}\small\item\em get all active drawables \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1renderer_1_1GameRenderer_a6db7d4435830fdd3456a94e6f7248ffd}{show\+FPS}} ()
+\begin{DoxyCompactList}\small\item\em display fps to the left top corner of screen \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const sf\+::\+Vector2i \mbox{\hyperlink{classgame_1_1renderer_1_1GameRenderer_a95ca54abaa747dceada66adfd7d24c45}{Referenced\+Resolution}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classgame_1_1renderer_1_1GameRenderer_a87fd0fe53ca0541f2593ca9e4c4d9d8c}{on\+Game\+Window\+Resize}} (int width, int height)
+\begin{DoxyCompactList}\small\item\em game window resize event handler \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classgame_1_1components_1_1RenderComponent}{components\+::\+Render\+Component}} $\ast$ $>$ \mbox{\hyperlink{classgame_1_1renderer_1_1GameRenderer_af66c5706bd51354576fcfffe5ea90958}{m\+Render\+Queue}}
+\item 
+sf\+::\+Render\+Window \& \mbox{\hyperlink{classgame_1_1renderer_1_1GameRenderer_a56cb4503f77893b8def0014930ae8e9d}{m\+Window}}
+\item 
+sf\+::\+View \& \mbox{\hyperlink{classgame_1_1renderer_1_1GameRenderer_aec12b733a041eb141a4b40b1ab4b22c9}{m\+UICamera}}
+\item 
+sf\+::\+View \& \mbox{\hyperlink{classgame_1_1renderer_1_1GameRenderer_a07e777bc85eedf9777aec641b0234cfe}{m\+Game\+Camera}}
+\item 
+\mbox{\hyperlink{classgame_1_1components_1_1Text}{components\+::\+Text}} $\ast$ \mbox{\hyperlink{classgame_1_1renderer_1_1GameRenderer_a1dd5083708c847d61f8f05a7816fd17b}{m\+Fps\+Text}}
+\item 
+boost\+::signals2\+::connection \mbox{\hyperlink{classgame_1_1renderer_1_1GameRenderer_a719705673bd28a2055650415eaa8369d}{m\+Game\+Window\+Resize\+Listener}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+game drawable renderer 
+
+this is the class that manages all the drawable components in game, it sorts drawables based on their render layer and depth, and sort drawables in the same layer and depth based on their distance to the camera, and render these drawables to game window every frame
+
+\begin{DoxyAuthor}{Author}
+Zheng Yang 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgame_1_1renderer_1_1GameRenderer_af0ffb93c09ff6e80ab775034883a8a44}\label{classgame_1_1renderer_1_1GameRenderer_af0ffb93c09ff6e80ab775034883a8a44}} 
+\index{game::renderer::GameRenderer@{game::renderer::GameRenderer}!GameRenderer@{GameRenderer}}
+\index{GameRenderer@{GameRenderer}!game::renderer::GameRenderer@{game::renderer::GameRenderer}}
+\doxysubsubsection{\texorpdfstring{GameRenderer()}{GameRenderer()}}
+{\footnotesize\ttfamily game\+::renderer\+::\+Game\+Renderer\+::\+Game\+Renderer (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window,  }\item[{sf\+::\+View \&}]{ui\+View,  }\item[{sf\+::\+View \&}]{game\+View }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classgame_1_1renderer_1_1GameRenderer}{Game\+Renderer}} constructor. 
+
+\mbox{\hyperlink{classgame_1_1renderer_1_1GameRenderer}{Game\+Renderer}} constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & game window \\
+\hline
+{\em ui\+View} & UI camera \\
+\hline
+{\em game\+View} & game camera \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1renderer_1_1GameRenderer_a73868f6df9067fc18aa094c024788fa8}\label{classgame_1_1renderer_1_1GameRenderer_a73868f6df9067fc18aa094c024788fa8}} 
+\index{game::renderer::GameRenderer@{game::renderer::GameRenderer}!````~GameRenderer@{$\sim$GameRenderer}}
+\index{````~GameRenderer@{$\sim$GameRenderer}!game::renderer::GameRenderer@{game::renderer::GameRenderer}}
+\doxysubsubsection{\texorpdfstring{$\sim$GameRenderer()}{~GameRenderer()}}
+{\footnotesize\ttfamily game\+::renderer\+::\+Game\+Renderer\+::$\sim$\+Game\+Renderer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classgame_1_1renderer_1_1GameRenderer}{Game\+Renderer}} destructor. 
+
+\mbox{\hyperlink{classgame_1_1renderer_1_1GameRenderer}{Game\+Renderer}} destructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgame_1_1renderer_1_1GameRenderer_a8683fb5fff2c2287caf6c76ff8a64a40}\label{classgame_1_1renderer_1_1GameRenderer_a8683fb5fff2c2287caf6c76ff8a64a40}} 
+\index{game::renderer::GameRenderer@{game::renderer::GameRenderer}!clear@{clear}}
+\index{clear@{clear}!game::renderer::GameRenderer@{game::renderer::GameRenderer}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void game\+::renderer\+::\+Game\+Renderer\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+clear render queue 
+
+clear entire render queue \mbox{\Hypertarget{classgame_1_1renderer_1_1GameRenderer_a342a4a2f760e496fe38897a912fa19ed}\label{classgame_1_1renderer_1_1GameRenderer_a342a4a2f760e496fe38897a912fa19ed}} 
+\index{game::renderer::GameRenderer@{game::renderer::GameRenderer}!draw@{draw}}
+\index{draw@{draw}!game::renderer::GameRenderer@{game::renderer::GameRenderer}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void game\+::renderer\+::\+Game\+Renderer\+::draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+called every frame to render active drawables to game window 
+
+do not manually call this API\+: it is called by game manager every frame to render active drawables to game window \mbox{\Hypertarget{classgame_1_1renderer_1_1GameRenderer_abac636b631288745206556685fbb5183}\label{classgame_1_1renderer_1_1GameRenderer_abac636b631288745206556685fbb5183}} 
+\index{game::renderer::GameRenderer@{game::renderer::GameRenderer}!getCurrentDrawables@{getCurrentDrawables}}
+\index{getCurrentDrawables@{getCurrentDrawables}!game::renderer::GameRenderer@{game::renderer::GameRenderer}}
+\doxysubsubsection{\texorpdfstring{getCurrentDrawables()}{getCurrentDrawables()}}
+{\footnotesize\ttfamily const std\+::vector$<$\mbox{\hyperlink{classgame_1_1components_1_1RenderComponent}{components\+::\+Render\+Component}}$\ast$$>$\& game\+::renderer\+::\+Game\+Renderer\+::get\+Current\+Drawables (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get all active drawables 
+
+get all active drawables cached in the render queue
+
+\begin{DoxyReturn}{Returns}
+a list of all active drawables 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgame_1_1renderer_1_1GameRenderer_a6109e9794495e6a410e1ffe73bc02df9}\label{classgame_1_1renderer_1_1GameRenderer_a6109e9794495e6a410e1ffe73bc02df9}} 
+\index{game::renderer::GameRenderer@{game::renderer::GameRenderer}!init@{init}}
+\index{init@{init}!game::renderer::GameRenderer@{game::renderer::GameRenderer}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void game\+::renderer\+::\+Game\+Renderer\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classgame_1_1renderer_1_1GameRenderer}{Game\+Renderer}} initializer. 
+
+call this function before using any APIs provided by game renderer \mbox{\Hypertarget{classgame_1_1renderer_1_1GameRenderer_a87fd0fe53ca0541f2593ca9e4c4d9d8c}\label{classgame_1_1renderer_1_1GameRenderer_a87fd0fe53ca0541f2593ca9e4c4d9d8c}} 
+\index{game::renderer::GameRenderer@{game::renderer::GameRenderer}!onGameWindowResize@{onGameWindowResize}}
+\index{onGameWindowResize@{onGameWindowResize}!game::renderer::GameRenderer@{game::renderer::GameRenderer}}
+\doxysubsubsection{\texorpdfstring{onGameWindowResize()}{onGameWindowResize()}}
+{\footnotesize\ttfamily void game\+::renderer\+::\+Game\+Renderer\+::on\+Game\+Window\+Resize (\begin{DoxyParamCaption}\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+game window resize event handler 
+
+callback function for game window resize event
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & new width \\
+\hline
+{\em height} & new height \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1renderer_1_1GameRenderer_aa5a6025cd7c73a860ab2c904e0b0242f}\label{classgame_1_1renderer_1_1GameRenderer_aa5a6025cd7c73a860ab2c904e0b0242f}} 
+\index{game::renderer::GameRenderer@{game::renderer::GameRenderer}!registerDrawable@{registerDrawable}}
+\index{registerDrawable@{registerDrawable}!game::renderer::GameRenderer@{game::renderer::GameRenderer}}
+\doxysubsubsection{\texorpdfstring{registerDrawable()}{registerDrawable()}}
+{\footnotesize\ttfamily void game\+::renderer\+::\+Game\+Renderer\+::register\+Drawable (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgame_1_1components_1_1RenderComponent}{components\+::\+Render\+Component}} $\ast$}]{drawable }\end{DoxyParamCaption})}
+
+
+
+register a drawable component 
+
+register a drawable component to active render queue
+
+
+\begin{DoxyParams}{Parameters}
+{\em drawable} & drawable component to be added to the render queue \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1renderer_1_1GameRenderer_a6db7d4435830fdd3456a94e6f7248ffd}\label{classgame_1_1renderer_1_1GameRenderer_a6db7d4435830fdd3456a94e6f7248ffd}} 
+\index{game::renderer::GameRenderer@{game::renderer::GameRenderer}!showFPS@{showFPS}}
+\index{showFPS@{showFPS}!game::renderer::GameRenderer@{game::renderer::GameRenderer}}
+\doxysubsubsection{\texorpdfstring{showFPS()}{showFPS()}}
+{\footnotesize\ttfamily void game\+::renderer\+::\+Game\+Renderer\+::show\+FPS (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+display fps to the left top corner of screen 
+
+call this function to display fps to the left top corner of screen \mbox{\Hypertarget{classgame_1_1renderer_1_1GameRenderer_ac5ed16b66b9d7cbf1fdab9fe0044f7e3}\label{classgame_1_1renderer_1_1GameRenderer_ac5ed16b66b9d7cbf1fdab9fe0044f7e3}} 
+\index{game::renderer::GameRenderer@{game::renderer::GameRenderer}!unregisterDrawable@{unregisterDrawable}}
+\index{unregisterDrawable@{unregisterDrawable}!game::renderer::GameRenderer@{game::renderer::GameRenderer}}
+\doxysubsubsection{\texorpdfstring{unregisterDrawable()}{unregisterDrawable()}}
+{\footnotesize\ttfamily void game\+::renderer\+::\+Game\+Renderer\+::unregister\+Drawable (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgame_1_1components_1_1RenderComponent}{components\+::\+Render\+Component}} $\ast$}]{drawable }\end{DoxyParamCaption})}
+
+
+
+unregister a drawable component 
+
+unregister a drawable component from active render queue
+
+
+\begin{DoxyParams}{Parameters}
+{\em drawable} & drawable component to be removed from the render queue \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classgame_1_1renderer_1_1GameRenderer_a1dd5083708c847d61f8f05a7816fd17b}\label{classgame_1_1renderer_1_1GameRenderer_a1dd5083708c847d61f8f05a7816fd17b}} 
+\index{game::renderer::GameRenderer@{game::renderer::GameRenderer}!mFpsText@{mFpsText}}
+\index{mFpsText@{mFpsText}!game::renderer::GameRenderer@{game::renderer::GameRenderer}}
+\doxysubsubsection{\texorpdfstring{mFpsText}{mFpsText}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgame_1_1components_1_1Text}{components\+::\+Text}}$\ast$ game\+::renderer\+::\+Game\+Renderer\+::m\+Fps\+Text\hspace{0.3cm}{\ttfamily [private]}}
+
+fps text \mbox{\Hypertarget{classgame_1_1renderer_1_1GameRenderer_a07e777bc85eedf9777aec641b0234cfe}\label{classgame_1_1renderer_1_1GameRenderer_a07e777bc85eedf9777aec641b0234cfe}} 
+\index{game::renderer::GameRenderer@{game::renderer::GameRenderer}!mGameCamera@{mGameCamera}}
+\index{mGameCamera@{mGameCamera}!game::renderer::GameRenderer@{game::renderer::GameRenderer}}
+\doxysubsubsection{\texorpdfstring{mGameCamera}{mGameCamera}}
+{\footnotesize\ttfamily sf\+::\+View\& game\+::renderer\+::\+Game\+Renderer\+::m\+Game\+Camera\hspace{0.3cm}{\ttfamily [private]}}
+
+cached game camera \mbox{\Hypertarget{classgame_1_1renderer_1_1GameRenderer_a719705673bd28a2055650415eaa8369d}\label{classgame_1_1renderer_1_1GameRenderer_a719705673bd28a2055650415eaa8369d}} 
+\index{game::renderer::GameRenderer@{game::renderer::GameRenderer}!mGameWindowResizeListener@{mGameWindowResizeListener}}
+\index{mGameWindowResizeListener@{mGameWindowResizeListener}!game::renderer::GameRenderer@{game::renderer::GameRenderer}}
+\doxysubsubsection{\texorpdfstring{mGameWindowResizeListener}{mGameWindowResizeListener}}
+{\footnotesize\ttfamily boost\+::signals2\+::connection game\+::renderer\+::\+Game\+Renderer\+::m\+Game\+Window\+Resize\+Listener\hspace{0.3cm}{\ttfamily [private]}}
+
+game window resize event listener \mbox{\Hypertarget{classgame_1_1renderer_1_1GameRenderer_af66c5706bd51354576fcfffe5ea90958}\label{classgame_1_1renderer_1_1GameRenderer_af66c5706bd51354576fcfffe5ea90958}} 
+\index{game::renderer::GameRenderer@{game::renderer::GameRenderer}!mRenderQueue@{mRenderQueue}}
+\index{mRenderQueue@{mRenderQueue}!game::renderer::GameRenderer@{game::renderer::GameRenderer}}
+\doxysubsubsection{\texorpdfstring{mRenderQueue}{mRenderQueue}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classgame_1_1components_1_1RenderComponent}{components\+::\+Render\+Component}}$\ast$$>$ game\+::renderer\+::\+Game\+Renderer\+::m\+Render\+Queue\hspace{0.3cm}{\ttfamily [private]}}
+
+render queue \mbox{\Hypertarget{classgame_1_1renderer_1_1GameRenderer_aec12b733a041eb141a4b40b1ab4b22c9}\label{classgame_1_1renderer_1_1GameRenderer_aec12b733a041eb141a4b40b1ab4b22c9}} 
+\index{game::renderer::GameRenderer@{game::renderer::GameRenderer}!mUICamera@{mUICamera}}
+\index{mUICamera@{mUICamera}!game::renderer::GameRenderer@{game::renderer::GameRenderer}}
+\doxysubsubsection{\texorpdfstring{mUICamera}{mUICamera}}
+{\footnotesize\ttfamily sf\+::\+View\& game\+::renderer\+::\+Game\+Renderer\+::m\+UICamera\hspace{0.3cm}{\ttfamily [private]}}
+
+cached UI camera \mbox{\Hypertarget{classgame_1_1renderer_1_1GameRenderer_a56cb4503f77893b8def0014930ae8e9d}\label{classgame_1_1renderer_1_1GameRenderer_a56cb4503f77893b8def0014930ae8e9d}} 
+\index{game::renderer::GameRenderer@{game::renderer::GameRenderer}!mWindow@{mWindow}}
+\index{mWindow@{mWindow}!game::renderer::GameRenderer@{game::renderer::GameRenderer}}
+\doxysubsubsection{\texorpdfstring{mWindow}{mWindow}}
+{\footnotesize\ttfamily sf\+::\+Render\+Window\& game\+::renderer\+::\+Game\+Renderer\+::m\+Window\hspace{0.3cm}{\ttfamily [private]}}
+
+cached game window \mbox{\Hypertarget{classgame_1_1renderer_1_1GameRenderer_a95ca54abaa747dceada66adfd7d24c45}\label{classgame_1_1renderer_1_1GameRenderer_a95ca54abaa747dceada66adfd7d24c45}} 
+\index{game::renderer::GameRenderer@{game::renderer::GameRenderer}!ReferencedResolution@{ReferencedResolution}}
+\index{ReferencedResolution@{ReferencedResolution}!game::renderer::GameRenderer@{game::renderer::GameRenderer}}
+\doxysubsubsection{\texorpdfstring{ReferencedResolution}{ReferencedResolution}}
+{\footnotesize\ttfamily const sf\+::\+Vector2i game\+::renderer\+::\+Game\+Renderer\+::\+Referenced\+Resolution\hspace{0.3cm}{\ttfamily [static]}}
+
+referenced game resolution 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Renderer/Game\+Renderer.\+h\end{DoxyCompactItemize}

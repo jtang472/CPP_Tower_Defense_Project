@@ -1,0 +1,145 @@
+\hypertarget{structgame_1_1data_1_1EnemyAnimDefine}{}\doxysection{game\+::data\+::Enemy\+Anim\+Define Struct Reference}
+\label{structgame_1_1data_1_1EnemyAnimDefine}\index{game::data::EnemyAnimDefine@{game::data::EnemyAnimDefine}}
+
+
+data structure to hold enemy animation data  
+
+
+
+
+{\ttfamily \#include $<$Enemy\+Define.\+h$>$}
+
+
+
+Inheritance diagram for game\+::data\+::Enemy\+Anim\+Define\+:
+% FIG 0
+
+
+Collaboration diagram for game\+::data\+::Enemy\+Anim\+Define\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structgame_1_1data_1_1EnemyAnimDefine_a6e4487ee4b5c0cb603d39922e9ffc023}{Enemy\+Anim\+Define}} (const rapidjson\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structgame_1_1data_1_1EnemyAnimDefine}{Enemy\+Anim\+Define}} constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structgame_1_1data_1_1EnemyAnimDefine_a3753de14e16ba41bbeaf9be9b5e0c143}\label{structgame_1_1data_1_1EnemyAnimDefine_a3753de14e16ba41bbeaf9be9b5e0c143}} 
+{\bfseries Enemy\+Anim\+Define} (const \mbox{\hyperlink{structgame_1_1data_1_1EnemyAnimDefine}{Enemy\+Anim\+Define}} \&other)=delete
+\item 
+\mbox{\Hypertarget{structgame_1_1data_1_1EnemyAnimDefine_ae2bd78b073100f26e0dd056eaf804f52}\label{structgame_1_1data_1_1EnemyAnimDefine_ae2bd78b073100f26e0dd056eaf804f52}} 
+\mbox{\hyperlink{structgame_1_1data_1_1EnemyAnimDefine}{Enemy\+Anim\+Define}} \& {\bfseries operator=} (const \mbox{\hyperlink{structgame_1_1data_1_1EnemyAnimDefine}{Enemy\+Anim\+Define}} \&other)=delete
+\item 
+void \mbox{\hyperlink{structgame_1_1data_1_1EnemyAnimDefine_a5b8b88f5d3d4cda23b3166bde8873183}{from\+Json}} (const rapidjson\+::\+Value \&json) override
+\begin{DoxyCompactList}\small\item\em deserialize c++ data structure from json object \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structgame_1_1data_1_1EnemyAnimDefine_a56cef7ab36f7f8d442ad1e3e81e6d6fd}{to\+Json}} (rapidjson\+::\+Writer$<$ rapidjson\+::\+String\+Buffer $>$ $\ast$writer) override
+\begin{DoxyCompactList}\small\item\em serialize a c++ data structure to a json object \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{structgame_1_1data_1_1EnemyAnimDefine_a5159213520d4e0548bcbd582de6897e9}{anim\+State\+ID}}
+\item 
+int \mbox{\hyperlink{structgame_1_1data_1_1EnemyAnimDefine_ad99be2ded220a890a2ea3bcc289d7b48}{anim\+ID}}
+\item 
+bool \mbox{\hyperlink{structgame_1_1data_1_1EnemyAnimDefine_a93a9d84d1d13c72ed1bab9de4104540f}{make\+Initial\+State}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+data structure to hold enemy animation data 
+
+this is the data structure to hold animation data defined in Enemy\+Define.\+json
+
+\begin{DoxyAuthor}{Author}
+Zheng Yang 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structgame_1_1data_1_1EnemyAnimDefine_a6e4487ee4b5c0cb603d39922e9ffc023}\label{structgame_1_1data_1_1EnemyAnimDefine_a6e4487ee4b5c0cb603d39922e9ffc023}} 
+\index{game::data::EnemyAnimDefine@{game::data::EnemyAnimDefine}!EnemyAnimDefine@{EnemyAnimDefine}}
+\index{EnemyAnimDefine@{EnemyAnimDefine}!game::data::EnemyAnimDefine@{game::data::EnemyAnimDefine}}
+\doxysubsubsection{\texorpdfstring{EnemyAnimDefine()}{EnemyAnimDefine()}}
+{\footnotesize\ttfamily game\+::data\+::\+Enemy\+Anim\+Define\+::\+Enemy\+Anim\+Define (\begin{DoxyParamCaption}\item[{const rapidjson\+::\+Value \&}]{json }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+\mbox{\hyperlink{structgame_1_1data_1_1EnemyAnimDefine}{Enemy\+Anim\+Define}} constructor. 
+
+\mbox{\hyperlink{structgame_1_1data_1_1EnemyAnimDefine}{Enemy\+Anim\+Define}} constructor which deserializes a json object
+
+
+\begin{DoxyParams}{Parameters}
+{\em json} & object of the enemy animation data \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structgame_1_1data_1_1EnemyAnimDefine_a5b8b88f5d3d4cda23b3166bde8873183}\label{structgame_1_1data_1_1EnemyAnimDefine_a5b8b88f5d3d4cda23b3166bde8873183}} 
+\index{game::data::EnemyAnimDefine@{game::data::EnemyAnimDefine}!fromJson@{fromJson}}
+\index{fromJson@{fromJson}!game::data::EnemyAnimDefine@{game::data::EnemyAnimDefine}}
+\doxysubsubsection{\texorpdfstring{fromJson()}{fromJson()}}
+{\footnotesize\ttfamily void game\+::data\+::\+Enemy\+Anim\+Define\+::from\+Json (\begin{DoxyParamCaption}\item[{const rapidjson\+::\+Value \&}]{json }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+deserialize c++ data structure from json object 
+
+this function takes a json object, and deserialize c++ data structure from it
+
+
+\begin{DoxyParams}{Parameters}
+{\em json} & serialized json object \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classgame_1_1data_1_1JsonBase_ad71ccf1cdfa32f5100ba32d208afbffa}{game\+::data\+::\+Json\+Base}}.
+
+\mbox{\Hypertarget{structgame_1_1data_1_1EnemyAnimDefine_a56cef7ab36f7f8d442ad1e3e81e6d6fd}\label{structgame_1_1data_1_1EnemyAnimDefine_a56cef7ab36f7f8d442ad1e3e81e6d6fd}} 
+\index{game::data::EnemyAnimDefine@{game::data::EnemyAnimDefine}!toJson@{toJson}}
+\index{toJson@{toJson}!game::data::EnemyAnimDefine@{game::data::EnemyAnimDefine}}
+\doxysubsubsection{\texorpdfstring{toJson()}{toJson()}}
+{\footnotesize\ttfamily void game\+::data\+::\+Enemy\+Anim\+Define\+::to\+Json (\begin{DoxyParamCaption}\item[{rapidjson\+::\+Writer$<$ rapidjson\+::\+String\+Buffer $>$ $\ast$}]{writer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+serialize a c++ data structure to a json object 
+
+this function takes a json writer, and serialize c++ data structure to it
+
+
+\begin{DoxyParams}{Parameters}
+{\em writer} & json writer \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classgame_1_1data_1_1JsonBase_a9b0277fdcf438ded476fe08d07c2ed2d}{game\+::data\+::\+Json\+Base}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structgame_1_1data_1_1EnemyAnimDefine_ad99be2ded220a890a2ea3bcc289d7b48}\label{structgame_1_1data_1_1EnemyAnimDefine_ad99be2ded220a890a2ea3bcc289d7b48}} 
+\index{game::data::EnemyAnimDefine@{game::data::EnemyAnimDefine}!animID@{animID}}
+\index{animID@{animID}!game::data::EnemyAnimDefine@{game::data::EnemyAnimDefine}}
+\doxysubsubsection{\texorpdfstring{animID}{animID}}
+{\footnotesize\ttfamily int game\+::data\+::\+Enemy\+Anim\+Define\+::anim\+ID}
+
+animation identifier \mbox{\Hypertarget{structgame_1_1data_1_1EnemyAnimDefine_a5159213520d4e0548bcbd582de6897e9}\label{structgame_1_1data_1_1EnemyAnimDefine_a5159213520d4e0548bcbd582de6897e9}} 
+\index{game::data::EnemyAnimDefine@{game::data::EnemyAnimDefine}!animStateID@{animStateID}}
+\index{animStateID@{animStateID}!game::data::EnemyAnimDefine@{game::data::EnemyAnimDefine}}
+\doxysubsubsection{\texorpdfstring{animStateID}{animStateID}}
+{\footnotesize\ttfamily int game\+::data\+::\+Enemy\+Anim\+Define\+::anim\+State\+ID}
+
+animation state identifier \mbox{\Hypertarget{structgame_1_1data_1_1EnemyAnimDefine_a93a9d84d1d13c72ed1bab9de4104540f}\label{structgame_1_1data_1_1EnemyAnimDefine_a93a9d84d1d13c72ed1bab9de4104540f}} 
+\index{game::data::EnemyAnimDefine@{game::data::EnemyAnimDefine}!makeInitialState@{makeInitialState}}
+\index{makeInitialState@{makeInitialState}!game::data::EnemyAnimDefine@{game::data::EnemyAnimDefine}}
+\doxysubsubsection{\texorpdfstring{makeInitialState}{makeInitialState}}
+{\footnotesize\ttfamily bool game\+::data\+::\+Enemy\+Anim\+Define\+::make\+Initial\+State}
+
+make this the initial animation ~\newline
+ 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Data/Enemy\+Define.\+h\end{DoxyCompactItemize}

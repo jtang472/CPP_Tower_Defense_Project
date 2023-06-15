@@ -1,0 +1,245 @@
+\hypertarget{classgame_1_1states_1_1MainState}{}\doxysection{game\+::states\+::Main\+State Class Reference}
+\label{classgame_1_1states_1_1MainState}\index{game::states::MainState@{game::states::MainState}}
+
+
+loading state  
+
+
+
+
+{\ttfamily \#include $<$Main\+State.\+h$>$}
+
+
+
+Inheritance diagram for game\+::states\+::Main\+State\+:
+% FIG 0
+
+
+Collaboration diagram for game\+::states\+::Main\+State\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgame_1_1states_1_1MainState_a1db4a6c99f533db088310cea47b9a1e3}{Main\+State}} (\mbox{\hyperlink{classgame_1_1states_1_1StateMachine}{State\+Machine}} $\ast$owner)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classgame_1_1states_1_1MainState}{Main\+State}} constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classgame_1_1states_1_1MainState_afe955bb69daa4f82dcad55f78b427357}{$\sim$\+Main\+State}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classgame_1_1states_1_1MainState}{Main\+State}} destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1states_1_1MainState_a58accb68ebaedb2dc2f7f6d8b62b9aee}{init}} () override
+\begin{DoxyCompactList}\small\item\em initialization of state \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1states_1_1MainState_aa0617dc6a2927772013c08656e3c7431}{on\+Fade\+In}} ()
+\begin{DoxyCompactList}\small\item\em callback for fade in animation complete event \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1states_1_1MainState_a968da318ca3dcbb3bf0c33bd79c662f5}{on\+Start\+Button\+Clicked}} ()
+\begin{DoxyCompactList}\small\item\em callback for start button click event \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1states_1_1MainState_a0902d97e39b4398969ada721c0fcea1d}{on\+Quit\+Button\+Clicked}} ()
+\begin{DoxyCompactList}\small\item\em callback for quit button click event \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1states_1_1MainState_a38f95745995cb5ae2d32c0e5264d72ba}{on\+Option\+Button\+Clicked}} ()
+\begin{DoxyCompactList}\small\item\em callback for option button click event \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1states_1_1MainState_a55a82a7b8d59bcc76abfabb6bf82ebf0}{on\+Shop\+Button\+Clicked}} ()
+\begin{DoxyCompactList}\small\item\em callback for shop button click event \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1states_1_1MainState_aaa7b72b76a0dbe8ef203641b07a75696}{on\+Save\+And\+Load\+Button\+Clicked}} ()
+\begin{DoxyCompactList}\small\item\em callback for save button click event \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1states_1_1MainState_aca2ad9533ce30fb8c7a7e8301420597c}{on\+Test\+Button\+Clicked}} ()
+\begin{DoxyCompactList}\small\item\em callback for test button click event \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+boost\+::signals2\+::connection \mbox{\hyperlink{classgame_1_1states_1_1MainState_ad78cd53feb3ac655e21aa30531ea1808}{m\+Start\+Button\+Listener}}
+\item 
+boost\+::signals2\+::connection \mbox{\hyperlink{classgame_1_1states_1_1MainState_abc76ed176570a8448a54f67befbca8b0}{m\+Quit\+Button\+Listener}}
+\item 
+boost\+::signals2\+::connection \mbox{\hyperlink{classgame_1_1states_1_1MainState_a29604ce3571cebfa0adf06784d895891}{m\+Option\+Button\+Listener}}
+\item 
+boost\+::signals2\+::connection \mbox{\hyperlink{classgame_1_1states_1_1MainState_a6bd5f3adf96ad5b4f93978dd79bdfb5e}{m\+Shop\+Button\+Listener}}
+\item 
+boost\+::signals2\+::connection \mbox{\hyperlink{classgame_1_1states_1_1MainState_ab6635995fd510a06e3f7e21847247c53}{m\+Save\+And\+Load\+Button\+Listener}}
+\item 
+boost\+::signals2\+::connection \mbox{\hyperlink{classgame_1_1states_1_1MainState_a87c3d13c3c073ee01ee1aff45fbb3959}{m\+Test\+Button\+Listener}}
+\item 
+boost\+::signals2\+::connection \mbox{\hyperlink{classgame_1_1states_1_1MainState_ab4690f6144556e57f2ac5b07931d58c1}{m\+Fade\+In\+Listener}}
+\item 
+bool \mbox{\hyperlink{classgame_1_1states_1_1MainState_ab309fa9a13547f4fb17c3a22fb4da623}{m\+Fade\+In\+Complete}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+loading state 
+
+this state will be pushed to state machine when player goes to the main menu
+
+\begin{DoxyAuthor}{Author}
+Zheng Yang 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgame_1_1states_1_1MainState_a1db4a6c99f533db088310cea47b9a1e3}\label{classgame_1_1states_1_1MainState_a1db4a6c99f533db088310cea47b9a1e3}} 
+\index{game::states::MainState@{game::states::MainState}!MainState@{MainState}}
+\index{MainState@{MainState}!game::states::MainState@{game::states::MainState}}
+\doxysubsubsection{\texorpdfstring{MainState()}{MainState()}}
+{\footnotesize\ttfamily game\+::states\+::\+Main\+State\+::\+Main\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgame_1_1states_1_1StateMachine}{State\+Machine}} $\ast$}]{owner }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classgame_1_1states_1_1MainState}{Main\+State}} constructor. 
+
+\mbox{\hyperlink{classgame_1_1states_1_1MainState}{Main\+State}} constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em owner} & state machine \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1states_1_1MainState_afe955bb69daa4f82dcad55f78b427357}\label{classgame_1_1states_1_1MainState_afe955bb69daa4f82dcad55f78b427357}} 
+\index{game::states::MainState@{game::states::MainState}!````~MainState@{$\sim$MainState}}
+\index{````~MainState@{$\sim$MainState}!game::states::MainState@{game::states::MainState}}
+\doxysubsubsection{\texorpdfstring{$\sim$MainState()}{~MainState()}}
+{\footnotesize\ttfamily game\+::states\+::\+Main\+State\+::$\sim$\+Main\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classgame_1_1states_1_1MainState}{Main\+State}} destructor. 
+
+\mbox{\hyperlink{classgame_1_1states_1_1MainState}{Main\+State}} destructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgame_1_1states_1_1MainState_a58accb68ebaedb2dc2f7f6d8b62b9aee}\label{classgame_1_1states_1_1MainState_a58accb68ebaedb2dc2f7f6d8b62b9aee}} 
+\index{game::states::MainState@{game::states::MainState}!init@{init}}
+\index{init@{init}!game::states::MainState@{game::states::MainState}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void game\+::states\+::\+Main\+State\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+initialization of state 
+
+initialization of state, called by state machine after state is created and put to the stack 
+
+Reimplemented from \mbox{\hyperlink{classgame_1_1states_1_1State_ab8464551e311a0621bd80f2a21a7cb4a}{game\+::states\+::\+State}}.
+
+\mbox{\Hypertarget{classgame_1_1states_1_1MainState_aa0617dc6a2927772013c08656e3c7431}\label{classgame_1_1states_1_1MainState_aa0617dc6a2927772013c08656e3c7431}} 
+\index{game::states::MainState@{game::states::MainState}!onFadeIn@{onFadeIn}}
+\index{onFadeIn@{onFadeIn}!game::states::MainState@{game::states::MainState}}
+\doxysubsubsection{\texorpdfstring{onFadeIn()}{onFadeIn()}}
+{\footnotesize\ttfamily void game\+::states\+::\+Main\+State\+::on\+Fade\+In (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+callback for fade in animation complete event 
+
+callback function for fade in animation complete event \mbox{\Hypertarget{classgame_1_1states_1_1MainState_a38f95745995cb5ae2d32c0e5264d72ba}\label{classgame_1_1states_1_1MainState_a38f95745995cb5ae2d32c0e5264d72ba}} 
+\index{game::states::MainState@{game::states::MainState}!onOptionButtonClicked@{onOptionButtonClicked}}
+\index{onOptionButtonClicked@{onOptionButtonClicked}!game::states::MainState@{game::states::MainState}}
+\doxysubsubsection{\texorpdfstring{onOptionButtonClicked()}{onOptionButtonClicked()}}
+{\footnotesize\ttfamily void game\+::states\+::\+Main\+State\+::on\+Option\+Button\+Clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+callback for option button click event 
+
+callback function for option button click event \mbox{\Hypertarget{classgame_1_1states_1_1MainState_a0902d97e39b4398969ada721c0fcea1d}\label{classgame_1_1states_1_1MainState_a0902d97e39b4398969ada721c0fcea1d}} 
+\index{game::states::MainState@{game::states::MainState}!onQuitButtonClicked@{onQuitButtonClicked}}
+\index{onQuitButtonClicked@{onQuitButtonClicked}!game::states::MainState@{game::states::MainState}}
+\doxysubsubsection{\texorpdfstring{onQuitButtonClicked()}{onQuitButtonClicked()}}
+{\footnotesize\ttfamily void game\+::states\+::\+Main\+State\+::on\+Quit\+Button\+Clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+callback for quit button click event 
+
+callback function for quit button click event \mbox{\Hypertarget{classgame_1_1states_1_1MainState_aaa7b72b76a0dbe8ef203641b07a75696}\label{classgame_1_1states_1_1MainState_aaa7b72b76a0dbe8ef203641b07a75696}} 
+\index{game::states::MainState@{game::states::MainState}!onSaveAndLoadButtonClicked@{onSaveAndLoadButtonClicked}}
+\index{onSaveAndLoadButtonClicked@{onSaveAndLoadButtonClicked}!game::states::MainState@{game::states::MainState}}
+\doxysubsubsection{\texorpdfstring{onSaveAndLoadButtonClicked()}{onSaveAndLoadButtonClicked()}}
+{\footnotesize\ttfamily void game\+::states\+::\+Main\+State\+::on\+Save\+And\+Load\+Button\+Clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+callback for save button click event 
+
+callback function for save button click event \mbox{\Hypertarget{classgame_1_1states_1_1MainState_a55a82a7b8d59bcc76abfabb6bf82ebf0}\label{classgame_1_1states_1_1MainState_a55a82a7b8d59bcc76abfabb6bf82ebf0}} 
+\index{game::states::MainState@{game::states::MainState}!onShopButtonClicked@{onShopButtonClicked}}
+\index{onShopButtonClicked@{onShopButtonClicked}!game::states::MainState@{game::states::MainState}}
+\doxysubsubsection{\texorpdfstring{onShopButtonClicked()}{onShopButtonClicked()}}
+{\footnotesize\ttfamily void game\+::states\+::\+Main\+State\+::on\+Shop\+Button\+Clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+callback for shop button click event 
+
+callback function for shop button click event \mbox{\Hypertarget{classgame_1_1states_1_1MainState_a968da318ca3dcbb3bf0c33bd79c662f5}\label{classgame_1_1states_1_1MainState_a968da318ca3dcbb3bf0c33bd79c662f5}} 
+\index{game::states::MainState@{game::states::MainState}!onStartButtonClicked@{onStartButtonClicked}}
+\index{onStartButtonClicked@{onStartButtonClicked}!game::states::MainState@{game::states::MainState}}
+\doxysubsubsection{\texorpdfstring{onStartButtonClicked()}{onStartButtonClicked()}}
+{\footnotesize\ttfamily void game\+::states\+::\+Main\+State\+::on\+Start\+Button\+Clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+callback for start button click event 
+
+callback function for start button click event \mbox{\Hypertarget{classgame_1_1states_1_1MainState_aca2ad9533ce30fb8c7a7e8301420597c}\label{classgame_1_1states_1_1MainState_aca2ad9533ce30fb8c7a7e8301420597c}} 
+\index{game::states::MainState@{game::states::MainState}!onTestButtonClicked@{onTestButtonClicked}}
+\index{onTestButtonClicked@{onTestButtonClicked}!game::states::MainState@{game::states::MainState}}
+\doxysubsubsection{\texorpdfstring{onTestButtonClicked()}{onTestButtonClicked()}}
+{\footnotesize\ttfamily void game\+::states\+::\+Main\+State\+::on\+Test\+Button\+Clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+callback for test button click event 
+
+callback function for test button click event 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classgame_1_1states_1_1MainState_ab309fa9a13547f4fb17c3a22fb4da623}\label{classgame_1_1states_1_1MainState_ab309fa9a13547f4fb17c3a22fb4da623}} 
+\index{game::states::MainState@{game::states::MainState}!mFadeInComplete@{mFadeInComplete}}
+\index{mFadeInComplete@{mFadeInComplete}!game::states::MainState@{game::states::MainState}}
+\doxysubsubsection{\texorpdfstring{mFadeInComplete}{mFadeInComplete}}
+{\footnotesize\ttfamily bool game\+::states\+::\+Main\+State\+::m\+Fade\+In\+Complete\hspace{0.3cm}{\ttfamily [private]}}
+
+is fade in animation completed \mbox{\Hypertarget{classgame_1_1states_1_1MainState_ab4690f6144556e57f2ac5b07931d58c1}\label{classgame_1_1states_1_1MainState_ab4690f6144556e57f2ac5b07931d58c1}} 
+\index{game::states::MainState@{game::states::MainState}!mFadeInListener@{mFadeInListener}}
+\index{mFadeInListener@{mFadeInListener}!game::states::MainState@{game::states::MainState}}
+\doxysubsubsection{\texorpdfstring{mFadeInListener}{mFadeInListener}}
+{\footnotesize\ttfamily boost\+::signals2\+::connection game\+::states\+::\+Main\+State\+::m\+Fade\+In\+Listener\hspace{0.3cm}{\ttfamily [private]}}
+
+fade in animation complete event listener \mbox{\Hypertarget{classgame_1_1states_1_1MainState_a29604ce3571cebfa0adf06784d895891}\label{classgame_1_1states_1_1MainState_a29604ce3571cebfa0adf06784d895891}} 
+\index{game::states::MainState@{game::states::MainState}!mOptionButtonListener@{mOptionButtonListener}}
+\index{mOptionButtonListener@{mOptionButtonListener}!game::states::MainState@{game::states::MainState}}
+\doxysubsubsection{\texorpdfstring{mOptionButtonListener}{mOptionButtonListener}}
+{\footnotesize\ttfamily boost\+::signals2\+::connection game\+::states\+::\+Main\+State\+::m\+Option\+Button\+Listener\hspace{0.3cm}{\ttfamily [private]}}
+
+option button click listener \mbox{\Hypertarget{classgame_1_1states_1_1MainState_abc76ed176570a8448a54f67befbca8b0}\label{classgame_1_1states_1_1MainState_abc76ed176570a8448a54f67befbca8b0}} 
+\index{game::states::MainState@{game::states::MainState}!mQuitButtonListener@{mQuitButtonListener}}
+\index{mQuitButtonListener@{mQuitButtonListener}!game::states::MainState@{game::states::MainState}}
+\doxysubsubsection{\texorpdfstring{mQuitButtonListener}{mQuitButtonListener}}
+{\footnotesize\ttfamily boost\+::signals2\+::connection game\+::states\+::\+Main\+State\+::m\+Quit\+Button\+Listener\hspace{0.3cm}{\ttfamily [private]}}
+
+quit button click listener \mbox{\Hypertarget{classgame_1_1states_1_1MainState_ab6635995fd510a06e3f7e21847247c53}\label{classgame_1_1states_1_1MainState_ab6635995fd510a06e3f7e21847247c53}} 
+\index{game::states::MainState@{game::states::MainState}!mSaveAndLoadButtonListener@{mSaveAndLoadButtonListener}}
+\index{mSaveAndLoadButtonListener@{mSaveAndLoadButtonListener}!game::states::MainState@{game::states::MainState}}
+\doxysubsubsection{\texorpdfstring{mSaveAndLoadButtonListener}{mSaveAndLoadButtonListener}}
+{\footnotesize\ttfamily boost\+::signals2\+::connection game\+::states\+::\+Main\+State\+::m\+Save\+And\+Load\+Button\+Listener\hspace{0.3cm}{\ttfamily [private]}}
+
+save button click listener \mbox{\Hypertarget{classgame_1_1states_1_1MainState_a6bd5f3adf96ad5b4f93978dd79bdfb5e}\label{classgame_1_1states_1_1MainState_a6bd5f3adf96ad5b4f93978dd79bdfb5e}} 
+\index{game::states::MainState@{game::states::MainState}!mShopButtonListener@{mShopButtonListener}}
+\index{mShopButtonListener@{mShopButtonListener}!game::states::MainState@{game::states::MainState}}
+\doxysubsubsection{\texorpdfstring{mShopButtonListener}{mShopButtonListener}}
+{\footnotesize\ttfamily boost\+::signals2\+::connection game\+::states\+::\+Main\+State\+::m\+Shop\+Button\+Listener\hspace{0.3cm}{\ttfamily [private]}}
+
+shop button click listener \mbox{\Hypertarget{classgame_1_1states_1_1MainState_ad78cd53feb3ac655e21aa30531ea1808}\label{classgame_1_1states_1_1MainState_ad78cd53feb3ac655e21aa30531ea1808}} 
+\index{game::states::MainState@{game::states::MainState}!mStartButtonListener@{mStartButtonListener}}
+\index{mStartButtonListener@{mStartButtonListener}!game::states::MainState@{game::states::MainState}}
+\doxysubsubsection{\texorpdfstring{mStartButtonListener}{mStartButtonListener}}
+{\footnotesize\ttfamily boost\+::signals2\+::connection game\+::states\+::\+Main\+State\+::m\+Start\+Button\+Listener\hspace{0.3cm}{\ttfamily [private]}}
+
+start button click listener \mbox{\Hypertarget{classgame_1_1states_1_1MainState_a87c3d13c3c073ee01ee1aff45fbb3959}\label{classgame_1_1states_1_1MainState_a87c3d13c3c073ee01ee1aff45fbb3959}} 
+\index{game::states::MainState@{game::states::MainState}!mTestButtonListener@{mTestButtonListener}}
+\index{mTestButtonListener@{mTestButtonListener}!game::states::MainState@{game::states::MainState}}
+\doxysubsubsection{\texorpdfstring{mTestButtonListener}{mTestButtonListener}}
+{\footnotesize\ttfamily boost\+::signals2\+::connection game\+::states\+::\+Main\+State\+::m\+Test\+Button\+Listener\hspace{0.3cm}{\ttfamily [private]}}
+
+test button click listener 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+States/Main\+State.\+h\end{DoxyCompactItemize}

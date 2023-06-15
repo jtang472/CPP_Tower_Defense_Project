@@ -1,0 +1,31 @@
+digraph "game::states::StartState"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="game::states::StartState",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="game state"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="game::states::State",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgame_1_1states_1_1State.html",tooltip="base class of all game states"];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mOwner" ,fontname="Helvetica"];
+  Node3 [label="game::states::StateMachine",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgame_1_1states_1_1StateMachine.html",tooltip="implementation of a pushdown state machine"];
+  Node4 -> Node3 [dir="back",color="firebrick4",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="sf::NonCopyable",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mBackgroundSprite" ,fontname="Helvetica"];
+  Node5 [label="game::components::Sprite",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgame_1_1components_1_1Sprite.html",tooltip="wrapper class for sf::sprite"];
+  Node6 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="game::components::Render\lComponent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgame_1_1components_1_1RenderComponent.html",tooltip="base class for all the drawables in the game"];
+  Node7 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="game::components::Component",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgame_1_1components_1_1Component.html",tooltip="base class for all components"];
+  Node4 -> Node7 [dir="back",color="firebrick4",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mOwner" ,fontname="Helvetica"];
+  Node8 [label="game::components::GameObject",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgame_1_1components_1_1GameObject.html",tooltip="container class for a group of components"];
+  Node4 -> Node8 [dir="back",color="firebrick4",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mTransform" ,fontname="Helvetica"];
+  Node9 [label="game::components::Transform",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgame_1_1components_1_1Transform.html",tooltip="transform component of a gameobject"];
+  Node7 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mParent" ,fontname="Helvetica"];
+  Node9 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mTransform" ,fontname="Helvetica"];
+  Node10 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mPressKeyText" ,fontname="Helvetica"];
+  Node10 [label="game::components::Text",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgame_1_1components_1_1Text.html",tooltip="drawable for texts"];
+  Node6 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

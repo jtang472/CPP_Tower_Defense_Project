@@ -1,0 +1,160 @@
+\hypertarget{structgame_1_1data_1_1FightRuleDefine}{}\doxysection{game\+::data\+::Fight\+Rule\+Define Struct Reference}
+\label{structgame_1_1data_1_1FightRuleDefine}\index{game::data::FightRuleDefine@{game::data::FightRuleDefine}}
+
+
+data structure to hold fight rule data  
+
+
+
+
+{\ttfamily \#include $<$Enemy\+Spawn\+Rule\+Define.\+h$>$}
+
+
+
+Inheritance diagram for game\+::data\+::Fight\+Rule\+Define\+:
+% FIG 0
+
+
+Collaboration diagram for game\+::data\+::Fight\+Rule\+Define\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structgame_1_1data_1_1FightRuleDefine_aee9e3a47948246c683cc644d5ab2bcf2}{Fight\+Rule\+Define}} (const rapidjson\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structgame_1_1data_1_1FightRuleDefine}{Fight\+Rule\+Define}} constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structgame_1_1data_1_1FightRuleDefine_af5799ee8ce8cf797734331c3740bdc20}\label{structgame_1_1data_1_1FightRuleDefine_af5799ee8ce8cf797734331c3740bdc20}} 
+{\bfseries Fight\+Rule\+Define} (const \mbox{\hyperlink{structgame_1_1data_1_1FightRuleDefine}{Fight\+Rule\+Define}} \&other)=delete
+\item 
+\mbox{\Hypertarget{structgame_1_1data_1_1FightRuleDefine_a1be8526f85780b87c1e3c81e78f3b0ba}\label{structgame_1_1data_1_1FightRuleDefine_a1be8526f85780b87c1e3c81e78f3b0ba}} 
+\mbox{\hyperlink{structgame_1_1data_1_1FightRuleDefine}{Fight\+Rule\+Define}} \& {\bfseries operator=} (const \mbox{\hyperlink{structgame_1_1data_1_1FightRuleDefine}{Fight\+Rule\+Define}} \&other)=delete
+\item 
+void \mbox{\hyperlink{structgame_1_1data_1_1FightRuleDefine_a95fad0c652946ce9e9dcbf888d6828ff}{from\+Json}} (const rapidjson\+::\+Value \&json) override
+\begin{DoxyCompactList}\small\item\em deserialize c++ data structure from json object \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structgame_1_1data_1_1FightRuleDefine_a8ff6a49b073ffab741ae52c06af234e3}{to\+Json}} (rapidjson\+::\+Writer$<$ rapidjson\+::\+String\+Buffer $>$ $\ast$writer) override
+\begin{DoxyCompactList}\small\item\em serialize a c++ data structure to a json object \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{structgame_1_1data_1_1FightRuleDefine_adca9835da43cb4a48dad47fd2214bdb8}{total\+Enemies}}
+\item 
+float \mbox{\hyperlink{structgame_1_1data_1_1FightRuleDefine_afa2e9adafc0b309474b8ff3bb19c2e99}{regular\+Enemies}}
+\item 
+float \mbox{\hyperlink{structgame_1_1data_1_1FightRuleDefine_af53e918b540284740f54281e2de71801}{elite\+Enemies}}
+\item 
+float \mbox{\hyperlink{structgame_1_1data_1_1FightRuleDefine_a420aa973ea19da94a7e8ccea5aa23700}{minimum\+Wait\+Time}}
+\item 
+float \mbox{\hyperlink{structgame_1_1data_1_1FightRuleDefine_a3195ed4c1db624d82e36a0a3ebbab13d}{maximum\+Wait\+Time}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+data structure to hold fight rule data 
+
+this is the data structure to hold fight rule data defined in Spawn\+Rule\+Define.\+json
+
+\begin{DoxyAuthor}{Author}
+Zheng Yang 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structgame_1_1data_1_1FightRuleDefine_aee9e3a47948246c683cc644d5ab2bcf2}\label{structgame_1_1data_1_1FightRuleDefine_aee9e3a47948246c683cc644d5ab2bcf2}} 
+\index{game::data::FightRuleDefine@{game::data::FightRuleDefine}!FightRuleDefine@{FightRuleDefine}}
+\index{FightRuleDefine@{FightRuleDefine}!game::data::FightRuleDefine@{game::data::FightRuleDefine}}
+\doxysubsubsection{\texorpdfstring{FightRuleDefine()}{FightRuleDefine()}}
+{\footnotesize\ttfamily game\+::data\+::\+Fight\+Rule\+Define\+::\+Fight\+Rule\+Define (\begin{DoxyParamCaption}\item[{const rapidjson\+::\+Value \&}]{json }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+\mbox{\hyperlink{structgame_1_1data_1_1FightRuleDefine}{Fight\+Rule\+Define}} constructor. 
+
+\mbox{\hyperlink{structgame_1_1data_1_1FightRuleDefine}{Fight\+Rule\+Define}} constructor which deserializes a json object
+
+
+\begin{DoxyParams}{Parameters}
+{\em json} & object of the fight rule data \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structgame_1_1data_1_1FightRuleDefine_a95fad0c652946ce9e9dcbf888d6828ff}\label{structgame_1_1data_1_1FightRuleDefine_a95fad0c652946ce9e9dcbf888d6828ff}} 
+\index{game::data::FightRuleDefine@{game::data::FightRuleDefine}!fromJson@{fromJson}}
+\index{fromJson@{fromJson}!game::data::FightRuleDefine@{game::data::FightRuleDefine}}
+\doxysubsubsection{\texorpdfstring{fromJson()}{fromJson()}}
+{\footnotesize\ttfamily void game\+::data\+::\+Fight\+Rule\+Define\+::from\+Json (\begin{DoxyParamCaption}\item[{const rapidjson\+::\+Value \&}]{json }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+deserialize c++ data structure from json object 
+
+this function takes a json object, and deserialize c++ data structure from it
+
+
+\begin{DoxyParams}{Parameters}
+{\em json} & serialized json object \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classgame_1_1data_1_1JsonBase_ad71ccf1cdfa32f5100ba32d208afbffa}{game\+::data\+::\+Json\+Base}}.
+
+\mbox{\Hypertarget{structgame_1_1data_1_1FightRuleDefine_a8ff6a49b073ffab741ae52c06af234e3}\label{structgame_1_1data_1_1FightRuleDefine_a8ff6a49b073ffab741ae52c06af234e3}} 
+\index{game::data::FightRuleDefine@{game::data::FightRuleDefine}!toJson@{toJson}}
+\index{toJson@{toJson}!game::data::FightRuleDefine@{game::data::FightRuleDefine}}
+\doxysubsubsection{\texorpdfstring{toJson()}{toJson()}}
+{\footnotesize\ttfamily void game\+::data\+::\+Fight\+Rule\+Define\+::to\+Json (\begin{DoxyParamCaption}\item[{rapidjson\+::\+Writer$<$ rapidjson\+::\+String\+Buffer $>$ $\ast$}]{writer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+serialize a c++ data structure to a json object 
+
+this function takes a json writer, and serialize c++ data structure to it
+
+
+\begin{DoxyParams}{Parameters}
+{\em writer} & json writer \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classgame_1_1data_1_1JsonBase_a9b0277fdcf438ded476fe08d07c2ed2d}{game\+::data\+::\+Json\+Base}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structgame_1_1data_1_1FightRuleDefine_af53e918b540284740f54281e2de71801}\label{structgame_1_1data_1_1FightRuleDefine_af53e918b540284740f54281e2de71801}} 
+\index{game::data::FightRuleDefine@{game::data::FightRuleDefine}!eliteEnemies@{eliteEnemies}}
+\index{eliteEnemies@{eliteEnemies}!game::data::FightRuleDefine@{game::data::FightRuleDefine}}
+\doxysubsubsection{\texorpdfstring{eliteEnemies}{eliteEnemies}}
+{\footnotesize\ttfamily float game\+::data\+::\+Fight\+Rule\+Define\+::elite\+Enemies}
+
+portion of elite enemies \mbox{\Hypertarget{structgame_1_1data_1_1FightRuleDefine_a3195ed4c1db624d82e36a0a3ebbab13d}\label{structgame_1_1data_1_1FightRuleDefine_a3195ed4c1db624d82e36a0a3ebbab13d}} 
+\index{game::data::FightRuleDefine@{game::data::FightRuleDefine}!maximumWaitTime@{maximumWaitTime}}
+\index{maximumWaitTime@{maximumWaitTime}!game::data::FightRuleDefine@{game::data::FightRuleDefine}}
+\doxysubsubsection{\texorpdfstring{maximumWaitTime}{maximumWaitTime}}
+{\footnotesize\ttfamily float game\+::data\+::\+Fight\+Rule\+Define\+::maximum\+Wait\+Time}
+
+max waiting time \mbox{\Hypertarget{structgame_1_1data_1_1FightRuleDefine_a420aa973ea19da94a7e8ccea5aa23700}\label{structgame_1_1data_1_1FightRuleDefine_a420aa973ea19da94a7e8ccea5aa23700}} 
+\index{game::data::FightRuleDefine@{game::data::FightRuleDefine}!minimumWaitTime@{minimumWaitTime}}
+\index{minimumWaitTime@{minimumWaitTime}!game::data::FightRuleDefine@{game::data::FightRuleDefine}}
+\doxysubsubsection{\texorpdfstring{minimumWaitTime}{minimumWaitTime}}
+{\footnotesize\ttfamily float game\+::data\+::\+Fight\+Rule\+Define\+::minimum\+Wait\+Time}
+
+min waiting time \mbox{\Hypertarget{structgame_1_1data_1_1FightRuleDefine_afa2e9adafc0b309474b8ff3bb19c2e99}\label{structgame_1_1data_1_1FightRuleDefine_afa2e9adafc0b309474b8ff3bb19c2e99}} 
+\index{game::data::FightRuleDefine@{game::data::FightRuleDefine}!regularEnemies@{regularEnemies}}
+\index{regularEnemies@{regularEnemies}!game::data::FightRuleDefine@{game::data::FightRuleDefine}}
+\doxysubsubsection{\texorpdfstring{regularEnemies}{regularEnemies}}
+{\footnotesize\ttfamily float game\+::data\+::\+Fight\+Rule\+Define\+::regular\+Enemies}
+
+portion of regular enemies \mbox{\Hypertarget{structgame_1_1data_1_1FightRuleDefine_adca9835da43cb4a48dad47fd2214bdb8}\label{structgame_1_1data_1_1FightRuleDefine_adca9835da43cb4a48dad47fd2214bdb8}} 
+\index{game::data::FightRuleDefine@{game::data::FightRuleDefine}!totalEnemies@{totalEnemies}}
+\index{totalEnemies@{totalEnemies}!game::data::FightRuleDefine@{game::data::FightRuleDefine}}
+\doxysubsubsection{\texorpdfstring{totalEnemies}{totalEnemies}}
+{\footnotesize\ttfamily int game\+::data\+::\+Fight\+Rule\+Define\+::total\+Enemies}
+
+identifier 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Data/Enemy\+Spawn\+Rule\+Define.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,214 @@
+\hypertarget{classgame_1_1components_1_1Quad}{}\doxysection{game\+::components\+::Quad Class Reference}
+\label{classgame_1_1components_1_1Quad}\index{game::components::Quad@{game::components::Quad}}
+
+
+drawables to make use of the vertex array provided by SFML  
+
+
+
+
+{\ttfamily \#include $<$Quad.\+h$>$}
+
+
+
+Inheritance diagram for game\+::components\+::Quad\+:
+% FIG 0
+
+
+Collaboration diagram for game\+::components\+::Quad\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgame_1_1components_1_1Quad_a75a3c5f47f75f6fb6269cf7168a69c52}{Quad}} (\mbox{\hyperlink{classgame_1_1components_1_1GameObject}{Game\+Object}} \&owner, renderer\+::\+Render\+Layer layer, int depth)
+\begin{DoxyCompactList}\small\item\em quad constructor \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classgame_1_1components_1_1Quad_a4a69ad9fd5a972b7fa8d9ed494be1035}{$\sim$\+Quad}} () override
+\begin{DoxyCompactList}\small\item\em quad destructor \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1Quad_a4511982a9069b25e1c09af1722792179}{draw}} (sf\+::\+Render\+Window \&window) override
+\begin{DoxyCompactList}\small\item\em draw quad to screen \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1Quad_a654f0b77a965db244e6cb02533d91db8}{set}} (sf\+::\+Texture $\ast$texture, sf\+::\+Float\+Rect tex\+Coords)
+\begin{DoxyCompactList}\small\item\em set the texture to be used for rendering, and set the texture coordinate in the texture that we want to draw with \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1Quad_a933aa629a4055223c907583215ad2b42}{on\+Enable}} () override
+\begin{DoxyCompactList}\small\item\em component lifecycle function \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1Quad_aa563f38bbdec291dea227db1b329dbb9}{on\+Disable}} () override
+\begin{DoxyCompactList}\small\item\em component lifecycle function \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classgame_1_1components_1_1Quad_ab2d66778ccd8d3ea6f1b7dfe5b208a4d}{is\+Raycastable}} () override
+\begin{DoxyCompactList}\small\item\em determines if a render component can be detected by input system and block pointer \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Vertex\+Array \mbox{\hyperlink{classgame_1_1components_1_1Quad_ac3603d817b4b65ca47ddfa110f5001ad}{m\+Quad}}
+\item 
+sf\+::\+Texture $\ast$ \mbox{\hyperlink{classgame_1_1components_1_1Quad_ad5d416013ba92d7da50813f7c58d28c4}{m\+Referenced\+Texture}}
+\item 
+sf\+::\+Float\+Rect \mbox{\hyperlink{classgame_1_1components_1_1Quad_a30cd8d3e3568289f3db429ace7c29a86}{m\+Tex\+Coords}}
+\item 
+sf\+::\+Vector2f \mbox{\hyperlink{classgame_1_1components_1_1Quad_a8ae7f6d6b422a42f8cb4cc1890986bca}{m\+Size}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+drawables to make use of the vertex array provided by SFML 
+
+currently, this class is only used with tiles in the grid system to eliminate black artifacts at the edge of the tile, if you want to draw normal GUI elements, use \mbox{\hyperlink{classgame_1_1components_1_1Sprite}{Sprite}} class instead
+
+\begin{DoxyAuthor}{Author}
+Zheng Yang 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgame_1_1components_1_1Quad_a75a3c5f47f75f6fb6269cf7168a69c52}\label{classgame_1_1components_1_1Quad_a75a3c5f47f75f6fb6269cf7168a69c52}} 
+\index{game::components::Quad@{game::components::Quad}!Quad@{Quad}}
+\index{Quad@{Quad}!game::components::Quad@{game::components::Quad}}
+\doxysubsubsection{\texorpdfstring{Quad()}{Quad()}}
+{\footnotesize\ttfamily game\+::components\+::\+Quad\+::\+Quad (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgame_1_1components_1_1GameObject}{Game\+Object}} \&}]{owner,  }\item[{renderer\+::\+Render\+Layer}]{layer,  }\item[{int}]{depth }\end{DoxyParamCaption})}
+
+
+
+quad constructor 
+
+quad constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em owner} & owner of the component \\
+\hline
+{\em layer} & render layer of quad \\
+\hline
+{\em depth} & render depth of quad \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1components_1_1Quad_a4a69ad9fd5a972b7fa8d9ed494be1035}\label{classgame_1_1components_1_1Quad_a4a69ad9fd5a972b7fa8d9ed494be1035}} 
+\index{game::components::Quad@{game::components::Quad}!````~Quad@{$\sim$Quad}}
+\index{````~Quad@{$\sim$Quad}!game::components::Quad@{game::components::Quad}}
+\doxysubsubsection{\texorpdfstring{$\sim$Quad()}{~Quad()}}
+{\footnotesize\ttfamily game\+::components\+::\+Quad\+::$\sim$\+Quad (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+quad destructor 
+
+quad destructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgame_1_1components_1_1Quad_a4511982a9069b25e1c09af1722792179}\label{classgame_1_1components_1_1Quad_a4511982a9069b25e1c09af1722792179}} 
+\index{game::components::Quad@{game::components::Quad}!draw@{draw}}
+\index{draw@{draw}!game::components::Quad@{game::components::Quad}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Quad\+::draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+draw quad to screen 
+
+do not call it -\/ this function should only be called by game renderer every frame this is where drawable components actually gets drawed to the screen
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & the game window to render the quad on \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classgame_1_1components_1_1RenderComponent_ada17983becaa14156fc793e915f34653}{game\+::components\+::\+Render\+Component}}.
+
+\mbox{\Hypertarget{classgame_1_1components_1_1Quad_ab2d66778ccd8d3ea6f1b7dfe5b208a4d}\label{classgame_1_1components_1_1Quad_ab2d66778ccd8d3ea6f1b7dfe5b208a4d}} 
+\index{game::components::Quad@{game::components::Quad}!isRaycastable@{isRaycastable}}
+\index{isRaycastable@{isRaycastable}!game::components::Quad@{game::components::Quad}}
+\doxysubsubsection{\texorpdfstring{isRaycastable()}{isRaycastable()}}
+{\footnotesize\ttfamily bool game\+::components\+::\+Quad\+::is\+Raycastable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+determines if a render component can be detected by input system and block pointer 
+
+determines if a render component can be detected by input system
+
+\begin{DoxyReturn}{Returns}
+true if drawable can be detected by pointer, false otherwise 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classgame_1_1components_1_1RenderComponent_af1c7b4976870146d22a226b3ff6bf19c}{game\+::components\+::\+Render\+Component}}.
+
+\mbox{\Hypertarget{classgame_1_1components_1_1Quad_aa563f38bbdec291dea227db1b329dbb9}\label{classgame_1_1components_1_1Quad_aa563f38bbdec291dea227db1b329dbb9}} 
+\index{game::components::Quad@{game::components::Quad}!onDisable@{onDisable}}
+\index{onDisable@{onDisable}!game::components::Quad@{game::components::Quad}}
+\doxysubsubsection{\texorpdfstring{onDisable()}{onDisable()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Quad\+::on\+Disable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+component lifecycle function 
+
+component lifecycle function, gets called automatically when component is disabled 
+
+Reimplemented from \mbox{\hyperlink{classgame_1_1components_1_1RenderComponent_a92315d762c58050ed67ef88b804426a5}{game\+::components\+::\+Render\+Component}}.
+
+\mbox{\Hypertarget{classgame_1_1components_1_1Quad_a933aa629a4055223c907583215ad2b42}\label{classgame_1_1components_1_1Quad_a933aa629a4055223c907583215ad2b42}} 
+\index{game::components::Quad@{game::components::Quad}!onEnable@{onEnable}}
+\index{onEnable@{onEnable}!game::components::Quad@{game::components::Quad}}
+\doxysubsubsection{\texorpdfstring{onEnable()}{onEnable()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Quad\+::on\+Enable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+component lifecycle function 
+
+component lifecycle function, gets called automatically when component is enabled 
+
+Reimplemented from \mbox{\hyperlink{classgame_1_1components_1_1RenderComponent_ae4fac2917f13cd029ab46cae876d14e3}{game\+::components\+::\+Render\+Component}}.
+
+\mbox{\Hypertarget{classgame_1_1components_1_1Quad_a654f0b77a965db244e6cb02533d91db8}\label{classgame_1_1components_1_1Quad_a654f0b77a965db244e6cb02533d91db8}} 
+\index{game::components::Quad@{game::components::Quad}!set@{set}}
+\index{set@{set}!game::components::Quad@{game::components::Quad}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Quad\+::set (\begin{DoxyParamCaption}\item[{sf\+::\+Texture $\ast$}]{texture,  }\item[{sf\+::\+Float\+Rect}]{tex\+Coords }\end{DoxyParamCaption})}
+
+
+
+set the texture to be used for rendering, and set the texture coordinate in the texture that we want to draw with 
+
+must call this function before a quad can be properly draw to the screen set the texture to be used for rendering, and set the texture coordinate in the texture that we want to draw with
+
+
+\begin{DoxyParams}{Parameters}
+{\em texture} & the texture to be drawn with \\
+\hline
+{\em tex\+Coords} & the texture coordinate in the texture that we want to draw with \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classgame_1_1components_1_1Quad_ac3603d817b4b65ca47ddfa110f5001ad}\label{classgame_1_1components_1_1Quad_ac3603d817b4b65ca47ddfa110f5001ad}} 
+\index{game::components::Quad@{game::components::Quad}!mQuad@{mQuad}}
+\index{mQuad@{mQuad}!game::components::Quad@{game::components::Quad}}
+\doxysubsubsection{\texorpdfstring{mQuad}{mQuad}}
+{\footnotesize\ttfamily sf\+::\+Vertex\+Array game\+::components\+::\+Quad\+::m\+Quad\hspace{0.3cm}{\ttfamily [private]}}
+
+the actually vertexes provided by sfml \mbox{\Hypertarget{classgame_1_1components_1_1Quad_ad5d416013ba92d7da50813f7c58d28c4}\label{classgame_1_1components_1_1Quad_ad5d416013ba92d7da50813f7c58d28c4}} 
+\index{game::components::Quad@{game::components::Quad}!mReferencedTexture@{mReferencedTexture}}
+\index{mReferencedTexture@{mReferencedTexture}!game::components::Quad@{game::components::Quad}}
+\doxysubsubsection{\texorpdfstring{mReferencedTexture}{mReferencedTexture}}
+{\footnotesize\ttfamily sf\+::\+Texture$\ast$ game\+::components\+::\+Quad\+::m\+Referenced\+Texture\hspace{0.3cm}{\ttfamily [private]}}
+
+the texture to be drawn with \mbox{\Hypertarget{classgame_1_1components_1_1Quad_a8ae7f6d6b422a42f8cb4cc1890986bca}\label{classgame_1_1components_1_1Quad_a8ae7f6d6b422a42f8cb4cc1890986bca}} 
+\index{game::components::Quad@{game::components::Quad}!mSize@{mSize}}
+\index{mSize@{mSize}!game::components::Quad@{game::components::Quad}}
+\doxysubsubsection{\texorpdfstring{mSize}{mSize}}
+{\footnotesize\ttfamily sf\+::\+Vector2f game\+::components\+::\+Quad\+::m\+Size\hspace{0.3cm}{\ttfamily [private]}}
+
+cached size of the drawable \mbox{\Hypertarget{classgame_1_1components_1_1Quad_a30cd8d3e3568289f3db429ace7c29a86}\label{classgame_1_1components_1_1Quad_a30cd8d3e3568289f3db429ace7c29a86}} 
+\index{game::components::Quad@{game::components::Quad}!mTexCoords@{mTexCoords}}
+\index{mTexCoords@{mTexCoords}!game::components::Quad@{game::components::Quad}}
+\doxysubsubsection{\texorpdfstring{mTexCoords}{mTexCoords}}
+{\footnotesize\ttfamily sf\+::\+Float\+Rect game\+::components\+::\+Quad\+::m\+Tex\+Coords\hspace{0.3cm}{\ttfamily [private]}}
+
+the texture coordinates on the referenced texture to be drawn with 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Components/\+Drawables/Quad.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,145 @@
+\hypertarget{structgame_1_1data_1_1ProjectionAnimDefine}{}\doxysection{game\+::data\+::Projection\+Anim\+Define Struct Reference}
+\label{structgame_1_1data_1_1ProjectionAnimDefine}\index{game::data::ProjectionAnimDefine@{game::data::ProjectionAnimDefine}}
+
+
+data structure to hold enemy animation data  
+
+
+
+
+{\ttfamily \#include $<$Projection\+Define.\+h$>$}
+
+
+
+Inheritance diagram for game\+::data\+::Projection\+Anim\+Define\+:
+% FIG 0
+
+
+Collaboration diagram for game\+::data\+::Projection\+Anim\+Define\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structgame_1_1data_1_1ProjectionAnimDefine_a50b2afd46033d17ffa7c2031a08c6c6c}{Projection\+Anim\+Define}} (const rapidjson\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structgame_1_1data_1_1ProjectionAnimDefine}{Projection\+Anim\+Define}} constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structgame_1_1data_1_1ProjectionAnimDefine_a772d1a476e8d05294152bcf75d014714}\label{structgame_1_1data_1_1ProjectionAnimDefine_a772d1a476e8d05294152bcf75d014714}} 
+{\bfseries Projection\+Anim\+Define} (const \mbox{\hyperlink{structgame_1_1data_1_1ProjectionAnimDefine}{Projection\+Anim\+Define}} \&other)=delete
+\item 
+\mbox{\Hypertarget{structgame_1_1data_1_1ProjectionAnimDefine_a1a2d3e7074a84749ed9e7bae006102b9}\label{structgame_1_1data_1_1ProjectionAnimDefine_a1a2d3e7074a84749ed9e7bae006102b9}} 
+\mbox{\hyperlink{structgame_1_1data_1_1ProjectionAnimDefine}{Projection\+Anim\+Define}} \& {\bfseries operator=} (const \mbox{\hyperlink{structgame_1_1data_1_1ProjectionAnimDefine}{Projection\+Anim\+Define}} \&other)=delete
+\item 
+void \mbox{\hyperlink{structgame_1_1data_1_1ProjectionAnimDefine_a158484a74e73a1f3108c1c0f37f4f7c7}{from\+Json}} (const rapidjson\+::\+Value \&json) override
+\begin{DoxyCompactList}\small\item\em deserialize c++ data structure from json object \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structgame_1_1data_1_1ProjectionAnimDefine_a529c6bdeffb817629ae78509b50c680b}{to\+Json}} (rapidjson\+::\+Writer$<$ rapidjson\+::\+String\+Buffer $>$ $\ast$writer) override
+\begin{DoxyCompactList}\small\item\em serialize a c++ data structure to a json object \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{structgame_1_1data_1_1ProjectionAnimDefine_a8c1f3a9c51667726ab96f148726c56f1}{anim\+State\+ID}}
+\item 
+int \mbox{\hyperlink{structgame_1_1data_1_1ProjectionAnimDefine_a0adaa5330e0d9ac019fcea2db411bb40}{anim\+ID}}
+\item 
+bool \mbox{\hyperlink{structgame_1_1data_1_1ProjectionAnimDefine_a40e64b69bb6dcef696a0442c878b9021}{make\+Initial\+State}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+data structure to hold enemy animation data 
+
+this is the data structure to hold animation data defined in Enemy\+Define.\+json
+
+\begin{DoxyAuthor}{Author}
+Zheng Yang 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structgame_1_1data_1_1ProjectionAnimDefine_a50b2afd46033d17ffa7c2031a08c6c6c}\label{structgame_1_1data_1_1ProjectionAnimDefine_a50b2afd46033d17ffa7c2031a08c6c6c}} 
+\index{game::data::ProjectionAnimDefine@{game::data::ProjectionAnimDefine}!ProjectionAnimDefine@{ProjectionAnimDefine}}
+\index{ProjectionAnimDefine@{ProjectionAnimDefine}!game::data::ProjectionAnimDefine@{game::data::ProjectionAnimDefine}}
+\doxysubsubsection{\texorpdfstring{ProjectionAnimDefine()}{ProjectionAnimDefine()}}
+{\footnotesize\ttfamily game\+::data\+::\+Projection\+Anim\+Define\+::\+Projection\+Anim\+Define (\begin{DoxyParamCaption}\item[{const rapidjson\+::\+Value \&}]{json }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+\mbox{\hyperlink{structgame_1_1data_1_1ProjectionAnimDefine}{Projection\+Anim\+Define}} constructor. 
+
+\mbox{\hyperlink{structgame_1_1data_1_1ProjectionAnimDefine}{Projection\+Anim\+Define}} constructor which deserializes a json object
+
+
+\begin{DoxyParams}{Parameters}
+{\em json} & object of the projection animation data \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structgame_1_1data_1_1ProjectionAnimDefine_a158484a74e73a1f3108c1c0f37f4f7c7}\label{structgame_1_1data_1_1ProjectionAnimDefine_a158484a74e73a1f3108c1c0f37f4f7c7}} 
+\index{game::data::ProjectionAnimDefine@{game::data::ProjectionAnimDefine}!fromJson@{fromJson}}
+\index{fromJson@{fromJson}!game::data::ProjectionAnimDefine@{game::data::ProjectionAnimDefine}}
+\doxysubsubsection{\texorpdfstring{fromJson()}{fromJson()}}
+{\footnotesize\ttfamily void game\+::data\+::\+Projection\+Anim\+Define\+::from\+Json (\begin{DoxyParamCaption}\item[{const rapidjson\+::\+Value \&}]{json }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+deserialize c++ data structure from json object 
+
+this function takes a json object, and deserialize c++ data structure from it
+
+
+\begin{DoxyParams}{Parameters}
+{\em json} & serialized json object \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classgame_1_1data_1_1JsonBase_ad71ccf1cdfa32f5100ba32d208afbffa}{game\+::data\+::\+Json\+Base}}.
+
+\mbox{\Hypertarget{structgame_1_1data_1_1ProjectionAnimDefine_a529c6bdeffb817629ae78509b50c680b}\label{structgame_1_1data_1_1ProjectionAnimDefine_a529c6bdeffb817629ae78509b50c680b}} 
+\index{game::data::ProjectionAnimDefine@{game::data::ProjectionAnimDefine}!toJson@{toJson}}
+\index{toJson@{toJson}!game::data::ProjectionAnimDefine@{game::data::ProjectionAnimDefine}}
+\doxysubsubsection{\texorpdfstring{toJson()}{toJson()}}
+{\footnotesize\ttfamily void game\+::data\+::\+Projection\+Anim\+Define\+::to\+Json (\begin{DoxyParamCaption}\item[{rapidjson\+::\+Writer$<$ rapidjson\+::\+String\+Buffer $>$ $\ast$}]{writer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+serialize a c++ data structure to a json object 
+
+this function takes a json writer, and serialize c++ data structure to it
+
+
+\begin{DoxyParams}{Parameters}
+{\em writer} & json writer \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classgame_1_1data_1_1JsonBase_a9b0277fdcf438ded476fe08d07c2ed2d}{game\+::data\+::\+Json\+Base}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structgame_1_1data_1_1ProjectionAnimDefine_a0adaa5330e0d9ac019fcea2db411bb40}\label{structgame_1_1data_1_1ProjectionAnimDefine_a0adaa5330e0d9ac019fcea2db411bb40}} 
+\index{game::data::ProjectionAnimDefine@{game::data::ProjectionAnimDefine}!animID@{animID}}
+\index{animID@{animID}!game::data::ProjectionAnimDefine@{game::data::ProjectionAnimDefine}}
+\doxysubsubsection{\texorpdfstring{animID}{animID}}
+{\footnotesize\ttfamily int game\+::data\+::\+Projection\+Anim\+Define\+::anim\+ID}
+
+animation identifier \mbox{\Hypertarget{structgame_1_1data_1_1ProjectionAnimDefine_a8c1f3a9c51667726ab96f148726c56f1}\label{structgame_1_1data_1_1ProjectionAnimDefine_a8c1f3a9c51667726ab96f148726c56f1}} 
+\index{game::data::ProjectionAnimDefine@{game::data::ProjectionAnimDefine}!animStateID@{animStateID}}
+\index{animStateID@{animStateID}!game::data::ProjectionAnimDefine@{game::data::ProjectionAnimDefine}}
+\doxysubsubsection{\texorpdfstring{animStateID}{animStateID}}
+{\footnotesize\ttfamily int game\+::data\+::\+Projection\+Anim\+Define\+::anim\+State\+ID}
+
+animation state identifier \mbox{\Hypertarget{structgame_1_1data_1_1ProjectionAnimDefine_a40e64b69bb6dcef696a0442c878b9021}\label{structgame_1_1data_1_1ProjectionAnimDefine_a40e64b69bb6dcef696a0442c878b9021}} 
+\index{game::data::ProjectionAnimDefine@{game::data::ProjectionAnimDefine}!makeInitialState@{makeInitialState}}
+\index{makeInitialState@{makeInitialState}!game::data::ProjectionAnimDefine@{game::data::ProjectionAnimDefine}}
+\doxysubsubsection{\texorpdfstring{makeInitialState}{makeInitialState}}
+{\footnotesize\ttfamily bool game\+::data\+::\+Projection\+Anim\+Define\+::make\+Initial\+State}
+
+make this the initial animation ~\newline
+ 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Data/Projection\+Define.\+h\end{DoxyCompactItemize}

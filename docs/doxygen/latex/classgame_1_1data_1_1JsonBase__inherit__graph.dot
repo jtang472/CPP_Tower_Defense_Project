@@ -1,0 +1,32 @@
+digraph "game::data::JsonBase"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="game::data::JsonBase",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="game::data::AnimDefine",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structgame_1_1data_1_1AnimDefine.html",tooltip="data structure to hold character animation data"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="game::data::ButtonDefine",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structgame_1_1data_1_1ButtonDefine.html",tooltip="data structure to hold button data"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="game::data::EnemyAnimDefine",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structgame_1_1data_1_1EnemyAnimDefine.html",tooltip="data structure to hold enemy animation data"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="game::data::EnemyDefine",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structgame_1_1data_1_1EnemyDefine.html",tooltip="data structure to hold enemy data"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="game::data::EnemySpawnRule\lDefine",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structgame_1_1data_1_1EnemySpawnRuleDefine.html",tooltip="data structure to hold spawn rule data"];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="game::data::FightRuleDefine",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structgame_1_1data_1_1FightRuleDefine.html",tooltip="data structure to hold fight rule data"];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="game::data::PlayerData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structgame_1_1data_1_1PlayerData.html",tooltip="data structure to hold player save data"];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="game::data::ProjectionAnim\lDefine",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structgame_1_1data_1_1ProjectionAnimDefine.html",tooltip="data structure to hold enemy animation data"];
+  Node1 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="game::data::ProjectionDefine",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structgame_1_1data_1_1ProjectionDefine.html",tooltip="data structure to hold projection data"];
+  Node1 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="game::data::ShopItemDefine",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structgame_1_1data_1_1ShopItemDefine.html",tooltip="data structure to hold shop item data"];
+  Node1 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="game::data::TowerAnimDefine",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structgame_1_1data_1_1TowerAnimDefine.html",tooltip="data structure to hold enemy animation data"];
+  Node1 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node13 [label="game::data::TowerDefine",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structgame_1_1data_1_1TowerDefine.html",tooltip="data structure to hold tower data"];
+}

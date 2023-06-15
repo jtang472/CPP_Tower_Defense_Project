@@ -1,0 +1,192 @@
+\hypertarget{classgame_1_1audio_1_1MusicManager}{}\doxysection{game\+::audio\+::Music\+Manager Class Reference}
+\label{classgame_1_1audio_1_1MusicManager}\index{game::audio::MusicManager@{game::audio::MusicManager}}
+
+
+manager singleton class for in-\/game background music  
+
+
+
+
+{\ttfamily \#include $<$Music\+Manager.\+h$>$}
+
+
+
+Inheritance diagram for game\+::audio\+::Music\+Manager\+:
+% FIG 0
+
+
+Collaboration diagram for game\+::audio\+::Music\+Manager\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classgame_1_1audio_1_1MusicManager_af83d80db2cc87c5a1abad44959600cec}{init}} ()
+\begin{DoxyCompactList}\small\item\em music initialization and configuration \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1audio_1_1MusicManager_acf1c2fb4c846b87ff8fb67f0ee814188}{play}} (Music\+Type music\+Type)
+\begin{DoxyCompactList}\small\item\em play BGM based on its unique identifier \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1audio_1_1MusicManager_ab19fd7ad14a0ae6b536993a9d0ebc028}{stop}} ()
+\begin{DoxyCompactList}\small\item\em stop BGM \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1audio_1_1MusicManager_a55f43184dcd926f7496a6a76542392b7}{set\+Volumn}} (float volumn)
+\begin{DoxyCompactList}\small\item\em music volumn setter \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1audio_1_1MusicManager_af037a9bd6a8859198cc799a1ad89dec4}{set\+Pause}} (bool is\+Paused)
+\begin{DoxyCompactList}\small\item\em pause/continue the current music \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1audio_1_1MusicManager_a68b87469d239d1a04468c7260528b4d0}{register\+Music}} (Music\+Type type, std\+::string path)
+\begin{DoxyCompactList}\small\item\em register a id to resource path pair for a in-\/game background music \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgame_1_1audio_1_1MusicManager_ac47dfe9ac798ac5e303d9b34baf2af28}{Music\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em private constructor to ensure the singleton pattern \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unordered\+\_\+map$<$ Music\+Type, std\+::string $>$ \mbox{\hyperlink{classgame_1_1audio_1_1MusicManager_a32a69816becddbfb4ca975ce9aee1bf9}{m\+Type\+To\+Path\+Mapping}}
+\item 
+sf\+::\+Music \mbox{\hyperlink{classgame_1_1audio_1_1MusicManager_aa3a3a80fe99ebb4c96153e17f4e4ef66}{m\+Music}}
+\item 
+float \mbox{\hyperlink{classgame_1_1audio_1_1MusicManager_a6a60e9242d1d6dae1fccd6cf643ac27c}{m\+Volumn}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classgame_1_1audio_1_1MusicManager_acdc0742c8a1f52c01ee30470156668ab}\label{classgame_1_1audio_1_1MusicManager_acdc0742c8a1f52c01ee30470156668ab}} 
+class {\bfseries Singleton$<$ Music\+Manager $>$}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+manager singleton class for in-\/game background music 
+
+this class is a singleton manager class, and it is used to control all the in-\/game music resources. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgame_1_1audio_1_1MusicManager_ac47dfe9ac798ac5e303d9b34baf2af28}\label{classgame_1_1audio_1_1MusicManager_ac47dfe9ac798ac5e303d9b34baf2af28}} 
+\index{game::audio::MusicManager@{game::audio::MusicManager}!MusicManager@{MusicManager}}
+\index{MusicManager@{MusicManager}!game::audio::MusicManager@{game::audio::MusicManager}}
+\doxysubsubsection{\texorpdfstring{MusicManager()}{MusicManager()}}
+{\footnotesize\ttfamily game\+::audio\+::\+Music\+Manager\+::\+Music\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+private constructor to ensure the singleton pattern 
+
+the constructor is private because it is a singleton class 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgame_1_1audio_1_1MusicManager_af83d80db2cc87c5a1abad44959600cec}\label{classgame_1_1audio_1_1MusicManager_af83d80db2cc87c5a1abad44959600cec}} 
+\index{game::audio::MusicManager@{game::audio::MusicManager}!init@{init}}
+\index{init@{init}!game::audio::MusicManager@{game::audio::MusicManager}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void game\+::audio\+::\+Music\+Manager\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+music initialization and configuration 
+
+this function should be called before any other APIs, it initializes the music settings \mbox{\Hypertarget{classgame_1_1audio_1_1MusicManager_acf1c2fb4c846b87ff8fb67f0ee814188}\label{classgame_1_1audio_1_1MusicManager_acf1c2fb4c846b87ff8fb67f0ee814188}} 
+\index{game::audio::MusicManager@{game::audio::MusicManager}!play@{play}}
+\index{play@{play}!game::audio::MusicManager@{game::audio::MusicManager}}
+\doxysubsubsection{\texorpdfstring{play()}{play()}}
+{\footnotesize\ttfamily void game\+::audio\+::\+Music\+Manager\+::play (\begin{DoxyParamCaption}\item[{Music\+Type}]{music\+Type }\end{DoxyParamCaption})}
+
+
+
+play BGM based on its unique identifier 
+
+this function takes a music id, and plays the corresponding music
+
+
+\begin{DoxyParams}{Parameters}
+{\em music\+Type} & id of the music to be played \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1audio_1_1MusicManager_a68b87469d239d1a04468c7260528b4d0}\label{classgame_1_1audio_1_1MusicManager_a68b87469d239d1a04468c7260528b4d0}} 
+\index{game::audio::MusicManager@{game::audio::MusicManager}!registerMusic@{registerMusic}}
+\index{registerMusic@{registerMusic}!game::audio::MusicManager@{game::audio::MusicManager}}
+\doxysubsubsection{\texorpdfstring{registerMusic()}{registerMusic()}}
+{\footnotesize\ttfamily void game\+::audio\+::\+Music\+Manager\+::register\+Music (\begin{DoxyParamCaption}\item[{Music\+Type}]{type,  }\item[{std\+::string}]{path }\end{DoxyParamCaption})}
+
+
+
+register a id to resource path pair for a in-\/game background music 
+
+this function register a id to resource path pair for a in-\/game background music
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & the unique identifier of a music file \\
+\hline
+{\em path} & the resource path of a music file \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1audio_1_1MusicManager_af037a9bd6a8859198cc799a1ad89dec4}\label{classgame_1_1audio_1_1MusicManager_af037a9bd6a8859198cc799a1ad89dec4}} 
+\index{game::audio::MusicManager@{game::audio::MusicManager}!setPause@{setPause}}
+\index{setPause@{setPause}!game::audio::MusicManager@{game::audio::MusicManager}}
+\doxysubsubsection{\texorpdfstring{setPause()}{setPause()}}
+{\footnotesize\ttfamily void game\+::audio\+::\+Music\+Manager\+::set\+Pause (\begin{DoxyParamCaption}\item[{bool}]{is\+Paused }\end{DoxyParamCaption})}
+
+
+
+pause/continue the current music 
+
+this function pauses or continues the current music based on a boolean flag
+
+
+\begin{DoxyParams}{Parameters}
+{\em is\+Paused} & true if you want to pause the music, otherwise false \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1audio_1_1MusicManager_a55f43184dcd926f7496a6a76542392b7}\label{classgame_1_1audio_1_1MusicManager_a55f43184dcd926f7496a6a76542392b7}} 
+\index{game::audio::MusicManager@{game::audio::MusicManager}!setVolumn@{setVolumn}}
+\index{setVolumn@{setVolumn}!game::audio::MusicManager@{game::audio::MusicManager}}
+\doxysubsubsection{\texorpdfstring{setVolumn()}{setVolumn()}}
+{\footnotesize\ttfamily void game\+::audio\+::\+Music\+Manager\+::set\+Volumn (\begin{DoxyParamCaption}\item[{float}]{volumn }\end{DoxyParamCaption})}
+
+
+
+music volumn setter 
+
+this is the setter function of music volumn
+
+
+\begin{DoxyParams}{Parameters}
+{\em volumn} & new music volumn, which should be a number between 0 and 100 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1audio_1_1MusicManager_ab19fd7ad14a0ae6b536993a9d0ebc028}\label{classgame_1_1audio_1_1MusicManager_ab19fd7ad14a0ae6b536993a9d0ebc028}} 
+\index{game::audio::MusicManager@{game::audio::MusicManager}!stop@{stop}}
+\index{stop@{stop}!game::audio::MusicManager@{game::audio::MusicManager}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void game\+::audio\+::\+Music\+Manager\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+stop BGM 
+
+this function stops the background music, if there is any 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classgame_1_1audio_1_1MusicManager_aa3a3a80fe99ebb4c96153e17f4e4ef66}\label{classgame_1_1audio_1_1MusicManager_aa3a3a80fe99ebb4c96153e17f4e4ef66}} 
+\index{game::audio::MusicManager@{game::audio::MusicManager}!mMusic@{mMusic}}
+\index{mMusic@{mMusic}!game::audio::MusicManager@{game::audio::MusicManager}}
+\doxysubsubsection{\texorpdfstring{mMusic}{mMusic}}
+{\footnotesize\ttfamily sf\+::\+Music game\+::audio\+::\+Music\+Manager\+::m\+Music\hspace{0.3cm}{\ttfamily [private]}}
+
+actual music player provided by SFML \mbox{\Hypertarget{classgame_1_1audio_1_1MusicManager_a32a69816becddbfb4ca975ce9aee1bf9}\label{classgame_1_1audio_1_1MusicManager_a32a69816becddbfb4ca975ce9aee1bf9}} 
+\index{game::audio::MusicManager@{game::audio::MusicManager}!mTypeToPathMapping@{mTypeToPathMapping}}
+\index{mTypeToPathMapping@{mTypeToPathMapping}!game::audio::MusicManager@{game::audio::MusicManager}}
+\doxysubsubsection{\texorpdfstring{mTypeToPathMapping}{mTypeToPathMapping}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$Music\+Type, std\+::string$>$ game\+::audio\+::\+Music\+Manager\+::m\+Type\+To\+Path\+Mapping\hspace{0.3cm}{\ttfamily [private]}}
+
+registered music type to path mapping \mbox{\Hypertarget{classgame_1_1audio_1_1MusicManager_a6a60e9242d1d6dae1fccd6cf643ac27c}\label{classgame_1_1audio_1_1MusicManager_a6a60e9242d1d6dae1fccd6cf643ac27c}} 
+\index{game::audio::MusicManager@{game::audio::MusicManager}!mVolumn@{mVolumn}}
+\index{mVolumn@{mVolumn}!game::audio::MusicManager@{game::audio::MusicManager}}
+\doxysubsubsection{\texorpdfstring{mVolumn}{mVolumn}}
+{\footnotesize\ttfamily float game\+::audio\+::\+Music\+Manager\+::m\+Volumn\hspace{0.3cm}{\ttfamily [private]}}
+
+global state of current music volumn 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Audio/Music\+Manager.\+h\end{DoxyCompactItemize}

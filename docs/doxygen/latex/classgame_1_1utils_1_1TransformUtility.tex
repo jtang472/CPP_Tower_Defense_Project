@@ -1,0 +1,86 @@
+\hypertarget{classgame_1_1utils_1_1TransformUtility}{}\doxysection{game\+::utils\+::Transform\+Utility Class Reference}
+\label{classgame_1_1utils_1_1TransformUtility}\index{game::utils::TransformUtility@{game::utils::TransformUtility}}
+
+
+a static class to deal with coordinate transform and collision detection  
+
+
+
+
+{\ttfamily \#include $<$Transform\+Utility.\+h$>$}
+
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static sf\+::\+Vector2f \mbox{\hyperlink{classgame_1_1utils_1_1TransformUtility_a7b5f5c5b49d5433b19f6e1ef18753228}{map\+Screen\+Point\+To\+World\+Pos}} (sf\+::\+Render\+Window \&window, sf\+::\+View \&camera, sf\+::\+Vector2i screen\+Pos)
+\begin{DoxyCompactList}\small\item\em transform a point from screen point to world space \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classgame_1_1utils_1_1TransformUtility_a8194f3e108dc8858fa6450449093d865}{rectangle\+Contains\+Screen\+Point}} (sf\+::\+Render\+Window \&window, sf\+::\+View \&camera, sf\+::\+Vector2i screen\+Pos, sf\+::\+Float\+Rect rect)
+\begin{DoxyCompactList}\small\item\em check if a point in the screen space is in a rectangle bounding box of world space \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+a static class to deal with coordinate transform and collision detection 
+
+This class is pure static and is meant to deal with coordinate transform and collision detection
+
+\begin{DoxyAuthor}{Author}
+Zheng Yang 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgame_1_1utils_1_1TransformUtility_a7b5f5c5b49d5433b19f6e1ef18753228}\label{classgame_1_1utils_1_1TransformUtility_a7b5f5c5b49d5433b19f6e1ef18753228}} 
+\index{game::utils::TransformUtility@{game::utils::TransformUtility}!mapScreenPointToWorldPos@{mapScreenPointToWorldPos}}
+\index{mapScreenPointToWorldPos@{mapScreenPointToWorldPos}!game::utils::TransformUtility@{game::utils::TransformUtility}}
+\doxysubsubsection{\texorpdfstring{mapScreenPointToWorldPos()}{mapScreenPointToWorldPos()}}
+{\footnotesize\ttfamily static sf\+::\+Vector2f game\+::utils\+::\+Transform\+Utility\+::map\+Screen\+Point\+To\+World\+Pos (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window,  }\item[{sf\+::\+View \&}]{camera,  }\item[{sf\+::\+Vector2i}]{screen\+Pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+transform a point from screen point to world space 
+
+this function takes a camera and a point in the screen space, and calculate the position of the point in world space
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & current game window \\
+\hline
+{\em camera} & game camera, which is the origin of the world space \\
+\hline
+{\em screen\+Pos} & the screen position to be transformed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the point in the world space 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgame_1_1utils_1_1TransformUtility_a8194f3e108dc8858fa6450449093d865}\label{classgame_1_1utils_1_1TransformUtility_a8194f3e108dc8858fa6450449093d865}} 
+\index{game::utils::TransformUtility@{game::utils::TransformUtility}!rectangleContainsScreenPoint@{rectangleContainsScreenPoint}}
+\index{rectangleContainsScreenPoint@{rectangleContainsScreenPoint}!game::utils::TransformUtility@{game::utils::TransformUtility}}
+\doxysubsubsection{\texorpdfstring{rectangleContainsScreenPoint()}{rectangleContainsScreenPoint()}}
+{\footnotesize\ttfamily static bool game\+::utils\+::\+Transform\+Utility\+::rectangle\+Contains\+Screen\+Point (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window,  }\item[{sf\+::\+View \&}]{camera,  }\item[{sf\+::\+Vector2i}]{screen\+Pos,  }\item[{sf\+::\+Float\+Rect}]{rect }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+check if a point in the screen space is in a rectangle bounding box of world space 
+
+this function takes a camera, a point in the screen space, and a bounding box in world space, and it calculate check if the point is inside the rectangle bounding box
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & current game window \\
+\hline
+{\em camera} & game camera, which is the origin of the world space \\
+\hline
+{\em screen\+Pos} & the screen position to be transformed \\
+\hline
+{\em rect} & the rect bounding box in world space \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the point in the world space 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Utils/Transform\+Utility.\+h\end{DoxyCompactItemize}

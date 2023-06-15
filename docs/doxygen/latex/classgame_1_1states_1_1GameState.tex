@@ -1,0 +1,430 @@
+\hypertarget{classgame_1_1states_1_1GameState}{}\doxysection{game\+::states\+::Game\+State Class Reference}
+\label{classgame_1_1states_1_1GameState}\index{game::states::GameState@{game::states::GameState}}
+
+
+game state  
+
+
+
+
+{\ttfamily \#include $<$Game\+State.\+h$>$}
+
+
+
+Inheritance diagram for game\+::states\+::Game\+State\+:
+% FIG 0
+
+
+Collaboration diagram for game\+::states\+::Game\+State\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgame_1_1states_1_1GameState_ab5a790c4e5a6eff45104b878b171de56}{Game\+State}} (\mbox{\hyperlink{classgame_1_1states_1_1StateMachine}{State\+Machine}} $\ast$owner)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classgame_1_1states_1_1GameState}{Game\+State}} constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classgame_1_1states_1_1GameState_a0730fc2fcc11359f1850c33e8718f196}{$\sim$\+Game\+State}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classgame_1_1states_1_1GameState}{Game\+State}} destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1states_1_1GameState_a42dd3537fffd822da5c044727356f266}{init}} () override
+\begin{DoxyCompactList}\small\item\em initialization of state \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1states_1_1GameState_afc087ebdc5a5fcd9534ae9012d746600}{load\+Game\+Word}} ()
+\begin{DoxyCompactList}\small\item\em load game world \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1states_1_1GameState_a504491b735da3eb09c5e4adb51f18770}{on\+Map\+Load\+Completed}} ()
+\begin{DoxyCompactList}\small\item\em callback for map load complete event \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1states_1_1GameState_ac0f52d871ea32e0df4417ebd0230a902}{disable\+Input}} () override
+\begin{DoxyCompactList}\small\item\em disable user input in the current state \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1states_1_1GameState_aac2e038e50d73b0c994064c7bd40e9f3}{enable\+Input}} () override
+\begin{DoxyCompactList}\small\item\em enable user input in the current state \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1states_1_1GameState_a418813616b1ff073a4c7c097d3e5d388}{lose\+Game}} ()
+\begin{DoxyCompactList}\small\item\em callback for game lose event \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1states_1_1GameState_aa032d755de1a611ac92ee473667398c3}{win\+Game}} ()
+\begin{DoxyCompactList}\small\item\em callback for game win event \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1states_1_1GameState_ae350bcf7d0ce72500484d1bad4e495c2}{adjust\+Game\+Camera}} ()
+\begin{DoxyCompactList}\small\item\em adjust game camera based on player position in the game world \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgame_1_1states_1_1GameState_ac9ef49acc8bf1ec0750eba9b6287dabb}\label{classgame_1_1states_1_1GameState_ac9ef49acc8bf1ec0750eba9b6287dabb}} 
+void {\bfseries on\+Wheel\+Scrolled} (int delta)
+\item 
+void \mbox{\hyperlink{classgame_1_1states_1_1GameState_ac0891b5c04d3ff4fc6f788283e43ef3b}{on\+Mouse\+Drag}} (int deltaX, int deltaY)
+\begin{DoxyCompactList}\small\item\em callback for mouse dragging event \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1states_1_1GameState_a7e2effeb0a1876f931e84e74c7379c10}{on\+Spawn\+Button\+Clicked}} ()
+\begin{DoxyCompactList}\small\item\em callback for spawn button click event \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1states_1_1GameState_a45aec172ec359067b992beccd5e5d98c}{on\+Pause\+Button\+Clicked}} ()
+\begin{DoxyCompactList}\small\item\em callback for pause button click event \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1states_1_1GameState_aa0bc4354ccee12d8dfb7edfe1a985f2d}{on\+Enemy\+Spawned}} (\mbox{\hyperlink{classgame_1_1components_1_1Enemy}{components\+::\+Enemy}} $\ast$enemy)
+\begin{DoxyCompactList}\small\item\em callback for pause button click event \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1states_1_1GameState_a1345a749da603b192353a18a89f1cd67}{on\+All\+Enemies\+Spawned}} ()
+\begin{DoxyCompactList}\small\item\em callback for all enemy spawned event \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1states_1_1GameState_ac958c8857b10999503231ad9564b74d9}{on\+Enemy\+Dead}} (const \mbox{\hyperlink{structgame_1_1data_1_1EnemyDefine}{data\+::\+Enemy\+Define}} $\ast$enemy)
+\begin{DoxyCompactList}\small\item\em callback for enemy spawned event \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1states_1_1GameState_a47bf449ddb4fa9548085ab5acd0e42f5}{on\+Enemy\+Arrive\+Destination}} (const \mbox{\hyperlink{structgame_1_1data_1_1EnemyDefine}{data\+::\+Enemy\+Define}} $\ast$enemy)
+\begin{DoxyCompactList}\small\item\em callback for enemy arriving destination event \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgame_1_1core_1_1ObjectHandle}{core\+::\+Go\+Handle}} \mbox{\hyperlink{classgame_1_1states_1_1GameState_ab282f1b868fd179d6134b41a8a4873a4}{m\+Game\+Root}}
+\item 
+const ldtk\+::\+World \& \mbox{\hyperlink{classgame_1_1states_1_1GameState_aa745c10b8f2f5698af34d57cef61ce01}{m\+Game\+World}}
+\item 
+sf\+::\+View $\ast$ \mbox{\hyperlink{classgame_1_1states_1_1GameState_abae2c51e4aa937466ddd9e4c0ca6a9b8}{m\+Game\+Camera}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classgame_1_1grid_1_1GridSystem}{grid\+::\+Grid\+System}} $>$ \mbox{\hyperlink{classgame_1_1states_1_1GameState_a076a6f1e6511e02c3236570040b50810}{m\+Grid\+System}}
+\item 
+\mbox{\hyperlink{classgame_1_1components_1_1EnemySpawner}{components\+::\+Enemy\+Spawner}} $\ast$ \mbox{\hyperlink{classgame_1_1states_1_1GameState_a2e98ad13539e6427a43374d1fef7c201}{m\+Enemy\+Spawner}}
+\item 
+\mbox{\hyperlink{classgame_1_1components_1_1PlayerHud}{components\+::\+Player\+Hud}} $\ast$ \mbox{\hyperlink{classgame_1_1states_1_1GameState_a4a1d2c683cc7de5c96b5b7ab96225588}{m\+Player\+Hud}}
+\item 
+\mbox{\hyperlink{classgame_1_1components_1_1Button}{components\+::\+Button}} $\ast$ \mbox{\hyperlink{classgame_1_1states_1_1GameState_a700d5fe16fe34f45770c695bd37f634b}{m\+Enemy\+Spawn\+Button}}
+\item 
+\mbox{\hyperlink{classgame_1_1components_1_1SimpleButton}{components\+::\+Simple\+Button}} $\ast$ \mbox{\hyperlink{classgame_1_1states_1_1GameState_a0263effa90a9c123e2c5aac2459ba51a}{m\+Pause\+Button}}
+\item 
+boost\+::signals2\+::connection \mbox{\hyperlink{classgame_1_1states_1_1GameState_aa43a8fb6be6f5c5187cae1f940d4c590}{m\+Loading\+Task\+Listener}}
+\item 
+boost\+::signals2\+::connection \mbox{\hyperlink{classgame_1_1states_1_1GameState_a42b5276c0b24a3ee40164ef155c02667}{m\+Wheel\+Scrolled\+Listener}}
+\item 
+boost\+::signals2\+::connection \mbox{\hyperlink{classgame_1_1states_1_1GameState_aa7568b8211c02a78e9725cfbaff2caec}{m\+Key\+Pressed\+Listener}}
+\item 
+boost\+::signals2\+::connection \mbox{\hyperlink{classgame_1_1states_1_1GameState_a33e9d9a7c4f5a24a56d75c43fa090984}{m\+Mouse\+Drag\+Listener}}
+\item 
+boost\+::signals2\+::connection \mbox{\hyperlink{classgame_1_1states_1_1GameState_ab44e487012ff2429855d1f1c59adf4e8}{m\+Pause\+Button\+Click\+Listener}}
+\item 
+boost\+::signals2\+::connection \mbox{\hyperlink{classgame_1_1states_1_1GameState_a1e4c1d3de06f71de2e3e781ed79fd9cb}{m\+Spawn\+Button\+Click\+Listener}}
+\item 
+int \mbox{\hyperlink{classgame_1_1states_1_1GameState_a8cf32af964df35f7bcc8688cf50c9b87}{m\+Enemy\+Count}}
+\item 
+\mbox{\hyperlink{classgame_1_1components_1_1TowerShop}{components\+::\+Tower\+Shop}} $\ast$ \mbox{\hyperlink{classgame_1_1states_1_1GameState_a43af848386870ff3edf12b3a5a6de667}{m\+Tower\+Shop}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static float \mbox{\hyperlink{classgame_1_1states_1_1GameState_a85f8cbad2c624e5e6c348acf475cc053}{scroll\+Speed}}
+\item 
+static float \mbox{\hyperlink{classgame_1_1states_1_1GameState_a091d5437afe6d60e1956ae900e66fe76}{camera\+Move\+Speed}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+game state 
+
+this state will be pushed to state machine when player start the game -\/ this is the main game state that will always be in the state machine during gameplay
+
+\begin{DoxyAuthor}{Author}
+Zheng Yang 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgame_1_1states_1_1GameState_ab5a790c4e5a6eff45104b878b171de56}\label{classgame_1_1states_1_1GameState_ab5a790c4e5a6eff45104b878b171de56}} 
+\index{game::states::GameState@{game::states::GameState}!GameState@{GameState}}
+\index{GameState@{GameState}!game::states::GameState@{game::states::GameState}}
+\doxysubsubsection{\texorpdfstring{GameState()}{GameState()}}
+{\footnotesize\ttfamily game\+::states\+::\+Game\+State\+::\+Game\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgame_1_1states_1_1StateMachine}{State\+Machine}} $\ast$}]{owner }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+\mbox{\hyperlink{classgame_1_1states_1_1GameState}{Game\+State}} constructor. 
+
+\mbox{\hyperlink{classgame_1_1states_1_1GameState}{Game\+State}} constructor \mbox{\Hypertarget{classgame_1_1states_1_1GameState_a0730fc2fcc11359f1850c33e8718f196}\label{classgame_1_1states_1_1GameState_a0730fc2fcc11359f1850c33e8718f196}} 
+\index{game::states::GameState@{game::states::GameState}!````~GameState@{$\sim$GameState}}
+\index{````~GameState@{$\sim$GameState}!game::states::GameState@{game::states::GameState}}
+\doxysubsubsection{\texorpdfstring{$\sim$GameState()}{~GameState()}}
+{\footnotesize\ttfamily game\+::states\+::\+Game\+State\+::$\sim$\+Game\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classgame_1_1states_1_1GameState}{Game\+State}} destructor. 
+
+\mbox{\hyperlink{classgame_1_1states_1_1GameState}{Game\+State}} destructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgame_1_1states_1_1GameState_ae350bcf7d0ce72500484d1bad4e495c2}\label{classgame_1_1states_1_1GameState_ae350bcf7d0ce72500484d1bad4e495c2}} 
+\index{game::states::GameState@{game::states::GameState}!adjustGameCamera@{adjustGameCamera}}
+\index{adjustGameCamera@{adjustGameCamera}!game::states::GameState@{game::states::GameState}}
+\doxysubsubsection{\texorpdfstring{adjustGameCamera()}{adjustGameCamera()}}
+{\footnotesize\ttfamily void game\+::states\+::\+Game\+State\+::adjust\+Game\+Camera (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+adjust game camera based on player position in the game world 
+
+adjust game camera based on player position in the game world \mbox{\Hypertarget{classgame_1_1states_1_1GameState_ac0f52d871ea32e0df4417ebd0230a902}\label{classgame_1_1states_1_1GameState_ac0f52d871ea32e0df4417ebd0230a902}} 
+\index{game::states::GameState@{game::states::GameState}!disableInput@{disableInput}}
+\index{disableInput@{disableInput}!game::states::GameState@{game::states::GameState}}
+\doxysubsubsection{\texorpdfstring{disableInput()}{disableInput()}}
+{\footnotesize\ttfamily void game\+::states\+::\+Game\+State\+::disable\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+disable user input in the current state 
+
+call this function to disable user input in the current state 
+
+Reimplemented from \mbox{\hyperlink{classgame_1_1states_1_1State_a8d4b3f92573026b7586f65e6782f9931}{game\+::states\+::\+State}}.
+
+\mbox{\Hypertarget{classgame_1_1states_1_1GameState_aac2e038e50d73b0c994064c7bd40e9f3}\label{classgame_1_1states_1_1GameState_aac2e038e50d73b0c994064c7bd40e9f3}} 
+\index{game::states::GameState@{game::states::GameState}!enableInput@{enableInput}}
+\index{enableInput@{enableInput}!game::states::GameState@{game::states::GameState}}
+\doxysubsubsection{\texorpdfstring{enableInput()}{enableInput()}}
+{\footnotesize\ttfamily void game\+::states\+::\+Game\+State\+::enable\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+enable user input in the current state 
+
+call this function to enable user input in the current state 
+
+Reimplemented from \mbox{\hyperlink{classgame_1_1states_1_1State_abda793135a71f9be21bcdfa51ee85d82}{game\+::states\+::\+State}}.
+
+\mbox{\Hypertarget{classgame_1_1states_1_1GameState_a42dd3537fffd822da5c044727356f266}\label{classgame_1_1states_1_1GameState_a42dd3537fffd822da5c044727356f266}} 
+\index{game::states::GameState@{game::states::GameState}!init@{init}}
+\index{init@{init}!game::states::GameState@{game::states::GameState}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void game\+::states\+::\+Game\+State\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+initialization of state 
+
+initialization of state, called by state machine after state is created and put to the stack 
+
+Reimplemented from \mbox{\hyperlink{classgame_1_1states_1_1State_ab8464551e311a0621bd80f2a21a7cb4a}{game\+::states\+::\+State}}.
+
+\mbox{\Hypertarget{classgame_1_1states_1_1GameState_afc087ebdc5a5fcd9534ae9012d746600}\label{classgame_1_1states_1_1GameState_afc087ebdc5a5fcd9534ae9012d746600}} 
+\index{game::states::GameState@{game::states::GameState}!loadGameWord@{loadGameWord}}
+\index{loadGameWord@{loadGameWord}!game::states::GameState@{game::states::GameState}}
+\doxysubsubsection{\texorpdfstring{loadGameWord()}{loadGameWord()}}
+{\footnotesize\ttfamily void game\+::states\+::\+Game\+State\+::load\+Game\+Word (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+load game world 
+
+load game world -\/ this include initialize grid system, initialize enemy spawner and create player hud menu \mbox{\Hypertarget{classgame_1_1states_1_1GameState_a418813616b1ff073a4c7c097d3e5d388}\label{classgame_1_1states_1_1GameState_a418813616b1ff073a4c7c097d3e5d388}} 
+\index{game::states::GameState@{game::states::GameState}!loseGame@{loseGame}}
+\index{loseGame@{loseGame}!game::states::GameState@{game::states::GameState}}
+\doxysubsubsection{\texorpdfstring{loseGame()}{loseGame()}}
+{\footnotesize\ttfamily void game\+::states\+::\+Game\+State\+::lose\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+callback for game lose event 
+
+callback function for game lose event \mbox{\Hypertarget{classgame_1_1states_1_1GameState_a1345a749da603b192353a18a89f1cd67}\label{classgame_1_1states_1_1GameState_a1345a749da603b192353a18a89f1cd67}} 
+\index{game::states::GameState@{game::states::GameState}!onAllEnemiesSpawned@{onAllEnemiesSpawned}}
+\index{onAllEnemiesSpawned@{onAllEnemiesSpawned}!game::states::GameState@{game::states::GameState}}
+\doxysubsubsection{\texorpdfstring{onAllEnemiesSpawned()}{onAllEnemiesSpawned()}}
+{\footnotesize\ttfamily void game\+::states\+::\+Game\+State\+::on\+All\+Enemies\+Spawned (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+callback for all enemy spawned event 
+
+callback function for all enemy spawned event \mbox{\Hypertarget{classgame_1_1states_1_1GameState_a47bf449ddb4fa9548085ab5acd0e42f5}\label{classgame_1_1states_1_1GameState_a47bf449ddb4fa9548085ab5acd0e42f5}} 
+\index{game::states::GameState@{game::states::GameState}!onEnemyArriveDestination@{onEnemyArriveDestination}}
+\index{onEnemyArriveDestination@{onEnemyArriveDestination}!game::states::GameState@{game::states::GameState}}
+\doxysubsubsection{\texorpdfstring{onEnemyArriveDestination()}{onEnemyArriveDestination()}}
+{\footnotesize\ttfamily void game\+::states\+::\+Game\+State\+::on\+Enemy\+Arrive\+Destination (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structgame_1_1data_1_1EnemyDefine}{data\+::\+Enemy\+Define}} $\ast$}]{enemy }\end{DoxyParamCaption})}
+
+
+
+callback for enemy arriving destination event 
+
+callback function for enemy arriving destination event
+
+
+\begin{DoxyParams}{Parameters}
+{\em enemy} & enemy \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1states_1_1GameState_ac958c8857b10999503231ad9564b74d9}\label{classgame_1_1states_1_1GameState_ac958c8857b10999503231ad9564b74d9}} 
+\index{game::states::GameState@{game::states::GameState}!onEnemyDead@{onEnemyDead}}
+\index{onEnemyDead@{onEnemyDead}!game::states::GameState@{game::states::GameState}}
+\doxysubsubsection{\texorpdfstring{onEnemyDead()}{onEnemyDead()}}
+{\footnotesize\ttfamily void game\+::states\+::\+Game\+State\+::on\+Enemy\+Dead (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structgame_1_1data_1_1EnemyDefine}{data\+::\+Enemy\+Define}} $\ast$}]{enemy }\end{DoxyParamCaption})}
+
+
+
+callback for enemy spawned event 
+
+callback function for enemy spawned event
+
+
+\begin{DoxyParams}{Parameters}
+{\em enemy} & enemy \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1states_1_1GameState_aa0bc4354ccee12d8dfb7edfe1a985f2d}\label{classgame_1_1states_1_1GameState_aa0bc4354ccee12d8dfb7edfe1a985f2d}} 
+\index{game::states::GameState@{game::states::GameState}!onEnemySpawned@{onEnemySpawned}}
+\index{onEnemySpawned@{onEnemySpawned}!game::states::GameState@{game::states::GameState}}
+\doxysubsubsection{\texorpdfstring{onEnemySpawned()}{onEnemySpawned()}}
+{\footnotesize\ttfamily void game\+::states\+::\+Game\+State\+::on\+Enemy\+Spawned (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgame_1_1components_1_1Enemy}{components\+::\+Enemy}} $\ast$}]{enemy }\end{DoxyParamCaption})}
+
+
+
+callback for pause button click event 
+
+callback function for pause button click event \mbox{\Hypertarget{classgame_1_1states_1_1GameState_a504491b735da3eb09c5e4adb51f18770}\label{classgame_1_1states_1_1GameState_a504491b735da3eb09c5e4adb51f18770}} 
+\index{game::states::GameState@{game::states::GameState}!onMapLoadCompleted@{onMapLoadCompleted}}
+\index{onMapLoadCompleted@{onMapLoadCompleted}!game::states::GameState@{game::states::GameState}}
+\doxysubsubsection{\texorpdfstring{onMapLoadCompleted()}{onMapLoadCompleted()}}
+{\footnotesize\ttfamily void game\+::states\+::\+Game\+State\+::on\+Map\+Load\+Completed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+callback for map load complete event 
+
+callback function for map load complete event \mbox{\Hypertarget{classgame_1_1states_1_1GameState_ac0891b5c04d3ff4fc6f788283e43ef3b}\label{classgame_1_1states_1_1GameState_ac0891b5c04d3ff4fc6f788283e43ef3b}} 
+\index{game::states::GameState@{game::states::GameState}!onMouseDrag@{onMouseDrag}}
+\index{onMouseDrag@{onMouseDrag}!game::states::GameState@{game::states::GameState}}
+\doxysubsubsection{\texorpdfstring{onMouseDrag()}{onMouseDrag()}}
+{\footnotesize\ttfamily void game\+::states\+::\+Game\+State\+::on\+Mouse\+Drag (\begin{DoxyParamCaption}\item[{int}]{deltaX,  }\item[{int}]{deltaY }\end{DoxyParamCaption})}
+
+
+
+callback for mouse dragging event 
+
+callback function for mouse dragging event \mbox{\Hypertarget{classgame_1_1states_1_1GameState_a45aec172ec359067b992beccd5e5d98c}\label{classgame_1_1states_1_1GameState_a45aec172ec359067b992beccd5e5d98c}} 
+\index{game::states::GameState@{game::states::GameState}!onPauseButtonClicked@{onPauseButtonClicked}}
+\index{onPauseButtonClicked@{onPauseButtonClicked}!game::states::GameState@{game::states::GameState}}
+\doxysubsubsection{\texorpdfstring{onPauseButtonClicked()}{onPauseButtonClicked()}}
+{\footnotesize\ttfamily void game\+::states\+::\+Game\+State\+::on\+Pause\+Button\+Clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+callback for pause button click event 
+
+callback function for gpause button click event \mbox{\Hypertarget{classgame_1_1states_1_1GameState_a7e2effeb0a1876f931e84e74c7379c10}\label{classgame_1_1states_1_1GameState_a7e2effeb0a1876f931e84e74c7379c10}} 
+\index{game::states::GameState@{game::states::GameState}!onSpawnButtonClicked@{onSpawnButtonClicked}}
+\index{onSpawnButtonClicked@{onSpawnButtonClicked}!game::states::GameState@{game::states::GameState}}
+\doxysubsubsection{\texorpdfstring{onSpawnButtonClicked()}{onSpawnButtonClicked()}}
+{\footnotesize\ttfamily void game\+::states\+::\+Game\+State\+::on\+Spawn\+Button\+Clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+callback for spawn button click event 
+
+callback function for spawn button click event \mbox{\Hypertarget{classgame_1_1states_1_1GameState_aa032d755de1a611ac92ee473667398c3}\label{classgame_1_1states_1_1GameState_aa032d755de1a611ac92ee473667398c3}} 
+\index{game::states::GameState@{game::states::GameState}!winGame@{winGame}}
+\index{winGame@{winGame}!game::states::GameState@{game::states::GameState}}
+\doxysubsubsection{\texorpdfstring{winGame()}{winGame()}}
+{\footnotesize\ttfamily void game\+::states\+::\+Game\+State\+::win\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+callback for game win event 
+
+callback function for game win event 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classgame_1_1states_1_1GameState_a091d5437afe6d60e1956ae900e66fe76}\label{classgame_1_1states_1_1GameState_a091d5437afe6d60e1956ae900e66fe76}} 
+\index{game::states::GameState@{game::states::GameState}!cameraMoveSpeed@{cameraMoveSpeed}}
+\index{cameraMoveSpeed@{cameraMoveSpeed}!game::states::GameState@{game::states::GameState}}
+\doxysubsubsection{\texorpdfstring{cameraMoveSpeed}{cameraMoveSpeed}}
+{\footnotesize\ttfamily float game\+::states\+::\+Game\+State\+::camera\+Move\+Speed\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+camera move speed \mbox{\Hypertarget{classgame_1_1states_1_1GameState_a8cf32af964df35f7bcc8688cf50c9b87}\label{classgame_1_1states_1_1GameState_a8cf32af964df35f7bcc8688cf50c9b87}} 
+\index{game::states::GameState@{game::states::GameState}!mEnemyCount@{mEnemyCount}}
+\index{mEnemyCount@{mEnemyCount}!game::states::GameState@{game::states::GameState}}
+\doxysubsubsection{\texorpdfstring{mEnemyCount}{mEnemyCount}}
+{\footnotesize\ttfamily int game\+::states\+::\+Game\+State\+::m\+Enemy\+Count\hspace{0.3cm}{\ttfamily [private]}}
+
+total number of active enemies in the scene \mbox{\Hypertarget{classgame_1_1states_1_1GameState_a700d5fe16fe34f45770c695bd37f634b}\label{classgame_1_1states_1_1GameState_a700d5fe16fe34f45770c695bd37f634b}} 
+\index{game::states::GameState@{game::states::GameState}!mEnemySpawnButton@{mEnemySpawnButton}}
+\index{mEnemySpawnButton@{mEnemySpawnButton}!game::states::GameState@{game::states::GameState}}
+\doxysubsubsection{\texorpdfstring{mEnemySpawnButton}{mEnemySpawnButton}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgame_1_1components_1_1Button}{components\+::\+Button}}$\ast$ game\+::states\+::\+Game\+State\+::m\+Enemy\+Spawn\+Button\hspace{0.3cm}{\ttfamily [private]}}
+
+enemy spawn button \mbox{\Hypertarget{classgame_1_1states_1_1GameState_a2e98ad13539e6427a43374d1fef7c201}\label{classgame_1_1states_1_1GameState_a2e98ad13539e6427a43374d1fef7c201}} 
+\index{game::states::GameState@{game::states::GameState}!mEnemySpawner@{mEnemySpawner}}
+\index{mEnemySpawner@{mEnemySpawner}!game::states::GameState@{game::states::GameState}}
+\doxysubsubsection{\texorpdfstring{mEnemySpawner}{mEnemySpawner}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgame_1_1components_1_1EnemySpawner}{components\+::\+Enemy\+Spawner}}$\ast$ game\+::states\+::\+Game\+State\+::m\+Enemy\+Spawner\hspace{0.3cm}{\ttfamily [private]}}
+
+enemy spawner \mbox{\Hypertarget{classgame_1_1states_1_1GameState_abae2c51e4aa937466ddd9e4c0ca6a9b8}\label{classgame_1_1states_1_1GameState_abae2c51e4aa937466ddd9e4c0ca6a9b8}} 
+\index{game::states::GameState@{game::states::GameState}!mGameCamera@{mGameCamera}}
+\index{mGameCamera@{mGameCamera}!game::states::GameState@{game::states::GameState}}
+\doxysubsubsection{\texorpdfstring{mGameCamera}{mGameCamera}}
+{\footnotesize\ttfamily sf\+::\+View$\ast$ game\+::states\+::\+Game\+State\+::m\+Game\+Camera\hspace{0.3cm}{\ttfamily [private]}}
+
+cached game camera \mbox{\Hypertarget{classgame_1_1states_1_1GameState_ab282f1b868fd179d6134b41a8a4873a4}\label{classgame_1_1states_1_1GameState_ab282f1b868fd179d6134b41a8a4873a4}} 
+\index{game::states::GameState@{game::states::GameState}!mGameRoot@{mGameRoot}}
+\index{mGameRoot@{mGameRoot}!game::states::GameState@{game::states::GameState}}
+\doxysubsubsection{\texorpdfstring{mGameRoot}{mGameRoot}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgame_1_1core_1_1ObjectHandle}{core\+::\+Go\+Handle}} game\+::states\+::\+Game\+State\+::m\+Game\+Root\hspace{0.3cm}{\ttfamily [private]}}
+
+root gameobject handle \mbox{\Hypertarget{classgame_1_1states_1_1GameState_aa745c10b8f2f5698af34d57cef61ce01}\label{classgame_1_1states_1_1GameState_aa745c10b8f2f5698af34d57cef61ce01}} 
+\index{game::states::GameState@{game::states::GameState}!mGameWorld@{mGameWorld}}
+\index{mGameWorld@{mGameWorld}!game::states::GameState@{game::states::GameState}}
+\doxysubsubsection{\texorpdfstring{mGameWorld}{mGameWorld}}
+{\footnotesize\ttfamily const ldtk\+::\+World\& game\+::states\+::\+Game\+State\+::m\+Game\+World\hspace{0.3cm}{\ttfamily [private]}}
+
+game world adta \mbox{\Hypertarget{classgame_1_1states_1_1GameState_a076a6f1e6511e02c3236570040b50810}\label{classgame_1_1states_1_1GameState_a076a6f1e6511e02c3236570040b50810}} 
+\index{game::states::GameState@{game::states::GameState}!mGridSystem@{mGridSystem}}
+\index{mGridSystem@{mGridSystem}!game::states::GameState@{game::states::GameState}}
+\doxysubsubsection{\texorpdfstring{mGridSystem}{mGridSystem}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classgame_1_1grid_1_1GridSystem}{grid\+::\+Grid\+System}}$>$ game\+::states\+::\+Game\+State\+::m\+Grid\+System\hspace{0.3cm}{\ttfamily [private]}}
+
+grid system \mbox{\Hypertarget{classgame_1_1states_1_1GameState_aa7568b8211c02a78e9725cfbaff2caec}\label{classgame_1_1states_1_1GameState_aa7568b8211c02a78e9725cfbaff2caec}} 
+\index{game::states::GameState@{game::states::GameState}!mKeyPressedListener@{mKeyPressedListener}}
+\index{mKeyPressedListener@{mKeyPressedListener}!game::states::GameState@{game::states::GameState}}
+\doxysubsubsection{\texorpdfstring{mKeyPressedListener}{mKeyPressedListener}}
+{\footnotesize\ttfamily boost\+::signals2\+::connection game\+::states\+::\+Game\+State\+::m\+Key\+Pressed\+Listener\hspace{0.3cm}{\ttfamily [private]}}
+
+keyboard pressed listener \mbox{\Hypertarget{classgame_1_1states_1_1GameState_aa43a8fb6be6f5c5187cae1f940d4c590}\label{classgame_1_1states_1_1GameState_aa43a8fb6be6f5c5187cae1f940d4c590}} 
+\index{game::states::GameState@{game::states::GameState}!mLoadingTaskListener@{mLoadingTaskListener}}
+\index{mLoadingTaskListener@{mLoadingTaskListener}!game::states::GameState@{game::states::GameState}}
+\doxysubsubsection{\texorpdfstring{mLoadingTaskListener}{mLoadingTaskListener}}
+{\footnotesize\ttfamily boost\+::signals2\+::connection game\+::states\+::\+Game\+State\+::m\+Loading\+Task\+Listener\hspace{0.3cm}{\ttfamily [private]}}
+
+loading task listener \mbox{\Hypertarget{classgame_1_1states_1_1GameState_a33e9d9a7c4f5a24a56d75c43fa090984}\label{classgame_1_1states_1_1GameState_a33e9d9a7c4f5a24a56d75c43fa090984}} 
+\index{game::states::GameState@{game::states::GameState}!mMouseDragListener@{mMouseDragListener}}
+\index{mMouseDragListener@{mMouseDragListener}!game::states::GameState@{game::states::GameState}}
+\doxysubsubsection{\texorpdfstring{mMouseDragListener}{mMouseDragListener}}
+{\footnotesize\ttfamily boost\+::signals2\+::connection game\+::states\+::\+Game\+State\+::m\+Mouse\+Drag\+Listener\hspace{0.3cm}{\ttfamily [private]}}
+
+mouse dragging event listener \mbox{\Hypertarget{classgame_1_1states_1_1GameState_a0263effa90a9c123e2c5aac2459ba51a}\label{classgame_1_1states_1_1GameState_a0263effa90a9c123e2c5aac2459ba51a}} 
+\index{game::states::GameState@{game::states::GameState}!mPauseButton@{mPauseButton}}
+\index{mPauseButton@{mPauseButton}!game::states::GameState@{game::states::GameState}}
+\doxysubsubsection{\texorpdfstring{mPauseButton}{mPauseButton}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgame_1_1components_1_1SimpleButton}{components\+::\+Simple\+Button}}$\ast$ game\+::states\+::\+Game\+State\+::m\+Pause\+Button\hspace{0.3cm}{\ttfamily [private]}}
+
+pause button \mbox{\Hypertarget{classgame_1_1states_1_1GameState_ab44e487012ff2429855d1f1c59adf4e8}\label{classgame_1_1states_1_1GameState_ab44e487012ff2429855d1f1c59adf4e8}} 
+\index{game::states::GameState@{game::states::GameState}!mPauseButtonClickListener@{mPauseButtonClickListener}}
+\index{mPauseButtonClickListener@{mPauseButtonClickListener}!game::states::GameState@{game::states::GameState}}
+\doxysubsubsection{\texorpdfstring{mPauseButtonClickListener}{mPauseButtonClickListener}}
+{\footnotesize\ttfamily boost\+::signals2\+::connection game\+::states\+::\+Game\+State\+::m\+Pause\+Button\+Click\+Listener\hspace{0.3cm}{\ttfamily [private]}}
+
+pause button click listener \mbox{\Hypertarget{classgame_1_1states_1_1GameState_a4a1d2c683cc7de5c96b5b7ab96225588}\label{classgame_1_1states_1_1GameState_a4a1d2c683cc7de5c96b5b7ab96225588}} 
+\index{game::states::GameState@{game::states::GameState}!mPlayerHud@{mPlayerHud}}
+\index{mPlayerHud@{mPlayerHud}!game::states::GameState@{game::states::GameState}}
+\doxysubsubsection{\texorpdfstring{mPlayerHud}{mPlayerHud}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgame_1_1components_1_1PlayerHud}{components\+::\+Player\+Hud}}$\ast$ game\+::states\+::\+Game\+State\+::m\+Player\+Hud\hspace{0.3cm}{\ttfamily [private]}}
+
+player hud \mbox{\Hypertarget{classgame_1_1states_1_1GameState_a1e4c1d3de06f71de2e3e781ed79fd9cb}\label{classgame_1_1states_1_1GameState_a1e4c1d3de06f71de2e3e781ed79fd9cb}} 
+\index{game::states::GameState@{game::states::GameState}!mSpawnButtonClickListener@{mSpawnButtonClickListener}}
+\index{mSpawnButtonClickListener@{mSpawnButtonClickListener}!game::states::GameState@{game::states::GameState}}
+\doxysubsubsection{\texorpdfstring{mSpawnButtonClickListener}{mSpawnButtonClickListener}}
+{\footnotesize\ttfamily boost\+::signals2\+::connection game\+::states\+::\+Game\+State\+::m\+Spawn\+Button\+Click\+Listener\hspace{0.3cm}{\ttfamily [private]}}
+
+spawn button click listener \mbox{\Hypertarget{classgame_1_1states_1_1GameState_a43af848386870ff3edf12b3a5a6de667}\label{classgame_1_1states_1_1GameState_a43af848386870ff3edf12b3a5a6de667}} 
+\index{game::states::GameState@{game::states::GameState}!mTowerShop@{mTowerShop}}
+\index{mTowerShop@{mTowerShop}!game::states::GameState@{game::states::GameState}}
+\doxysubsubsection{\texorpdfstring{mTowerShop}{mTowerShop}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgame_1_1components_1_1TowerShop}{components\+::\+Tower\+Shop}}$\ast$ game\+::states\+::\+Game\+State\+::m\+Tower\+Shop\hspace{0.3cm}{\ttfamily [private]}}
+
+cached tower shop component \mbox{\Hypertarget{classgame_1_1states_1_1GameState_a42b5276c0b24a3ee40164ef155c02667}\label{classgame_1_1states_1_1GameState_a42b5276c0b24a3ee40164ef155c02667}} 
+\index{game::states::GameState@{game::states::GameState}!mWheelScrolledListener@{mWheelScrolledListener}}
+\index{mWheelScrolledListener@{mWheelScrolledListener}!game::states::GameState@{game::states::GameState}}
+\doxysubsubsection{\texorpdfstring{mWheelScrolledListener}{mWheelScrolledListener}}
+{\footnotesize\ttfamily boost\+::signals2\+::connection game\+::states\+::\+Game\+State\+::m\+Wheel\+Scrolled\+Listener\hspace{0.3cm}{\ttfamily [private]}}
+
+wheel button listener \mbox{\Hypertarget{classgame_1_1states_1_1GameState_a85f8cbad2c624e5e6c348acf475cc053}\label{classgame_1_1states_1_1GameState_a85f8cbad2c624e5e6c348acf475cc053}} 
+\index{game::states::GameState@{game::states::GameState}!scrollSpeed@{scrollSpeed}}
+\index{scrollSpeed@{scrollSpeed}!game::states::GameState@{game::states::GameState}}
+\doxysubsubsection{\texorpdfstring{scrollSpeed}{scrollSpeed}}
+{\footnotesize\ttfamily float game\+::states\+::\+Game\+State\+::scroll\+Speed\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+mouse scroll speed 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+States/Game\+State.\+h\end{DoxyCompactItemize}

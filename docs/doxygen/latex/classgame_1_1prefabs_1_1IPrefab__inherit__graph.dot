@@ -1,0 +1,16 @@
+digraph "game::prefabs::IPrefab"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="game::prefabs::IPrefab",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="game::prefabs::PlayerHud\lPrefab",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgame_1_1prefabs_1_1PlayerHudPrefab.html",tooltip="predefined player HUD menu"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="game::prefabs::SaveSlotPrefab",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgame_1_1prefabs_1_1SaveSlotPrefab.html",tooltip="predefined game save slot menu"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="game::prefabs::ShopItemPrefab",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgame_1_1prefabs_1_1ShopItemPrefab.html",tooltip="predefined game shop item UI"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="game::prefabs::TowerShop\lItemPrefab",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgame_1_1prefabs_1_1TowerShopItemPrefab.html",tooltip="predefined tower shop menu"];
+}

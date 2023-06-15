@@ -1,0 +1,151 @@
+\hypertarget{structgame_1_1data_1_1PlayerData}{}\doxysection{game\+::data\+::Player\+Data Struct Reference}
+\label{structgame_1_1data_1_1PlayerData}\index{game::data::PlayerData@{game::data::PlayerData}}
+
+
+data structure to hold player save data  
+
+
+
+
+{\ttfamily \#include $<$Player\+Data.\+h$>$}
+
+
+
+Inheritance diagram for game\+::data\+::Player\+Data\+:
+% FIG 0
+
+
+Collaboration diagram for game\+::data\+::Player\+Data\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structgame_1_1data_1_1PlayerData_ad9537e668a1305384d456f0b1828a08c}\label{structgame_1_1data_1_1PlayerData_ad9537e668a1305384d456f0b1828a08c}} 
+{\bfseries Player\+Data} (const rapidjson\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{structgame_1_1data_1_1PlayerData_a26ee096c8570cf2c1d8ba8108559bfc2}\label{structgame_1_1data_1_1PlayerData_a26ee096c8570cf2c1d8ba8108559bfc2}} 
+{\bfseries Player\+Data} (const \mbox{\hyperlink{structgame_1_1data_1_1PlayerData}{Player\+Data}} \&other)=delete
+\item 
+\mbox{\Hypertarget{structgame_1_1data_1_1PlayerData_ad8bbc10e3bbaf2891241995dc942a7de}\label{structgame_1_1data_1_1PlayerData_ad8bbc10e3bbaf2891241995dc942a7de}} 
+\mbox{\hyperlink{structgame_1_1data_1_1PlayerData}{Player\+Data}} \& {\bfseries operator=} (const \mbox{\hyperlink{structgame_1_1data_1_1PlayerData}{Player\+Data}} \&other)=delete
+\item 
+void \mbox{\hyperlink{structgame_1_1data_1_1PlayerData_a28e5986b22b7a319b29c61774e6ba176}{from\+Json}} (const rapidjson\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em deserialize c++ data structure from json object \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structgame_1_1data_1_1PlayerData_a6436bb1da11817eb98b4feca5bf265e5}{to\+Json}} (rapidjson\+::\+Writer$<$ rapidjson\+::\+String\+Buffer $>$ $\ast$writer)
+\begin{DoxyCompactList}\small\item\em serialize a c++ data structure to a json object \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{structgame_1_1data_1_1PlayerData_ae2ab518ba3ba5c8c0269e8391f14f82e}{game\+Level}}
+\item 
+int \mbox{\hyperlink{structgame_1_1data_1_1PlayerData_a61215962c649a5002c7eae178dfc8f39}{current\+Gold}}
+\item 
+std\+::string \mbox{\hyperlink{structgame_1_1data_1_1PlayerData_aed342a3d87aca328c76e7003f8740405}{save\+Time}}
+\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{structgame_1_1data_1_1PlayerData_ad3ab57a5cf4d2b9d36eb23705d3b2fea}{power\+Ups}}
+\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{structgame_1_1data_1_1PlayerData_a116caec69d33a4669f50aa6215d65e01}{unlocked\+Towers}}
+\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{structgame_1_1data_1_1PlayerData_ae2ad1b9c5565b4dadcf2a1fbac020d10}{completed\+Achievements}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+data structure to hold player save data 
+
+this is the data structure to hold player save data that will eventually be stored in game savefile
+
+\begin{DoxyAuthor}{Author}
+Zheng Yang
+\end{DoxyAuthor}
+\mbox{\hyperlink{structgame_1_1data_1_1PlayerData}{Player\+Data}} constructor
+
+\mbox{\hyperlink{structgame_1_1data_1_1PlayerData}{Player\+Data}} default constructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structgame_1_1data_1_1PlayerData_a28e5986b22b7a319b29c61774e6ba176}\label{structgame_1_1data_1_1PlayerData_a28e5986b22b7a319b29c61774e6ba176}} 
+\index{game::data::PlayerData@{game::data::PlayerData}!fromJson@{fromJson}}
+\index{fromJson@{fromJson}!game::data::PlayerData@{game::data::PlayerData}}
+\doxysubsubsection{\texorpdfstring{fromJson()}{fromJson()}}
+{\footnotesize\ttfamily void game\+::data\+::\+Player\+Data\+::from\+Json (\begin{DoxyParamCaption}\item[{const rapidjson\+::\+Value \&}]{json }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+deserialize c++ data structure from json object 
+
+this function takes a json object, and deserialize c++ data structure from it
+
+
+\begin{DoxyParams}{Parameters}
+{\em json} & serialized json object \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classgame_1_1data_1_1JsonBase_ad71ccf1cdfa32f5100ba32d208afbffa}{game\+::data\+::\+Json\+Base}}.
+
+\mbox{\Hypertarget{structgame_1_1data_1_1PlayerData_a6436bb1da11817eb98b4feca5bf265e5}\label{structgame_1_1data_1_1PlayerData_a6436bb1da11817eb98b4feca5bf265e5}} 
+\index{game::data::PlayerData@{game::data::PlayerData}!toJson@{toJson}}
+\index{toJson@{toJson}!game::data::PlayerData@{game::data::PlayerData}}
+\doxysubsubsection{\texorpdfstring{toJson()}{toJson()}}
+{\footnotesize\ttfamily void game\+::data\+::\+Player\+Data\+::to\+Json (\begin{DoxyParamCaption}\item[{rapidjson\+::\+Writer$<$ rapidjson\+::\+String\+Buffer $>$ $\ast$}]{writer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+serialize a c++ data structure to a json object 
+
+this function takes a json writer, and serialize c++ data structure to it
+
+
+\begin{DoxyParams}{Parameters}
+{\em writer} & json writer \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classgame_1_1data_1_1JsonBase_a9b0277fdcf438ded476fe08d07c2ed2d}{game\+::data\+::\+Json\+Base}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structgame_1_1data_1_1PlayerData_ae2ad1b9c5565b4dadcf2a1fbac020d10}\label{structgame_1_1data_1_1PlayerData_ae2ad1b9c5565b4dadcf2a1fbac020d10}} 
+\index{game::data::PlayerData@{game::data::PlayerData}!completedAchievements@{completedAchievements}}
+\index{completedAchievements@{completedAchievements}!game::data::PlayerData@{game::data::PlayerData}}
+\doxysubsubsection{\texorpdfstring{completedAchievements}{completedAchievements}}
+{\footnotesize\ttfamily std\+::vector$<$int$>$ game\+::data\+::\+Player\+Data\+::completed\+Achievements}
+
+all completed achievements \mbox{\Hypertarget{structgame_1_1data_1_1PlayerData_a61215962c649a5002c7eae178dfc8f39}\label{structgame_1_1data_1_1PlayerData_a61215962c649a5002c7eae178dfc8f39}} 
+\index{game::data::PlayerData@{game::data::PlayerData}!currentGold@{currentGold}}
+\index{currentGold@{currentGold}!game::data::PlayerData@{game::data::PlayerData}}
+\doxysubsubsection{\texorpdfstring{currentGold}{currentGold}}
+{\footnotesize\ttfamily int game\+::data\+::\+Player\+Data\+::current\+Gold}
+
+gold \mbox{\Hypertarget{structgame_1_1data_1_1PlayerData_ae2ab518ba3ba5c8c0269e8391f14f82e}\label{structgame_1_1data_1_1PlayerData_ae2ab518ba3ba5c8c0269e8391f14f82e}} 
+\index{game::data::PlayerData@{game::data::PlayerData}!gameLevel@{gameLevel}}
+\index{gameLevel@{gameLevel}!game::data::PlayerData@{game::data::PlayerData}}
+\doxysubsubsection{\texorpdfstring{gameLevel}{gameLevel}}
+{\footnotesize\ttfamily int game\+::data\+::\+Player\+Data\+::game\+Level}
+
+game level \mbox{\Hypertarget{structgame_1_1data_1_1PlayerData_ad3ab57a5cf4d2b9d36eb23705d3b2fea}\label{structgame_1_1data_1_1PlayerData_ad3ab57a5cf4d2b9d36eb23705d3b2fea}} 
+\index{game::data::PlayerData@{game::data::PlayerData}!powerUps@{powerUps}}
+\index{powerUps@{powerUps}!game::data::PlayerData@{game::data::PlayerData}}
+\doxysubsubsection{\texorpdfstring{powerUps}{powerUps}}
+{\footnotesize\ttfamily std\+::vector$<$int$>$ game\+::data\+::\+Player\+Data\+::power\+Ups}
+
+all powerup items \mbox{\Hypertarget{structgame_1_1data_1_1PlayerData_aed342a3d87aca328c76e7003f8740405}\label{structgame_1_1data_1_1PlayerData_aed342a3d87aca328c76e7003f8740405}} 
+\index{game::data::PlayerData@{game::data::PlayerData}!saveTime@{saveTime}}
+\index{saveTime@{saveTime}!game::data::PlayerData@{game::data::PlayerData}}
+\doxysubsubsection{\texorpdfstring{saveTime}{saveTime}}
+{\footnotesize\ttfamily std\+::string game\+::data\+::\+Player\+Data\+::save\+Time}
+
+time when saved \mbox{\Hypertarget{structgame_1_1data_1_1PlayerData_a116caec69d33a4669f50aa6215d65e01}\label{structgame_1_1data_1_1PlayerData_a116caec69d33a4669f50aa6215d65e01}} 
+\index{game::data::PlayerData@{game::data::PlayerData}!unlockedTowers@{unlockedTowers}}
+\index{unlockedTowers@{unlockedTowers}!game::data::PlayerData@{game::data::PlayerData}}
+\doxysubsubsection{\texorpdfstring{unlockedTowers}{unlockedTowers}}
+{\footnotesize\ttfamily std\+::vector$<$int$>$ game\+::data\+::\+Player\+Data\+::unlocked\+Towers}
+
+all unlocked towers 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Data/Player\+Data.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,176 @@
+\hypertarget{structgame_1_1data_1_1AnimDefine}{}\doxysection{game\+::data\+::Anim\+Define Struct Reference}
+\label{structgame_1_1data_1_1AnimDefine}\index{game::data::AnimDefine@{game::data::AnimDefine}}
+
+
+data structure to hold character animation data  
+
+
+
+
+{\ttfamily \#include $<$Anim\+Define.\+h$>$}
+
+
+
+Inheritance diagram for game\+::data\+::Anim\+Define\+:
+% FIG 0
+
+
+Collaboration diagram for game\+::data\+::Anim\+Define\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structgame_1_1data_1_1AnimDefine_a71f878a1cc3adbcd664e87114db28601}{Anim\+Define}} (const rapidjson\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structgame_1_1data_1_1AnimDefine}{Anim\+Define}} constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structgame_1_1data_1_1AnimDefine_aa610865785d3bde50d9908c4e2d23ac5}\label{structgame_1_1data_1_1AnimDefine_aa610865785d3bde50d9908c4e2d23ac5}} 
+{\bfseries Anim\+Define} (const \mbox{\hyperlink{structgame_1_1data_1_1AnimDefine}{Anim\+Define}} \&other)=delete
+\item 
+\mbox{\Hypertarget{structgame_1_1data_1_1AnimDefine_aaf20647e6b945363d4f6c024e036ea50}\label{structgame_1_1data_1_1AnimDefine_aaf20647e6b945363d4f6c024e036ea50}} 
+\mbox{\hyperlink{structgame_1_1data_1_1AnimDefine}{Anim\+Define}} \& {\bfseries operator=} (const \mbox{\hyperlink{structgame_1_1data_1_1AnimDefine}{Anim\+Define}} \&other)=delete
+\item 
+void \mbox{\hyperlink{structgame_1_1data_1_1AnimDefine_a963ea38dd8e53ef2b3edecba3fc72d28}{from\+Json}} (const rapidjson\+::\+Value \&json) override
+\begin{DoxyCompactList}\small\item\em deserialize c++ data structure from json object \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structgame_1_1data_1_1AnimDefine_a35722e332733fb1be15c3d6a96932afd}{to\+Json}} (rapidjson\+::\+Writer$<$ rapidjson\+::\+String\+Buffer $>$ $\ast$writer) override
+\begin{DoxyCompactList}\small\item\em serialize a c++ data structure to a json object \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{structgame_1_1data_1_1AnimDefine_ace32d72dc139269d3bd2c79e218a2126}{t\+ID}}
+\item 
+int \mbox{\hyperlink{structgame_1_1data_1_1AnimDefine_a0a9dc1d5bfba75c68b2cbb898d88193a}{texture\+ID}}
+\item 
+int \mbox{\hyperlink{structgame_1_1data_1_1AnimDefine_a4189ba7bbf10479f286e32cd7d58f639}{column}}
+\item 
+int \mbox{\hyperlink{structgame_1_1data_1_1AnimDefine_a601fa4ee42aa9118efc9ae480ec1dd49}{row}}
+\item 
+int \mbox{\hyperlink{structgame_1_1data_1_1AnimDefine_a062d5cadc89fb92398fce21aad0e227f}{speed}}
+\item 
+bool \mbox{\hyperlink{structgame_1_1data_1_1AnimDefine_a249a085669ae94d9fc77a037924cc0d2}{reverse}}
+\item 
+bool \mbox{\hyperlink{structgame_1_1data_1_1AnimDefine_af430625347978cd15c8b8a4376656623}{is\+Looping}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+data structure to hold character animation data 
+
+this is the data structure to hold animation data defined in Anim\+Define.\+json
+
+\begin{DoxyAuthor}{Author}
+Zheng Yang 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structgame_1_1data_1_1AnimDefine_a71f878a1cc3adbcd664e87114db28601}\label{structgame_1_1data_1_1AnimDefine_a71f878a1cc3adbcd664e87114db28601}} 
+\index{game::data::AnimDefine@{game::data::AnimDefine}!AnimDefine@{AnimDefine}}
+\index{AnimDefine@{AnimDefine}!game::data::AnimDefine@{game::data::AnimDefine}}
+\doxysubsubsection{\texorpdfstring{AnimDefine()}{AnimDefine()}}
+{\footnotesize\ttfamily game\+::data\+::\+Anim\+Define\+::\+Anim\+Define (\begin{DoxyParamCaption}\item[{const rapidjson\+::\+Value \&}]{json }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+\mbox{\hyperlink{structgame_1_1data_1_1AnimDefine}{Anim\+Define}} constructor. 
+
+\mbox{\hyperlink{structgame_1_1data_1_1AnimDefine}{Anim\+Define}} constructor which deserializes a json object
+
+
+\begin{DoxyParams}{Parameters}
+{\em json} & object of the animation data \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structgame_1_1data_1_1AnimDefine_a963ea38dd8e53ef2b3edecba3fc72d28}\label{structgame_1_1data_1_1AnimDefine_a963ea38dd8e53ef2b3edecba3fc72d28}} 
+\index{game::data::AnimDefine@{game::data::AnimDefine}!fromJson@{fromJson}}
+\index{fromJson@{fromJson}!game::data::AnimDefine@{game::data::AnimDefine}}
+\doxysubsubsection{\texorpdfstring{fromJson()}{fromJson()}}
+{\footnotesize\ttfamily void game\+::data\+::\+Anim\+Define\+::from\+Json (\begin{DoxyParamCaption}\item[{const rapidjson\+::\+Value \&}]{json }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+deserialize c++ data structure from json object 
+
+this function takes a json object, and deserialize c++ data structure from it
+
+
+\begin{DoxyParams}{Parameters}
+{\em json} & serialized json object \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classgame_1_1data_1_1JsonBase_ad71ccf1cdfa32f5100ba32d208afbffa}{game\+::data\+::\+Json\+Base}}.
+
+\mbox{\Hypertarget{structgame_1_1data_1_1AnimDefine_a35722e332733fb1be15c3d6a96932afd}\label{structgame_1_1data_1_1AnimDefine_a35722e332733fb1be15c3d6a96932afd}} 
+\index{game::data::AnimDefine@{game::data::AnimDefine}!toJson@{toJson}}
+\index{toJson@{toJson}!game::data::AnimDefine@{game::data::AnimDefine}}
+\doxysubsubsection{\texorpdfstring{toJson()}{toJson()}}
+{\footnotesize\ttfamily void game\+::data\+::\+Anim\+Define\+::to\+Json (\begin{DoxyParamCaption}\item[{rapidjson\+::\+Writer$<$ rapidjson\+::\+String\+Buffer $>$ $\ast$}]{writer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+serialize a c++ data structure to a json object 
+
+this function takes a json writer, and serialize c++ data structure to it
+
+
+\begin{DoxyParams}{Parameters}
+{\em writer} & json writer \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classgame_1_1data_1_1JsonBase_a9b0277fdcf438ded476fe08d07c2ed2d}{game\+::data\+::\+Json\+Base}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structgame_1_1data_1_1AnimDefine_a4189ba7bbf10479f286e32cd7d58f639}\label{structgame_1_1data_1_1AnimDefine_a4189ba7bbf10479f286e32cd7d58f639}} 
+\index{game::data::AnimDefine@{game::data::AnimDefine}!column@{column}}
+\index{column@{column}!game::data::AnimDefine@{game::data::AnimDefine}}
+\doxysubsubsection{\texorpdfstring{column}{column}}
+{\footnotesize\ttfamily int game\+::data\+::\+Anim\+Define\+::column}
+
+total columns in the texture sheet \mbox{\Hypertarget{structgame_1_1data_1_1AnimDefine_af430625347978cd15c8b8a4376656623}\label{structgame_1_1data_1_1AnimDefine_af430625347978cd15c8b8a4376656623}} 
+\index{game::data::AnimDefine@{game::data::AnimDefine}!isLooping@{isLooping}}
+\index{isLooping@{isLooping}!game::data::AnimDefine@{game::data::AnimDefine}}
+\doxysubsubsection{\texorpdfstring{isLooping}{isLooping}}
+{\footnotesize\ttfamily bool game\+::data\+::\+Anim\+Define\+::is\+Looping}
+
+is animation repeating \mbox{\Hypertarget{structgame_1_1data_1_1AnimDefine_a249a085669ae94d9fc77a037924cc0d2}\label{structgame_1_1data_1_1AnimDefine_a249a085669ae94d9fc77a037924cc0d2}} 
+\index{game::data::AnimDefine@{game::data::AnimDefine}!reverse@{reverse}}
+\index{reverse@{reverse}!game::data::AnimDefine@{game::data::AnimDefine}}
+\doxysubsubsection{\texorpdfstring{reverse}{reverse}}
+{\footnotesize\ttfamily bool game\+::data\+::\+Anim\+Define\+::reverse}
+
+is sheet reversed \mbox{\Hypertarget{structgame_1_1data_1_1AnimDefine_a601fa4ee42aa9118efc9ae480ec1dd49}\label{structgame_1_1data_1_1AnimDefine_a601fa4ee42aa9118efc9ae480ec1dd49}} 
+\index{game::data::AnimDefine@{game::data::AnimDefine}!row@{row}}
+\index{row@{row}!game::data::AnimDefine@{game::data::AnimDefine}}
+\doxysubsubsection{\texorpdfstring{row}{row}}
+{\footnotesize\ttfamily int game\+::data\+::\+Anim\+Define\+::row}
+
+total rows in the texture sheet \mbox{\Hypertarget{structgame_1_1data_1_1AnimDefine_a062d5cadc89fb92398fce21aad0e227f}\label{structgame_1_1data_1_1AnimDefine_a062d5cadc89fb92398fce21aad0e227f}} 
+\index{game::data::AnimDefine@{game::data::AnimDefine}!speed@{speed}}
+\index{speed@{speed}!game::data::AnimDefine@{game::data::AnimDefine}}
+\doxysubsubsection{\texorpdfstring{speed}{speed}}
+{\footnotesize\ttfamily int game\+::data\+::\+Anim\+Define\+::speed}
+
+animation speed \mbox{\Hypertarget{structgame_1_1data_1_1AnimDefine_a0a9dc1d5bfba75c68b2cbb898d88193a}\label{structgame_1_1data_1_1AnimDefine_a0a9dc1d5bfba75c68b2cbb898d88193a}} 
+\index{game::data::AnimDefine@{game::data::AnimDefine}!textureID@{textureID}}
+\index{textureID@{textureID}!game::data::AnimDefine@{game::data::AnimDefine}}
+\doxysubsubsection{\texorpdfstring{textureID}{textureID}}
+{\footnotesize\ttfamily int game\+::data\+::\+Anim\+Define\+::texture\+ID}
+
+referenced texture id \mbox{\Hypertarget{structgame_1_1data_1_1AnimDefine_ace32d72dc139269d3bd2c79e218a2126}\label{structgame_1_1data_1_1AnimDefine_ace32d72dc139269d3bd2c79e218a2126}} 
+\index{game::data::AnimDefine@{game::data::AnimDefine}!tID@{tID}}
+\index{tID@{tID}!game::data::AnimDefine@{game::data::AnimDefine}}
+\doxysubsubsection{\texorpdfstring{tID}{tID}}
+{\footnotesize\ttfamily int game\+::data\+::\+Anim\+Define\+::t\+ID}
+
+unique identifier 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Data/Anim\+Define.\+h\end{DoxyCompactItemize}

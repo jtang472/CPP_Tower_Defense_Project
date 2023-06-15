@@ -1,0 +1,196 @@
+\hypertarget{classgame_1_1grid_1_1GridSystem}{}\doxysection{game\+::grid\+::Grid\+System Class Reference}
+\label{classgame_1_1grid_1_1GridSystem}\index{game::grid::GridSystem@{game::grid::GridSystem}}
+
+
+grid system that manages a group of grid layers  
+
+
+
+
+{\ttfamily \#include $<$Grid\+System.\+h$>$}
+
+
+
+Inheritance diagram for game\+::grid\+::Grid\+System\+:
+% FIG 0
+
+
+Collaboration diagram for game\+::grid\+::Grid\+System\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgame_1_1grid_1_1GridSystem_ab94e17f5b597fc96b66b4ff017d34221}{Grid\+System}} ()
+\begin{DoxyCompactList}\small\item\em grid system constructor \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1grid_1_1GridSystem_a65d866040e21414567ecb9452b2898a0}{register\+Layer}} (Layer layer, std\+::string layer\+Name, renderer\+::\+Render\+Layer render\+Layer, int depth, bool is\+Background)
+\begin{DoxyCompactList}\small\item\em register a grid layer \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1grid_1_1GridSystem_ae3e1a76e28125428dad33f51dfa4567f}{load\+Level}} (const ldtk\+::\+Level $\ast$level)
+\begin{DoxyCompactList}\small\item\em load a game level \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1grid_1_1GridSystem_a5cf2720aa8feec6115ab819a2c1d5683}{unload}} ()
+\begin{DoxyCompactList}\small\item\em unload resources used in the grid system \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1grid_1_1GridSystem_a6b769549a443ca55f6b852b1627d5ec3}{set\+Active}} (bool is\+Active)
+\begin{DoxyCompactList}\small\item\em activate/deactivate grid layers \end{DoxyCompactList}\item 
+sf\+::\+Vector2i \mbox{\hyperlink{classgame_1_1grid_1_1GridSystem_a8183a86ab2f4cd289cbb93cf1ffe4a46}{get\+World\+Size}} () const
+\begin{DoxyCompactList}\small\item\em world size getter \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classgame_1_1grid_1_1GridLayer}{Grid\+Layer}} $\ast$ \mbox{\hyperlink{classgame_1_1grid_1_1GridSystem_a10aa0416cba0b9d48a93e5efce6aeb61}{get\+Grid\+Layer\+By\+ID}} (grid\+::\+Layer layer)
+\begin{DoxyCompactList}\small\item\em grid layer getter \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unordered\+\_\+map$<$ Layer, const \mbox{\hyperlink{structgame_1_1grid_1_1LayerInfo}{Layer\+Info}} $>$ \mbox{\hyperlink{classgame_1_1grid_1_1GridSystem_a71be6213864a01f16dae1044384f27e4}{m\+Layer\+To\+Info\+Mapping}}
+\item 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classgame_1_1grid_1_1GridLayer}{Grid\+Layer}} $>$ $>$ \mbox{\hyperlink{classgame_1_1grid_1_1GridSystem_adaeb4695409f4b0d3ac9b4a63972e067}{m\+Active\+Layers}}
+\item 
+const ldtk\+::\+Level $\ast$ \mbox{\hyperlink{classgame_1_1grid_1_1GridSystem_a2e88251700028a0405d5ea44ebce737e}{m\+Current\+Loaded\+Level}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+grid system that manages a group of grid layers 
+
+grid system class manages a group of grid layers, each grid layer manages a group of grid cells, each grid cell manages a group of grid entities. This ensures a one-\/way dependency in the grid module
+
+\begin{DoxyAuthor}{Author}
+Zheng Yang 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgame_1_1grid_1_1GridSystem_ab94e17f5b597fc96b66b4ff017d34221}\label{classgame_1_1grid_1_1GridSystem_ab94e17f5b597fc96b66b4ff017d34221}} 
+\index{game::grid::GridSystem@{game::grid::GridSystem}!GridSystem@{GridSystem}}
+\index{GridSystem@{GridSystem}!game::grid::GridSystem@{game::grid::GridSystem}}
+\doxysubsubsection{\texorpdfstring{GridSystem()}{GridSystem()}}
+{\footnotesize\ttfamily game\+::grid\+::\+Grid\+System\+::\+Grid\+System (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+grid system constructor 
+
+grid system constructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgame_1_1grid_1_1GridSystem_a10aa0416cba0b9d48a93e5efce6aeb61}\label{classgame_1_1grid_1_1GridSystem_a10aa0416cba0b9d48a93e5efce6aeb61}} 
+\index{game::grid::GridSystem@{game::grid::GridSystem}!getGridLayerByID@{getGridLayerByID}}
+\index{getGridLayerByID@{getGridLayerByID}!game::grid::GridSystem@{game::grid::GridSystem}}
+\doxysubsubsection{\texorpdfstring{getGridLayerByID()}{getGridLayerByID()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgame_1_1grid_1_1GridLayer}{Grid\+Layer}}$\ast$ game\+::grid\+::\+Grid\+System\+::get\+Grid\+Layer\+By\+ID (\begin{DoxyParamCaption}\item[{grid\+::\+Layer}]{layer }\end{DoxyParamCaption})}
+
+
+
+grid layer getter 
+
+get a specific grid layer based on its unique identifier
+
+\begin{DoxyReturn}{Returns}
+grid layer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgame_1_1grid_1_1GridSystem_a8183a86ab2f4cd289cbb93cf1ffe4a46}\label{classgame_1_1grid_1_1GridSystem_a8183a86ab2f4cd289cbb93cf1ffe4a46}} 
+\index{game::grid::GridSystem@{game::grid::GridSystem}!getWorldSize@{getWorldSize}}
+\index{getWorldSize@{getWorldSize}!game::grid::GridSystem@{game::grid::GridSystem}}
+\doxysubsubsection{\texorpdfstring{getWorldSize()}{getWorldSize()}}
+{\footnotesize\ttfamily sf\+::\+Vector2i game\+::grid\+::\+Grid\+System\+::get\+World\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+world size getter 
+
+get the world size of the currently loaded game level
+
+\begin{DoxyReturn}{Returns}
+world size of current game level 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgame_1_1grid_1_1GridSystem_ae3e1a76e28125428dad33f51dfa4567f}\label{classgame_1_1grid_1_1GridSystem_ae3e1a76e28125428dad33f51dfa4567f}} 
+\index{game::grid::GridSystem@{game::grid::GridSystem}!loadLevel@{loadLevel}}
+\index{loadLevel@{loadLevel}!game::grid::GridSystem@{game::grid::GridSystem}}
+\doxysubsubsection{\texorpdfstring{loadLevel()}{loadLevel()}}
+{\footnotesize\ttfamily void game\+::grid\+::\+Grid\+System\+::load\+Level (\begin{DoxyParamCaption}\item[{const ldtk\+::\+Level $\ast$}]{level }\end{DoxyParamCaption})}
+
+
+
+load a game level 
+
+load a game level based on level number
+
+
+\begin{DoxyParams}{Parameters}
+{\em level\+Define} & game level data \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1grid_1_1GridSystem_a65d866040e21414567ecb9452b2898a0}\label{classgame_1_1grid_1_1GridSystem_a65d866040e21414567ecb9452b2898a0}} 
+\index{game::grid::GridSystem@{game::grid::GridSystem}!registerLayer@{registerLayer}}
+\index{registerLayer@{registerLayer}!game::grid::GridSystem@{game::grid::GridSystem}}
+\doxysubsubsection{\texorpdfstring{registerLayer()}{registerLayer()}}
+{\footnotesize\ttfamily void game\+::grid\+::\+Grid\+System\+::register\+Layer (\begin{DoxyParamCaption}\item[{Layer}]{layer,  }\item[{std\+::string}]{layer\+Name,  }\item[{renderer\+::\+Render\+Layer}]{render\+Layer,  }\item[{int}]{depth,  }\item[{bool}]{is\+Background }\end{DoxyParamCaption})}
+
+
+
+register a grid layer 
+
+register a grid layer which will be generated later when game starts
+
+
+\begin{DoxyParams}{Parameters}
+{\em layer} & layer identifier \\
+\hline
+{\em layer\+Name} & name of the layer \\
+\hline
+{\em render\+Layer} & render layer of the grid layer \\
+\hline
+{\em depth} & depth in the render layer \\
+\hline
+{\em is\+Background} & is this the background layer \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1grid_1_1GridSystem_a6b769549a443ca55f6b852b1627d5ec3}\label{classgame_1_1grid_1_1GridSystem_a6b769549a443ca55f6b852b1627d5ec3}} 
+\index{game::grid::GridSystem@{game::grid::GridSystem}!setActive@{setActive}}
+\index{setActive@{setActive}!game::grid::GridSystem@{game::grid::GridSystem}}
+\doxysubsubsection{\texorpdfstring{setActive()}{setActive()}}
+{\footnotesize\ttfamily void game\+::grid\+::\+Grid\+System\+::set\+Active (\begin{DoxyParamCaption}\item[{bool}]{is\+Active }\end{DoxyParamCaption})}
+
+
+
+activate/deactivate grid layers 
+
+activate/deactivate all grid layers in the grid system
+
+
+\begin{DoxyParams}{Parameters}
+{\em is\+Active} & activate or deactivate \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1grid_1_1GridSystem_a5cf2720aa8feec6115ab819a2c1d5683}\label{classgame_1_1grid_1_1GridSystem_a5cf2720aa8feec6115ab819a2c1d5683}} 
+\index{game::grid::GridSystem@{game::grid::GridSystem}!unload@{unload}}
+\index{unload@{unload}!game::grid::GridSystem@{game::grid::GridSystem}}
+\doxysubsubsection{\texorpdfstring{unload()}{unload()}}
+{\footnotesize\ttfamily void game\+::grid\+::\+Grid\+System\+::unload (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+unload resources used in the grid system 
+
+unload resources used in the grid system before a new game level starts 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classgame_1_1grid_1_1GridSystem_adaeb4695409f4b0d3ac9b4a63972e067}\label{classgame_1_1grid_1_1GridSystem_adaeb4695409f4b0d3ac9b4a63972e067}} 
+\index{game::grid::GridSystem@{game::grid::GridSystem}!mActiveLayers@{mActiveLayers}}
+\index{mActiveLayers@{mActiveLayers}!game::grid::GridSystem@{game::grid::GridSystem}}
+\doxysubsubsection{\texorpdfstring{mActiveLayers}{mActiveLayers}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classgame_1_1grid_1_1GridLayer}{Grid\+Layer}}$>$ $>$ game\+::grid\+::\+Grid\+System\+::m\+Active\+Layers\hspace{0.3cm}{\ttfamily [private]}}
+
+all active grid layers \mbox{\Hypertarget{classgame_1_1grid_1_1GridSystem_a2e88251700028a0405d5ea44ebce737e}\label{classgame_1_1grid_1_1GridSystem_a2e88251700028a0405d5ea44ebce737e}} 
+\index{game::grid::GridSystem@{game::grid::GridSystem}!mCurrentLoadedLevel@{mCurrentLoadedLevel}}
+\index{mCurrentLoadedLevel@{mCurrentLoadedLevel}!game::grid::GridSystem@{game::grid::GridSystem}}
+\doxysubsubsection{\texorpdfstring{mCurrentLoadedLevel}{mCurrentLoadedLevel}}
+{\footnotesize\ttfamily const ldtk\+::\+Level$\ast$ game\+::grid\+::\+Grid\+System\+::m\+Current\+Loaded\+Level\hspace{0.3cm}{\ttfamily [private]}}
+
+current game level data \mbox{\Hypertarget{classgame_1_1grid_1_1GridSystem_a71be6213864a01f16dae1044384f27e4}\label{classgame_1_1grid_1_1GridSystem_a71be6213864a01f16dae1044384f27e4}} 
+\index{game::grid::GridSystem@{game::grid::GridSystem}!mLayerToInfoMapping@{mLayerToInfoMapping}}
+\index{mLayerToInfoMapping@{mLayerToInfoMapping}!game::grid::GridSystem@{game::grid::GridSystem}}
+\doxysubsubsection{\texorpdfstring{mLayerToInfoMapping}{mLayerToInfoMapping}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$Layer, const \mbox{\hyperlink{structgame_1_1grid_1_1LayerInfo}{Layer\+Info}}$>$ game\+::grid\+::\+Grid\+System\+::m\+Layer\+To\+Info\+Mapping\hspace{0.3cm}{\ttfamily [private]}}
+
+grid id to static data mapping 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Grid/Grid\+System.\+h\end{DoxyCompactItemize}

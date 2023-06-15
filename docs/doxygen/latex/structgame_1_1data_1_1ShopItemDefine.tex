@@ -1,0 +1,160 @@
+\hypertarget{structgame_1_1data_1_1ShopItemDefine}{}\doxysection{game\+::data\+::Shop\+Item\+Define Struct Reference}
+\label{structgame_1_1data_1_1ShopItemDefine}\index{game::data::ShopItemDefine@{game::data::ShopItemDefine}}
+
+
+data structure to hold shop item data  
+
+
+
+
+{\ttfamily \#include $<$Shop\+Item\+Define.\+h$>$}
+
+
+
+Inheritance diagram for game\+::data\+::Shop\+Item\+Define\+:
+% FIG 0
+
+
+Collaboration diagram for game\+::data\+::Shop\+Item\+Define\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structgame_1_1data_1_1ShopItemDefine_a7b5fc0c94201fb3931f4cc9645fc173f}{Shop\+Item\+Define}} (const rapidjson\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structgame_1_1data_1_1ShopItemDefine}{Shop\+Item\+Define}} constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structgame_1_1data_1_1ShopItemDefine_ac73e8eb861cb3af4feecf978352f4c52}\label{structgame_1_1data_1_1ShopItemDefine_ac73e8eb861cb3af4feecf978352f4c52}} 
+{\bfseries Shop\+Item\+Define} (const \mbox{\hyperlink{structgame_1_1data_1_1ShopItemDefine}{Shop\+Item\+Define}} \&other)=delete
+\item 
+\mbox{\Hypertarget{structgame_1_1data_1_1ShopItemDefine_ab4fc170ba0b36ea2829835d9c0e587b3}\label{structgame_1_1data_1_1ShopItemDefine_ab4fc170ba0b36ea2829835d9c0e587b3}} 
+\mbox{\hyperlink{structgame_1_1data_1_1ShopItemDefine}{Shop\+Item\+Define}} \& {\bfseries operator=} (const \mbox{\hyperlink{structgame_1_1data_1_1ShopItemDefine}{Shop\+Item\+Define}} \&other)=delete
+\item 
+void \mbox{\hyperlink{structgame_1_1data_1_1ShopItemDefine_a35a0d92ee4e309a4f17328868c077e22}{from\+Json}} (const rapidjson\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em deserialize c++ data structure from json object \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structgame_1_1data_1_1ShopItemDefine_a647591e538cfd095d45b4391d6998c6f}{to\+Json}} (rapidjson\+::\+Writer$<$ rapidjson\+::\+String\+Buffer $>$ $\ast$writer) override
+\begin{DoxyCompactList}\small\item\em serialize a c++ data structure to a json object \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{structgame_1_1data_1_1ShopItemDefine_ab00d74b3c3a1c7935bac98b918ec96c4}{t\+ID}}
+\item 
+std\+::string \mbox{\hyperlink{structgame_1_1data_1_1ShopItemDefine_a1677d20025b2c6219ebab84a285f5eab}{name}}
+\item 
+std\+::string \mbox{\hyperlink{structgame_1_1data_1_1ShopItemDefine_a84e070fbd709533130841e2b5162c705}{description}}
+\item 
+int \mbox{\hyperlink{structgame_1_1data_1_1ShopItemDefine_ae626bb1c046168d8c06c518c2f1a4a5d}{cost}}
+\item 
+int \mbox{\hyperlink{structgame_1_1data_1_1ShopItemDefine_a2bad8d16fa8b5b148f24ce9c8a6e0d6b}{icon\+Texture\+ID}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+data structure to hold shop item data 
+
+this is the data structure to hold shop item data defined in Shop\+Item\+Define.\+json
+
+\begin{DoxyAuthor}{Author}
+Zheng Yang 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structgame_1_1data_1_1ShopItemDefine_a7b5fc0c94201fb3931f4cc9645fc173f}\label{structgame_1_1data_1_1ShopItemDefine_a7b5fc0c94201fb3931f4cc9645fc173f}} 
+\index{game::data::ShopItemDefine@{game::data::ShopItemDefine}!ShopItemDefine@{ShopItemDefine}}
+\index{ShopItemDefine@{ShopItemDefine}!game::data::ShopItemDefine@{game::data::ShopItemDefine}}
+\doxysubsubsection{\texorpdfstring{ShopItemDefine()}{ShopItemDefine()}}
+{\footnotesize\ttfamily game\+::data\+::\+Shop\+Item\+Define\+::\+Shop\+Item\+Define (\begin{DoxyParamCaption}\item[{const rapidjson\+::\+Value \&}]{json }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+\mbox{\hyperlink{structgame_1_1data_1_1ShopItemDefine}{Shop\+Item\+Define}} constructor. 
+
+\mbox{\hyperlink{structgame_1_1data_1_1ShopItemDefine}{Shop\+Item\+Define}} constructor which deserializes a json object
+
+
+\begin{DoxyParams}{Parameters}
+{\em json} & object of the shop item data \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structgame_1_1data_1_1ShopItemDefine_a35a0d92ee4e309a4f17328868c077e22}\label{structgame_1_1data_1_1ShopItemDefine_a35a0d92ee4e309a4f17328868c077e22}} 
+\index{game::data::ShopItemDefine@{game::data::ShopItemDefine}!fromJson@{fromJson}}
+\index{fromJson@{fromJson}!game::data::ShopItemDefine@{game::data::ShopItemDefine}}
+\doxysubsubsection{\texorpdfstring{fromJson()}{fromJson()}}
+{\footnotesize\ttfamily void game\+::data\+::\+Shop\+Item\+Define\+::from\+Json (\begin{DoxyParamCaption}\item[{const rapidjson\+::\+Value \&}]{json }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+deserialize c++ data structure from json object 
+
+this function takes a json object, and deserialize c++ data structure from it
+
+
+\begin{DoxyParams}{Parameters}
+{\em json} & serialized json object \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classgame_1_1data_1_1JsonBase_ad71ccf1cdfa32f5100ba32d208afbffa}{game\+::data\+::\+Json\+Base}}.
+
+\mbox{\Hypertarget{structgame_1_1data_1_1ShopItemDefine_a647591e538cfd095d45b4391d6998c6f}\label{structgame_1_1data_1_1ShopItemDefine_a647591e538cfd095d45b4391d6998c6f}} 
+\index{game::data::ShopItemDefine@{game::data::ShopItemDefine}!toJson@{toJson}}
+\index{toJson@{toJson}!game::data::ShopItemDefine@{game::data::ShopItemDefine}}
+\doxysubsubsection{\texorpdfstring{toJson()}{toJson()}}
+{\footnotesize\ttfamily void game\+::data\+::\+Shop\+Item\+Define\+::to\+Json (\begin{DoxyParamCaption}\item[{rapidjson\+::\+Writer$<$ rapidjson\+::\+String\+Buffer $>$ $\ast$}]{writer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+serialize a c++ data structure to a json object 
+
+this function takes a json writer, and serialize c++ data structure to it
+
+
+\begin{DoxyParams}{Parameters}
+{\em writer} & json writer \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classgame_1_1data_1_1JsonBase_a9b0277fdcf438ded476fe08d07c2ed2d}{game\+::data\+::\+Json\+Base}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structgame_1_1data_1_1ShopItemDefine_ae626bb1c046168d8c06c518c2f1a4a5d}\label{structgame_1_1data_1_1ShopItemDefine_ae626bb1c046168d8c06c518c2f1a4a5d}} 
+\index{game::data::ShopItemDefine@{game::data::ShopItemDefine}!cost@{cost}}
+\index{cost@{cost}!game::data::ShopItemDefine@{game::data::ShopItemDefine}}
+\doxysubsubsection{\texorpdfstring{cost}{cost}}
+{\footnotesize\ttfamily int game\+::data\+::\+Shop\+Item\+Define\+::cost}
+
+cost \mbox{\Hypertarget{structgame_1_1data_1_1ShopItemDefine_a84e070fbd709533130841e2b5162c705}\label{structgame_1_1data_1_1ShopItemDefine_a84e070fbd709533130841e2b5162c705}} 
+\index{game::data::ShopItemDefine@{game::data::ShopItemDefine}!description@{description}}
+\index{description@{description}!game::data::ShopItemDefine@{game::data::ShopItemDefine}}
+\doxysubsubsection{\texorpdfstring{description}{description}}
+{\footnotesize\ttfamily std\+::string game\+::data\+::\+Shop\+Item\+Define\+::description}
+
+item description \mbox{\Hypertarget{structgame_1_1data_1_1ShopItemDefine_a2bad8d16fa8b5b148f24ce9c8a6e0d6b}\label{structgame_1_1data_1_1ShopItemDefine_a2bad8d16fa8b5b148f24ce9c8a6e0d6b}} 
+\index{game::data::ShopItemDefine@{game::data::ShopItemDefine}!iconTextureID@{iconTextureID}}
+\index{iconTextureID@{iconTextureID}!game::data::ShopItemDefine@{game::data::ShopItemDefine}}
+\doxysubsubsection{\texorpdfstring{iconTextureID}{iconTextureID}}
+{\footnotesize\ttfamily int game\+::data\+::\+Shop\+Item\+Define\+::icon\+Texture\+ID}
+
+item icon id \mbox{\Hypertarget{structgame_1_1data_1_1ShopItemDefine_a1677d20025b2c6219ebab84a285f5eab}\label{structgame_1_1data_1_1ShopItemDefine_a1677d20025b2c6219ebab84a285f5eab}} 
+\index{game::data::ShopItemDefine@{game::data::ShopItemDefine}!name@{name}}
+\index{name@{name}!game::data::ShopItemDefine@{game::data::ShopItemDefine}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily std\+::string game\+::data\+::\+Shop\+Item\+Define\+::name}
+
+item name \mbox{\Hypertarget{structgame_1_1data_1_1ShopItemDefine_ab00d74b3c3a1c7935bac98b918ec96c4}\label{structgame_1_1data_1_1ShopItemDefine_ab00d74b3c3a1c7935bac98b918ec96c4}} 
+\index{game::data::ShopItemDefine@{game::data::ShopItemDefine}!tID@{tID}}
+\index{tID@{tID}!game::data::ShopItemDefine@{game::data::ShopItemDefine}}
+\doxysubsubsection{\texorpdfstring{tID}{tID}}
+{\footnotesize\ttfamily int game\+::data\+::\+Shop\+Item\+Define\+::t\+ID}
+
+identifier 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Data/Shop\+Item\+Define.\+h\end{DoxyCompactItemize}

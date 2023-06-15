@@ -1,0 +1,134 @@
+\hypertarget{classgame_1_1audio_1_1SoundManager}{}\doxysection{game\+::audio\+::Sound\+Manager Class Reference}
+\label{classgame_1_1audio_1_1SoundManager}\index{game::audio::SoundManager@{game::audio::SoundManager}}
+
+
+manager singleton class for in-\/game sound fx player  
+
+
+
+
+{\ttfamily \#include $<$Sound\+Manager.\+h$>$}
+
+
+
+Inheritance diagram for game\+::audio\+::Sound\+Manager\+:
+% FIG 0
+
+
+Collaboration diagram for game\+::audio\+::Sound\+Manager\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classgame_1_1audio_1_1SoundManager_ac05fca44292de816a3d9d60410d42ee0}{init}} ()
+\begin{DoxyCompactList}\small\item\em sound initialization and configuration \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1audio_1_1SoundManager_a8a552faba2945e33630bb899b5bfb4c0}{tick}} ()
+\begin{DoxyCompactList}\small\item\em called every frame to clean completed sound instances \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1audio_1_1SoundManager_ae4769e43e398d142b1d1a730c3b823d6}{play}} (int sound\+Id)
+\begin{DoxyCompactList}\small\item\em play sound fx based on its unique identifier \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1audio_1_1SoundManager_ab83c7f84ec87c50294028afcc39e9bd9}{clean}} ()
+\begin{DoxyCompactList}\small\item\em called by tick every frame to clean completed sound instances \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgame_1_1audio_1_1SoundManager_ab2bf2b2a4b89a9c978d6cc5ab6b120e0}{Sound\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em private constructor to ensure the singleton pattern \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::list$<$ sf\+::\+Sound $>$ \mbox{\hyperlink{classgame_1_1audio_1_1SoundManager_abc87fcabac81f4a02194271dce037b55}{m\+Sounds}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classgame_1_1audio_1_1SoundManager_a0caa66cbb01357370233dc2bd5fdb585}\label{classgame_1_1audio_1_1SoundManager_a0caa66cbb01357370233dc2bd5fdb585}} 
+class {\bfseries Singleton$<$ Sound\+Manager $>$}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+manager singleton class for in-\/game sound fx player 
+
+this class is a singleton manager class, and it is used to control and play all the in-\/game short sound fx
+
+\begin{DoxyAuthor}{Author}
+Zheng Yang 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgame_1_1audio_1_1SoundManager_ab2bf2b2a4b89a9c978d6cc5ab6b120e0}\label{classgame_1_1audio_1_1SoundManager_ab2bf2b2a4b89a9c978d6cc5ab6b120e0}} 
+\index{game::audio::SoundManager@{game::audio::SoundManager}!SoundManager@{SoundManager}}
+\index{SoundManager@{SoundManager}!game::audio::SoundManager@{game::audio::SoundManager}}
+\doxysubsubsection{\texorpdfstring{SoundManager()}{SoundManager()}}
+{\footnotesize\ttfamily game\+::audio\+::\+Sound\+Manager\+::\+Sound\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+private constructor to ensure the singleton pattern 
+
+the constructor is private because it is a singleton class 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgame_1_1audio_1_1SoundManager_ab83c7f84ec87c50294028afcc39e9bd9}\label{classgame_1_1audio_1_1SoundManager_ab83c7f84ec87c50294028afcc39e9bd9}} 
+\index{game::audio::SoundManager@{game::audio::SoundManager}!clean@{clean}}
+\index{clean@{clean}!game::audio::SoundManager@{game::audio::SoundManager}}
+\doxysubsubsection{\texorpdfstring{clean()}{clean()}}
+{\footnotesize\ttfamily void game\+::audio\+::\+Sound\+Manager\+::clean (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+called by tick every frame to clean completed sound instances 
+
+this function does the actual cleaning of the completed sound effect instance \mbox{\Hypertarget{classgame_1_1audio_1_1SoundManager_ac05fca44292de816a3d9d60410d42ee0}\label{classgame_1_1audio_1_1SoundManager_ac05fca44292de816a3d9d60410d42ee0}} 
+\index{game::audio::SoundManager@{game::audio::SoundManager}!init@{init}}
+\index{init@{init}!game::audio::SoundManager@{game::audio::SoundManager}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void game\+::audio\+::\+Sound\+Manager\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+sound initialization and configuration 
+
+this function should be called before any other APIs, it initializes the sound settings \mbox{\Hypertarget{classgame_1_1audio_1_1SoundManager_ae4769e43e398d142b1d1a730c3b823d6}\label{classgame_1_1audio_1_1SoundManager_ae4769e43e398d142b1d1a730c3b823d6}} 
+\index{game::audio::SoundManager@{game::audio::SoundManager}!play@{play}}
+\index{play@{play}!game::audio::SoundManager@{game::audio::SoundManager}}
+\doxysubsubsection{\texorpdfstring{play()}{play()}}
+{\footnotesize\ttfamily void game\+::audio\+::\+Sound\+Manager\+::play (\begin{DoxyParamCaption}\item[{int}]{sound\+Id }\end{DoxyParamCaption})}
+
+
+
+play sound fx based on its unique identifier 
+
+this function takes a sound id, and plays the corresponding audio effect
+
+
+\begin{DoxyParams}{Parameters}
+{\em sound\+Id} & unique id of the sound to be played \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1audio_1_1SoundManager_a8a552faba2945e33630bb899b5bfb4c0}\label{classgame_1_1audio_1_1SoundManager_a8a552faba2945e33630bb899b5bfb4c0}} 
+\index{game::audio::SoundManager@{game::audio::SoundManager}!tick@{tick}}
+\index{tick@{tick}!game::audio::SoundManager@{game::audio::SoundManager}}
+\doxysubsubsection{\texorpdfstring{tick()}{tick()}}
+{\footnotesize\ttfamily void game\+::audio\+::\+Sound\+Manager\+::tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+called every frame to clean completed sound instances 
+
+this function is called by game manager every frame to clean out all the completed sound instances 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classgame_1_1audio_1_1SoundManager_abc87fcabac81f4a02194271dce037b55}\label{classgame_1_1audio_1_1SoundManager_abc87fcabac81f4a02194271dce037b55}} 
+\index{game::audio::SoundManager@{game::audio::SoundManager}!mSounds@{mSounds}}
+\index{mSounds@{mSounds}!game::audio::SoundManager@{game::audio::SoundManager}}
+\doxysubsubsection{\texorpdfstring{mSounds}{mSounds}}
+{\footnotesize\ttfamily std\+::list$<$sf\+::\+Sound$>$ game\+::audio\+::\+Sound\+Manager\+::m\+Sounds\hspace{0.3cm}{\ttfamily [private]}}
+
+all the active sound effects that are currently being played 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Audio/Sound\+Manager.\+h\end{DoxyCompactItemize}

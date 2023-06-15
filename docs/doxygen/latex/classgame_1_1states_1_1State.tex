@@ -1,0 +1,204 @@
+\hypertarget{classgame_1_1states_1_1State}{}\doxysection{game\+::states\+::State Class Reference}
+\label{classgame_1_1states_1_1State}\index{game::states::State@{game::states::State}}
+
+
+base class of all game states  
+
+
+
+
+{\ttfamily \#include $<$State.\+h$>$}
+
+
+
+Inheritance diagram for game\+::states\+::State\+:
+% FIG 0
+
+
+Collaboration diagram for game\+::states\+::State\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgame_1_1states_1_1State_ab6b8b9f07b2b6f9556a9110e5411e63b}{State}} (\mbox{\hyperlink{classgame_1_1states_1_1StateMachine}{State\+Machine}} $\ast$owner)
+\begin{DoxyCompactList}\small\item\em state constructor \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classgame_1_1states_1_1State_ab1e41dea7ec9b285b1eec79d7b1f136b}{State}} (\mbox{\hyperlink{classgame_1_1states_1_1StateMachine}{State\+Machine}} $\ast$owner, int root\+Width, int root\+Height)
+\begin{DoxyCompactList}\small\item\em state constructor \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classgame_1_1states_1_1State_a81e5327c78e7cac5dd323ef35bf9176c}{$\sim$\+State}} ()
+\begin{DoxyCompactList}\small\item\em state destructor \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classgame_1_1states_1_1State_ab8464551e311a0621bd80f2a21a7cb4a}{init}} ()
+\begin{DoxyCompactList}\small\item\em initialization of state \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classgame_1_1states_1_1State_abda793135a71f9be21bcdfa51ee85d82}{enable\+Input}} ()
+\begin{DoxyCompactList}\small\item\em enable user input in the current state \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classgame_1_1states_1_1State_a8d4b3f92573026b7586f65e6782f9931}{disable\+Input}} ()
+\begin{DoxyCompactList}\small\item\em disable user input in the current state \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classgame_1_1states_1_1State_ad66a7d869a38b0560796e1b7c4562c15}{freeze\+Time}} ()
+\begin{DoxyCompactList}\small\item\em check if delta time should be set to 0 when the state is created and put to the state machine \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classgame_1_1components_1_1GameObject}{components\+::\+Game\+Object}} $\ast$ \mbox{\hyperlink{classgame_1_1states_1_1State_ab49c732d0fa4489ab552343f8e136668}{instantiate\+GO}} (components\+::\+Anchor anchor=components\+::\+ANCHOR\+\_\+\+TOP\+\_\+\+LEFT, components\+::\+Pivot pivot=components\+::\+PIVOT\+\_\+\+TOP\+\_\+\+LEFT, \mbox{\hyperlink{classgame_1_1components_1_1GameObject_a7219837ddf188469edc82e4f1f942882}{components\+::\+Game\+Object\+::\+Go\+State}}=\mbox{\hyperlink{classgame_1_1components_1_1GameObject_a7219837ddf188469edc82e4f1f942882a18ff74f43da410c5529f7d6fca84f115}{components\+::\+Game\+Object\+::\+Go\+State\+::\+ACTIVE}})
+\begin{DoxyCompactList}\small\item\em helper function to instantiate a gameobject \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgame_1_1core_1_1ObjectHandle}{core\+::\+Go\+Handle}} \mbox{\hyperlink{classgame_1_1states_1_1State_a2fceb613ab4853b4a1141a4018b4782d}{m\+Root}}
+\item 
+\mbox{\hyperlink{classgame_1_1states_1_1StateMachine}{State\+Machine}} $\ast$ \mbox{\hyperlink{classgame_1_1states_1_1State_a24f05e7edc7c14ac30e04422f6e071ed}{m\+Owner}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+base class of all game states 
+
+this is the base class of all game states. A game state controls the game flow, and it allows a state to be easily reused and stack on each other to create multiple states for example, a game pause state can be stack on the game state so the game state can be resumed once the game pause state gets poped
+
+\begin{DoxyAuthor}{Author}
+Zheng Yang 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgame_1_1states_1_1State_ab6b8b9f07b2b6f9556a9110e5411e63b}\label{classgame_1_1states_1_1State_ab6b8b9f07b2b6f9556a9110e5411e63b}} 
+\index{game::states::State@{game::states::State}!State@{State}}
+\index{State@{State}!game::states::State@{game::states::State}}
+\doxysubsubsection{\texorpdfstring{State()}{State()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily game\+::states\+::\+State\+::\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgame_1_1states_1_1StateMachine}{State\+Machine}} $\ast$}]{owner }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+state constructor 
+
+state constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em owner} & state machine \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1states_1_1State_ab1e41dea7ec9b285b1eec79d7b1f136b}\label{classgame_1_1states_1_1State_ab1e41dea7ec9b285b1eec79d7b1f136b}} 
+\index{game::states::State@{game::states::State}!State@{State}}
+\index{State@{State}!game::states::State@{game::states::State}}
+\doxysubsubsection{\texorpdfstring{State()}{State()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily game\+::states\+::\+State\+::\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgame_1_1states_1_1StateMachine}{State\+Machine}} $\ast$}]{owner,  }\item[{int}]{root\+Width,  }\item[{int}]{root\+Height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+state constructor 
+
+state constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em owner} & state machine \\
+\hline
+{\em root\+Height} & height of the root gameobject for the state \\
+\hline
+{\em root\+Width} & width of the root gameobject for the state \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1states_1_1State_a81e5327c78e7cac5dd323ef35bf9176c}\label{classgame_1_1states_1_1State_a81e5327c78e7cac5dd323ef35bf9176c}} 
+\index{game::states::State@{game::states::State}!````~State@{$\sim$State}}
+\index{````~State@{$\sim$State}!game::states::State@{game::states::State}}
+\doxysubsubsection{\texorpdfstring{$\sim$State()}{~State()}}
+{\footnotesize\ttfamily virtual game\+::states\+::\+State\+::$\sim$\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+state destructor 
+
+state destructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgame_1_1states_1_1State_a8d4b3f92573026b7586f65e6782f9931}\label{classgame_1_1states_1_1State_a8d4b3f92573026b7586f65e6782f9931}} 
+\index{game::states::State@{game::states::State}!disableInput@{disableInput}}
+\index{disableInput@{disableInput}!game::states::State@{game::states::State}}
+\doxysubsubsection{\texorpdfstring{disableInput()}{disableInput()}}
+{\footnotesize\ttfamily virtual void game\+::states\+::\+State\+::disable\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+disable user input in the current state 
+
+call this function to disable user input in the current state 
+
+Reimplemented in \mbox{\hyperlink{classgame_1_1states_1_1GameState_ac0f52d871ea32e0df4417ebd0230a902}{game\+::states\+::\+Game\+State}}.
+
+\mbox{\Hypertarget{classgame_1_1states_1_1State_abda793135a71f9be21bcdfa51ee85d82}\label{classgame_1_1states_1_1State_abda793135a71f9be21bcdfa51ee85d82}} 
+\index{game::states::State@{game::states::State}!enableInput@{enableInput}}
+\index{enableInput@{enableInput}!game::states::State@{game::states::State}}
+\doxysubsubsection{\texorpdfstring{enableInput()}{enableInput()}}
+{\footnotesize\ttfamily virtual void game\+::states\+::\+State\+::enable\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+enable user input in the current state 
+
+call this function to enable user input in the current state 
+
+Reimplemented in \mbox{\hyperlink{classgame_1_1states_1_1GameState_aac2e038e50d73b0c994064c7bd40e9f3}{game\+::states\+::\+Game\+State}}.
+
+\mbox{\Hypertarget{classgame_1_1states_1_1State_ad66a7d869a38b0560796e1b7c4562c15}\label{classgame_1_1states_1_1State_ad66a7d869a38b0560796e1b7c4562c15}} 
+\index{game::states::State@{game::states::State}!freezeTime@{freezeTime}}
+\index{freezeTime@{freezeTime}!game::states::State@{game::states::State}}
+\doxysubsubsection{\texorpdfstring{freezeTime()}{freezeTime()}}
+{\footnotesize\ttfamily virtual bool game\+::states\+::\+State\+::freeze\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+check if delta time should be set to 0 when the state is created and put to the state machine 
+
+check if delta time should be set to 0 when the state is created and put to the state machine 
+
+Reimplemented in \mbox{\hyperlink{classgame_1_1states_1_1PauseState_a332b00173bdc02ab801441f5d2a1d338}{game\+::states\+::\+Pause\+State}}, \mbox{\hyperlink{classgame_1_1states_1_1GameWinState_afbbbef6e48da3023173e4b78667a0a5b}{game\+::states\+::\+Game\+Win\+State}}, \mbox{\hyperlink{classgame_1_1states_1_1GameOverState_a23574704a73d4d222815171214a62364}{game\+::states\+::\+Game\+Over\+State}}, and \mbox{\hyperlink{classgame_1_1states_1_1GameCompletedState_a7228f21b8f72e710e40f639d8c191480}{game\+::states\+::\+Game\+Completed\+State}}.
+
+\mbox{\Hypertarget{classgame_1_1states_1_1State_ab8464551e311a0621bd80f2a21a7cb4a}\label{classgame_1_1states_1_1State_ab8464551e311a0621bd80f2a21a7cb4a}} 
+\index{game::states::State@{game::states::State}!init@{init}}
+\index{init@{init}!game::states::State@{game::states::State}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily virtual void game\+::states\+::\+State\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+initialization of state 
+
+initialization of state, called by state machine after state is created and put to the stack 
+
+Reimplemented in \mbox{\hyperlink{classgame_1_1states_1_1TestState_a881a26aab962a8a59d9a2cffccc0e1db}{game\+::states\+::\+Test\+State}}, \mbox{\hyperlink{classgame_1_1states_1_1StartState_a152758b9258f0cff0182cac773baeb91}{game\+::states\+::\+Start\+State}}, \mbox{\hyperlink{classgame_1_1states_1_1ShopState_a5ec49c9f022f9a1477a0f95fbee25c22}{game\+::states\+::\+Shop\+State}}, \mbox{\hyperlink{classgame_1_1states_1_1SaveAndLoadState_ae8ac697b4b2a7340cbaab9a6e61472c7}{game\+::states\+::\+Save\+And\+Load\+State}}, \mbox{\hyperlink{classgame_1_1states_1_1PauseState_afdf38c80c0fcea18ab4efb3b42f2f9db}{game\+::states\+::\+Pause\+State}}, \mbox{\hyperlink{classgame_1_1states_1_1MainState_a58accb68ebaedb2dc2f7f6d8b62b9aee}{game\+::states\+::\+Main\+State}}, \mbox{\hyperlink{classgame_1_1states_1_1LoadingState_ae9a310a37c0c66946284cc02c6242e3b}{game\+::states\+::\+Loading\+State}}, \mbox{\hyperlink{classgame_1_1states_1_1GameWinState_abf3efb7944e7634cab38520420c31c76}{game\+::states\+::\+Game\+Win\+State}}, \mbox{\hyperlink{classgame_1_1states_1_1GameState_a42dd3537fffd822da5c044727356f266}{game\+::states\+::\+Game\+State}}, \mbox{\hyperlink{classgame_1_1states_1_1GameOverState_abee58ebf681ee347803ca60b0ed2a762}{game\+::states\+::\+Game\+Over\+State}}, and \mbox{\hyperlink{classgame_1_1states_1_1GameCompletedState_a4868c1ff9bfa30bdcff869e07e4aad1d}{game\+::states\+::\+Game\+Completed\+State}}.
+
+\mbox{\Hypertarget{classgame_1_1states_1_1State_ab49c732d0fa4489ab552343f8e136668}\label{classgame_1_1states_1_1State_ab49c732d0fa4489ab552343f8e136668}} 
+\index{game::states::State@{game::states::State}!instantiateGO@{instantiateGO}}
+\index{instantiateGO@{instantiateGO}!game::states::State@{game::states::State}}
+\doxysubsubsection{\texorpdfstring{instantiateGO()}{instantiateGO()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgame_1_1components_1_1GameObject}{components\+::\+Game\+Object}}$\ast$ game\+::states\+::\+State\+::instantiate\+GO (\begin{DoxyParamCaption}\item[{components\+::\+Anchor}]{anchor = {\ttfamily components\+:\+:ANCHOR\+\_\+TOP\+\_\+LEFT},  }\item[{components\+::\+Pivot}]{pivot = {\ttfamily components\+:\+:PIVOT\+\_\+TOP\+\_\+LEFT},  }\item[{\mbox{\hyperlink{classgame_1_1components_1_1GameObject_a7219837ddf188469edc82e4f1f942882}{components\+::\+Game\+Object\+::\+Go\+State}}}]{ = {\ttfamily \mbox{\hyperlink{classgame_1_1components_1_1GameObject_a7219837ddf188469edc82e4f1f942882a18ff74f43da410c5529f7d6fca84f115}{components\+::\+Game\+Object\+::\+Go\+State\+::\+ACTIVE}}} }\end{DoxyParamCaption})}
+
+
+
+helper function to instantiate a gameobject 
+
+helper function to instantiate a gameobject and set its parent to the root gameobject of the state
+
+
+\begin{DoxyParams}{Parameters}
+{\em anchor} & gameobject anchor \\
+\hline
+{\em pivot} & gameobject pivot \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classgame_1_1states_1_1State_a24f05e7edc7c14ac30e04422f6e071ed}\label{classgame_1_1states_1_1State_a24f05e7edc7c14ac30e04422f6e071ed}} 
+\index{game::states::State@{game::states::State}!mOwner@{mOwner}}
+\index{mOwner@{mOwner}!game::states::State@{game::states::State}}
+\doxysubsubsection{\texorpdfstring{mOwner}{mOwner}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgame_1_1states_1_1StateMachine}{State\+Machine}}$\ast$ game\+::states\+::\+State\+::m\+Owner\hspace{0.3cm}{\ttfamily [protected]}}
+
+state machine \mbox{\Hypertarget{classgame_1_1states_1_1State_a2fceb613ab4853b4a1141a4018b4782d}\label{classgame_1_1states_1_1State_a2fceb613ab4853b4a1141a4018b4782d}} 
+\index{game::states::State@{game::states::State}!mRoot@{mRoot}}
+\index{mRoot@{mRoot}!game::states::State@{game::states::State}}
+\doxysubsubsection{\texorpdfstring{mRoot}{mRoot}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgame_1_1core_1_1ObjectHandle}{core\+::\+Go\+Handle}} game\+::states\+::\+State\+::m\+Root\hspace{0.3cm}{\ttfamily [protected]}}
+
+root gameobject handle 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+States/State.\+h\end{DoxyCompactItemize}

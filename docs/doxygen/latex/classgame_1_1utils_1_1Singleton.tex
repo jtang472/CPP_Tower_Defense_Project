@@ -1,0 +1,101 @@
+\hypertarget{classgame_1_1utils_1_1Singleton}{}\doxysection{game\+::utils\+::Singleton$<$ T $>$ Class Template Reference}
+\label{classgame_1_1utils_1_1Singleton}\index{game::utils::Singleton$<$ T $>$@{game::utils::Singleton$<$ T $>$}}
+
+
+a implementation of the singleton pattern with lazy initialization  
+
+
+
+
+{\ttfamily \#include $<$Singleton.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgame_1_1utils_1_1Singleton_a82255c2c1d7f6d44e160181354ad6b79}{Singleton}} (const T \&)=delete
+\begin{DoxyCompactList}\small\item\em copy constructor is deleted \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1utils_1_1Singleton_ab5bbd65a2d22bc3f18a3b2f92ebb8a2a}{operator=}} (const T \&)=delete
+\begin{DoxyCompactList}\small\item\em copy assignment operator is deleted \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static T \& \mbox{\hyperlink{classgame_1_1utils_1_1Singleton_ac32b214f5b6558e1d068f6530b7a0bd4}{get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em get the singleton object of T class \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgame_1_1utils_1_1Singleton_ad58d71f5a5a40e21e0f489bd9186c055}{Singleton}} ()
+\begin{DoxyCompactList}\small\item\em private constructor as required in the singleton pattern \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class game\+::utils\+::\+Singleton$<$ T $>$}
+
+a implementation of the singleton pattern with lazy initialization 
+
+This class is a simple implementation of the singleton pattern, the singleton object is lazy initialized at the first time get\+Instance method get called
+
+\begin{DoxyAuthor}{Author}
+Zheng Yang 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgame_1_1utils_1_1Singleton_ad58d71f5a5a40e21e0f489bd9186c055}\label{classgame_1_1utils_1_1Singleton_ad58d71f5a5a40e21e0f489bd9186c055}} 
+\index{game::utils::Singleton$<$ T $>$@{game::utils::Singleton$<$ T $>$}!Singleton@{Singleton}}
+\index{Singleton@{Singleton}!game::utils::Singleton$<$ T $>$@{game::utils::Singleton$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Singleton()}{Singleton()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classgame_1_1utils_1_1Singleton}{game\+::utils\+::\+Singleton}}$<$ T $>$\+::\mbox{\hyperlink{classgame_1_1utils_1_1Singleton}{Singleton}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+private constructor as required in the singleton pattern 
+
+the constructor of the singleton class is made to be private because we do not want other authority to be able to create instances of a singleton class \mbox{\Hypertarget{classgame_1_1utils_1_1Singleton_a82255c2c1d7f6d44e160181354ad6b79}\label{classgame_1_1utils_1_1Singleton_a82255c2c1d7f6d44e160181354ad6b79}} 
+\index{game::utils::Singleton$<$ T $>$@{game::utils::Singleton$<$ T $>$}!Singleton@{Singleton}}
+\index{Singleton@{Singleton}!game::utils::Singleton$<$ T $>$@{game::utils::Singleton$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Singleton()}{Singleton()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classgame_1_1utils_1_1Singleton}{game\+::utils\+::\+Singleton}}$<$ T $>$\+::\mbox{\hyperlink{classgame_1_1utils_1_1Singleton}{Singleton}} (\begin{DoxyParamCaption}\item[{const T \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+copy constructor is deleted 
+
+copy constructor is deleted as required for the singleton pattern 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgame_1_1utils_1_1Singleton_ac32b214f5b6558e1d068f6530b7a0bd4}\label{classgame_1_1utils_1_1Singleton_ac32b214f5b6558e1d068f6530b7a0bd4}} 
+\index{game::utils::Singleton$<$ T $>$@{game::utils::Singleton$<$ T $>$}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!game::utils::Singleton$<$ T $>$@{game::utils::Singleton$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static T\& \mbox{\hyperlink{classgame_1_1utils_1_1Singleton}{game\+::utils\+::\+Singleton}}$<$ T $>$\+::get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+get the singleton object of T class 
+
+this function maintains a static local variable as the singleton object of T, it gets initialized the first time this function gets called
+
+\begin{DoxyReturn}{Returns}
+the singleton object of T class 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgame_1_1utils_1_1Singleton_ab5bbd65a2d22bc3f18a3b2f92ebb8a2a}\label{classgame_1_1utils_1_1Singleton_ab5bbd65a2d22bc3f18a3b2f92ebb8a2a}} 
+\index{game::utils::Singleton$<$ T $>$@{game::utils::Singleton$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!game::utils::Singleton$<$ T $>$@{game::utils::Singleton$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classgame_1_1utils_1_1Singleton}{game\+::utils\+::\+Singleton}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const T \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+copy assignment operator is deleted 
+
+copy assignment operator 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Utils/Singleton.\+h\end{DoxyCompactItemize}

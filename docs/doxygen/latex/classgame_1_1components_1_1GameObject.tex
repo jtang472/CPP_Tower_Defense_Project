@@ -1,0 +1,320 @@
+\hypertarget{classgame_1_1components_1_1GameObject}{}\doxysection{game\+::components\+::Game\+Object Class Reference}
+\label{classgame_1_1components_1_1GameObject}\index{game::components::GameObject@{game::components::GameObject}}
+
+
+container class for a group of components  
+
+
+
+
+{\ttfamily \#include $<$Game\+Object.\+h$>$}
+
+
+
+Inheritance diagram for game\+::components\+::Game\+Object\+:
+% FIG 0
+
+
+Collaboration diagram for game\+::components\+::Game\+Object\+:
+% FIG 1
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{classgame_1_1components_1_1GameObject_a7219837ddf188469edc82e4f1f942882}{Go\+State}} \{ \mbox{\hyperlink{classgame_1_1components_1_1GameObject_a7219837ddf188469edc82e4f1f942882a18ff74f43da410c5529f7d6fca84f115}{ACTIVE}}
+, \mbox{\hyperlink{classgame_1_1components_1_1GameObject_a7219837ddf188469edc82e4f1f942882a055c1a591abb0e8cd86dc969727bcc0b}{DISABLED}}
+, \mbox{\hyperlink{classgame_1_1components_1_1GameObject_a7219837ddf188469edc82e4f1f942882ac8dc3c109ebebfe8182795a94e9c14f1}{MARK\+\_\+\+TO\+\_\+\+DESTROY}}
+ \}
+\begin{DoxyCompactList}\small\item\em all gameobject states \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgame_1_1components_1_1GameObject_a681740c40b56430de78981b86a181d2b}{$\sim$\+Game\+Object}} ()
+\begin{DoxyCompactList}\small\item\em gameobject destructor \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classgame_1_1components_1_1Transform}{Transform}} $\ast$ \mbox{\hyperlink{classgame_1_1components_1_1GameObject_a6f4e54d6265dbb433d5d5f20aecf47fd}{get\+Transform}} ()
+\begin{DoxyCompactList}\small\item\em gameobject transform component getter \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classgame_1_1components_1_1Transform}{Transform}} $\ast$ \mbox{\hyperlink{classgame_1_1components_1_1GameObject_a7ed35bb7bb63c319d3bd334ebfc7f0f0}{get\+Parent}} ()
+\begin{DoxyCompactList}\small\item\em parent transform component getter \end{DoxyCompactList}\item 
+GUID \mbox{\hyperlink{classgame_1_1components_1_1GameObject_aa4ba6a3fec77e84f89aa8a98b06a7053}{get\+GUID}} () const
+\begin{DoxyCompactList}\small\item\em gameobject guid component getter \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1GameObject_acbd6b64b4ca6e97e5d1379b07d2c1ae5}{set\+State}} (\mbox{\hyperlink{classgame_1_1components_1_1GameObject_a7219837ddf188469edc82e4f1f942882}{Go\+State}} state)
+\begin{DoxyCompactList}\small\item\em reset the state of the gameobject \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classgame_1_1components_1_1GameObject_a7219837ddf188469edc82e4f1f942882}{Go\+State}} \mbox{\hyperlink{classgame_1_1components_1_1GameObject_a2451a072147e2e99cc1c9fd98103705d}{get\+State}} ()
+\begin{DoxyCompactList}\small\item\em gameobject state getter \end{DoxyCompactList}\item 
+{\footnotesize template$<$class TComponent , typename... Args$>$ }\\TComponent $\ast$ \mbox{\hyperlink{classgame_1_1components_1_1GameObject_a974888f716c35e293ac901e76dfa6c43}{add\+Component}} (Args \&\&... args)
+\begin{DoxyCompactList}\small\item\em add a new component to gameobject \end{DoxyCompactList}\item 
+{\footnotesize template$<$class TComponent $>$ }\\TComponent $\ast$ \mbox{\hyperlink{classgame_1_1components_1_1GameObject_a02555623108d121c6f1e8e29a6328472}{get\+Component}} ()
+\begin{DoxyCompactList}\small\item\em get a component from gameobject \end{DoxyCompactList}\item 
+{\footnotesize template$<$class TComponent $>$ }\\void \mbox{\hyperlink{classgame_1_1components_1_1GameObject_a29c079d476edd5d767eb7dce1debf4eb}{get\+Components}} (std\+::vector$<$ TComponent $\ast$ $>$ \&components)
+\begin{DoxyCompactList}\small\item\em return a list of components which have a same base type \end{DoxyCompactList}\item 
+{\footnotesize template$<$class TComponent $>$ }\\bool \mbox{\hyperlink{classgame_1_1components_1_1GameObject_a17120898215b4def6ac832965eaad28d}{remove\+Component}} ()
+\begin{DoxyCompactList}\small\item\em remove a component from gameobject \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgame_1_1components_1_1GameObject_a95eb98ee8abb6842766829cc999c97b5}{Game\+Object}} (GUID id, \mbox{\hyperlink{classgame_1_1components_1_1GameObject_a7219837ddf188469edc82e4f1f942882}{Go\+State}} state=\mbox{\hyperlink{classgame_1_1components_1_1GameObject_a7219837ddf188469edc82e4f1f942882a18ff74f43da410c5529f7d6fca84f115}{Go\+State\+::\+ACTIVE}})
+\begin{DoxyCompactList}\small\item\em gameobject constructor \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1GameObject_a4c18df867be5434734b9f55b2173c6df}{tick}} (float delta\+Time)
+\begin{DoxyCompactList}\small\item\em tick gameobject and its component list every frame \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+GUID \mbox{\hyperlink{classgame_1_1components_1_1GameObject_a2b03f6d992e5fda8a8ba7d90fe09b7fd}{m\+ID}}
+\item 
+\mbox{\hyperlink{classgame_1_1components_1_1GameObject_a7219837ddf188469edc82e4f1f942882}{Go\+State}} \mbox{\hyperlink{classgame_1_1components_1_1GameObject_a6463fef7493601f4981135d8b09eeb92}{m\+State}}
+\item 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classgame_1_1components_1_1Component}{Component}} $>$ $>$ \mbox{\hyperlink{classgame_1_1components_1_1GameObject_a27436623fdaa0f0f24d3b2b1957c71cd}{m\+Components}}
+\item 
+\mbox{\hyperlink{classgame_1_1components_1_1Transform}{Transform}} $\ast$ \mbox{\hyperlink{classgame_1_1components_1_1GameObject_a3043d76ae5115fa440a98f8a63a8eac3}{m\+Transform}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classgame_1_1components_1_1GameObject_a11a0ebb64ab411ed5c9466a4fba759c6}\label{classgame_1_1components_1_1GameObject_a11a0ebb64ab411ed5c9466a4fba759c6}} 
+class {\bfseries game\+::core\+::\+Game\+Manager}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+container class for a group of components 
+
+gameobject class functions as a pure container of a group of components that defines the behavior of a logical entity each gameobject has a unique runtime guid, and have a state identifier
+
+\begin{DoxyAuthor}{Author}
+Zheng Yang 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classgame_1_1components_1_1GameObject_a7219837ddf188469edc82e4f1f942882}\label{classgame_1_1components_1_1GameObject_a7219837ddf188469edc82e4f1f942882}} 
+\index{game::components::GameObject@{game::components::GameObject}!GoState@{GoState}}
+\index{GoState@{GoState}!game::components::GameObject@{game::components::GameObject}}
+\doxysubsubsection{\texorpdfstring{GoState}{GoState}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classgame_1_1components_1_1GameObject_a7219837ddf188469edc82e4f1f942882}{game\+::components\+::\+Game\+Object\+::\+Go\+State}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+all gameobject states 
+
+all gameobject states
+
+\begin{DoxyAuthor}{Author}
+Zheng Yang 
+\end{DoxyAuthor}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ACTIVE@{ACTIVE}!game::components::GameObject@{game::components::GameObject}}\index{game::components::GameObject@{game::components::GameObject}!ACTIVE@{ACTIVE}}}\mbox{\Hypertarget{classgame_1_1components_1_1GameObject_a7219837ddf188469edc82e4f1f942882a18ff74f43da410c5529f7d6fca84f115}\label{classgame_1_1components_1_1GameObject_a7219837ddf188469edc82e4f1f942882a18ff74f43da410c5529f7d6fca84f115}} 
+ACTIVE&gameobject is active \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DISABLED@{DISABLED}!game::components::GameObject@{game::components::GameObject}}\index{game::components::GameObject@{game::components::GameObject}!DISABLED@{DISABLED}}}\mbox{\Hypertarget{classgame_1_1components_1_1GameObject_a7219837ddf188469edc82e4f1f942882a055c1a591abb0e8cd86dc969727bcc0b}\label{classgame_1_1components_1_1GameObject_a7219837ddf188469edc82e4f1f942882a055c1a591abb0e8cd86dc969727bcc0b}} 
+DISABLED&gameobject is disabled \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MARK\_TO\_DESTROY@{MARK\_TO\_DESTROY}!game::components::GameObject@{game::components::GameObject}}\index{game::components::GameObject@{game::components::GameObject}!MARK\_TO\_DESTROY@{MARK\_TO\_DESTROY}}}\mbox{\Hypertarget{classgame_1_1components_1_1GameObject_a7219837ddf188469edc82e4f1f942882ac8dc3c109ebebfe8182795a94e9c14f1}\label{classgame_1_1components_1_1GameObject_a7219837ddf188469edc82e4f1f942882ac8dc3c109ebebfe8182795a94e9c14f1}} 
+MARK\+\_\+\+TO\+\_\+\+DESTROY&gameobject is marked to be destroyed at the end of the frame \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgame_1_1components_1_1GameObject_a681740c40b56430de78981b86a181d2b}\label{classgame_1_1components_1_1GameObject_a681740c40b56430de78981b86a181d2b}} 
+\index{game::components::GameObject@{game::components::GameObject}!````~GameObject@{$\sim$GameObject}}
+\index{````~GameObject@{$\sim$GameObject}!game::components::GameObject@{game::components::GameObject}}
+\doxysubsubsection{\texorpdfstring{$\sim$GameObject()}{~GameObject()}}
+{\footnotesize\ttfamily game\+::components\+::\+Game\+Object\+::$\sim$\+Game\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+gameobject destructor 
+
+gameobject destructor \mbox{\Hypertarget{classgame_1_1components_1_1GameObject_a95eb98ee8abb6842766829cc999c97b5}\label{classgame_1_1components_1_1GameObject_a95eb98ee8abb6842766829cc999c97b5}} 
+\index{game::components::GameObject@{game::components::GameObject}!GameObject@{GameObject}}
+\index{GameObject@{GameObject}!game::components::GameObject@{game::components::GameObject}}
+\doxysubsubsection{\texorpdfstring{GameObject()}{GameObject()}}
+{\footnotesize\ttfamily game\+::components\+::\+Game\+Object\+::\+Game\+Object (\begin{DoxyParamCaption}\item[{GUID}]{id,  }\item[{\mbox{\hyperlink{classgame_1_1components_1_1GameObject_a7219837ddf188469edc82e4f1f942882}{Go\+State}}}]{state = {\ttfamily \mbox{\hyperlink{classgame_1_1components_1_1GameObject_a7219837ddf188469edc82e4f1f942882a18ff74f43da410c5529f7d6fca84f115}{Go\+State\+::\+ACTIVE}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+gameobject constructor 
+
+private constructor to make sure GOs can only be managed by Game\+Manager 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgame_1_1components_1_1GameObject_a974888f716c35e293ac901e76dfa6c43}\label{classgame_1_1components_1_1GameObject_a974888f716c35e293ac901e76dfa6c43}} 
+\index{game::components::GameObject@{game::components::GameObject}!addComponent@{addComponent}}
+\index{addComponent@{addComponent}!game::components::GameObject@{game::components::GameObject}}
+\doxysubsubsection{\texorpdfstring{addComponent()}{addComponent()}}
+{\footnotesize\ttfamily template$<$class TComponent , typename ... Args$>$ \\
+TComponent $\ast$ game\+::components\+::\+Game\+Object\+::add\+Component (\begin{DoxyParamCaption}\item[{Args \&\&...}]{args }\end{DoxyParamCaption})}
+
+
+
+add a new component to gameobject 
+
+add a new component to gameobject
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & component constructor parameter list \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1components_1_1GameObject_a02555623108d121c6f1e8e29a6328472}\label{classgame_1_1components_1_1GameObject_a02555623108d121c6f1e8e29a6328472}} 
+\index{game::components::GameObject@{game::components::GameObject}!getComponent@{getComponent}}
+\index{getComponent@{getComponent}!game::components::GameObject@{game::components::GameObject}}
+\doxysubsubsection{\texorpdfstring{getComponent()}{getComponent()}}
+{\footnotesize\ttfamily template$<$class TComponent $>$ \\
+TComponent $\ast$ game\+::components\+::\+Game\+Object\+::get\+Component}
+
+
+
+get a component from gameobject 
+
+get a component from gameobject based on its type this function uses runtime type check \mbox{\Hypertarget{classgame_1_1components_1_1GameObject_a29c079d476edd5d767eb7dce1debf4eb}\label{classgame_1_1components_1_1GameObject_a29c079d476edd5d767eb7dce1debf4eb}} 
+\index{game::components::GameObject@{game::components::GameObject}!getComponents@{getComponents}}
+\index{getComponents@{getComponents}!game::components::GameObject@{game::components::GameObject}}
+\doxysubsubsection{\texorpdfstring{getComponents()}{getComponents()}}
+{\footnotesize\ttfamily template$<$class TComponent $>$ \\
+void game\+::components\+::\+Game\+Object\+::get\+Components (\begin{DoxyParamCaption}\item[{std\+::vector$<$ TComponent $\ast$ $>$ \&}]{components }\end{DoxyParamCaption})}
+
+
+
+return a list of components which have a same base type 
+
+return a list of components which have a same base type
+
+
+\begin{DoxyParams}{Parameters}
+{\em components} & vector to hold the return value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1components_1_1GameObject_aa4ba6a3fec77e84f89aa8a98b06a7053}\label{classgame_1_1components_1_1GameObject_aa4ba6a3fec77e84f89aa8a98b06a7053}} 
+\index{game::components::GameObject@{game::components::GameObject}!getGUID@{getGUID}}
+\index{getGUID@{getGUID}!game::components::GameObject@{game::components::GameObject}}
+\doxysubsubsection{\texorpdfstring{getGUID()}{getGUID()}}
+{\footnotesize\ttfamily GUID game\+::components\+::\+Game\+Object\+::get\+GUID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+gameobject guid component getter 
+
+gameobject guid getter
+
+\begin{DoxyReturn}{Returns}
+gameobject guid 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgame_1_1components_1_1GameObject_a7ed35bb7bb63c319d3bd334ebfc7f0f0}\label{classgame_1_1components_1_1GameObject_a7ed35bb7bb63c319d3bd334ebfc7f0f0}} 
+\index{game::components::GameObject@{game::components::GameObject}!getParent@{getParent}}
+\index{getParent@{getParent}!game::components::GameObject@{game::components::GameObject}}
+\doxysubsubsection{\texorpdfstring{getParent()}{getParent()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgame_1_1components_1_1Transform}{Transform}} $\ast$ game\+::components\+::\+Game\+Object\+::get\+Parent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+parent transform component getter 
+
+parent transform component getter
+
+\begin{DoxyReturn}{Returns}
+parent transform component 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgame_1_1components_1_1GameObject_a2451a072147e2e99cc1c9fd98103705d}\label{classgame_1_1components_1_1GameObject_a2451a072147e2e99cc1c9fd98103705d}} 
+\index{game::components::GameObject@{game::components::GameObject}!getState@{getState}}
+\index{getState@{getState}!game::components::GameObject@{game::components::GameObject}}
+\doxysubsubsection{\texorpdfstring{getState()}{getState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgame_1_1components_1_1GameObject_a7219837ddf188469edc82e4f1f942882}{Go\+State}} game\+::components\+::\+Game\+Object\+::get\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+gameobject state getter 
+
+gameobject state getter
+
+\begin{DoxyReturn}{Returns}
+gameobject state 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgame_1_1components_1_1GameObject_a6f4e54d6265dbb433d5d5f20aecf47fd}\label{classgame_1_1components_1_1GameObject_a6f4e54d6265dbb433d5d5f20aecf47fd}} 
+\index{game::components::GameObject@{game::components::GameObject}!getTransform@{getTransform}}
+\index{getTransform@{getTransform}!game::components::GameObject@{game::components::GameObject}}
+\doxysubsubsection{\texorpdfstring{getTransform()}{getTransform()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgame_1_1components_1_1Transform}{Transform}} $\ast$ game\+::components\+::\+Game\+Object\+::get\+Transform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+gameobject transform component getter 
+
+gameobject transform component getter
+
+\begin{DoxyReturn}{Returns}
+transform component 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgame_1_1components_1_1GameObject_a17120898215b4def6ac832965eaad28d}\label{classgame_1_1components_1_1GameObject_a17120898215b4def6ac832965eaad28d}} 
+\index{game::components::GameObject@{game::components::GameObject}!removeComponent@{removeComponent}}
+\index{removeComponent@{removeComponent}!game::components::GameObject@{game::components::GameObject}}
+\doxysubsubsection{\texorpdfstring{removeComponent()}{removeComponent()}}
+{\footnotesize\ttfamily template$<$class TComponent $>$ \\
+bool game\+::components\+::\+Game\+Object\+::remove\+Component}
+
+
+
+remove a component from gameobject 
+
+remove a component from gameobject based on its type this function uses runtime type check \mbox{\Hypertarget{classgame_1_1components_1_1GameObject_acbd6b64b4ca6e97e5d1379b07d2c1ae5}\label{classgame_1_1components_1_1GameObject_acbd6b64b4ca6e97e5d1379b07d2c1ae5}} 
+\index{game::components::GameObject@{game::components::GameObject}!setState@{setState}}
+\index{setState@{setState}!game::components::GameObject@{game::components::GameObject}}
+\doxysubsubsection{\texorpdfstring{setState()}{setState()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Game\+Object\+::set\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgame_1_1components_1_1GameObject_a7219837ddf188469edc82e4f1f942882}{Go\+State}}}]{state }\end{DoxyParamCaption})}
+
+
+
+reset the state of the gameobject 
+
+reset the state of the gameobject, this function can be called recursively if gameobjects has children
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & new state \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1components_1_1GameObject_a4c18df867be5434734b9f55b2173c6df}\label{classgame_1_1components_1_1GameObject_a4c18df867be5434734b9f55b2173c6df}} 
+\index{game::components::GameObject@{game::components::GameObject}!tick@{tick}}
+\index{tick@{tick}!game::components::GameObject@{game::components::GameObject}}
+\doxysubsubsection{\texorpdfstring{tick()}{tick()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Game\+Object\+::tick (\begin{DoxyParamCaption}\item[{float}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+tick gameobject and its component list every frame 
+
+this function is called every frame to tick the gameobject and its components 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classgame_1_1components_1_1GameObject_a27436623fdaa0f0f24d3b2b1957c71cd}\label{classgame_1_1components_1_1GameObject_a27436623fdaa0f0f24d3b2b1957c71cd}} 
+\index{game::components::GameObject@{game::components::GameObject}!mComponents@{mComponents}}
+\index{mComponents@{mComponents}!game::components::GameObject@{game::components::GameObject}}
+\doxysubsubsection{\texorpdfstring{mComponents}{mComponents}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classgame_1_1components_1_1Component}{Component}}$>$ $>$ game\+::components\+::\+Game\+Object\+::m\+Components\hspace{0.3cm}{\ttfamily [private]}}
+
+my component list \mbox{\Hypertarget{classgame_1_1components_1_1GameObject_a2b03f6d992e5fda8a8ba7d90fe09b7fd}\label{classgame_1_1components_1_1GameObject_a2b03f6d992e5fda8a8ba7d90fe09b7fd}} 
+\index{game::components::GameObject@{game::components::GameObject}!mID@{mID}}
+\index{mID@{mID}!game::components::GameObject@{game::components::GameObject}}
+\doxysubsubsection{\texorpdfstring{mID}{mID}}
+{\footnotesize\ttfamily GUID game\+::components\+::\+Game\+Object\+::m\+ID\hspace{0.3cm}{\ttfamily [private]}}
+
+my guid \mbox{\Hypertarget{classgame_1_1components_1_1GameObject_a6463fef7493601f4981135d8b09eeb92}\label{classgame_1_1components_1_1GameObject_a6463fef7493601f4981135d8b09eeb92}} 
+\index{game::components::GameObject@{game::components::GameObject}!mState@{mState}}
+\index{mState@{mState}!game::components::GameObject@{game::components::GameObject}}
+\doxysubsubsection{\texorpdfstring{mState}{mState}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgame_1_1components_1_1GameObject_a7219837ddf188469edc82e4f1f942882}{Go\+State}} game\+::components\+::\+Game\+Object\+::m\+State\hspace{0.3cm}{\ttfamily [private]}}
+
+my state \mbox{\Hypertarget{classgame_1_1components_1_1GameObject_a3043d76ae5115fa440a98f8a63a8eac3}\label{classgame_1_1components_1_1GameObject_a3043d76ae5115fa440a98f8a63a8eac3}} 
+\index{game::components::GameObject@{game::components::GameObject}!mTransform@{mTransform}}
+\index{mTransform@{mTransform}!game::components::GameObject@{game::components::GameObject}}
+\doxysubsubsection{\texorpdfstring{mTransform}{mTransform}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgame_1_1components_1_1Transform}{Transform}}$\ast$ game\+::components\+::\+Game\+Object\+::m\+Transform\hspace{0.3cm}{\ttfamily [private]}}
+
+my cached transform component 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Components/Game\+Object.\+h\item 
+include/\+Components/Game\+Object.\+inl\end{DoxyCompactItemize}

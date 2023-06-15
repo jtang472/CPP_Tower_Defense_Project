@@ -1,0 +1,330 @@
+\hypertarget{classgame_1_1components_1_1CharacterAnimator}{}\doxysection{game\+::components\+::Character\+Animator Class Reference}
+\label{classgame_1_1components_1_1CharacterAnimator}\index{game::components::CharacterAnimator@{game::components::CharacterAnimator}}
+
+
+animator for in-\/game characters  
+
+
+
+
+{\ttfamily \#include $<$Character\+Animator.\+h$>$}
+
+
+
+Inheritance diagram for game\+::components\+::Character\+Animator\+:
+% FIG 0
+
+
+Collaboration diagram for game\+::components\+::Character\+Animator\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgame_1_1components_1_1CharacterAnimator_a973a32dd5d2fb635a47b2fd5bef4e706}{Character\+Animator}} (\mbox{\hyperlink{classgame_1_1components_1_1GameObject}{Game\+Object}} \&owner)
+\begin{DoxyCompactList}\small\item\em character animator constructor \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1CharacterAnimator_aba36cfbaa158debe4c595f85d5dcab3e}{start}} () override
+\begin{DoxyCompactList}\small\item\em start animation \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1CharacterAnimator_a326c0f3ff1145d0c5757a2ce23dcf509}{stop}} () override
+\begin{DoxyCompactList}\small\item\em stop animation \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1CharacterAnimator_a16ac773f8653a1760509512f438a1a31}{tick}} (float delta\+Time) override
+\begin{DoxyCompactList}\small\item\em component lifecycle function \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1CharacterAnimator_aa6a5024d6397c45b54bd4d20d14ce294}{set\+Target}} (\mbox{\hyperlink{classgame_1_1components_1_1Sprite}{Sprite}} $\ast$target)
+\begin{DoxyCompactList}\small\item\em set the sprite component to perform animation on \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1CharacterAnimator_abfce4e3c67d86000e64d7be5dc0b6903}{make\+Transition}} (Animation\+State state)
+\begin{DoxyCompactList}\small\item\em transition between animation states \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1CharacterAnimator_ae3e3a6c957499abc69f6638f168f26f9}{register\+State}} (Animation\+State state, int tid, bool make\+Initial\+State=false)
+\begin{DoxyCompactList}\small\item\em register state \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1CharacterAnimator_a068cc9b191a544c00ff5b9623b981385}{register\+State}} (int anim\+State\+ID, int tid, bool make\+Initial\+State=false)
+\begin{DoxyCompactList}\small\item\em register state \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classgame_1_1components_1_1CharacterAnimator_a56eeb15d558cf41cb6dbfbcd36ed9e8e}{contains\+State}} (Animation\+State state)
+\begin{DoxyCompactList}\small\item\em check if an animation state is registered \end{DoxyCompactList}\item 
+Animation\+State \mbox{\hyperlink{classgame_1_1components_1_1CharacterAnimator_af339c6461ba06d0530408a90e6cd6797}{get\+Current\+State}} () const
+\begin{DoxyCompactList}\small\item\em current animation state getter \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1CharacterAnimator_a3a0e51c3632058c0a49b080d09a40ffd}{get\+All\+States}} (std\+::vector$<$ Animation\+State $>$ \&states) const
+\begin{DoxyCompactList}\small\item\em get all the available states of the current animator \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgame_1_1components_1_1Sprite}{Sprite}} $\ast$ \mbox{\hyperlink{classgame_1_1components_1_1CharacterAnimator_a7d340df77bf41eb3ba805c50904aa7e3}{m\+Target}}
+\item 
+sf\+::\+Texture $\ast$ \mbox{\hyperlink{classgame_1_1components_1_1CharacterAnimator_adb893daf640c4174b8596ad4fb22956e}{m\+Cached\+Texture}}
+\item 
+int \mbox{\hyperlink{classgame_1_1components_1_1CharacterAnimator_a1eee74c8df5a28305b045dcf7165a449}{m\+Current\+Anim\+Index}}
+\item 
+Animation\+State \mbox{\hyperlink{classgame_1_1components_1_1CharacterAnimator_a032acbcc5300c6bef9fc6bae7f5b4e00}{m\+Current\+State}}
+\item 
+const \mbox{\hyperlink{structgame_1_1data_1_1AnimDefine}{data\+::\+Anim\+Define}} $\ast$ \mbox{\hyperlink{classgame_1_1components_1_1CharacterAnimator_ad025d823356188ded08f84cba04447c2}{m\+Current\+Animation}}
+\item 
+const \mbox{\hyperlink{structgame_1_1data_1_1AnimDefine}{data\+::\+Anim\+Define}} $\ast$ \mbox{\hyperlink{classgame_1_1components_1_1CharacterAnimator_a914337212ed5fb96570047e3c5d53714}{m\+Initial\+Animation}}
+\item 
+std\+::unordered\+\_\+map$<$ Animation\+State, const \mbox{\hyperlink{structgame_1_1data_1_1AnimDefine}{data\+::\+Anim\+Define}} $\ast$ $>$ \mbox{\hyperlink{classgame_1_1components_1_1CharacterAnimator_a9d225cf7cb7f61d4b131658c99e05aac}{m\+State\+Map}}
+\item 
+bool \mbox{\hyperlink{classgame_1_1components_1_1CharacterAnimator_ace0e7c87ad0542dc9a1335e31e7b369b}{m\+Go\+Reverse}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+animator for in-\/game characters 
+
+This type of animator animates directly on in-\/game character such as enemies and towers. It allows user to register multiple animation state so that it can transit between states during gameplay
+
+\begin{DoxyAuthor}{Author}
+Zheng Yang 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgame_1_1components_1_1CharacterAnimator_a973a32dd5d2fb635a47b2fd5bef4e706}\label{classgame_1_1components_1_1CharacterAnimator_a973a32dd5d2fb635a47b2fd5bef4e706}} 
+\index{game::components::CharacterAnimator@{game::components::CharacterAnimator}!CharacterAnimator@{CharacterAnimator}}
+\index{CharacterAnimator@{CharacterAnimator}!game::components::CharacterAnimator@{game::components::CharacterAnimator}}
+\doxysubsubsection{\texorpdfstring{CharacterAnimator()}{CharacterAnimator()}}
+{\footnotesize\ttfamily game\+::components\+::\+Character\+Animator\+::\+Character\+Animator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgame_1_1components_1_1GameObject}{Game\+Object}} \&}]{owner }\end{DoxyParamCaption})}
+
+
+
+character animator constructor 
+
+character animator constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em owner} & owner of the animator \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgame_1_1components_1_1CharacterAnimator_a56eeb15d558cf41cb6dbfbcd36ed9e8e}\label{classgame_1_1components_1_1CharacterAnimator_a56eeb15d558cf41cb6dbfbcd36ed9e8e}} 
+\index{game::components::CharacterAnimator@{game::components::CharacterAnimator}!containsState@{containsState}}
+\index{containsState@{containsState}!game::components::CharacterAnimator@{game::components::CharacterAnimator}}
+\doxysubsubsection{\texorpdfstring{containsState()}{containsState()}}
+{\footnotesize\ttfamily bool game\+::components\+::\+Character\+Animator\+::contains\+State (\begin{DoxyParamCaption}\item[{Animation\+State}]{state }\end{DoxyParamCaption})}
+
+
+
+check if an animation state is registered 
+
+call this function to check if an animation state is registered
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & the state id \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if state exist, otherwise false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgame_1_1components_1_1CharacterAnimator_a3a0e51c3632058c0a49b080d09a40ffd}\label{classgame_1_1components_1_1CharacterAnimator_a3a0e51c3632058c0a49b080d09a40ffd}} 
+\index{game::components::CharacterAnimator@{game::components::CharacterAnimator}!getAllStates@{getAllStates}}
+\index{getAllStates@{getAllStates}!game::components::CharacterAnimator@{game::components::CharacterAnimator}}
+\doxysubsubsection{\texorpdfstring{getAllStates()}{getAllStates()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Character\+Animator\+::get\+All\+States (\begin{DoxyParamCaption}\item[{std\+::vector$<$ Animation\+State $>$ \&}]{states }\end{DoxyParamCaption}) const}
+
+
+
+get all the available states of the current animator 
+
+get all the available states of the current animator and put it in the vector
+
+
+\begin{DoxyParams}{Parameters}
+{\em states} & all the animation states will be put here \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1components_1_1CharacterAnimator_af339c6461ba06d0530408a90e6cd6797}\label{classgame_1_1components_1_1CharacterAnimator_af339c6461ba06d0530408a90e6cd6797}} 
+\index{game::components::CharacterAnimator@{game::components::CharacterAnimator}!getCurrentState@{getCurrentState}}
+\index{getCurrentState@{getCurrentState}!game::components::CharacterAnimator@{game::components::CharacterAnimator}}
+\doxysubsubsection{\texorpdfstring{getCurrentState()}{getCurrentState()}}
+{\footnotesize\ttfamily Animation\+State game\+::components\+::\+Character\+Animator\+::get\+Current\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+current animation state getter 
+
+this function returns the current animation state of the animator
+
+\begin{DoxyReturn}{Returns}
+current animation state 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgame_1_1components_1_1CharacterAnimator_abfce4e3c67d86000e64d7be5dc0b6903}\label{classgame_1_1components_1_1CharacterAnimator_abfce4e3c67d86000e64d7be5dc0b6903}} 
+\index{game::components::CharacterAnimator@{game::components::CharacterAnimator}!makeTransition@{makeTransition}}
+\index{makeTransition@{makeTransition}!game::components::CharacterAnimator@{game::components::CharacterAnimator}}
+\doxysubsubsection{\texorpdfstring{makeTransition()}{makeTransition()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Character\+Animator\+::make\+Transition (\begin{DoxyParamCaption}\item[{Animation\+State}]{state }\end{DoxyParamCaption})}
+
+
+
+transition between animation states 
+
+call this function to make transition between multiple animation states, must call register\+State first to register the available states
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & the new state \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1components_1_1CharacterAnimator_ae3e3a6c957499abc69f6638f168f26f9}\label{classgame_1_1components_1_1CharacterAnimator_ae3e3a6c957499abc69f6638f168f26f9}} 
+\index{game::components::CharacterAnimator@{game::components::CharacterAnimator}!registerState@{registerState}}
+\index{registerState@{registerState}!game::components::CharacterAnimator@{game::components::CharacterAnimator}}
+\doxysubsubsection{\texorpdfstring{registerState()}{registerState()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void game\+::components\+::\+Character\+Animator\+::register\+State (\begin{DoxyParamCaption}\item[{Animation\+State}]{state,  }\item[{int}]{tid,  }\item[{bool}]{make\+Initial\+State = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+register state 
+
+call this function to register an animation state with the current character animator
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & the state id \\
+\hline
+{\em tid} & animation define data tid \\
+\hline
+{\em make\+Initial\+State} & is this state the initial state of the animator \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1components_1_1CharacterAnimator_a068cc9b191a544c00ff5b9623b981385}\label{classgame_1_1components_1_1CharacterAnimator_a068cc9b191a544c00ff5b9623b981385}} 
+\index{game::components::CharacterAnimator@{game::components::CharacterAnimator}!registerState@{registerState}}
+\index{registerState@{registerState}!game::components::CharacterAnimator@{game::components::CharacterAnimator}}
+\doxysubsubsection{\texorpdfstring{registerState()}{registerState()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void game\+::components\+::\+Character\+Animator\+::register\+State (\begin{DoxyParamCaption}\item[{int}]{anim\+State\+ID,  }\item[{int}]{tid,  }\item[{bool}]{make\+Initial\+State = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+register state 
+
+call this function to register an animation state with the current character animator
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & the state id \\
+\hline
+{\em tid} & animation define data tid \\
+\hline
+{\em make\+Initial\+State} & is this state the initial state of the animator \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1components_1_1CharacterAnimator_aa6a5024d6397c45b54bd4d20d14ce294}\label{classgame_1_1components_1_1CharacterAnimator_aa6a5024d6397c45b54bd4d20d14ce294}} 
+\index{game::components::CharacterAnimator@{game::components::CharacterAnimator}!setTarget@{setTarget}}
+\index{setTarget@{setTarget}!game::components::CharacterAnimator@{game::components::CharacterAnimator}}
+\doxysubsubsection{\texorpdfstring{setTarget()}{setTarget()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Character\+Animator\+::set\+Target (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgame_1_1components_1_1Sprite}{Sprite}} $\ast$}]{target }\end{DoxyParamCaption})}
+
+
+
+set the sprite component to perform animation on 
+
+this function set the sprite component to perform animation on
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & the sprite component to perform animation on \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1components_1_1CharacterAnimator_aba36cfbaa158debe4c595f85d5dcab3e}\label{classgame_1_1components_1_1CharacterAnimator_aba36cfbaa158debe4c595f85d5dcab3e}} 
+\index{game::components::CharacterAnimator@{game::components::CharacterAnimator}!start@{start}}
+\index{start@{start}!game::components::CharacterAnimator@{game::components::CharacterAnimator}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Character\+Animator\+::start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+start animation 
+
+to start the animation, call this override method 
+
+Reimplemented from \mbox{\hyperlink{classgame_1_1components_1_1Animator_ac4182ed18c0d5bd1b49754265623e74a}{game\+::components\+::\+Animator}}.
+
+\mbox{\Hypertarget{classgame_1_1components_1_1CharacterAnimator_a326c0f3ff1145d0c5757a2ce23dcf509}\label{classgame_1_1components_1_1CharacterAnimator_a326c0f3ff1145d0c5757a2ce23dcf509}} 
+\index{game::components::CharacterAnimator@{game::components::CharacterAnimator}!stop@{stop}}
+\index{stop@{stop}!game::components::CharacterAnimator@{game::components::CharacterAnimator}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Character\+Animator\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+stop animation 
+
+to stop the animation, call this override method 
+
+Reimplemented from \mbox{\hyperlink{classgame_1_1components_1_1Animator_a430cb30daaa29f3b08164b6e86c88985}{game\+::components\+::\+Animator}}.
+
+\mbox{\Hypertarget{classgame_1_1components_1_1CharacterAnimator_a16ac773f8653a1760509512f438a1a31}\label{classgame_1_1components_1_1CharacterAnimator_a16ac773f8653a1760509512f438a1a31}} 
+\index{game::components::CharacterAnimator@{game::components::CharacterAnimator}!tick@{tick}}
+\index{tick@{tick}!game::components::CharacterAnimator@{game::components::CharacterAnimator}}
+\doxysubsubsection{\texorpdfstring{tick()}{tick()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Character\+Animator\+::tick (\begin{DoxyParamCaption}\item[{float}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+component lifecycle function 
+
+component lifecycle function, gets called automatically every frame. This is where every component in the game gets updated
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & the time elpased between now and last frame \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classgame_1_1components_1_1Component_ac85cd99e8109eb32a97549bf437ea5ce}{game\+::components\+::\+Component}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classgame_1_1components_1_1CharacterAnimator_adb893daf640c4174b8596ad4fb22956e}\label{classgame_1_1components_1_1CharacterAnimator_adb893daf640c4174b8596ad4fb22956e}} 
+\index{game::components::CharacterAnimator@{game::components::CharacterAnimator}!mCachedTexture@{mCachedTexture}}
+\index{mCachedTexture@{mCachedTexture}!game::components::CharacterAnimator@{game::components::CharacterAnimator}}
+\doxysubsubsection{\texorpdfstring{mCachedTexture}{mCachedTexture}}
+{\footnotesize\ttfamily sf\+::\+Texture$\ast$ game\+::components\+::\+Character\+Animator\+::m\+Cached\+Texture\hspace{0.3cm}{\ttfamily [private]}}
+
+texture of the animator \mbox{\Hypertarget{classgame_1_1components_1_1CharacterAnimator_ad025d823356188ded08f84cba04447c2}\label{classgame_1_1components_1_1CharacterAnimator_ad025d823356188ded08f84cba04447c2}} 
+\index{game::components::CharacterAnimator@{game::components::CharacterAnimator}!mCurrentAnimation@{mCurrentAnimation}}
+\index{mCurrentAnimation@{mCurrentAnimation}!game::components::CharacterAnimator@{game::components::CharacterAnimator}}
+\doxysubsubsection{\texorpdfstring{mCurrentAnimation}{mCurrentAnimation}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structgame_1_1data_1_1AnimDefine}{data\+::\+Anim\+Define}}$\ast$ game\+::components\+::\+Character\+Animator\+::m\+Current\+Animation\hspace{0.3cm}{\ttfamily [private]}}
+
+current animation identifier \mbox{\Hypertarget{classgame_1_1components_1_1CharacterAnimator_a1eee74c8df5a28305b045dcf7165a449}\label{classgame_1_1components_1_1CharacterAnimator_a1eee74c8df5a28305b045dcf7165a449}} 
+\index{game::components::CharacterAnimator@{game::components::CharacterAnimator}!mCurrentAnimIndex@{mCurrentAnimIndex}}
+\index{mCurrentAnimIndex@{mCurrentAnimIndex}!game::components::CharacterAnimator@{game::components::CharacterAnimator}}
+\doxysubsubsection{\texorpdfstring{mCurrentAnimIndex}{mCurrentAnimIndex}}
+{\footnotesize\ttfamily int game\+::components\+::\+Character\+Animator\+::m\+Current\+Anim\+Index\hspace{0.3cm}{\ttfamily [private]}}
+
+position of current animation \mbox{\Hypertarget{classgame_1_1components_1_1CharacterAnimator_a032acbcc5300c6bef9fc6bae7f5b4e00}\label{classgame_1_1components_1_1CharacterAnimator_a032acbcc5300c6bef9fc6bae7f5b4e00}} 
+\index{game::components::CharacterAnimator@{game::components::CharacterAnimator}!mCurrentState@{mCurrentState}}
+\index{mCurrentState@{mCurrentState}!game::components::CharacterAnimator@{game::components::CharacterAnimator}}
+\doxysubsubsection{\texorpdfstring{mCurrentState}{mCurrentState}}
+{\footnotesize\ttfamily Animation\+State game\+::components\+::\+Character\+Animator\+::m\+Current\+State\hspace{0.3cm}{\ttfamily [private]}}
+
+current animation state \mbox{\Hypertarget{classgame_1_1components_1_1CharacterAnimator_ace0e7c87ad0542dc9a1335e31e7b369b}\label{classgame_1_1components_1_1CharacterAnimator_ace0e7c87ad0542dc9a1335e31e7b369b}} 
+\index{game::components::CharacterAnimator@{game::components::CharacterAnimator}!mGoReverse@{mGoReverse}}
+\index{mGoReverse@{mGoReverse}!game::components::CharacterAnimator@{game::components::CharacterAnimator}}
+\doxysubsubsection{\texorpdfstring{mGoReverse}{mGoReverse}}
+{\footnotesize\ttfamily bool game\+::components\+::\+Character\+Animator\+::m\+Go\+Reverse\hspace{0.3cm}{\ttfamily [private]}}
+
+true if go is facing right, false otherwise \mbox{\Hypertarget{classgame_1_1components_1_1CharacterAnimator_a914337212ed5fb96570047e3c5d53714}\label{classgame_1_1components_1_1CharacterAnimator_a914337212ed5fb96570047e3c5d53714}} 
+\index{game::components::CharacterAnimator@{game::components::CharacterAnimator}!mInitialAnimation@{mInitialAnimation}}
+\index{mInitialAnimation@{mInitialAnimation}!game::components::CharacterAnimator@{game::components::CharacterAnimator}}
+\doxysubsubsection{\texorpdfstring{mInitialAnimation}{mInitialAnimation}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structgame_1_1data_1_1AnimDefine}{data\+::\+Anim\+Define}}$\ast$ game\+::components\+::\+Character\+Animator\+::m\+Initial\+Animation\hspace{0.3cm}{\ttfamily [private]}}
+
+initial animation identifier \mbox{\Hypertarget{classgame_1_1components_1_1CharacterAnimator_a9d225cf7cb7f61d4b131658c99e05aac}\label{classgame_1_1components_1_1CharacterAnimator_a9d225cf7cb7f61d4b131658c99e05aac}} 
+\index{game::components::CharacterAnimator@{game::components::CharacterAnimator}!mStateMap@{mStateMap}}
+\index{mStateMap@{mStateMap}!game::components::CharacterAnimator@{game::components::CharacterAnimator}}
+\doxysubsubsection{\texorpdfstring{mStateMap}{mStateMap}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$Animation\+State, const \mbox{\hyperlink{structgame_1_1data_1_1AnimDefine}{data\+::\+Anim\+Define}}$\ast$$>$ game\+::components\+::\+Character\+Animator\+::m\+State\+Map\hspace{0.3cm}{\ttfamily [private]}}
+
+animation state to data file mapping \mbox{\Hypertarget{classgame_1_1components_1_1CharacterAnimator_a7d340df77bf41eb3ba805c50904aa7e3}\label{classgame_1_1components_1_1CharacterAnimator_a7d340df77bf41eb3ba805c50904aa7e3}} 
+\index{game::components::CharacterAnimator@{game::components::CharacterAnimator}!mTarget@{mTarget}}
+\index{mTarget@{mTarget}!game::components::CharacterAnimator@{game::components::CharacterAnimator}}
+\doxysubsubsection{\texorpdfstring{mTarget}{mTarget}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgame_1_1components_1_1Sprite}{Sprite}}$\ast$ game\+::components\+::\+Character\+Animator\+::m\+Target\hspace{0.3cm}{\ttfamily [private]}}
+
+target of the animator 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Components/\+Animators/Character\+Animator.\+h\end{DoxyCompactItemize}

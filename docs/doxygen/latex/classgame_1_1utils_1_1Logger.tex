@@ -1,0 +1,195 @@
+\hypertarget{classgame_1_1utils_1_1Logger}{}\doxysection{game\+::utils\+::Logger Class Reference}
+\label{classgame_1_1utils_1_1Logger}\index{game::utils::Logger@{game::utils::Logger}}
+
+
+a simple logger class  
+
+
+
+
+{\ttfamily \#include $<$Logger.\+h$>$}
+
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classgame_1_1utils_1_1Logger_a1955cf9185153ccaf11ffebf13a17d32}{log}} (const std\+::string log\+Message, int log\+Level=1)
+\begin{DoxyCompactList}\small\item\em print string to console \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classgame_1_1utils_1_1Logger_a48f7a8c58da325199e8f1fa369325914}{log}} (const sf\+::\+Vector2i vector, int log\+Level=1)
+\begin{DoxyCompactList}\small\item\em print Vector2i to console \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classgame_1_1utils_1_1Logger_a43ca67656c6bbfff2f119f0b5a5b1457}{log}} (const sf\+::\+Vector2f vector, int log\+Level=1)
+\begin{DoxyCompactList}\small\item\em print Vector2f to console \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classgame_1_1utils_1_1Logger_a43aae9a921402ecfa67dc4e5210889ae}{log}} (const sf\+::\+Float\+Rect rect, int log\+Level=1)
+\begin{DoxyCompactList}\small\item\em print Float\+Rect to console \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classgame_1_1utils_1_1Logger_ab153d8ee5353dad1f2eb20fb5436db85}{log}} (int value, int log\+Level=1)
+\begin{DoxyCompactList}\small\item\em print integer to console \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classgame_1_1utils_1_1Logger_ae573b62cd111fa0cdadd4736bbe81d55}{log}} (float value, int log\+Level=1)
+\begin{DoxyCompactList}\small\item\em print float to console \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classgame_1_1utils_1_1Logger_a2cdbc1e1a31e5055524c5a30eb4ddfd2}{set\+Log\+Level}} (int new\+Log\+Level)
+\begin{DoxyCompactList}\small\item\em set the current log level \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{classgame_1_1utils_1_1Logger_a71e2bd421fff97c5820db54b49c133d1}{Log\+Level}}
+\begin{DoxyCompactList}\small\item\em the current log level \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+a simple logger class 
+
+This class contains only static method that logs different type of data structures to console
+
+\begin{DoxyAuthor}{Author}
+Zheng Yang 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgame_1_1utils_1_1Logger_a43aae9a921402ecfa67dc4e5210889ae}\label{classgame_1_1utils_1_1Logger_a43aae9a921402ecfa67dc4e5210889ae}} 
+\index{game::utils::Logger@{game::utils::Logger}!log@{log}}
+\index{log@{log}!game::utils::Logger@{game::utils::Logger}}
+\doxysubsubsection{\texorpdfstring{log()}{log()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily static void game\+::utils\+::\+Logger\+::log (\begin{DoxyParamCaption}\item[{const sf\+::\+Float\+Rect}]{rect,  }\item[{int}]{log\+Level = {\ttfamily 1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+print Float\+Rect to console 
+
+this function takes a Float\+Rect and the log level and print the Float\+Rect to console if log level meets the requirement
+
+
+\begin{DoxyParams}{Parameters}
+{\em rect} & the rect to be printed \\
+\hline
+{\em log\+Level} & the level of this log message \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1utils_1_1Logger_a43ca67656c6bbfff2f119f0b5a5b1457}\label{classgame_1_1utils_1_1Logger_a43ca67656c6bbfff2f119f0b5a5b1457}} 
+\index{game::utils::Logger@{game::utils::Logger}!log@{log}}
+\index{log@{log}!game::utils::Logger@{game::utils::Logger}}
+\doxysubsubsection{\texorpdfstring{log()}{log()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily static void game\+::utils\+::\+Logger\+::log (\begin{DoxyParamCaption}\item[{const sf\+::\+Vector2f}]{vector,  }\item[{int}]{log\+Level = {\ttfamily 1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+print Vector2f to console 
+
+this function takes a vector and the log level and print the vector to console if log level meets the requirement
+
+
+\begin{DoxyParams}{Parameters}
+{\em vector} & the vector to be printed \\
+\hline
+{\em log\+Level} & the level of this log message \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1utils_1_1Logger_a48f7a8c58da325199e8f1fa369325914}\label{classgame_1_1utils_1_1Logger_a48f7a8c58da325199e8f1fa369325914}} 
+\index{game::utils::Logger@{game::utils::Logger}!log@{log}}
+\index{log@{log}!game::utils::Logger@{game::utils::Logger}}
+\doxysubsubsection{\texorpdfstring{log()}{log()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily static void game\+::utils\+::\+Logger\+::log (\begin{DoxyParamCaption}\item[{const sf\+::\+Vector2i}]{vector,  }\item[{int}]{log\+Level = {\ttfamily 1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+print Vector2i to console 
+
+this function takes a vector and the log level and print the vector to console if log level meets the requirement
+
+
+\begin{DoxyParams}{Parameters}
+{\em vector} & the vector to be printed \\
+\hline
+{\em log\+Level} & the level of this log message \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1utils_1_1Logger_a1955cf9185153ccaf11ffebf13a17d32}\label{classgame_1_1utils_1_1Logger_a1955cf9185153ccaf11ffebf13a17d32}} 
+\index{game::utils::Logger@{game::utils::Logger}!log@{log}}
+\index{log@{log}!game::utils::Logger@{game::utils::Logger}}
+\doxysubsubsection{\texorpdfstring{log()}{log()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily static void game\+::utils\+::\+Logger\+::log (\begin{DoxyParamCaption}\item[{const std\+::string}]{log\+Message,  }\item[{int}]{log\+Level = {\ttfamily 1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+print string to console 
+
+this function takes the log message and the log level and print the log to console if log level meets the requirement
+
+
+\begin{DoxyParams}{Parameters}
+{\em log\+Message} & the log message to be printed \\
+\hline
+{\em log\+Level} & the level of this log message \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1utils_1_1Logger_ae573b62cd111fa0cdadd4736bbe81d55}\label{classgame_1_1utils_1_1Logger_ae573b62cd111fa0cdadd4736bbe81d55}} 
+\index{game::utils::Logger@{game::utils::Logger}!log@{log}}
+\index{log@{log}!game::utils::Logger@{game::utils::Logger}}
+\doxysubsubsection{\texorpdfstring{log()}{log()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily static void game\+::utils\+::\+Logger\+::log (\begin{DoxyParamCaption}\item[{float}]{value,  }\item[{int}]{log\+Level = {\ttfamily 1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+print float to console 
+
+this function takes a float and the log level and print the float to console if log level meets the requirement
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & the float to be printed \\
+\hline
+{\em log\+Level} & the level of this log message \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1utils_1_1Logger_ab153d8ee5353dad1f2eb20fb5436db85}\label{classgame_1_1utils_1_1Logger_ab153d8ee5353dad1f2eb20fb5436db85}} 
+\index{game::utils::Logger@{game::utils::Logger}!log@{log}}
+\index{log@{log}!game::utils::Logger@{game::utils::Logger}}
+\doxysubsubsection{\texorpdfstring{log()}{log()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily static void game\+::utils\+::\+Logger\+::log (\begin{DoxyParamCaption}\item[{int}]{value,  }\item[{int}]{log\+Level = {\ttfamily 1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+print integer to console 
+
+this function takes a integer and the log level and print the integer to console if log level meets the requirement
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & the integer to be printed \\
+\hline
+{\em log\+Level} & the level of this log message \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1utils_1_1Logger_a2cdbc1e1a31e5055524c5a30eb4ddfd2}\label{classgame_1_1utils_1_1Logger_a2cdbc1e1a31e5055524c5a30eb4ddfd2}} 
+\index{game::utils::Logger@{game::utils::Logger}!setLogLevel@{setLogLevel}}
+\index{setLogLevel@{setLogLevel}!game::utils::Logger@{game::utils::Logger}}
+\doxysubsubsection{\texorpdfstring{setLogLevel()}{setLogLevel()}}
+{\footnotesize\ttfamily static void game\+::utils\+::\+Logger\+::set\+Log\+Level (\begin{DoxyParamCaption}\item[{int}]{new\+Log\+Level }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+set the current log level 
+
+this function set the current log level of the program to restrict the number of logs to be printed in the console
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Log\+Level} & the new log level \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classgame_1_1utils_1_1Logger_a71e2bd421fff97c5820db54b49c133d1}\label{classgame_1_1utils_1_1Logger_a71e2bd421fff97c5820db54b49c133d1}} 
+\index{game::utils::Logger@{game::utils::Logger}!LogLevel@{LogLevel}}
+\index{LogLevel@{LogLevel}!game::utils::Logger@{game::utils::Logger}}
+\doxysubsubsection{\texorpdfstring{LogLevel}{LogLevel}}
+{\footnotesize\ttfamily int game\+::utils\+::\+Logger\+::\+Log\+Level\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+the current log level 
+
+member functions of the log class select which message to print to the console based on this value 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Utils/Logger.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,259 @@
+\hypertarget{classgame_1_1resource_1_1ResourceManager}{}\doxysection{game\+::resource\+::Resource\+Manager$<$ TResource $>$ Class Template Reference}
+\label{classgame_1_1resource_1_1ResourceManager}\index{game::resource::ResourceManager$<$ TResource $>$@{game::resource::ResourceManager$<$ TResource $>$}}
+
+
+manager of all in-\/game resources  
+
+
+
+
+{\ttfamily \#include $<$Resource\+Manager.\+h$>$}
+
+
+
+Inheritance diagram for game\+::resource\+::Resource\+Manager$<$ TResource $>$\+:
+% FIG 0
+
+
+Collaboration diagram for game\+::resource\+::Resource\+Manager$<$ TResource $>$\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classgame_1_1resource_1_1ResourceManager_aad0a918d5dc2660bdb0cc1637b68eae4}{init}} ()
+\begin{DoxyCompactList}\small\item\em resource manager initialization \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1resource_1_1ResourceManager_a12ebc471fb75dd59e470bd13dc111297}{load\+All}} ()
+\begin{DoxyCompactList}\small\item\em load all registered resources \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1resource_1_1ResourceManager_a553ac0fc2b9d1c82c45d78a020ca981a}{register\+Resource}} (std\+::string resource\+Name, int tid, std\+::string path)
+\begin{DoxyCompactList}\small\item\em register a game resource \end{DoxyCompactList}\item 
+TResource $\ast$ \mbox{\hyperlink{classgame_1_1resource_1_1ResourceManager_ad44ae4e8bb95e37c73201a5bd72e6698}{get\+By\+ID}} (int tid) const
+\begin{DoxyCompactList}\small\item\em get resource by its id \end{DoxyCompactList}\item 
+TResource $\ast$ \mbox{\hyperlink{classgame_1_1resource_1_1ResourceManager_aa115df137b81e8f7f9a3550a043c89b8}{get\+By\+Name}} (std\+::string name) const
+\begin{DoxyCompactList}\small\item\em get resource by its name \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1resource_1_1ResourceManager_ad191b3162496a582ebecc0d6fefb7e87}{load}} (int tid)
+\begin{DoxyCompactList}\small\item\em load a resource by its id \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classgame_1_1resource_1_1ResourceManager_a601c27d4d2f4d1518e20883481b286d7}{contains}} (int tid) const
+\begin{DoxyCompactList}\small\item\em check if a resource is loaded \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgame_1_1resource_1_1ResourceManager_a3e23b0ad1180da8bca1b3ad58f27ea88}{Resource\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em private constructor \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1resource_1_1ResourceManager_a7bc672cd89d50794dc7ce87a2cde0703}{load}} (int tid, const std\+::string \&path)
+\begin{DoxyCompactList}\small\item\em load a resource based on its id and path \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unordered\+\_\+map$<$ int, std\+::unique\+\_\+ptr$<$ TResource $>$ $>$ \mbox{\hyperlink{classgame_1_1resource_1_1ResourceManager_ab75bea599dccbaf5b772edcd62bde614}{m\+Resources}}
+\item 
+std\+::unordered\+\_\+map$<$ int, std\+::string $>$ \mbox{\hyperlink{classgame_1_1resource_1_1ResourceManager_a020636ace72df21dd21c5f1788530cb3}{m\+Id\+To\+Path\+Mapping}}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, int $>$ \mbox{\hyperlink{classgame_1_1resource_1_1ResourceManager_aa5c08812709c35b1bade23a38296aee0}{m\+Name\+To\+Id\+Mapping}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classgame_1_1resource_1_1ResourceManager_a57f3bdd7098b48d7e4c5b0a9a6a4d72b}\label{classgame_1_1resource_1_1ResourceManager_a57f3bdd7098b48d7e4c5b0a9a6a4d72b}} 
+class {\bfseries utils\+::\+Singleton$<$ Resource\+Manager$<$ TResource $>$ $>$}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename TResource$>$\newline
+class game\+::resource\+::\+Resource\+Manager$<$ TResource $>$}
+
+manager of all in-\/game resources 
+
+this class manager of all in-\/game resources -\/ font, texture, sound effect, and provides APIs for user to access the references of these resources
+
+\begin{DoxyAuthor}{Author}
+Zheng Yang 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgame_1_1resource_1_1ResourceManager_a3e23b0ad1180da8bca1b3ad58f27ea88}\label{classgame_1_1resource_1_1ResourceManager_a3e23b0ad1180da8bca1b3ad58f27ea88}} 
+\index{game::resource::ResourceManager$<$ TResource $>$@{game::resource::ResourceManager$<$ TResource $>$}!ResourceManager@{ResourceManager}}
+\index{ResourceManager@{ResourceManager}!game::resource::ResourceManager$<$ TResource $>$@{game::resource::ResourceManager$<$ TResource $>$}}
+\doxysubsubsection{\texorpdfstring{ResourceManager()}{ResourceManager()}}
+{\footnotesize\ttfamily template$<$typename TResource $>$ \\
+\mbox{\hyperlink{classgame_1_1resource_1_1ResourceManager}{game\+::resource\+::\+Resource\+Manager}}$<$ TResource $>$\+::\mbox{\hyperlink{classgame_1_1resource_1_1ResourceManager}{Resource\+Manager}}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+private constructor 
+
+private constructor to ensure singleton pattern 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgame_1_1resource_1_1ResourceManager_a601c27d4d2f4d1518e20883481b286d7}\label{classgame_1_1resource_1_1ResourceManager_a601c27d4d2f4d1518e20883481b286d7}} 
+\index{game::resource::ResourceManager$<$ TResource $>$@{game::resource::ResourceManager$<$ TResource $>$}!contains@{contains}}
+\index{contains@{contains}!game::resource::ResourceManager$<$ TResource $>$@{game::resource::ResourceManager$<$ TResource $>$}}
+\doxysubsubsection{\texorpdfstring{contains()}{contains()}}
+{\footnotesize\ttfamily template$<$typename TResource $>$ \\
+bool \mbox{\hyperlink{classgame_1_1resource_1_1ResourceManager}{game\+::resource\+::\+Resource\+Manager}}$<$ TResource $>$\+::contains (\begin{DoxyParamCaption}\item[{int}]{tid }\end{DoxyParamCaption}) const}
+
+
+
+check if a resource is loaded 
+
+check if a resource is loaded
+
+\begin{DoxyReturn}{Returns}
+true if resource is loaded, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgame_1_1resource_1_1ResourceManager_ad44ae4e8bb95e37c73201a5bd72e6698}\label{classgame_1_1resource_1_1ResourceManager_ad44ae4e8bb95e37c73201a5bd72e6698}} 
+\index{game::resource::ResourceManager$<$ TResource $>$@{game::resource::ResourceManager$<$ TResource $>$}!getByID@{getByID}}
+\index{getByID@{getByID}!game::resource::ResourceManager$<$ TResource $>$@{game::resource::ResourceManager$<$ TResource $>$}}
+\doxysubsubsection{\texorpdfstring{getByID()}{getByID()}}
+{\footnotesize\ttfamily template$<$typename TResource $>$ \\
+TResource $\ast$ \mbox{\hyperlink{classgame_1_1resource_1_1ResourceManager}{game\+::resource\+::\+Resource\+Manager}}$<$ TResource $>$\+::get\+By\+ID (\begin{DoxyParamCaption}\item[{int}]{tid }\end{DoxyParamCaption}) const}
+
+
+
+get resource by its id 
+
+get reference to a resource by its id
+
+
+\begin{DoxyParams}{Parameters}
+{\em tid} & resource id \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+reference to resource 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgame_1_1resource_1_1ResourceManager_aa115df137b81e8f7f9a3550a043c89b8}\label{classgame_1_1resource_1_1ResourceManager_aa115df137b81e8f7f9a3550a043c89b8}} 
+\index{game::resource::ResourceManager$<$ TResource $>$@{game::resource::ResourceManager$<$ TResource $>$}!getByName@{getByName}}
+\index{getByName@{getByName}!game::resource::ResourceManager$<$ TResource $>$@{game::resource::ResourceManager$<$ TResource $>$}}
+\doxysubsubsection{\texorpdfstring{getByName()}{getByName()}}
+{\footnotesize\ttfamily template$<$typename TResource $>$ \\
+TResource $\ast$ \mbox{\hyperlink{classgame_1_1resource_1_1ResourceManager}{game\+::resource\+::\+Resource\+Manager}}$<$ TResource $>$\+::get\+By\+Name (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption}) const}
+
+
+
+get resource by its name 
+
+get reference to a resource by its name
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & resource name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+reference to resource 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgame_1_1resource_1_1ResourceManager_aad0a918d5dc2660bdb0cc1637b68eae4}\label{classgame_1_1resource_1_1ResourceManager_aad0a918d5dc2660bdb0cc1637b68eae4}} 
+\index{game::resource::ResourceManager$<$ TResource $>$@{game::resource::ResourceManager$<$ TResource $>$}!init@{init}}
+\index{init@{init}!game::resource::ResourceManager$<$ TResource $>$@{game::resource::ResourceManager$<$ TResource $>$}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily template$<$typename TResource $>$ \\
+void \mbox{\hyperlink{classgame_1_1resource_1_1ResourceManager}{game\+::resource\+::\+Resource\+Manager}}$<$ TResource $>$\+::init}
+
+
+
+resource manager initialization 
+
+must call this function before using any API provided by resource manager \mbox{\Hypertarget{classgame_1_1resource_1_1ResourceManager_ad191b3162496a582ebecc0d6fefb7e87}\label{classgame_1_1resource_1_1ResourceManager_ad191b3162496a582ebecc0d6fefb7e87}} 
+\index{game::resource::ResourceManager$<$ TResource $>$@{game::resource::ResourceManager$<$ TResource $>$}!load@{load}}
+\index{load@{load}!game::resource::ResourceManager$<$ TResource $>$@{game::resource::ResourceManager$<$ TResource $>$}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename TResource $>$ \\
+void \mbox{\hyperlink{classgame_1_1resource_1_1ResourceManager}{game\+::resource\+::\+Resource\+Manager}}$<$ TResource $>$\+::load (\begin{DoxyParamCaption}\item[{int}]{tid }\end{DoxyParamCaption})}
+
+
+
+load a resource by its id 
+
+load a resource by its id
+
+
+\begin{DoxyParams}{Parameters}
+{\em tid} & resource id \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1resource_1_1ResourceManager_a7bc672cd89d50794dc7ce87a2cde0703}\label{classgame_1_1resource_1_1ResourceManager_a7bc672cd89d50794dc7ce87a2cde0703}} 
+\index{game::resource::ResourceManager$<$ TResource $>$@{game::resource::ResourceManager$<$ TResource $>$}!load@{load}}
+\index{load@{load}!game::resource::ResourceManager$<$ TResource $>$@{game::resource::ResourceManager$<$ TResource $>$}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename TResource $>$ \\
+void \mbox{\hyperlink{classgame_1_1resource_1_1ResourceManager}{game\+::resource\+::\+Resource\+Manager}}$<$ TResource $>$\+::load (\begin{DoxyParamCaption}\item[{int}]{tid,  }\item[{const std\+::string \&}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+load a resource based on its id and path 
+
+load a resource based on its id and path
+
+
+\begin{DoxyParams}{Parameters}
+{\em tid} & resource id \\
+\hline
+{\em path} & resource path in hard drive \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1resource_1_1ResourceManager_a12ebc471fb75dd59e470bd13dc111297}\label{classgame_1_1resource_1_1ResourceManager_a12ebc471fb75dd59e470bd13dc111297}} 
+\index{game::resource::ResourceManager$<$ TResource $>$@{game::resource::ResourceManager$<$ TResource $>$}!loadAll@{loadAll}}
+\index{loadAll@{loadAll}!game::resource::ResourceManager$<$ TResource $>$@{game::resource::ResourceManager$<$ TResource $>$}}
+\doxysubsubsection{\texorpdfstring{loadAll()}{loadAll()}}
+{\footnotesize\ttfamily template$<$typename TResource $>$ \\
+void \mbox{\hyperlink{classgame_1_1resource_1_1ResourceManager}{game\+::resource\+::\+Resource\+Manager}}$<$ TResource $>$\+::load\+All}
+
+
+
+load all registered resources 
+
+load all registered resources and store them in a list of unique pointers \mbox{\Hypertarget{classgame_1_1resource_1_1ResourceManager_a553ac0fc2b9d1c82c45d78a020ca981a}\label{classgame_1_1resource_1_1ResourceManager_a553ac0fc2b9d1c82c45d78a020ca981a}} 
+\index{game::resource::ResourceManager$<$ TResource $>$@{game::resource::ResourceManager$<$ TResource $>$}!registerResource@{registerResource}}
+\index{registerResource@{registerResource}!game::resource::ResourceManager$<$ TResource $>$@{game::resource::ResourceManager$<$ TResource $>$}}
+\doxysubsubsection{\texorpdfstring{registerResource()}{registerResource()}}
+{\footnotesize\ttfamily template$<$typename TResource $>$ \\
+void \mbox{\hyperlink{classgame_1_1resource_1_1ResourceManager}{game\+::resource\+::\+Resource\+Manager}}$<$ TResource $>$\+::register\+Resource (\begin{DoxyParamCaption}\item[{std\+::string}]{resource\+Name,  }\item[{int}]{tid,  }\item[{std\+::string}]{path }\end{DoxyParamCaption})}
+
+
+
+register a game resource 
+
+register a game resource so it can be loaded later
+
+
+\begin{DoxyParams}{Parameters}
+{\em tid} & resource id \\
+\hline
+{\em resource\+Name} & reource name \\
+\hline
+{\em path} & resource path in hard drive \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classgame_1_1resource_1_1ResourceManager_a020636ace72df21dd21c5f1788530cb3}\label{classgame_1_1resource_1_1ResourceManager_a020636ace72df21dd21c5f1788530cb3}} 
+\index{game::resource::ResourceManager$<$ TResource $>$@{game::resource::ResourceManager$<$ TResource $>$}!mIdToPathMapping@{mIdToPathMapping}}
+\index{mIdToPathMapping@{mIdToPathMapping}!game::resource::ResourceManager$<$ TResource $>$@{game::resource::ResourceManager$<$ TResource $>$}}
+\doxysubsubsection{\texorpdfstring{mIdToPathMapping}{mIdToPathMapping}}
+{\footnotesize\ttfamily template$<$typename TResource $>$ \\
+std\+::unordered\+\_\+map$<$int, std\+::string$>$ \mbox{\hyperlink{classgame_1_1resource_1_1ResourceManager}{game\+::resource\+::\+Resource\+Manager}}$<$ TResource $>$\+::m\+Id\+To\+Path\+Mapping\hspace{0.3cm}{\ttfamily [private]}}
+
+resource id to file path mapping \mbox{\Hypertarget{classgame_1_1resource_1_1ResourceManager_aa5c08812709c35b1bade23a38296aee0}\label{classgame_1_1resource_1_1ResourceManager_aa5c08812709c35b1bade23a38296aee0}} 
+\index{game::resource::ResourceManager$<$ TResource $>$@{game::resource::ResourceManager$<$ TResource $>$}!mNameToIdMapping@{mNameToIdMapping}}
+\index{mNameToIdMapping@{mNameToIdMapping}!game::resource::ResourceManager$<$ TResource $>$@{game::resource::ResourceManager$<$ TResource $>$}}
+\doxysubsubsection{\texorpdfstring{mNameToIdMapping}{mNameToIdMapping}}
+{\footnotesize\ttfamily template$<$typename TResource $>$ \\
+std\+::unordered\+\_\+map$<$std\+::string, int$>$ \mbox{\hyperlink{classgame_1_1resource_1_1ResourceManager}{game\+::resource\+::\+Resource\+Manager}}$<$ TResource $>$\+::m\+Name\+To\+Id\+Mapping\hspace{0.3cm}{\ttfamily [private]}}
+
+resource name to id mapping \mbox{\Hypertarget{classgame_1_1resource_1_1ResourceManager_ab75bea599dccbaf5b772edcd62bde614}\label{classgame_1_1resource_1_1ResourceManager_ab75bea599dccbaf5b772edcd62bde614}} 
+\index{game::resource::ResourceManager$<$ TResource $>$@{game::resource::ResourceManager$<$ TResource $>$}!mResources@{mResources}}
+\index{mResources@{mResources}!game::resource::ResourceManager$<$ TResource $>$@{game::resource::ResourceManager$<$ TResource $>$}}
+\doxysubsubsection{\texorpdfstring{mResources}{mResources}}
+{\footnotesize\ttfamily template$<$typename TResource $>$ \\
+std\+::unordered\+\_\+map$<$int, std\+::unique\+\_\+ptr$<$TResource$>$ $>$ \mbox{\hyperlink{classgame_1_1resource_1_1ResourceManager}{game\+::resource\+::\+Resource\+Manager}}$<$ TResource $>$\+::m\+Resources\hspace{0.3cm}{\ttfamily [private]}}
+
+all the loaded resources 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Resource/Resource\+Manager.\+h\item 
+include/\+Resource/Resource\+Manager.\+inl\end{DoxyCompactItemize}

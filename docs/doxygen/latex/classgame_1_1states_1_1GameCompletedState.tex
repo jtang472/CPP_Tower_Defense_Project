@@ -1,0 +1,165 @@
+\hypertarget{classgame_1_1states_1_1GameCompletedState}{}\doxysection{game\+::states\+::Game\+Completed\+State Class Reference}
+\label{classgame_1_1states_1_1GameCompletedState}\index{game::states::GameCompletedState@{game::states::GameCompletedState}}
+
+
+game completed state  
+
+
+
+
+{\ttfamily \#include $<$Game\+Completed\+State.\+h$>$}
+
+
+
+Inheritance diagram for game\+::states\+::Game\+Completed\+State\+:
+% FIG 0
+
+
+Collaboration diagram for game\+::states\+::Game\+Completed\+State\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgame_1_1states_1_1GameCompletedState_a4ece226fd92852ed9a4b84eb147f6314}{Game\+Completed\+State}} (\mbox{\hyperlink{classgame_1_1states_1_1StateMachine}{State\+Machine}} $\ast$owner)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classgame_1_1states_1_1GameCompletedState}{Game\+Completed\+State}} constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classgame_1_1states_1_1GameCompletedState_accaef23dae7df03be476499b695c48e0}{$\sim$\+Game\+Completed\+State}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classgame_1_1states_1_1GameOverState}{Game\+Over\+State}} destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1states_1_1GameCompletedState_a4868c1ff9bfa30bdcff869e07e4aad1d}{init}} () override
+\begin{DoxyCompactList}\small\item\em initialization of state \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classgame_1_1states_1_1GameCompletedState_a7228f21b8f72e710e40f639d8c191480}{freeze\+Time}} () override
+\begin{DoxyCompactList}\small\item\em check if delta time should be set to 0 when the state is created and put to the state machine \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1states_1_1GameCompletedState_a2809ad174ffcc2148e080972d1e56be4}{on\+Quit\+Game\+Clicked}} ()
+\begin{DoxyCompactList}\small\item\em return to main button click event handler \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1states_1_1GameCompletedState_a3561ee49b02338be9de19e558737378c}{on\+Restart\+Clicked}} ()
+\begin{DoxyCompactList}\small\item\em return to restart button click event handler \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1states_1_1GameCompletedState_a78e0f8310d2a1eadf1c5d195bb24977d}{reset\+Player}} ()
+\begin{DoxyCompactList}\small\item\em reset player state before going back to main menu \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+boost\+::signals2\+::connection \mbox{\hyperlink{classgame_1_1states_1_1GameCompletedState_ae162f704984b1a463f369c42e59ca24c}{m\+Quit\+Button\+Listener}}
+\item 
+boost\+::signals2\+::connection \mbox{\hyperlink{classgame_1_1states_1_1GameCompletedState_a5e780d028e05ab1d17eba0ff3572616c}{m\+Restart\+Listener}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+game completed state 
+
+this state will be pushed to state machine when player beats the game
+
+\begin{DoxyAuthor}{Author}
+Zheng Yang 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgame_1_1states_1_1GameCompletedState_a4ece226fd92852ed9a4b84eb147f6314}\label{classgame_1_1states_1_1GameCompletedState_a4ece226fd92852ed9a4b84eb147f6314}} 
+\index{game::states::GameCompletedState@{game::states::GameCompletedState}!GameCompletedState@{GameCompletedState}}
+\index{GameCompletedState@{GameCompletedState}!game::states::GameCompletedState@{game::states::GameCompletedState}}
+\doxysubsubsection{\texorpdfstring{GameCompletedState()}{GameCompletedState()}}
+{\footnotesize\ttfamily game\+::states\+::\+Game\+Completed\+State\+::\+Game\+Completed\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgame_1_1states_1_1StateMachine}{State\+Machine}} $\ast$}]{owner }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classgame_1_1states_1_1GameCompletedState}{Game\+Completed\+State}} constructor. 
+
+\mbox{\hyperlink{classgame_1_1states_1_1GameCompletedState}{Game\+Completed\+State}} constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em owner} & state machine \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1states_1_1GameCompletedState_accaef23dae7df03be476499b695c48e0}\label{classgame_1_1states_1_1GameCompletedState_accaef23dae7df03be476499b695c48e0}} 
+\index{game::states::GameCompletedState@{game::states::GameCompletedState}!````~GameCompletedState@{$\sim$GameCompletedState}}
+\index{````~GameCompletedState@{$\sim$GameCompletedState}!game::states::GameCompletedState@{game::states::GameCompletedState}}
+\doxysubsubsection{\texorpdfstring{$\sim$GameCompletedState()}{~GameCompletedState()}}
+{\footnotesize\ttfamily game\+::states\+::\+Game\+Completed\+State\+::$\sim$\+Game\+Completed\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classgame_1_1states_1_1GameOverState}{Game\+Over\+State}} destructor. 
+
+\mbox{\hyperlink{classgame_1_1states_1_1GameOverState}{Game\+Over\+State}} destructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgame_1_1states_1_1GameCompletedState_a7228f21b8f72e710e40f639d8c191480}\label{classgame_1_1states_1_1GameCompletedState_a7228f21b8f72e710e40f639d8c191480}} 
+\index{game::states::GameCompletedState@{game::states::GameCompletedState}!freezeTime@{freezeTime}}
+\index{freezeTime@{freezeTime}!game::states::GameCompletedState@{game::states::GameCompletedState}}
+\doxysubsubsection{\texorpdfstring{freezeTime()}{freezeTime()}}
+{\footnotesize\ttfamily bool game\+::states\+::\+Game\+Completed\+State\+::freeze\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+check if delta time should be set to 0 when the state is created and put to the state machine 
+
+check if delta time should be set to 0 when the state is created and put to the state machine 
+
+Reimplemented from \mbox{\hyperlink{classgame_1_1states_1_1State_ad66a7d869a38b0560796e1b7c4562c15}{game\+::states\+::\+State}}.
+
+\mbox{\Hypertarget{classgame_1_1states_1_1GameCompletedState_a4868c1ff9bfa30bdcff869e07e4aad1d}\label{classgame_1_1states_1_1GameCompletedState_a4868c1ff9bfa30bdcff869e07e4aad1d}} 
+\index{game::states::GameCompletedState@{game::states::GameCompletedState}!init@{init}}
+\index{init@{init}!game::states::GameCompletedState@{game::states::GameCompletedState}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void game\+::states\+::\+Game\+Completed\+State\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+initialization of state 
+
+initialization of state, called by state machine after state is created and put to the stack 
+
+Reimplemented from \mbox{\hyperlink{classgame_1_1states_1_1State_ab8464551e311a0621bd80f2a21a7cb4a}{game\+::states\+::\+State}}.
+
+\mbox{\Hypertarget{classgame_1_1states_1_1GameCompletedState_a2809ad174ffcc2148e080972d1e56be4}\label{classgame_1_1states_1_1GameCompletedState_a2809ad174ffcc2148e080972d1e56be4}} 
+\index{game::states::GameCompletedState@{game::states::GameCompletedState}!onQuitGameClicked@{onQuitGameClicked}}
+\index{onQuitGameClicked@{onQuitGameClicked}!game::states::GameCompletedState@{game::states::GameCompletedState}}
+\doxysubsubsection{\texorpdfstring{onQuitGameClicked()}{onQuitGameClicked()}}
+{\footnotesize\ttfamily void game\+::states\+::\+Game\+Completed\+State\+::on\+Quit\+Game\+Clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+return to main button click event handler 
+
+callback function for main button click event \mbox{\Hypertarget{classgame_1_1states_1_1GameCompletedState_a3561ee49b02338be9de19e558737378c}\label{classgame_1_1states_1_1GameCompletedState_a3561ee49b02338be9de19e558737378c}} 
+\index{game::states::GameCompletedState@{game::states::GameCompletedState}!onRestartClicked@{onRestartClicked}}
+\index{onRestartClicked@{onRestartClicked}!game::states::GameCompletedState@{game::states::GameCompletedState}}
+\doxysubsubsection{\texorpdfstring{onRestartClicked()}{onRestartClicked()}}
+{\footnotesize\ttfamily void game\+::states\+::\+Game\+Completed\+State\+::on\+Restart\+Clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+return to restart button click event handler 
+
+callback function for restart button click event \mbox{\Hypertarget{classgame_1_1states_1_1GameCompletedState_a78e0f8310d2a1eadf1c5d195bb24977d}\label{classgame_1_1states_1_1GameCompletedState_a78e0f8310d2a1eadf1c5d195bb24977d}} 
+\index{game::states::GameCompletedState@{game::states::GameCompletedState}!resetPlayer@{resetPlayer}}
+\index{resetPlayer@{resetPlayer}!game::states::GameCompletedState@{game::states::GameCompletedState}}
+\doxysubsubsection{\texorpdfstring{resetPlayer()}{resetPlayer()}}
+{\footnotesize\ttfamily void game\+::states\+::\+Game\+Completed\+State\+::reset\+Player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+reset player state before going back to main menu 
+
+reset player state before going back to main menu 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classgame_1_1states_1_1GameCompletedState_ae162f704984b1a463f369c42e59ca24c}\label{classgame_1_1states_1_1GameCompletedState_ae162f704984b1a463f369c42e59ca24c}} 
+\index{game::states::GameCompletedState@{game::states::GameCompletedState}!mQuitButtonListener@{mQuitButtonListener}}
+\index{mQuitButtonListener@{mQuitButtonListener}!game::states::GameCompletedState@{game::states::GameCompletedState}}
+\doxysubsubsection{\texorpdfstring{mQuitButtonListener}{mQuitButtonListener}}
+{\footnotesize\ttfamily boost\+::signals2\+::connection game\+::states\+::\+Game\+Completed\+State\+::m\+Quit\+Button\+Listener\hspace{0.3cm}{\ttfamily [private]}}
+
+return to main button click event listener \mbox{\Hypertarget{classgame_1_1states_1_1GameCompletedState_a5e780d028e05ab1d17eba0ff3572616c}\label{classgame_1_1states_1_1GameCompletedState_a5e780d028e05ab1d17eba0ff3572616c}} 
+\index{game::states::GameCompletedState@{game::states::GameCompletedState}!mRestartListener@{mRestartListener}}
+\index{mRestartListener@{mRestartListener}!game::states::GameCompletedState@{game::states::GameCompletedState}}
+\doxysubsubsection{\texorpdfstring{mRestartListener}{mRestartListener}}
+{\footnotesize\ttfamily boost\+::signals2\+::connection game\+::states\+::\+Game\+Completed\+State\+::m\+Restart\+Listener\hspace{0.3cm}{\ttfamily [private]}}
+
+restart game button click event listener 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+States/Game\+Completed\+State.\+h\end{DoxyCompactItemize}

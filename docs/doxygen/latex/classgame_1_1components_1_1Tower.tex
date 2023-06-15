@@ -1,0 +1,212 @@
+\hypertarget{classgame_1_1components_1_1Tower}{}\doxysection{game\+::components\+::Tower Class Reference}
+\label{classgame_1_1components_1_1Tower}\index{game::components::Tower@{game::components::Tower}}
+
+
+base class for all types of towers in the game  
+
+
+
+
+{\ttfamily \#include $<$Tower.\+h$>$}
+
+
+
+Inheritance diagram for game\+::components\+::Tower\+:
+% FIG 0
+
+
+Collaboration diagram for game\+::components\+::Tower\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgame_1_1components_1_1Tower_af42f8961585666e20382864a38681fdb}{Tower}} (\mbox{\hyperlink{classgame_1_1components_1_1GameObject}{Game\+Object}} \&owner, const \mbox{\hyperlink{structgame_1_1data_1_1TowerDefine}{data\+::\+Tower\+Define}} \&data, \mbox{\hyperlink{classgame_1_1grid_1_1GridLayer}{grid\+::\+Grid\+Layer}} \&tower\+Layer, \mbox{\hyperlink{classgame_1_1grid_1_1GridLayer}{grid\+::\+Grid\+Layer}} \&enemy\+Layer)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classgame_1_1components_1_1Tower}{Tower}} constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classgame_1_1components_1_1Tower_a4bd358f579f3b970582c8bf9d0ecf0ad}{$\sim$\+Tower}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classgame_1_1components_1_1Tower}{Tower}} destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1Tower_aa5b527261d5455e5d01e4eda16f1bcc9}{tick}} (float delta\+Time) override
+\begin{DoxyCompactList}\small\item\em component lifecycle function \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{structgame_1_1data_1_1TowerDefine}{data\+::\+Tower\+Define}} \& \mbox{\hyperlink{classgame_1_1components_1_1Tower_afbf182584f145d88326f9df7407a90e7}{get\+Data}} () const
+\begin{DoxyCompactList}\small\item\em get enemy define \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1Tower_a6e6dcb71ff8e507ff590e1c724cd8374}{spawn}} ()
+\begin{DoxyCompactList}\small\item\em final initialization of tower before render it to grid \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1Tower_a608d38e6f05efb8242c5ba44eabfa39b}{register\+Animation}} ()
+\begin{DoxyCompactList}\small\item\em register all of the enemies animation states to its character animator \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classgame_1_1components_1_1GridEntity}{Grid\+Entity}} $\ast$ \mbox{\hyperlink{classgame_1_1components_1_1Tower_aa908150f72132a540d67eb10b180908b}{search\+Enemy}} ()
+\begin{DoxyCompactList}\small\item\em search the closest enemy that is in the tower\textquotesingle{}s attack range \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{structgame_1_1data_1_1TowerDefine}{data\+::\+Tower\+Define}} \& \mbox{\hyperlink{classgame_1_1components_1_1Tower_ac7b0e52663680f2e95cc999a25e8986f}{m\+Data}}
+\item 
+\mbox{\hyperlink{classgame_1_1components_1_1Sprite}{Sprite}} $\ast$ \mbox{\hyperlink{classgame_1_1components_1_1Tower_a67482c4ecd24e6398373fa75ee05760b}{m\+Sprite}}
+\item 
+\mbox{\hyperlink{classgame_1_1components_1_1CharacterAnimator}{Character\+Animator}} $\ast$ \mbox{\hyperlink{classgame_1_1components_1_1Tower_a559e10438dc0f394defa68615f939c02}{m\+Animator}}
+\item 
+\mbox{\hyperlink{classgame_1_1grid_1_1GridLayer}{grid\+::\+Grid\+Layer}} \& \mbox{\hyperlink{classgame_1_1components_1_1Tower_a3a41bd37290a77c72dcb018d4f5f5a84}{m\+Enemy\+Layer}}
+\item 
+float \mbox{\hyperlink{classgame_1_1components_1_1Tower_adc55b4f2f6a035566945ba8195ddd17b}{m\+Time\+Elapsed\+From\+Last\+Attack}}
+\item 
+bool \mbox{\hyperlink{classgame_1_1components_1_1Tower_aa166d4f01446bd9777c52918592d3c1f}{m\+Is\+Spawned}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+base class for all types of towers in the game 
+
+in the current design, we do not necessarily need any derived class for towers. Instead, all tower behavior should be defined in the Tower\+Define json file. So this class should be purely data driven and should be capable of handling any tower behavior defined in the json data file
+
+\begin{DoxyAuthor}{Author}
+Zheng Yang 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgame_1_1components_1_1Tower_af42f8961585666e20382864a38681fdb}\label{classgame_1_1components_1_1Tower_af42f8961585666e20382864a38681fdb}} 
+\index{game::components::Tower@{game::components::Tower}!Tower@{Tower}}
+\index{Tower@{Tower}!game::components::Tower@{game::components::Tower}}
+\doxysubsubsection{\texorpdfstring{Tower()}{Tower()}}
+{\footnotesize\ttfamily game\+::components\+::\+Tower\+::\+Tower (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgame_1_1components_1_1GameObject}{Game\+Object}} \&}]{owner,  }\item[{const \mbox{\hyperlink{structgame_1_1data_1_1TowerDefine}{data\+::\+Tower\+Define}} \&}]{data,  }\item[{\mbox{\hyperlink{classgame_1_1grid_1_1GridLayer}{grid\+::\+Grid\+Layer}} \&}]{tower\+Layer,  }\item[{\mbox{\hyperlink{classgame_1_1grid_1_1GridLayer}{grid\+::\+Grid\+Layer}} \&}]{enemy\+Layer }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classgame_1_1components_1_1Tower}{Tower}} constructor. 
+
+\mbox{\hyperlink{classgame_1_1components_1_1Tower}{Tower}} constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em owner} & owner of the component \\
+\hline
+{\em data} & tower data \\
+\hline
+{\em layer} & the grid layer of the tower entity \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1components_1_1Tower_a4bd358f579f3b970582c8bf9d0ecf0ad}\label{classgame_1_1components_1_1Tower_a4bd358f579f3b970582c8bf9d0ecf0ad}} 
+\index{game::components::Tower@{game::components::Tower}!````~Tower@{$\sim$Tower}}
+\index{````~Tower@{$\sim$Tower}!game::components::Tower@{game::components::Tower}}
+\doxysubsubsection{\texorpdfstring{$\sim$Tower()}{~Tower()}}
+{\footnotesize\ttfamily game\+::components\+::\+Tower\+::$\sim$\+Tower (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classgame_1_1components_1_1Tower}{Tower}} destructor. 
+
+\mbox{\hyperlink{classgame_1_1components_1_1Tower}{Tower}} destructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgame_1_1components_1_1Tower_afbf182584f145d88326f9df7407a90e7}\label{classgame_1_1components_1_1Tower_afbf182584f145d88326f9df7407a90e7}} 
+\index{game::components::Tower@{game::components::Tower}!getData@{getData}}
+\index{getData@{getData}!game::components::Tower@{game::components::Tower}}
+\doxysubsubsection{\texorpdfstring{getData()}{getData()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structgame_1_1data_1_1TowerDefine}{data\+::\+Tower\+Define}}\& game\+::components\+::\+Tower\+::get\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get enemy define 
+
+get enemy define
+
+\begin{DoxyReturn}{Returns}
+enemy define data 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgame_1_1components_1_1Tower_a608d38e6f05efb8242c5ba44eabfa39b}\label{classgame_1_1components_1_1Tower_a608d38e6f05efb8242c5ba44eabfa39b}} 
+\index{game::components::Tower@{game::components::Tower}!registerAnimation@{registerAnimation}}
+\index{registerAnimation@{registerAnimation}!game::components::Tower@{game::components::Tower}}
+\doxysubsubsection{\texorpdfstring{registerAnimation()}{registerAnimation()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Tower\+::register\+Animation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+register all of the enemies animation states to its character animator 
+
+register all of the enemies animation states to its character animator \mbox{\Hypertarget{classgame_1_1components_1_1Tower_aa908150f72132a540d67eb10b180908b}\label{classgame_1_1components_1_1Tower_aa908150f72132a540d67eb10b180908b}} 
+\index{game::components::Tower@{game::components::Tower}!searchEnemy@{searchEnemy}}
+\index{searchEnemy@{searchEnemy}!game::components::Tower@{game::components::Tower}}
+\doxysubsubsection{\texorpdfstring{searchEnemy()}{searchEnemy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgame_1_1components_1_1GridEntity}{Grid\+Entity}}$\ast$ game\+::components\+::\+Tower\+::search\+Enemy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+search the closest enemy that is in the tower\textquotesingle{}s attack range 
+
+search the closest enemy that is in the tower\textquotesingle{}s attack range in the grid \mbox{\Hypertarget{classgame_1_1components_1_1Tower_a6e6dcb71ff8e507ff590e1c724cd8374}\label{classgame_1_1components_1_1Tower_a6e6dcb71ff8e507ff590e1c724cd8374}} 
+\index{game::components::Tower@{game::components::Tower}!spawn@{spawn}}
+\index{spawn@{spawn}!game::components::Tower@{game::components::Tower}}
+\doxysubsubsection{\texorpdfstring{spawn()}{spawn()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Tower\+::spawn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+final initialization of tower before render it to grid 
+
+final initialization of tower before make it alive and put it to grid \mbox{\Hypertarget{classgame_1_1components_1_1Tower_aa5b527261d5455e5d01e4eda16f1bcc9}\label{classgame_1_1components_1_1Tower_aa5b527261d5455e5d01e4eda16f1bcc9}} 
+\index{game::components::Tower@{game::components::Tower}!tick@{tick}}
+\index{tick@{tick}!game::components::Tower@{game::components::Tower}}
+\doxysubsubsection{\texorpdfstring{tick()}{tick()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Tower\+::tick (\begin{DoxyParamCaption}\item[{float}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+component lifecycle function 
+
+component lifecycle function, gets called automatically every frame. This is where every component in the game gets updated
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & the time elpased between now and last frame \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classgame_1_1components_1_1Component_ac85cd99e8109eb32a97549bf437ea5ce}{game\+::components\+::\+Component}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classgame_1_1components_1_1Tower_a559e10438dc0f394defa68615f939c02}\label{classgame_1_1components_1_1Tower_a559e10438dc0f394defa68615f939c02}} 
+\index{game::components::Tower@{game::components::Tower}!mAnimator@{mAnimator}}
+\index{mAnimator@{mAnimator}!game::components::Tower@{game::components::Tower}}
+\doxysubsubsection{\texorpdfstring{mAnimator}{mAnimator}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgame_1_1components_1_1CharacterAnimator}{Character\+Animator}}$\ast$ game\+::components\+::\+Tower\+::m\+Animator\hspace{0.3cm}{\ttfamily [private]}}
+
+my character animator \mbox{\Hypertarget{classgame_1_1components_1_1Tower_ac7b0e52663680f2e95cc999a25e8986f}\label{classgame_1_1components_1_1Tower_ac7b0e52663680f2e95cc999a25e8986f}} 
+\index{game::components::Tower@{game::components::Tower}!mData@{mData}}
+\index{mData@{mData}!game::components::Tower@{game::components::Tower}}
+\doxysubsubsection{\texorpdfstring{mData}{mData}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structgame_1_1data_1_1TowerDefine}{data\+::\+Tower\+Define}}\& game\+::components\+::\+Tower\+::m\+Data\hspace{0.3cm}{\ttfamily [private]}}
+
+my enemy data \mbox{\Hypertarget{classgame_1_1components_1_1Tower_a3a41bd37290a77c72dcb018d4f5f5a84}\label{classgame_1_1components_1_1Tower_a3a41bd37290a77c72dcb018d4f5f5a84}} 
+\index{game::components::Tower@{game::components::Tower}!mEnemyLayer@{mEnemyLayer}}
+\index{mEnemyLayer@{mEnemyLayer}!game::components::Tower@{game::components::Tower}}
+\doxysubsubsection{\texorpdfstring{mEnemyLayer}{mEnemyLayer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgame_1_1grid_1_1GridLayer}{grid\+::\+Grid\+Layer}}\& game\+::components\+::\+Tower\+::m\+Enemy\+Layer\hspace{0.3cm}{\ttfamily [private]}}
+
+enemy layer \mbox{\Hypertarget{classgame_1_1components_1_1Tower_aa166d4f01446bd9777c52918592d3c1f}\label{classgame_1_1components_1_1Tower_aa166d4f01446bd9777c52918592d3c1f}} 
+\index{game::components::Tower@{game::components::Tower}!mIsSpawned@{mIsSpawned}}
+\index{mIsSpawned@{mIsSpawned}!game::components::Tower@{game::components::Tower}}
+\doxysubsubsection{\texorpdfstring{mIsSpawned}{mIsSpawned}}
+{\footnotesize\ttfamily bool game\+::components\+::\+Tower\+::m\+Is\+Spawned\hspace{0.3cm}{\ttfamily [private]}}
+
+is the tower ready to attack \mbox{\Hypertarget{classgame_1_1components_1_1Tower_a67482c4ecd24e6398373fa75ee05760b}\label{classgame_1_1components_1_1Tower_a67482c4ecd24e6398373fa75ee05760b}} 
+\index{game::components::Tower@{game::components::Tower}!mSprite@{mSprite}}
+\index{mSprite@{mSprite}!game::components::Tower@{game::components::Tower}}
+\doxysubsubsection{\texorpdfstring{mSprite}{mSprite}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgame_1_1components_1_1Sprite}{Sprite}}$\ast$ game\+::components\+::\+Tower\+::m\+Sprite\hspace{0.3cm}{\ttfamily [private]}}
+
+my sprite \mbox{\Hypertarget{classgame_1_1components_1_1Tower_adc55b4f2f6a035566945ba8195ddd17b}\label{classgame_1_1components_1_1Tower_adc55b4f2f6a035566945ba8195ddd17b}} 
+\index{game::components::Tower@{game::components::Tower}!mTimeElapsedFromLastAttack@{mTimeElapsedFromLastAttack}}
+\index{mTimeElapsedFromLastAttack@{mTimeElapsedFromLastAttack}!game::components::Tower@{game::components::Tower}}
+\doxysubsubsection{\texorpdfstring{mTimeElapsedFromLastAttack}{mTimeElapsedFromLastAttack}}
+{\footnotesize\ttfamily float game\+::components\+::\+Tower\+::m\+Time\+Elapsed\+From\+Last\+Attack\hspace{0.3cm}{\ttfamily [private]}}
+
+the elapsed time from last tower attack 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Components/\+Game\+Play/Tower.\+h\end{DoxyCompactItemize}

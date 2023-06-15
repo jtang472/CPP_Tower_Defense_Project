@@ -1,0 +1,284 @@
+\hypertarget{classgame_1_1components_1_1Button}{}\doxysection{game\+::components\+::Button Class Reference}
+\label{classgame_1_1components_1_1Button}\index{game::components::Button@{game::components::Button}}
+
+
+button class that provides a on click event for registrations  
+
+
+
+
+{\ttfamily \#include $<$Button.\+h$>$}
+
+
+
+Inheritance diagram for game\+::components\+::Button\+:
+% FIG 0
+
+
+Collaboration diagram for game\+::components\+::Button\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgame_1_1components_1_1Button_abe5551742fa4bf9c11b00e661a52cc94}{Button}} (\mbox{\hyperlink{classgame_1_1components_1_1GameObject}{Game\+Object}} \&owner, const \mbox{\hyperlink{structgame_1_1data_1_1ButtonDefine}{data\+::\+Button\+Define}} $\ast$button\+Define, renderer\+::\+Render\+Layer layer, int depth)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classgame_1_1components_1_1Button}{Button}} constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classgame_1_1components_1_1Button_a50a3c694607c0da9b7f51af92b1a940c}{$\sim$\+Button}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classgame_1_1components_1_1Button}{Button}} destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1Button_a7c8fdc9cdc1bb32d787f700c982a4aae}{on\+Enable}} () override
+\begin{DoxyCompactList}\small\item\em component lifecycle function \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1Button_a3e5c724baba4143560b9dfd2b814d542}{on\+Disable}} () override
+\begin{DoxyCompactList}\small\item\em component lifecycle function \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1Button_a928b5179ff58c5b89317933feb32dc9c}{on\+Pointer\+Press}} () override
+\begin{DoxyCompactList}\small\item\em callback for pointer press event \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1Button_ae36be34dd637544e2a8aab69be4abff0}{on\+Pointer\+Release}} () override
+\begin{DoxyCompactList}\small\item\em callback for pointer release event \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1Button_acf110d3e0d550d4bbf4db1524110dd36}{on\+Pointer\+Click}} () override
+\begin{DoxyCompactList}\small\item\em callback for pointer click event \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1Button_a1382877fd6ce63c12094e78043d98e02}{set\+Raycastable}} (bool is\+Raycastable)
+\begin{DoxyCompactList}\small\item\em set if button can be detected by input system and block pointer \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classgame_1_1components_1_1Text}{Text}} $\ast$ \mbox{\hyperlink{classgame_1_1components_1_1Button_ae31ef1591b3adc9862b37a0df1e5f97b}{get\+Text}} () const
+\begin{DoxyCompactList}\small\item\em return the text component of the button \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classgame_1_1components_1_1Sprite}{Sprite}} $\ast$ \mbox{\hyperlink{classgame_1_1components_1_1Button_ac30249cefceb25089f6f669f3c14233e}{get\+Sprite}} () const
+\begin{DoxyCompactList}\small\item\em return the sprite component of the button \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Button\+Click\+Delegate \mbox{\hyperlink{classgame_1_1components_1_1Button_abb2cadd719271b9b1c00d12156407d68}{on\+Click}}
+\item 
+\mbox{\hyperlink{classgame_1_1components_1_1Sprite}{Sprite}} $\ast$ \mbox{\hyperlink{classgame_1_1components_1_1Button_a1bf5de9b884b065aedf6f7fb092c75b6}{m\+Sprite}}
+\item 
+\mbox{\hyperlink{classgame_1_1components_1_1Text}{Text}} $\ast$ \mbox{\hyperlink{classgame_1_1components_1_1Button_af1419f1e819de1139e9734090cbf3c36}{m\+Text}}
+\item 
+sf\+::\+Texture $\ast$ \mbox{\hyperlink{classgame_1_1components_1_1Button_a362915584200fea6d48733f950e632da}{m\+Normal\+Texture}}
+\item 
+sf\+::\+Texture $\ast$ \mbox{\hyperlink{classgame_1_1components_1_1Button_a196400378dc958f45c861fbcd6e6685b}{m\+Pressed\+Texture}}
+\item 
+const \mbox{\hyperlink{structgame_1_1data_1_1ButtonDefine}{data\+::\+Button\+Define}} $\ast$ \mbox{\hyperlink{classgame_1_1components_1_1Button_a2b7fd87830ddba123391b2c8bc8de5b9}{m\+Data}}
+\item 
+renderer\+::\+Render\+Layer \mbox{\hyperlink{classgame_1_1components_1_1Button_ad4999593769dbc19589ab5e5b21a783b}{m\+Layer}}
+\item 
+int \mbox{\hyperlink{classgame_1_1components_1_1Button_a787428659df0f966b8b3d35c6da90b07}{m\+Depth}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+button class that provides a on click event for registrations 
+
+the button class that provides a on click event for registrations, and render button to screen based on rules defined in Button\+Define json file
+
+\begin{DoxyAuthor}{Author}
+Zheng Yang 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgame_1_1components_1_1Button_abe5551742fa4bf9c11b00e661a52cc94}\label{classgame_1_1components_1_1Button_abe5551742fa4bf9c11b00e661a52cc94}} 
+\index{game::components::Button@{game::components::Button}!Button@{Button}}
+\index{Button@{Button}!game::components::Button@{game::components::Button}}
+\doxysubsubsection{\texorpdfstring{Button()}{Button()}}
+{\footnotesize\ttfamily game\+::components\+::\+Button\+::\+Button (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgame_1_1components_1_1GameObject}{Game\+Object}} \&}]{owner,  }\item[{const \mbox{\hyperlink{structgame_1_1data_1_1ButtonDefine}{data\+::\+Button\+Define}} $\ast$}]{button\+Define,  }\item[{renderer\+::\+Render\+Layer}]{layer,  }\item[{int}]{depth }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classgame_1_1components_1_1Button}{Button}} constructor. 
+
+\mbox{\hyperlink{classgame_1_1components_1_1Button}{Button}} constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em owner} & owner of the component \\
+\hline
+{\em button\+Define} & button data \\
+\hline
+{\em layer} & render layer of the button \\
+\hline
+{\em depth} & depth of the button in its render layer \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1components_1_1Button_a50a3c694607c0da9b7f51af92b1a940c}\label{classgame_1_1components_1_1Button_a50a3c694607c0da9b7f51af92b1a940c}} 
+\index{game::components::Button@{game::components::Button}!````~Button@{$\sim$Button}}
+\index{````~Button@{$\sim$Button}!game::components::Button@{game::components::Button}}
+\doxysubsubsection{\texorpdfstring{$\sim$Button()}{~Button()}}
+{\footnotesize\ttfamily game\+::components\+::\+Button\+::$\sim$\+Button (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classgame_1_1components_1_1Button}{Button}} destructor. 
+
+\mbox{\hyperlink{classgame_1_1components_1_1Button}{Button}} destructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgame_1_1components_1_1Button_ac30249cefceb25089f6f669f3c14233e}\label{classgame_1_1components_1_1Button_ac30249cefceb25089f6f669f3c14233e}} 
+\index{game::components::Button@{game::components::Button}!getSprite@{getSprite}}
+\index{getSprite@{getSprite}!game::components::Button@{game::components::Button}}
+\doxysubsubsection{\texorpdfstring{getSprite()}{getSprite()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgame_1_1components_1_1Sprite}{Sprite}}$\ast$ game\+::components\+::\+Button\+::get\+Sprite (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+return the sprite component of the button 
+
+return the sprite component of the button
+
+\begin{DoxyReturn}{Returns}
+sprite component of the button 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgame_1_1components_1_1Button_ae31ef1591b3adc9862b37a0df1e5f97b}\label{classgame_1_1components_1_1Button_ae31ef1591b3adc9862b37a0df1e5f97b}} 
+\index{game::components::Button@{game::components::Button}!getText@{getText}}
+\index{getText@{getText}!game::components::Button@{game::components::Button}}
+\doxysubsubsection{\texorpdfstring{getText()}{getText()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgame_1_1components_1_1Text}{Text}}$\ast$ game\+::components\+::\+Button\+::get\+Text (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+return the text component of the button 
+
+return the text component of the button
+
+\begin{DoxyReturn}{Returns}
+text component of the button 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgame_1_1components_1_1Button_a3e5c724baba4143560b9dfd2b814d542}\label{classgame_1_1components_1_1Button_a3e5c724baba4143560b9dfd2b814d542}} 
+\index{game::components::Button@{game::components::Button}!onDisable@{onDisable}}
+\index{onDisable@{onDisable}!game::components::Button@{game::components::Button}}
+\doxysubsubsection{\texorpdfstring{onDisable()}{onDisable()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Button\+::on\+Disable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+component lifecycle function 
+
+component lifecycle function, gets called automatically when component is disabled 
+
+Reimplemented from \mbox{\hyperlink{classgame_1_1components_1_1Component_ac79cec6fc53b00f36bbde8e8f7e23c05}{game\+::components\+::\+Component}}.
+
+\mbox{\Hypertarget{classgame_1_1components_1_1Button_a7c8fdc9cdc1bb32d787f700c982a4aae}\label{classgame_1_1components_1_1Button_a7c8fdc9cdc1bb32d787f700c982a4aae}} 
+\index{game::components::Button@{game::components::Button}!onEnable@{onEnable}}
+\index{onEnable@{onEnable}!game::components::Button@{game::components::Button}}
+\doxysubsubsection{\texorpdfstring{onEnable()}{onEnable()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Button\+::on\+Enable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+component lifecycle function 
+
+component lifecycle function, gets called automatically when component is enabled 
+
+Reimplemented from \mbox{\hyperlink{classgame_1_1components_1_1Component_a333e4242c1594bfdc5713cddafae6a23}{game\+::components\+::\+Component}}.
+
+\mbox{\Hypertarget{classgame_1_1components_1_1Button_acf110d3e0d550d4bbf4db1524110dd36}\label{classgame_1_1components_1_1Button_acf110d3e0d550d4bbf4db1524110dd36}} 
+\index{game::components::Button@{game::components::Button}!onPointerClick@{onPointerClick}}
+\index{onPointerClick@{onPointerClick}!game::components::Button@{game::components::Button}}
+\doxysubsubsection{\texorpdfstring{onPointerClick()}{onPointerClick()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Button\+::on\+Pointer\+Click (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+callback for pointer click event 
+
+callback for pointer release event -\/ notify listeners of the button click event that this button is clicked 
+
+Implements \mbox{\hyperlink{classgame_1_1input_1_1IPointerClick_a324a6f26de0dedd47719372d23421007}{game\+::input\+::\+IPointer\+Click}}.
+
+\mbox{\Hypertarget{classgame_1_1components_1_1Button_a928b5179ff58c5b89317933feb32dc9c}\label{classgame_1_1components_1_1Button_a928b5179ff58c5b89317933feb32dc9c}} 
+\index{game::components::Button@{game::components::Button}!onPointerPress@{onPointerPress}}
+\index{onPointerPress@{onPointerPress}!game::components::Button@{game::components::Button}}
+\doxysubsubsection{\texorpdfstring{onPointerPress()}{onPointerPress()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Button\+::on\+Pointer\+Press (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+callback for pointer press event 
+
+callback for pointer press event -\/ switch to highlight sprite 
+
+Implements \mbox{\hyperlink{classgame_1_1input_1_1IPointerPress_accd35a5dda1d3ea37d1900bd8881da28}{game\+::input\+::\+IPointer\+Press}}.
+
+\mbox{\Hypertarget{classgame_1_1components_1_1Button_ae36be34dd637544e2a8aab69be4abff0}\label{classgame_1_1components_1_1Button_ae36be34dd637544e2a8aab69be4abff0}} 
+\index{game::components::Button@{game::components::Button}!onPointerRelease@{onPointerRelease}}
+\index{onPointerRelease@{onPointerRelease}!game::components::Button@{game::components::Button}}
+\doxysubsubsection{\texorpdfstring{onPointerRelease()}{onPointerRelease()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Button\+::on\+Pointer\+Release (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+callback for pointer release event 
+
+callback for pointer release event -\/ switch to normal sprite 
+
+Implements \mbox{\hyperlink{classgame_1_1input_1_1IPointerRelease_af501f3679d703db84bc97288ce89880c}{game\+::input\+::\+IPointer\+Release}}.
+
+\mbox{\Hypertarget{classgame_1_1components_1_1Button_a1382877fd6ce63c12094e78043d98e02}\label{classgame_1_1components_1_1Button_a1382877fd6ce63c12094e78043d98e02}} 
+\index{game::components::Button@{game::components::Button}!setRaycastable@{setRaycastable}}
+\index{setRaycastable@{setRaycastable}!game::components::Button@{game::components::Button}}
+\doxysubsubsection{\texorpdfstring{setRaycastable()}{setRaycastable()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Button\+::set\+Raycastable (\begin{DoxyParamCaption}\item[{bool}]{is\+Raycastable }\end{DoxyParamCaption})}
+
+
+
+set if button can be detected by input system and block pointer 
+
+set if a button can be detected by input system and block pointer
+
+
+\begin{DoxyParams}{Parameters}
+{\em is\+Raycastable} & true if you want the button to be detected and block pointer, false otherwise \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classgame_1_1components_1_1Button_a2b7fd87830ddba123391b2c8bc8de5b9}\label{classgame_1_1components_1_1Button_a2b7fd87830ddba123391b2c8bc8de5b9}} 
+\index{game::components::Button@{game::components::Button}!mData@{mData}}
+\index{mData@{mData}!game::components::Button@{game::components::Button}}
+\doxysubsubsection{\texorpdfstring{mData}{mData}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structgame_1_1data_1_1ButtonDefine}{data\+::\+Button\+Define}}$\ast$ game\+::components\+::\+Button\+::m\+Data}
+
+my data \mbox{\Hypertarget{classgame_1_1components_1_1Button_a787428659df0f966b8b3d35c6da90b07}\label{classgame_1_1components_1_1Button_a787428659df0f966b8b3d35c6da90b07}} 
+\index{game::components::Button@{game::components::Button}!mDepth@{mDepth}}
+\index{mDepth@{mDepth}!game::components::Button@{game::components::Button}}
+\doxysubsubsection{\texorpdfstring{mDepth}{mDepth}}
+{\footnotesize\ttfamily int game\+::components\+::\+Button\+::m\+Depth}
+
+my depth in current render layer \mbox{\Hypertarget{classgame_1_1components_1_1Button_ad4999593769dbc19589ab5e5b21a783b}\label{classgame_1_1components_1_1Button_ad4999593769dbc19589ab5e5b21a783b}} 
+\index{game::components::Button@{game::components::Button}!mLayer@{mLayer}}
+\index{mLayer@{mLayer}!game::components::Button@{game::components::Button}}
+\doxysubsubsection{\texorpdfstring{mLayer}{mLayer}}
+{\footnotesize\ttfamily renderer\+::\+Render\+Layer game\+::components\+::\+Button\+::m\+Layer}
+
+my render layer \mbox{\Hypertarget{classgame_1_1components_1_1Button_a362915584200fea6d48733f950e632da}\label{classgame_1_1components_1_1Button_a362915584200fea6d48733f950e632da}} 
+\index{game::components::Button@{game::components::Button}!mNormalTexture@{mNormalTexture}}
+\index{mNormalTexture@{mNormalTexture}!game::components::Button@{game::components::Button}}
+\doxysubsubsection{\texorpdfstring{mNormalTexture}{mNormalTexture}}
+{\footnotesize\ttfamily sf\+::\+Texture$\ast$ game\+::components\+::\+Button\+::m\+Normal\+Texture}
+
+my normal button texture \mbox{\Hypertarget{classgame_1_1components_1_1Button_a196400378dc958f45c861fbcd6e6685b}\label{classgame_1_1components_1_1Button_a196400378dc958f45c861fbcd6e6685b}} 
+\index{game::components::Button@{game::components::Button}!mPressedTexture@{mPressedTexture}}
+\index{mPressedTexture@{mPressedTexture}!game::components::Button@{game::components::Button}}
+\doxysubsubsection{\texorpdfstring{mPressedTexture}{mPressedTexture}}
+{\footnotesize\ttfamily sf\+::\+Texture$\ast$ game\+::components\+::\+Button\+::m\+Pressed\+Texture}
+
+my highlight button texture \mbox{\Hypertarget{classgame_1_1components_1_1Button_a1bf5de9b884b065aedf6f7fb092c75b6}\label{classgame_1_1components_1_1Button_a1bf5de9b884b065aedf6f7fb092c75b6}} 
+\index{game::components::Button@{game::components::Button}!mSprite@{mSprite}}
+\index{mSprite@{mSprite}!game::components::Button@{game::components::Button}}
+\doxysubsubsection{\texorpdfstring{mSprite}{mSprite}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgame_1_1components_1_1Sprite}{Sprite}}$\ast$ game\+::components\+::\+Button\+::m\+Sprite}
+
+my button sprite \mbox{\Hypertarget{classgame_1_1components_1_1Button_af1419f1e819de1139e9734090cbf3c36}\label{classgame_1_1components_1_1Button_af1419f1e819de1139e9734090cbf3c36}} 
+\index{game::components::Button@{game::components::Button}!mText@{mText}}
+\index{mText@{mText}!game::components::Button@{game::components::Button}}
+\doxysubsubsection{\texorpdfstring{mText}{mText}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgame_1_1components_1_1Text}{Text}}$\ast$ game\+::components\+::\+Button\+::m\+Text}
+
+my button text \mbox{\Hypertarget{classgame_1_1components_1_1Button_abb2cadd719271b9b1c00d12156407d68}\label{classgame_1_1components_1_1Button_abb2cadd719271b9b1c00d12156407d68}} 
+\index{game::components::Button@{game::components::Button}!onClick@{onClick}}
+\index{onClick@{onClick}!game::components::Button@{game::components::Button}}
+\doxysubsubsection{\texorpdfstring{onClick}{onClick}}
+{\footnotesize\ttfamily Button\+Click\+Delegate game\+::components\+::\+Button\+::on\+Click}
+
+my on click event 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Components/Button.\+h\end{DoxyCompactItemize}

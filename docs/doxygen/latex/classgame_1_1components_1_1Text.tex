@@ -1,0 +1,372 @@
+\hypertarget{classgame_1_1components_1_1Text}{}\doxysection{game\+::components\+::Text Class Reference}
+\label{classgame_1_1components_1_1Text}\index{game::components::Text@{game::components::Text}}
+
+
+drawable for texts  
+
+
+
+
+{\ttfamily \#include $<$Text.\+h$>$}
+
+
+
+Inheritance diagram for game\+::components\+::Text\+:
+% FIG 0
+
+
+Collaboration diagram for game\+::components\+::Text\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgame_1_1components_1_1Text_a00ab46b2be9a6d39a6c073ecf706c750}{Text}} (\mbox{\hyperlink{classgame_1_1components_1_1GameObject}{Game\+Object}} \&owner, renderer\+::\+Render\+Layer layer, int depth)
+\begin{DoxyCompactList}\small\item\em text constructor \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classgame_1_1components_1_1Text_afe84778481270bc1269a3ad253e65fbe}{$\sim$\+Text}} () override
+\begin{DoxyCompactList}\small\item\em sprite destructor \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1Text_adcc660bad9bd87b6539587f314b5bbe5}{draw}} (sf\+::\+Render\+Window \&window) override
+\begin{DoxyCompactList}\small\item\em draw quad to screen \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1Text_a8e8f3f7099fce97ff45f1fd26015a0cc}{on\+Enable}} () override
+\begin{DoxyCompactList}\small\item\em component lifecycle function \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1Text_ab81a6af4abb8f7157fa484da8908082e}{on\+Disable}} () override
+\begin{DoxyCompactList}\small\item\em component lifecycle function \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1Text_a489daf1b5f9ecdd2342480c8ca5dd3e4}{set\+Alpha}} (float alpha) override
+\begin{DoxyCompactList}\small\item\em set the alpha value of the drawable \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1Text_a8b202aeb190ccff50615d440e4bc946a}{set\+Font}} (int tid)
+\begin{DoxyCompactList}\small\item\em set the referenced font with its unique identifier \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1Text_a270d6c6e3401f9862e9752befef7e5ce}{set\+Font}} (const sf\+::\+Font $\ast$font)
+\begin{DoxyCompactList}\small\item\em set the referenced font \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1Text_a9f009c8cc87e6954ffa44d795b502760}{set\+Text}} (std\+::string new\+Text, bool justify\+Go\+Size\+To\+Fit\+Text=false)
+\begin{DoxyCompactList}\small\item\em set text \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1Text_aa789a7d2d0d48088ca1d425538ec08f9}{set\+Text\+Size}} (int text\+Size)
+\begin{DoxyCompactList}\small\item\em set the text size \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1Text_a91c11e6d114436733ec9d54078adfc43}{set\+Color}} (sf\+::\+Color new\+Color)
+\begin{DoxyCompactList}\small\item\em set the color of the drawable \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1Text_a090f3ede5ab4d683ede9d24f0fcc55f3}{fit\+Text}} ()
+\begin{DoxyCompactList}\small\item\em set the size of the gameobject to fize the size of the text \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+String \mbox{\hyperlink{classgame_1_1components_1_1Text_aba42b8206f2e895be9ff95e8d10cf7b7}{wrap\+Text}} (sf\+::\+String text)
+\begin{DoxyCompactList}\small\item\em set the size of the text to fize the size of the gameobject, wrap the text if needed \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Text \mbox{\hyperlink{classgame_1_1components_1_1Text_a4143cfc83c997434bdb537ffc39ffcaf}{m\+Text}}
+\item 
+const sf\+::\+Font $\ast$ \mbox{\hyperlink{classgame_1_1components_1_1Text_af9f45858617f76239eb02a16280fda6a}{m\+Font}}
+\item 
+sf\+::\+Vector2f \mbox{\hyperlink{classgame_1_1components_1_1Text_a98c0c31d8957af154e7714cadfc1dbd6}{m\+Cached\+Transform\+Size}}
+\item 
+sf\+::\+String \mbox{\hyperlink{classgame_1_1components_1_1Text_af60b383bb7e423025dde2c971431410e}{m\+String}}
+\item 
+Pivot \mbox{\hyperlink{classgame_1_1components_1_1Text_a883c60922fc490d13ea5eea98a1127a1}{m\+Cached\+Pivot}}
+\item 
+float \mbox{\hyperlink{classgame_1_1components_1_1Text_ab25f1d775c55e2add2d9e42202d6bc67}{m\+Cached\+OffsetY}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \mbox{\hyperlink{classgame_1_1components_1_1Text_ad889d09484358a9d165b85b4d1e0d298}{Default\+Font\+ID}}
+\item 
+static const int \mbox{\hyperlink{classgame_1_1components_1_1Text_a70d7c54ca0c8d5e7bf9471eea3814bd1}{Default\+Text\+Size}}
+\item 
+static const sf\+::\+String \mbox{\hyperlink{classgame_1_1components_1_1Text_a0033e2976a09d6e11567306070dc97de}{Default\+Text}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+drawable for texts 
+
+use this class if you want to draw some text to the target window must set up a referenced font resource before it can be properly render to the game window
+
+\begin{DoxyAuthor}{Author}
+Zheng Yang 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgame_1_1components_1_1Text_a00ab46b2be9a6d39a6c073ecf706c750}\label{classgame_1_1components_1_1Text_a00ab46b2be9a6d39a6c073ecf706c750}} 
+\index{game::components::Text@{game::components::Text}!Text@{Text}}
+\index{Text@{Text}!game::components::Text@{game::components::Text}}
+\doxysubsubsection{\texorpdfstring{Text()}{Text()}}
+{\footnotesize\ttfamily game\+::components\+::\+Text\+::\+Text (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgame_1_1components_1_1GameObject}{Game\+Object}} \&}]{owner,  }\item[{renderer\+::\+Render\+Layer}]{layer,  }\item[{int}]{depth }\end{DoxyParamCaption})}
+
+
+
+text constructor 
+
+text constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em owner} & owner of the component \\
+\hline
+{\em layer} & render layer of quad \\
+\hline
+{\em depth} & render depth of quad \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1components_1_1Text_afe84778481270bc1269a3ad253e65fbe}\label{classgame_1_1components_1_1Text_afe84778481270bc1269a3ad253e65fbe}} 
+\index{game::components::Text@{game::components::Text}!````~Text@{$\sim$Text}}
+\index{````~Text@{$\sim$Text}!game::components::Text@{game::components::Text}}
+\doxysubsubsection{\texorpdfstring{$\sim$Text()}{~Text()}}
+{\footnotesize\ttfamily game\+::components\+::\+Text\+::$\sim$\+Text (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+sprite destructor 
+
+sprite destructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgame_1_1components_1_1Text_adcc660bad9bd87b6539587f314b5bbe5}\label{classgame_1_1components_1_1Text_adcc660bad9bd87b6539587f314b5bbe5}} 
+\index{game::components::Text@{game::components::Text}!draw@{draw}}
+\index{draw@{draw}!game::components::Text@{game::components::Text}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Text\+::draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+draw quad to screen 
+
+do not call it -\/ this function should only be called by game renderer every frame this is where drawable components actually gets drawed to the screen
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & the game window to render the quad on \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classgame_1_1components_1_1RenderComponent_ada17983becaa14156fc793e915f34653}{game\+::components\+::\+Render\+Component}}.
+
+\mbox{\Hypertarget{classgame_1_1components_1_1Text_a090f3ede5ab4d683ede9d24f0fcc55f3}\label{classgame_1_1components_1_1Text_a090f3ede5ab4d683ede9d24f0fcc55f3}} 
+\index{game::components::Text@{game::components::Text}!fitText@{fitText}}
+\index{fitText@{fitText}!game::components::Text@{game::components::Text}}
+\doxysubsubsection{\texorpdfstring{fitText()}{fitText()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Text\+::fit\+Text (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+set the size of the gameobject to fize the size of the text 
+
+set the size of the gameobject to fize the size of the text \mbox{\Hypertarget{classgame_1_1components_1_1Text_ab81a6af4abb8f7157fa484da8908082e}\label{classgame_1_1components_1_1Text_ab81a6af4abb8f7157fa484da8908082e}} 
+\index{game::components::Text@{game::components::Text}!onDisable@{onDisable}}
+\index{onDisable@{onDisable}!game::components::Text@{game::components::Text}}
+\doxysubsubsection{\texorpdfstring{onDisable()}{onDisable()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Text\+::on\+Disable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+component lifecycle function 
+
+component lifecycle function, gets called automatically when component is disabled 
+
+Reimplemented from \mbox{\hyperlink{classgame_1_1components_1_1RenderComponent_a92315d762c58050ed67ef88b804426a5}{game\+::components\+::\+Render\+Component}}.
+
+\mbox{\Hypertarget{classgame_1_1components_1_1Text_a8e8f3f7099fce97ff45f1fd26015a0cc}\label{classgame_1_1components_1_1Text_a8e8f3f7099fce97ff45f1fd26015a0cc}} 
+\index{game::components::Text@{game::components::Text}!onEnable@{onEnable}}
+\index{onEnable@{onEnable}!game::components::Text@{game::components::Text}}
+\doxysubsubsection{\texorpdfstring{onEnable()}{onEnable()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Text\+::on\+Enable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+component lifecycle function 
+
+component lifecycle function, gets called automatically when component is enabled 
+
+Reimplemented from \mbox{\hyperlink{classgame_1_1components_1_1RenderComponent_ae4fac2917f13cd029ab46cae876d14e3}{game\+::components\+::\+Render\+Component}}.
+
+\mbox{\Hypertarget{classgame_1_1components_1_1Text_a489daf1b5f9ecdd2342480c8ca5dd3e4}\label{classgame_1_1components_1_1Text_a489daf1b5f9ecdd2342480c8ca5dd3e4}} 
+\index{game::components::Text@{game::components::Text}!setAlpha@{setAlpha}}
+\index{setAlpha@{setAlpha}!game::components::Text@{game::components::Text}}
+\doxysubsubsection{\texorpdfstring{setAlpha()}{setAlpha()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Text\+::set\+Alpha (\begin{DoxyParamCaption}\item[{float}]{alpha }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+set the alpha value of the drawable 
+
+set the alpha value of the drawable
+
+
+\begin{DoxyParams}{Parameters}
+{\em alpha} & 1 means entirely opaque, 0 means entirely transparent \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classgame_1_1components_1_1RenderComponent_a6038b2c4967df6ef5885d5b562e97f5a}{game\+::components\+::\+Render\+Component}}.
+
+\mbox{\Hypertarget{classgame_1_1components_1_1Text_a91c11e6d114436733ec9d54078adfc43}\label{classgame_1_1components_1_1Text_a91c11e6d114436733ec9d54078adfc43}} 
+\index{game::components::Text@{game::components::Text}!setColor@{setColor}}
+\index{setColor@{setColor}!game::components::Text@{game::components::Text}}
+\doxysubsubsection{\texorpdfstring{setColor()}{setColor()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Text\+::set\+Color (\begin{DoxyParamCaption}\item[{sf\+::\+Color}]{new\+Color }\end{DoxyParamCaption})}
+
+
+
+set the color of the drawable 
+
+set the color of the drawable
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & new color \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1components_1_1Text_a270d6c6e3401f9862e9752befef7e5ce}\label{classgame_1_1components_1_1Text_a270d6c6e3401f9862e9752befef7e5ce}} 
+\index{game::components::Text@{game::components::Text}!setFont@{setFont}}
+\index{setFont@{setFont}!game::components::Text@{game::components::Text}}
+\doxysubsubsection{\texorpdfstring{setFont()}{setFont()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void game\+::components\+::\+Text\+::set\+Font (\begin{DoxyParamCaption}\item[{const sf\+::\+Font $\ast$}]{font }\end{DoxyParamCaption})}
+
+
+
+set the referenced font 
+
+set the font to be used by sprite object -\/ font must exist as long as the sprite uses it
+
+
+\begin{DoxyParams}{Parameters}
+{\em font} & new font \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1components_1_1Text_a8b202aeb190ccff50615d440e4bc946a}\label{classgame_1_1components_1_1Text_a8b202aeb190ccff50615d440e4bc946a}} 
+\index{game::components::Text@{game::components::Text}!setFont@{setFont}}
+\index{setFont@{setFont}!game::components::Text@{game::components::Text}}
+\doxysubsubsection{\texorpdfstring{setFont()}{setFont()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void game\+::components\+::\+Text\+::set\+Font (\begin{DoxyParamCaption}\item[{int}]{tid }\end{DoxyParamCaption})}
+
+
+
+set the referenced font with its unique identifier 
+
+set the font to be used by sprite object -\/ font must exist as long as the sprite uses it
+
+
+\begin{DoxyParams}{Parameters}
+{\em tid} & the unique identifier of the new font \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1components_1_1Text_a9f009c8cc87e6954ffa44d795b502760}\label{classgame_1_1components_1_1Text_a9f009c8cc87e6954ffa44d795b502760}} 
+\index{game::components::Text@{game::components::Text}!setText@{setText}}
+\index{setText@{setText}!game::components::Text@{game::components::Text}}
+\doxysubsubsection{\texorpdfstring{setText()}{setText()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Text\+::set\+Text (\begin{DoxyParamCaption}\item[{std\+::string}]{new\+Text,  }\item[{bool}]{justify\+Go\+Size\+To\+Fit\+Text = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+set text 
+
+set the text to be displayed on the screen. set second parameter to be true if you want to adjust the size of the gameobject to match the size of the text. Otherwise, the text will be wrapped to the next line once it exceedes the width of the current gameobject
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Text} & new text \\
+\hline
+{\em justify\+Go\+Size\+To\+Fit\+Text} & true if you want to adjust the size of the gameobject to match the size of the text \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1components_1_1Text_aa789a7d2d0d48088ca1d425538ec08f9}\label{classgame_1_1components_1_1Text_aa789a7d2d0d48088ca1d425538ec08f9}} 
+\index{game::components::Text@{game::components::Text}!setTextSize@{setTextSize}}
+\index{setTextSize@{setTextSize}!game::components::Text@{game::components::Text}}
+\doxysubsubsection{\texorpdfstring{setTextSize()}{setTextSize()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Text\+::set\+Text\+Size (\begin{DoxyParamCaption}\item[{int}]{text\+Size }\end{DoxyParamCaption})}
+
+
+
+set the text size 
+
+set the text size of the text object
+
+
+\begin{DoxyParams}{Parameters}
+{\em text\+Size} & new text size \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1components_1_1Text_aba42b8206f2e895be9ff95e8d10cf7b7}\label{classgame_1_1components_1_1Text_aba42b8206f2e895be9ff95e8d10cf7b7}} 
+\index{game::components::Text@{game::components::Text}!wrapText@{wrapText}}
+\index{wrapText@{wrapText}!game::components::Text@{game::components::Text}}
+\doxysubsubsection{\texorpdfstring{wrapText()}{wrapText()}}
+{\footnotesize\ttfamily sf\+::\+String game\+::components\+::\+Text\+::wrap\+Text (\begin{DoxyParamCaption}\item[{sf\+::\+String}]{text }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+set the size of the text to fize the size of the gameobject, wrap the text if needed 
+
+set the size of the text to fize the size of the gameobject, wrap the text if needed
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & the text to be wrapped \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the new wrapped text 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classgame_1_1components_1_1Text_ad889d09484358a9d165b85b4d1e0d298}\label{classgame_1_1components_1_1Text_ad889d09484358a9d165b85b4d1e0d298}} 
+\index{game::components::Text@{game::components::Text}!DefaultFontID@{DefaultFontID}}
+\index{DefaultFontID@{DefaultFontID}!game::components::Text@{game::components::Text}}
+\doxysubsubsection{\texorpdfstring{DefaultFontID}{DefaultFontID}}
+{\footnotesize\ttfamily const int game\+::components\+::\+Text\+::\+Default\+Font\+ID\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+default font id if not otherwise defined \mbox{\Hypertarget{classgame_1_1components_1_1Text_a0033e2976a09d6e11567306070dc97de}\label{classgame_1_1components_1_1Text_a0033e2976a09d6e11567306070dc97de}} 
+\index{game::components::Text@{game::components::Text}!DefaultText@{DefaultText}}
+\index{DefaultText@{DefaultText}!game::components::Text@{game::components::Text}}
+\doxysubsubsection{\texorpdfstring{DefaultText}{DefaultText}}
+{\footnotesize\ttfamily const sf\+::\+String game\+::components\+::\+Text\+::\+Default\+Text\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+default text if not otherwise defined \mbox{\Hypertarget{classgame_1_1components_1_1Text_a70d7c54ca0c8d5e7bf9471eea3814bd1}\label{classgame_1_1components_1_1Text_a70d7c54ca0c8d5e7bf9471eea3814bd1}} 
+\index{game::components::Text@{game::components::Text}!DefaultTextSize@{DefaultTextSize}}
+\index{DefaultTextSize@{DefaultTextSize}!game::components::Text@{game::components::Text}}
+\doxysubsubsection{\texorpdfstring{DefaultTextSize}{DefaultTextSize}}
+{\footnotesize\ttfamily const int game\+::components\+::\+Text\+::\+Default\+Text\+Size\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+default text size if not otherwise defined \mbox{\Hypertarget{classgame_1_1components_1_1Text_ab25f1d775c55e2add2d9e42202d6bc67}\label{classgame_1_1components_1_1Text_ab25f1d775c55e2add2d9e42202d6bc67}} 
+\index{game::components::Text@{game::components::Text}!mCachedOffsetY@{mCachedOffsetY}}
+\index{mCachedOffsetY@{mCachedOffsetY}!game::components::Text@{game::components::Text}}
+\doxysubsubsection{\texorpdfstring{mCachedOffsetY}{mCachedOffsetY}}
+{\footnotesize\ttfamily float game\+::components\+::\+Text\+::m\+Cached\+OffsetY\hspace{0.3cm}{\ttfamily [private]}}
+
+add a default offset to the text on its y-\/axis \mbox{\Hypertarget{classgame_1_1components_1_1Text_a883c60922fc490d13ea5eea98a1127a1}\label{classgame_1_1components_1_1Text_a883c60922fc490d13ea5eea98a1127a1}} 
+\index{game::components::Text@{game::components::Text}!mCachedPivot@{mCachedPivot}}
+\index{mCachedPivot@{mCachedPivot}!game::components::Text@{game::components::Text}}
+\doxysubsubsection{\texorpdfstring{mCachedPivot}{mCachedPivot}}
+{\footnotesize\ttfamily Pivot game\+::components\+::\+Text\+::m\+Cached\+Pivot\hspace{0.3cm}{\ttfamily [private]}}
+
+my cached pivot \mbox{\Hypertarget{classgame_1_1components_1_1Text_a98c0c31d8957af154e7714cadfc1dbd6}\label{classgame_1_1components_1_1Text_a98c0c31d8957af154e7714cadfc1dbd6}} 
+\index{game::components::Text@{game::components::Text}!mCachedTransformSize@{mCachedTransformSize}}
+\index{mCachedTransformSize@{mCachedTransformSize}!game::components::Text@{game::components::Text}}
+\doxysubsubsection{\texorpdfstring{mCachedTransformSize}{mCachedTransformSize}}
+{\footnotesize\ttfamily sf\+::\+Vector2f game\+::components\+::\+Text\+::m\+Cached\+Transform\+Size\hspace{0.3cm}{\ttfamily [private]}}
+
+cache transform size for optimization \mbox{\Hypertarget{classgame_1_1components_1_1Text_af9f45858617f76239eb02a16280fda6a}\label{classgame_1_1components_1_1Text_af9f45858617f76239eb02a16280fda6a}} 
+\index{game::components::Text@{game::components::Text}!mFont@{mFont}}
+\index{mFont@{mFont}!game::components::Text@{game::components::Text}}
+\doxysubsubsection{\texorpdfstring{mFont}{mFont}}
+{\footnotesize\ttfamily const sf\+::\+Font$\ast$ game\+::components\+::\+Text\+::m\+Font\hspace{0.3cm}{\ttfamily [private]}}
+
+font of the text \mbox{\Hypertarget{classgame_1_1components_1_1Text_af60b383bb7e423025dde2c971431410e}\label{classgame_1_1components_1_1Text_af60b383bb7e423025dde2c971431410e}} 
+\index{game::components::Text@{game::components::Text}!mString@{mString}}
+\index{mString@{mString}!game::components::Text@{game::components::Text}}
+\doxysubsubsection{\texorpdfstring{mString}{mString}}
+{\footnotesize\ttfamily sf\+::\+String game\+::components\+::\+Text\+::m\+String\hspace{0.3cm}{\ttfamily [private]}}
+
+the text to be displayed \mbox{\Hypertarget{classgame_1_1components_1_1Text_a4143cfc83c997434bdb537ffc39ffcaf}\label{classgame_1_1components_1_1Text_a4143cfc83c997434bdb537ffc39ffcaf}} 
+\index{game::components::Text@{game::components::Text}!mText@{mText}}
+\index{mText@{mText}!game::components::Text@{game::components::Text}}
+\doxysubsubsection{\texorpdfstring{mText}{mText}}
+{\footnotesize\ttfamily sf\+::\+Text game\+::components\+::\+Text\+::m\+Text\hspace{0.3cm}{\ttfamily [private]}}
+
+the actual text provided by sfml 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Components/\+Drawables/Text.\+h\end{DoxyCompactItemize}

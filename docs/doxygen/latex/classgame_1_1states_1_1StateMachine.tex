@@ -1,0 +1,155 @@
+\hypertarget{classgame_1_1states_1_1StateMachine}{}\doxysection{game\+::states\+::State\+Machine Class Reference}
+\label{classgame_1_1states_1_1StateMachine}\index{game::states::StateMachine@{game::states::StateMachine}}
+
+
+implementation of a pushdown state machine  
+
+
+
+
+{\ttfamily \#include $<$State\+Machine.\+h$>$}
+
+
+
+Inheritance diagram for game\+::states\+::State\+Machine\+:
+% FIG 0
+
+
+Collaboration diagram for game\+::states\+::State\+Machine\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgame_1_1states_1_1StateMachine_a12314a120fc85073a8f28a37a704d581}{State\+Machine}} ()
+\begin{DoxyCompactList}\small\item\em state machine constructor \end{DoxyCompactList}\item 
+{\footnotesize template$<$class TState , typename... Args$>$ }\\TState $\ast$ \mbox{\hyperlink{classgame_1_1states_1_1StateMachine_a5cada68c821496221bd96b8b09645a68}{push}} (Args \&\&... args)
+\begin{DoxyCompactList}\small\item\em push a state \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1states_1_1StateMachine_a545eef19bfc78dd06a6aafe422a6c8f5}{pop}} ()
+\begin{DoxyCompactList}\small\item\em pop the top state \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classgame_1_1states_1_1State}{State}} $\ast$ \mbox{\hyperlink{classgame_1_1states_1_1StateMachine_a1ddd5844439ecbd712d710d5b9345f54}{peak}} () const
+\begin{DoxyCompactList}\small\item\em get the top state \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1states_1_1StateMachine_ac0595c3e0ff975b94bac0b40b0ae9695}{clear}} ()
+\begin{DoxyCompactList}\small\item\em clear all active states \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classgame_1_1states_1_1StateMachine_a161fd6c5becd1f8acc4bb2724dc975b7}{is\+Empty}} () const
+\begin{DoxyCompactList}\small\item\em check if state machine is empty \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classgame_1_1states_1_1State}{State}} $>$ $>$ \mbox{\hyperlink{classgame_1_1states_1_1StateMachine_aa4de82ab47c124aaaf1f6102ead17771}{m\+Active\+States}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+implementation of a pushdown state machine 
+
+this class manages all active states and put them in a stack to simulate pushdown automata behavior. This allows multiple states to be displayed in the same time
+
+\begin{DoxyAuthor}{Author}
+Zheng Yang 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgame_1_1states_1_1StateMachine_a12314a120fc85073a8f28a37a704d581}\label{classgame_1_1states_1_1StateMachine_a12314a120fc85073a8f28a37a704d581}} 
+\index{game::states::StateMachine@{game::states::StateMachine}!StateMachine@{StateMachine}}
+\index{StateMachine@{StateMachine}!game::states::StateMachine@{game::states::StateMachine}}
+\doxysubsubsection{\texorpdfstring{StateMachine()}{StateMachine()}}
+{\footnotesize\ttfamily game\+::states\+::\+State\+Machine\+::\+State\+Machine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+state machine constructor 
+
+state machine constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em owner} & state machine constructor \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgame_1_1states_1_1StateMachine_ac0595c3e0ff975b94bac0b40b0ae9695}\label{classgame_1_1states_1_1StateMachine_ac0595c3e0ff975b94bac0b40b0ae9695}} 
+\index{game::states::StateMachine@{game::states::StateMachine}!clear@{clear}}
+\index{clear@{clear}!game::states::StateMachine@{game::states::StateMachine}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void game\+::states\+::\+State\+Machine\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+clear all active states 
+
+clear all active states from the state machine \mbox{\Hypertarget{classgame_1_1states_1_1StateMachine_a161fd6c5becd1f8acc4bb2724dc975b7}\label{classgame_1_1states_1_1StateMachine_a161fd6c5becd1f8acc4bb2724dc975b7}} 
+\index{game::states::StateMachine@{game::states::StateMachine}!isEmpty@{isEmpty}}
+\index{isEmpty@{isEmpty}!game::states::StateMachine@{game::states::StateMachine}}
+\doxysubsubsection{\texorpdfstring{isEmpty()}{isEmpty()}}
+{\footnotesize\ttfamily bool game\+::states\+::\+State\+Machine\+::is\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+check if state machine is empty 
+
+check if state machine is empty
+
+\begin{DoxyReturn}{Returns}
+true if state machine is empty, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgame_1_1states_1_1StateMachine_a1ddd5844439ecbd712d710d5b9345f54}\label{classgame_1_1states_1_1StateMachine_a1ddd5844439ecbd712d710d5b9345f54}} 
+\index{game::states::StateMachine@{game::states::StateMachine}!peak@{peak}}
+\index{peak@{peak}!game::states::StateMachine@{game::states::StateMachine}}
+\doxysubsubsection{\texorpdfstring{peak()}{peak()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgame_1_1states_1_1State}{State}}$\ast$ game\+::states\+::\+State\+Machine\+::peak (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get the top state 
+
+get the top state from stack
+
+\begin{DoxyReturn}{Returns}
+top state 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgame_1_1states_1_1StateMachine_a545eef19bfc78dd06a6aafe422a6c8f5}\label{classgame_1_1states_1_1StateMachine_a545eef19bfc78dd06a6aafe422a6c8f5}} 
+\index{game::states::StateMachine@{game::states::StateMachine}!pop@{pop}}
+\index{pop@{pop}!game::states::StateMachine@{game::states::StateMachine}}
+\doxysubsubsection{\texorpdfstring{pop()}{pop()}}
+{\footnotesize\ttfamily void game\+::states\+::\+State\+Machine\+::pop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+pop the top state 
+
+pop the top state from stack \mbox{\Hypertarget{classgame_1_1states_1_1StateMachine_a5cada68c821496221bd96b8b09645a68}\label{classgame_1_1states_1_1StateMachine_a5cada68c821496221bd96b8b09645a68}} 
+\index{game::states::StateMachine@{game::states::StateMachine}!push@{push}}
+\index{push@{push}!game::states::StateMachine@{game::states::StateMachine}}
+\doxysubsubsection{\texorpdfstring{push()}{push()}}
+{\footnotesize\ttfamily template$<$class TState , typename... Args$>$ \\
+TState $\ast$ game\+::states\+::\+State\+Machine\+::push (\begin{DoxyParamCaption}\item[{Args \&\&...}]{args }\end{DoxyParamCaption})}
+
+
+
+push a state 
+
+push a state into the top of stack
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & state constructor parameters \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classgame_1_1states_1_1StateMachine_aa4de82ab47c124aaaf1f6102ead17771}\label{classgame_1_1states_1_1StateMachine_aa4de82ab47c124aaaf1f6102ead17771}} 
+\index{game::states::StateMachine@{game::states::StateMachine}!mActiveStates@{mActiveStates}}
+\index{mActiveStates@{mActiveStates}!game::states::StateMachine@{game::states::StateMachine}}
+\doxysubsubsection{\texorpdfstring{mActiveStates}{mActiveStates}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classgame_1_1states_1_1State}{State}}$>$ $>$ game\+::states\+::\+State\+Machine\+::m\+Active\+States\hspace{0.3cm}{\ttfamily [private]}}
+
+all active states 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+States/State\+Machine.\+h\item 
+include/\+States/State\+Machine.\+inl\end{DoxyCompactItemize}

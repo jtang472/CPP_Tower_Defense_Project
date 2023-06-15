@@ -1,0 +1,360 @@
+\hypertarget{classgame_1_1components_1_1RenderComponent}{}\doxysection{game\+::components\+::Render\+Component Class Reference}
+\label{classgame_1_1components_1_1RenderComponent}\index{game::components::RenderComponent@{game::components::RenderComponent}}
+
+
+base class for all the drawables in the game  
+
+
+
+
+{\ttfamily \#include $<$Render\+Component.\+h$>$}
+
+
+
+Inheritance diagram for game\+::components\+::Render\+Component\+:
+% FIG 0
+
+
+Collaboration diagram for game\+::components\+::Render\+Component\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgame_1_1components_1_1RenderComponent_ac646bb4b7a3e36f6fe268a17a069f061}{Render\+Component}} (\mbox{\hyperlink{classgame_1_1components_1_1GameObject}{Game\+Object}} \&owner, renderer\+::\+Render\+Layer layer, int depth)
+\begin{DoxyCompactList}\small\item\em render component constructor \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classgame_1_1components_1_1RenderComponent_aae02ecbe68c3e18854d48fcd0ba68509}{$\sim$\+Render\+Component}} ()
+\begin{DoxyCompactList}\small\item\em render component destructor \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classgame_1_1components_1_1RenderComponent_ada17983becaa14156fc793e915f34653}{draw}} (sf\+::\+Render\+Window \&window)
+\begin{DoxyCompactList}\small\item\em draw quad to screen \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classgame_1_1components_1_1RenderComponent_ae4fac2917f13cd029ab46cae876d14e3}{on\+Enable}} () override
+\begin{DoxyCompactList}\small\item\em component lifecycle function \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classgame_1_1components_1_1RenderComponent_a92315d762c58050ed67ef88b804426a5}{on\+Disable}} () override
+\begin{DoxyCompactList}\small\item\em component lifecycle function \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classgame_1_1components_1_1RenderComponent_a6038b2c4967df6ef5885d5b562e97f5a}{set\+Alpha}} (float alpha)
+\begin{DoxyCompactList}\small\item\em set the alpha value of the drawable \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classgame_1_1components_1_1RenderComponent_a70f4336f4a7c67260a4548b101bf442f}{set\+Rotate}} (float angle)
+\begin{DoxyCompactList}\small\item\em set the rotation value of the drawable \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classgame_1_1components_1_1RenderComponent_a1b5a15f697c3e72114a9e3c38a8aec1d}{rotate}} (float angle)
+\begin{DoxyCompactList}\small\item\em rotate drawable \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classgame_1_1components_1_1RenderComponent_af1c7b4976870146d22a226b3ff6bf19c}{is\+Raycastable}} ()
+\begin{DoxyCompactList}\small\item\em determines if a render component can be detected by input system and block pointer \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1RenderComponent_ad3a31883baa92767f85417a1ff37d602}{set\+Raycastable}} (bool \mbox{\hyperlink{classgame_1_1components_1_1RenderComponent_af1c7b4976870146d22a226b3ff6bf19c}{is\+Raycastable}})
+\begin{DoxyCompactList}\small\item\em set if a drawable can be detected by input system and block pointer \end{DoxyCompactList}\item 
+sf\+::\+Vector2f \mbox{\hyperlink{classgame_1_1components_1_1RenderComponent_adb3484519223bff3392e09b16ef4393b}{get\+Size}} () const
+\begin{DoxyCompactList}\small\item\em get the size of the drawable \end{DoxyCompactList}\item 
+sf\+::\+Float\+Rect \mbox{\hyperlink{classgame_1_1components_1_1RenderComponent_abd5a12297a19b6508ecc49cd715738f1}{get\+Bounding\+Box}} () const
+\begin{DoxyCompactList}\small\item\em get the bounding box of the drawable \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classgame_1_1components_1_1RenderComponent_a9678b3b896e4b335fd18cfc648d9ec3d}{get\+Depth}} () const
+\begin{DoxyCompactList}\small\item\em get the depth of the drawable \end{DoxyCompactList}\item 
+renderer\+::\+Render\+Layer \mbox{\hyperlink{classgame_1_1components_1_1RenderComponent_a093696c798371546bde3c6f7bbd90e6e}{get\+Layer}} () const
+\begin{DoxyCompactList}\small\item\em get the layer of the drawable \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgame_1_1components_1_1Transform}{Transform}} $\ast$ \mbox{\hyperlink{classgame_1_1components_1_1RenderComponent_abc6cf4a51483c647d30e4bdbffe3ef59}{m\+Transform}}
+\item 
+renderer\+::\+Render\+Layer \mbox{\hyperlink{classgame_1_1components_1_1RenderComponent_a2c3edcb90afd863dab2047b955aebffb}{m\+Layer}}
+\item 
+int \mbox{\hyperlink{classgame_1_1components_1_1RenderComponent_a0016bfae1d5242843c9001609637397f}{m\+Depth}}
+\item 
+bool \mbox{\hyperlink{classgame_1_1components_1_1RenderComponent_a46c977d9cdb9dc595c1b08d087045427}{m\+Is\+Raycastable}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \mbox{\hyperlink{classgame_1_1components_1_1RenderComponent_ac0cb362a5c129344057f1663d3715303}{Layer\+Modifier}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+base class for all the drawables in the game 
+
+everything in our game that can be saw by the player contains a drawable component inherited from this class this is an abstract class
+
+\begin{DoxyAuthor}{Author}
+Zheng Yang 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgame_1_1components_1_1RenderComponent_ac646bb4b7a3e36f6fe268a17a069f061}\label{classgame_1_1components_1_1RenderComponent_ac646bb4b7a3e36f6fe268a17a069f061}} 
+\index{game::components::RenderComponent@{game::components::RenderComponent}!RenderComponent@{RenderComponent}}
+\index{RenderComponent@{RenderComponent}!game::components::RenderComponent@{game::components::RenderComponent}}
+\doxysubsubsection{\texorpdfstring{RenderComponent()}{RenderComponent()}}
+{\footnotesize\ttfamily game\+::components\+::\+Render\+Component\+::\+Render\+Component (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgame_1_1components_1_1GameObject}{Game\+Object}} \&}]{owner,  }\item[{renderer\+::\+Render\+Layer}]{layer,  }\item[{int}]{depth }\end{DoxyParamCaption})}
+
+
+
+render component constructor 
+
+render component constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em owner} & owner of the component \\
+\hline
+{\em layer} & render layer of drawable \\
+\hline
+{\em depth} & render depth of drawable \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1components_1_1RenderComponent_aae02ecbe68c3e18854d48fcd0ba68509}\label{classgame_1_1components_1_1RenderComponent_aae02ecbe68c3e18854d48fcd0ba68509}} 
+\index{game::components::RenderComponent@{game::components::RenderComponent}!````~RenderComponent@{$\sim$RenderComponent}}
+\index{````~RenderComponent@{$\sim$RenderComponent}!game::components::RenderComponent@{game::components::RenderComponent}}
+\doxysubsubsection{\texorpdfstring{$\sim$RenderComponent()}{~RenderComponent()}}
+{\footnotesize\ttfamily virtual game\+::components\+::\+Render\+Component\+::$\sim$\+Render\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+render component destructor 
+
+render component destructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgame_1_1components_1_1RenderComponent_ada17983becaa14156fc793e915f34653}\label{classgame_1_1components_1_1RenderComponent_ada17983becaa14156fc793e915f34653}} 
+\index{game::components::RenderComponent@{game::components::RenderComponent}!draw@{draw}}
+\index{draw@{draw}!game::components::RenderComponent@{game::components::RenderComponent}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily virtual void game\+::components\+::\+Render\+Component\+::draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+draw quad to screen 
+
+do not call it -\/ this function should only be called by game renderer every frame this is where drawable components actually gets drawed to the screen
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & the game window to render the quad on \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classgame_1_1components_1_1Text_adcc660bad9bd87b6539587f314b5bbe5}{game\+::components\+::\+Text}}, \mbox{\hyperlink{classgame_1_1components_1_1Sprite_a02adea1e91692ef699ca30280645c634}{game\+::components\+::\+Sprite}}, \mbox{\hyperlink{classgame_1_1components_1_1Shape_a025ae9685f4a8d9c39a9b9a05083b628}{game\+::components\+::\+Shape}}, and \mbox{\hyperlink{classgame_1_1components_1_1Quad_a4511982a9069b25e1c09af1722792179}{game\+::components\+::\+Quad}}.
+
+\mbox{\Hypertarget{classgame_1_1components_1_1RenderComponent_abd5a12297a19b6508ecc49cd715738f1}\label{classgame_1_1components_1_1RenderComponent_abd5a12297a19b6508ecc49cd715738f1}} 
+\index{game::components::RenderComponent@{game::components::RenderComponent}!getBoundingBox@{getBoundingBox}}
+\index{getBoundingBox@{getBoundingBox}!game::components::RenderComponent@{game::components::RenderComponent}}
+\doxysubsubsection{\texorpdfstring{getBoundingBox()}{getBoundingBox()}}
+{\footnotesize\ttfamily sf\+::\+Float\+Rect game\+::components\+::\+Render\+Component\+::get\+Bounding\+Box (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get the bounding box of the drawable 
+
+get the bounding box of the drawable
+
+\begin{DoxyReturn}{Returns}
+bounding box of the drawable 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgame_1_1components_1_1RenderComponent_a9678b3b896e4b335fd18cfc648d9ec3d}\label{classgame_1_1components_1_1RenderComponent_a9678b3b896e4b335fd18cfc648d9ec3d}} 
+\index{game::components::RenderComponent@{game::components::RenderComponent}!getDepth@{getDepth}}
+\index{getDepth@{getDepth}!game::components::RenderComponent@{game::components::RenderComponent}}
+\doxysubsubsection{\texorpdfstring{getDepth()}{getDepth()}}
+{\footnotesize\ttfamily int game\+::components\+::\+Render\+Component\+::get\+Depth (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get the depth of the drawable 
+
+get the depth of the drawable
+
+\begin{DoxyReturn}{Returns}
+depth of the drawable 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgame_1_1components_1_1RenderComponent_a093696c798371546bde3c6f7bbd90e6e}\label{classgame_1_1components_1_1RenderComponent_a093696c798371546bde3c6f7bbd90e6e}} 
+\index{game::components::RenderComponent@{game::components::RenderComponent}!getLayer@{getLayer}}
+\index{getLayer@{getLayer}!game::components::RenderComponent@{game::components::RenderComponent}}
+\doxysubsubsection{\texorpdfstring{getLayer()}{getLayer()}}
+{\footnotesize\ttfamily renderer\+::\+Render\+Layer game\+::components\+::\+Render\+Component\+::get\+Layer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get the layer of the drawable 
+
+get the layer of the drawable
+
+\begin{DoxyReturn}{Returns}
+layer of the drawable 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgame_1_1components_1_1RenderComponent_adb3484519223bff3392e09b16ef4393b}\label{classgame_1_1components_1_1RenderComponent_adb3484519223bff3392e09b16ef4393b}} 
+\index{game::components::RenderComponent@{game::components::RenderComponent}!getSize@{getSize}}
+\index{getSize@{getSize}!game::components::RenderComponent@{game::components::RenderComponent}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily sf\+::\+Vector2f game\+::components\+::\+Render\+Component\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get the size of the drawable 
+
+get the size of the drawable
+
+\begin{DoxyReturn}{Returns}
+size of the drawable 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgame_1_1components_1_1RenderComponent_af1c7b4976870146d22a226b3ff6bf19c}\label{classgame_1_1components_1_1RenderComponent_af1c7b4976870146d22a226b3ff6bf19c}} 
+\index{game::components::RenderComponent@{game::components::RenderComponent}!isRaycastable@{isRaycastable}}
+\index{isRaycastable@{isRaycastable}!game::components::RenderComponent@{game::components::RenderComponent}}
+\doxysubsubsection{\texorpdfstring{isRaycastable()}{isRaycastable()}}
+{\footnotesize\ttfamily virtual bool game\+::components\+::\+Render\+Component\+::is\+Raycastable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+determines if a render component can be detected by input system and block pointer 
+
+determines if a render component can be detected by input system
+
+\begin{DoxyReturn}{Returns}
+true if drawable can be detected by pointer, false otherwise 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classgame_1_1components_1_1Sprite_a548af69b4a9e0f1160e2fe737de89c70}{game\+::components\+::\+Sprite}}, and \mbox{\hyperlink{classgame_1_1components_1_1Quad_ab2d66778ccd8d3ea6f1b7dfe5b208a4d}{game\+::components\+::\+Quad}}.
+
+\mbox{\Hypertarget{classgame_1_1components_1_1RenderComponent_a92315d762c58050ed67ef88b804426a5}\label{classgame_1_1components_1_1RenderComponent_a92315d762c58050ed67ef88b804426a5}} 
+\index{game::components::RenderComponent@{game::components::RenderComponent}!onDisable@{onDisable}}
+\index{onDisable@{onDisable}!game::components::RenderComponent@{game::components::RenderComponent}}
+\doxysubsubsection{\texorpdfstring{onDisable()}{onDisable()}}
+{\footnotesize\ttfamily virtual void game\+::components\+::\+Render\+Component\+::on\+Disable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+component lifecycle function 
+
+component lifecycle function, gets called automatically when component is disabled 
+
+Reimplemented from \mbox{\hyperlink{classgame_1_1components_1_1Component_ac79cec6fc53b00f36bbde8e8f7e23c05}{game\+::components\+::\+Component}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classgame_1_1components_1_1Text_ab81a6af4abb8f7157fa484da8908082e}{game\+::components\+::\+Text}}, \mbox{\hyperlink{classgame_1_1components_1_1Sprite_a64178747ff0ede0f1f5492da87c7e5c6}{game\+::components\+::\+Sprite}}, \mbox{\hyperlink{classgame_1_1components_1_1Shape_aac068e629480ea4d3d7eea3c14505216}{game\+::components\+::\+Shape}}, and \mbox{\hyperlink{classgame_1_1components_1_1Quad_aa563f38bbdec291dea227db1b329dbb9}{game\+::components\+::\+Quad}}.
+
+\mbox{\Hypertarget{classgame_1_1components_1_1RenderComponent_ae4fac2917f13cd029ab46cae876d14e3}\label{classgame_1_1components_1_1RenderComponent_ae4fac2917f13cd029ab46cae876d14e3}} 
+\index{game::components::RenderComponent@{game::components::RenderComponent}!onEnable@{onEnable}}
+\index{onEnable@{onEnable}!game::components::RenderComponent@{game::components::RenderComponent}}
+\doxysubsubsection{\texorpdfstring{onEnable()}{onEnable()}}
+{\footnotesize\ttfamily virtual void game\+::components\+::\+Render\+Component\+::on\+Enable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+component lifecycle function 
+
+component lifecycle function, gets called automatically when component is enabled 
+
+Reimplemented from \mbox{\hyperlink{classgame_1_1components_1_1Component_a333e4242c1594bfdc5713cddafae6a23}{game\+::components\+::\+Component}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classgame_1_1components_1_1Text_a8e8f3f7099fce97ff45f1fd26015a0cc}{game\+::components\+::\+Text}}, \mbox{\hyperlink{classgame_1_1components_1_1Sprite_afd29e4bf3b2c21e0b888cc4cc524f68c}{game\+::components\+::\+Sprite}}, \mbox{\hyperlink{classgame_1_1components_1_1Shape_af8417d3e7bf5bbe8d501484972da10ac}{game\+::components\+::\+Shape}}, and \mbox{\hyperlink{classgame_1_1components_1_1Quad_a933aa629a4055223c907583215ad2b42}{game\+::components\+::\+Quad}}.
+
+\mbox{\Hypertarget{classgame_1_1components_1_1RenderComponent_a1b5a15f697c3e72114a9e3c38a8aec1d}\label{classgame_1_1components_1_1RenderComponent_a1b5a15f697c3e72114a9e3c38a8aec1d}} 
+\index{game::components::RenderComponent@{game::components::RenderComponent}!rotate@{rotate}}
+\index{rotate@{rotate}!game::components::RenderComponent@{game::components::RenderComponent}}
+\doxysubsubsection{\texorpdfstring{rotate()}{rotate()}}
+{\footnotesize\ttfamily virtual void game\+::components\+::\+Render\+Component\+::rotate (\begin{DoxyParamCaption}\item[{float}]{angle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+rotate drawable 
+
+rotate drawable of a certain angle
+
+
+\begin{DoxyParams}{Parameters}
+{\em angle} & the angle between its current rotation to the new rotation \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1components_1_1RenderComponent_a6038b2c4967df6ef5885d5b562e97f5a}\label{classgame_1_1components_1_1RenderComponent_a6038b2c4967df6ef5885d5b562e97f5a}} 
+\index{game::components::RenderComponent@{game::components::RenderComponent}!setAlpha@{setAlpha}}
+\index{setAlpha@{setAlpha}!game::components::RenderComponent@{game::components::RenderComponent}}
+\doxysubsubsection{\texorpdfstring{setAlpha()}{setAlpha()}}
+{\footnotesize\ttfamily virtual void game\+::components\+::\+Render\+Component\+::set\+Alpha (\begin{DoxyParamCaption}\item[{float}]{alpha }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+set the alpha value of the drawable 
+
+set the alpha value of the drawable
+
+
+\begin{DoxyParams}{Parameters}
+{\em alpha} & 1 means entirely opaque, 0 means entirely transparent \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classgame_1_1components_1_1Text_a489daf1b5f9ecdd2342480c8ca5dd3e4}{game\+::components\+::\+Text}}, \mbox{\hyperlink{classgame_1_1components_1_1Sprite_ad6b407e8697d0ee1fea542f2d43d6b0e}{game\+::components\+::\+Sprite}}, and \mbox{\hyperlink{classgame_1_1components_1_1Shape_ab1e161f2df178c94ee4223f9cc6bc453}{game\+::components\+::\+Shape}}.
+
+\mbox{\Hypertarget{classgame_1_1components_1_1RenderComponent_ad3a31883baa92767f85417a1ff37d602}\label{classgame_1_1components_1_1RenderComponent_ad3a31883baa92767f85417a1ff37d602}} 
+\index{game::components::RenderComponent@{game::components::RenderComponent}!setRaycastable@{setRaycastable}}
+\index{setRaycastable@{setRaycastable}!game::components::RenderComponent@{game::components::RenderComponent}}
+\doxysubsubsection{\texorpdfstring{setRaycastable()}{setRaycastable()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Render\+Component\+::set\+Raycastable (\begin{DoxyParamCaption}\item[{bool}]{is\+Raycastable }\end{DoxyParamCaption})}
+
+
+
+set if a drawable can be detected by input system and block pointer 
+
+set if a drawable can be detected by input system and block pointer
+
+
+\begin{DoxyParams}{Parameters}
+{\em is\+Raycastable} & true if you want the drawable to be detected and block pointer, false otherwise \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1components_1_1RenderComponent_a70f4336f4a7c67260a4548b101bf442f}\label{classgame_1_1components_1_1RenderComponent_a70f4336f4a7c67260a4548b101bf442f}} 
+\index{game::components::RenderComponent@{game::components::RenderComponent}!setRotate@{setRotate}}
+\index{setRotate@{setRotate}!game::components::RenderComponent@{game::components::RenderComponent}}
+\doxysubsubsection{\texorpdfstring{setRotate()}{setRotate()}}
+{\footnotesize\ttfamily virtual void game\+::components\+::\+Render\+Component\+::set\+Rotate (\begin{DoxyParamCaption}\item[{float}]{angle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+set the rotation value of the drawable 
+
+set the rotation value of the drawable
+
+
+\begin{DoxyParams}{Parameters}
+{\em angle} & the angle between the drawable and +x axis \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classgame_1_1components_1_1RenderComponent_ac0cb362a5c129344057f1663d3715303}\label{classgame_1_1components_1_1RenderComponent_ac0cb362a5c129344057f1663d3715303}} 
+\index{game::components::RenderComponent@{game::components::RenderComponent}!LayerModifier@{LayerModifier}}
+\index{LayerModifier@{LayerModifier}!game::components::RenderComponent@{game::components::RenderComponent}}
+\doxysubsubsection{\texorpdfstring{LayerModifier}{LayerModifier}}
+{\footnotesize\ttfamily const int game\+::components\+::\+Render\+Component\+::\+Layer\+Modifier\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+the layer modifier \mbox{\Hypertarget{classgame_1_1components_1_1RenderComponent_a0016bfae1d5242843c9001609637397f}\label{classgame_1_1components_1_1RenderComponent_a0016bfae1d5242843c9001609637397f}} 
+\index{game::components::RenderComponent@{game::components::RenderComponent}!mDepth@{mDepth}}
+\index{mDepth@{mDepth}!game::components::RenderComponent@{game::components::RenderComponent}}
+\doxysubsubsection{\texorpdfstring{mDepth}{mDepth}}
+{\footnotesize\ttfamily int game\+::components\+::\+Render\+Component\+::m\+Depth\hspace{0.3cm}{\ttfamily [protected]}}
+
+my cached depth in my render layer \mbox{\Hypertarget{classgame_1_1components_1_1RenderComponent_a46c977d9cdb9dc595c1b08d087045427}\label{classgame_1_1components_1_1RenderComponent_a46c977d9cdb9dc595c1b08d087045427}} 
+\index{game::components::RenderComponent@{game::components::RenderComponent}!mIsRaycastable@{mIsRaycastable}}
+\index{mIsRaycastable@{mIsRaycastable}!game::components::RenderComponent@{game::components::RenderComponent}}
+\doxysubsubsection{\texorpdfstring{mIsRaycastable}{mIsRaycastable}}
+{\footnotesize\ttfamily bool game\+::components\+::\+Render\+Component\+::m\+Is\+Raycastable\hspace{0.3cm}{\ttfamily [protected]}}
+
+true if render component is raycastable and blocks pointer, false otherwise \mbox{\Hypertarget{classgame_1_1components_1_1RenderComponent_a2c3edcb90afd863dab2047b955aebffb}\label{classgame_1_1components_1_1RenderComponent_a2c3edcb90afd863dab2047b955aebffb}} 
+\index{game::components::RenderComponent@{game::components::RenderComponent}!mLayer@{mLayer}}
+\index{mLayer@{mLayer}!game::components::RenderComponent@{game::components::RenderComponent}}
+\doxysubsubsection{\texorpdfstring{mLayer}{mLayer}}
+{\footnotesize\ttfamily renderer\+::\+Render\+Layer game\+::components\+::\+Render\+Component\+::m\+Layer\hspace{0.3cm}{\ttfamily [protected]}}
+
+my cached render layer \mbox{\Hypertarget{classgame_1_1components_1_1RenderComponent_abc6cf4a51483c647d30e4bdbffe3ef59}\label{classgame_1_1components_1_1RenderComponent_abc6cf4a51483c647d30e4bdbffe3ef59}} 
+\index{game::components::RenderComponent@{game::components::RenderComponent}!mTransform@{mTransform}}
+\index{mTransform@{mTransform}!game::components::RenderComponent@{game::components::RenderComponent}}
+\doxysubsubsection{\texorpdfstring{mTransform}{mTransform}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgame_1_1components_1_1Transform}{Transform}}$\ast$ game\+::components\+::\+Render\+Component\+::m\+Transform\hspace{0.3cm}{\ttfamily [protected]}}
+
+my cached transform 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Components/\+Drawables/Render\+Component.\+h\end{DoxyCompactItemize}

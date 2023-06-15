@@ -1,0 +1,18 @@
+digraph "game::components::Button"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="game::components::Button",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="button class that provides a on click event for registrations"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="game::components::Component",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgame_1_1components_1_1Component.html",tooltip="base class for all components"];
+  Node3 -> Node2 [dir="back",color="firebrick4",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="sf::NonCopyable",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node4 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="game::input::IPointerPress",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgame_1_1input_1_1IPointerPress.html",tooltip="interface for pointer presses event handlers"];
+  Node5 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="game::input::IPointerRelease",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgame_1_1input_1_1IPointerRelease.html",tooltip="interface for pointer releases event handlers"];
+  Node6 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="game::input::IPointerClick",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgame_1_1input_1_1IPointerClick.html",tooltip="interface for pointer clicks event handlers"];
+}

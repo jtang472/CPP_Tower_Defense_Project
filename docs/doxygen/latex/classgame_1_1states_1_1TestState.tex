@@ -1,0 +1,154 @@
+\hypertarget{classgame_1_1states_1_1TestState}{}\doxysection{game\+::states\+::Test\+State Class Reference}
+\label{classgame_1_1states_1_1TestState}\index{game::states::TestState@{game::states::TestState}}
+
+
+shop state  
+
+
+
+
+{\ttfamily \#include $<$Test\+State.\+h$>$}
+
+
+
+Inheritance diagram for game\+::states\+::Test\+State\+:
+% FIG 0
+
+
+Collaboration diagram for game\+::states\+::Test\+State\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgame_1_1states_1_1TestState_a01f79d34fc3acab45a36eb432e63532c}{Test\+State}} (\mbox{\hyperlink{classgame_1_1states_1_1StateMachine}{State\+Machine}} $\ast$owner)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classgame_1_1states_1_1TestState}{Test\+State}} constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classgame_1_1states_1_1TestState_a3bf077e5824f30fcbf9abf7bc7b1ee65}{$\sim$\+Test\+State}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classgame_1_1states_1_1TestState}{Test\+State}} destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1states_1_1TestState_a881a26aab962a8a59d9a2cffccc0e1db}{init}} () override
+\begin{DoxyCompactList}\small\item\em initialization of state \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1states_1_1TestState_a26034896c78b22eb05ffe8271657f9e3}{on\+Press\+Key}} (sf\+::\+Keyboard\+::\+Key key\+Code)
+\begin{DoxyCompactList}\small\item\em callback for keyboard pressed event callback function for keyboard pressed event \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+boost\+::signals2\+::connection \mbox{\hyperlink{classgame_1_1states_1_1TestState_a33d91b65853519abbd685d3d682ba972}{m\+Key\+Pressed\+Listener}}
+\item 
+int \mbox{\hyperlink{classgame_1_1states_1_1TestState_ae06517eafa78df3ee5f38f271303a228}{m\+Current\+Animator\+Index}}
+\item 
+int \mbox{\hyperlink{classgame_1_1states_1_1TestState_ac428ab7baa416d621f5a4657868d8342}{m\+Current\+Animation\+Clip\+Index}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classgame_1_1components_1_1CharacterAnimator}{components\+::\+Character\+Animator}} $\ast$ $>$ \mbox{\hyperlink{classgame_1_1states_1_1TestState_a3a4c82a66c9bb50d2582864a399f7519}{m\+Test\+Animators}}
+\item 
+std\+::vector$<$ components\+::\+Animation\+State $>$ \mbox{\hyperlink{classgame_1_1states_1_1TestState_acd308afe542e45efcdaad3a4ffa7ba98}{m\+States}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+shop state 
+
+this state will be pushed to state machine when player goes to the test scene
+
+\begin{DoxyAuthor}{Author}
+Zheng Yang 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgame_1_1states_1_1TestState_a01f79d34fc3acab45a36eb432e63532c}\label{classgame_1_1states_1_1TestState_a01f79d34fc3acab45a36eb432e63532c}} 
+\index{game::states::TestState@{game::states::TestState}!TestState@{TestState}}
+\index{TestState@{TestState}!game::states::TestState@{game::states::TestState}}
+\doxysubsubsection{\texorpdfstring{TestState()}{TestState()}}
+{\footnotesize\ttfamily game\+::states\+::\+Test\+State\+::\+Test\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgame_1_1states_1_1StateMachine}{State\+Machine}} $\ast$}]{owner }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classgame_1_1states_1_1TestState}{Test\+State}} constructor. 
+
+\mbox{\hyperlink{classgame_1_1states_1_1TestState}{Test\+State}} constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em owner} & state machine \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1states_1_1TestState_a3bf077e5824f30fcbf9abf7bc7b1ee65}\label{classgame_1_1states_1_1TestState_a3bf077e5824f30fcbf9abf7bc7b1ee65}} 
+\index{game::states::TestState@{game::states::TestState}!````~TestState@{$\sim$TestState}}
+\index{````~TestState@{$\sim$TestState}!game::states::TestState@{game::states::TestState}}
+\doxysubsubsection{\texorpdfstring{$\sim$TestState()}{~TestState()}}
+{\footnotesize\ttfamily game\+::states\+::\+Test\+State\+::$\sim$\+Test\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classgame_1_1states_1_1TestState}{Test\+State}} destructor. 
+
+\mbox{\hyperlink{classgame_1_1states_1_1TestState}{Test\+State}} destructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgame_1_1states_1_1TestState_a881a26aab962a8a59d9a2cffccc0e1db}\label{classgame_1_1states_1_1TestState_a881a26aab962a8a59d9a2cffccc0e1db}} 
+\index{game::states::TestState@{game::states::TestState}!init@{init}}
+\index{init@{init}!game::states::TestState@{game::states::TestState}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void game\+::states\+::\+Test\+State\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+initialization of state 
+
+initialization of state, called by state machine after state is created and put to the stack 
+
+Reimplemented from \mbox{\hyperlink{classgame_1_1states_1_1State_ab8464551e311a0621bd80f2a21a7cb4a}{game\+::states\+::\+State}}.
+
+\mbox{\Hypertarget{classgame_1_1states_1_1TestState_a26034896c78b22eb05ffe8271657f9e3}\label{classgame_1_1states_1_1TestState_a26034896c78b22eb05ffe8271657f9e3}} 
+\index{game::states::TestState@{game::states::TestState}!onPressKey@{onPressKey}}
+\index{onPressKey@{onPressKey}!game::states::TestState@{game::states::TestState}}
+\doxysubsubsection{\texorpdfstring{onPressKey()}{onPressKey()}}
+{\footnotesize\ttfamily void game\+::states\+::\+Test\+State\+::on\+Press\+Key (\begin{DoxyParamCaption}\item[{sf\+::\+Keyboard\+::\+Key}]{key\+Code }\end{DoxyParamCaption})}
+
+
+
+callback for keyboard pressed event callback function for keyboard pressed event 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key\+Code} & keycode of the key that gets pressed \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classgame_1_1states_1_1TestState_ac428ab7baa416d621f5a4657868d8342}\label{classgame_1_1states_1_1TestState_ac428ab7baa416d621f5a4657868d8342}} 
+\index{game::states::TestState@{game::states::TestState}!mCurrentAnimationClipIndex@{mCurrentAnimationClipIndex}}
+\index{mCurrentAnimationClipIndex@{mCurrentAnimationClipIndex}!game::states::TestState@{game::states::TestState}}
+\doxysubsubsection{\texorpdfstring{mCurrentAnimationClipIndex}{mCurrentAnimationClipIndex}}
+{\footnotesize\ttfamily int game\+::states\+::\+Test\+State\+::m\+Current\+Animation\+Clip\+Index\hspace{0.3cm}{\ttfamily [private]}}
+
+current animation index \mbox{\Hypertarget{classgame_1_1states_1_1TestState_ae06517eafa78df3ee5f38f271303a228}\label{classgame_1_1states_1_1TestState_ae06517eafa78df3ee5f38f271303a228}} 
+\index{game::states::TestState@{game::states::TestState}!mCurrentAnimatorIndex@{mCurrentAnimatorIndex}}
+\index{mCurrentAnimatorIndex@{mCurrentAnimatorIndex}!game::states::TestState@{game::states::TestState}}
+\doxysubsubsection{\texorpdfstring{mCurrentAnimatorIndex}{mCurrentAnimatorIndex}}
+{\footnotesize\ttfamily int game\+::states\+::\+Test\+State\+::m\+Current\+Animator\+Index\hspace{0.3cm}{\ttfamily [private]}}
+
+current animator index \mbox{\Hypertarget{classgame_1_1states_1_1TestState_a33d91b65853519abbd685d3d682ba972}\label{classgame_1_1states_1_1TestState_a33d91b65853519abbd685d3d682ba972}} 
+\index{game::states::TestState@{game::states::TestState}!mKeyPressedListener@{mKeyPressedListener}}
+\index{mKeyPressedListener@{mKeyPressedListener}!game::states::TestState@{game::states::TestState}}
+\doxysubsubsection{\texorpdfstring{mKeyPressedListener}{mKeyPressedListener}}
+{\footnotesize\ttfamily boost\+::signals2\+::connection game\+::states\+::\+Test\+State\+::m\+Key\+Pressed\+Listener\hspace{0.3cm}{\ttfamily [private]}}
+
+fade in animation listener \mbox{\Hypertarget{classgame_1_1states_1_1TestState_acd308afe542e45efcdaad3a4ffa7ba98}\label{classgame_1_1states_1_1TestState_acd308afe542e45efcdaad3a4ffa7ba98}} 
+\index{game::states::TestState@{game::states::TestState}!mStates@{mStates}}
+\index{mStates@{mStates}!game::states::TestState@{game::states::TestState}}
+\doxysubsubsection{\texorpdfstring{mStates}{mStates}}
+{\footnotesize\ttfamily std\+::vector$<$components\+::\+Animation\+State$>$ game\+::states\+::\+Test\+State\+::m\+States\hspace{0.3cm}{\ttfamily [private]}}
+
+all animation states \mbox{\Hypertarget{classgame_1_1states_1_1TestState_a3a4c82a66c9bb50d2582864a399f7519}\label{classgame_1_1states_1_1TestState_a3a4c82a66c9bb50d2582864a399f7519}} 
+\index{game::states::TestState@{game::states::TestState}!mTestAnimators@{mTestAnimators}}
+\index{mTestAnimators@{mTestAnimators}!game::states::TestState@{game::states::TestState}}
+\doxysubsubsection{\texorpdfstring{mTestAnimators}{mTestAnimators}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classgame_1_1components_1_1CharacterAnimator}{components\+::\+Character\+Animator}}$\ast$$>$ game\+::states\+::\+Test\+State\+::m\+Test\+Animators\hspace{0.3cm}{\ttfamily [private]}}
+
+test animators 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+States/Test\+State.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,45 @@
+digraph "game::components::Enemy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="game::components::Enemy",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="base class for all types of enemies in the game"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="game::components::GridEntity",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgame_1_1components_1_1GridEntity.html",tooltip="base class for all the drawables in the game"];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="game::components::Component",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgame_1_1components_1_1Component.html",tooltip="base class for all components"];
+  Node4 -> Node3 [dir="back",color="firebrick4",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="sf::NonCopyable",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node5 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mOwner" ,fontname="Helvetica"];
+  Node5 [label="game::components::GameObject",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgame_1_1components_1_1GameObject.html",tooltip="container class for a group of components"];
+  Node4 -> Node5 [dir="back",color="firebrick4",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mTransform" ,fontname="Helvetica"];
+  Node6 [label="game::components::Transform",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgame_1_1components_1_1Transform.html",tooltip="transform component of a gameobject"];
+  Node3 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mParent" ,fontname="Helvetica"];
+  Node7 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mGridLayer" ,fontname="Helvetica"];
+  Node7 [label="game::grid::GridLayer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgame_1_1grid_1_1GridLayer.html",tooltip="grid layer that manages a group of grid cells"];
+  Node4 -> Node7 [dir="back",color="firebrick4",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mLayerInfo" ,fontname="Helvetica"];
+  Node8 [label="game::grid::LayerInfo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structgame_1_1grid_1_1LayerInfo.html",tooltip="layer data"];
+  Node9 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mSprite" ,fontname="Helvetica"];
+  Node9 [label="game::components::Sprite",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgame_1_1components_1_1Sprite.html",tooltip="wrapper class for sf::sprite"];
+  Node10 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="game::components::Render\lComponent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgame_1_1components_1_1RenderComponent.html",tooltip="base class for all the drawables in the game"];
+  Node3 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 -> Node10 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mTransform" ,fontname="Helvetica"];
+  Node11 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mAnimator" ,fontname="Helvetica"];
+  Node11 [label="game::components::Character\lAnimator",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgame_1_1components_1_1CharacterAnimator.html",tooltip="animator for in-game characters"];
+  Node12 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="game::components::Animator",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgame_1_1components_1_1Animator.html",tooltip="base class of all the animator components"];
+  Node3 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 -> Node11 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mTarget" ,fontname="Helvetica"];
+  Node13 -> Node11 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mCurrentAnimation\nmInitialAnimation" ,fontname="Helvetica"];
+  Node13 [label="game::data::AnimDefine",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structgame_1_1data_1_1AnimDefine.html",tooltip="data structure to hold character animation data"];
+  Node14 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="game::data::JsonBase",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgame_1_1data_1_1JsonBase.html",tooltip=" "];
+  Node15 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mData" ,fontname="Helvetica"];
+  Node15 [label="game::data::EnemyDefine",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structgame_1_1data_1_1EnemyDefine.html",tooltip="data structure to hold enemy data"];
+  Node14 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

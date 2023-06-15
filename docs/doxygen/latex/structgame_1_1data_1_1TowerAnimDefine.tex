@@ -1,0 +1,145 @@
+\hypertarget{structgame_1_1data_1_1TowerAnimDefine}{}\doxysection{game\+::data\+::Tower\+Anim\+Define Struct Reference}
+\label{structgame_1_1data_1_1TowerAnimDefine}\index{game::data::TowerAnimDefine@{game::data::TowerAnimDefine}}
+
+
+data structure to hold enemy animation data  
+
+
+
+
+{\ttfamily \#include $<$Tower\+Define.\+h$>$}
+
+
+
+Inheritance diagram for game\+::data\+::Tower\+Anim\+Define\+:
+% FIG 0
+
+
+Collaboration diagram for game\+::data\+::Tower\+Anim\+Define\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structgame_1_1data_1_1TowerAnimDefine_a3bb309224c1a48fb5125ff77534845e0}{Tower\+Anim\+Define}} (const rapidjson\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structgame_1_1data_1_1TowerAnimDefine}{Tower\+Anim\+Define}} constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structgame_1_1data_1_1TowerAnimDefine_a2e13fc06eb9290dd8d6c6d94e0602917}\label{structgame_1_1data_1_1TowerAnimDefine_a2e13fc06eb9290dd8d6c6d94e0602917}} 
+{\bfseries Tower\+Anim\+Define} (const \mbox{\hyperlink{structgame_1_1data_1_1TowerAnimDefine}{Tower\+Anim\+Define}} \&other)=delete
+\item 
+\mbox{\Hypertarget{structgame_1_1data_1_1TowerAnimDefine_a233c913b4f1d7da9d094421afc1f9f37}\label{structgame_1_1data_1_1TowerAnimDefine_a233c913b4f1d7da9d094421afc1f9f37}} 
+\mbox{\hyperlink{structgame_1_1data_1_1TowerAnimDefine}{Tower\+Anim\+Define}} \& {\bfseries operator=} (const \mbox{\hyperlink{structgame_1_1data_1_1TowerAnimDefine}{Tower\+Anim\+Define}} \&other)=delete
+\item 
+void \mbox{\hyperlink{structgame_1_1data_1_1TowerAnimDefine_aa74d8aa4d8d6230b56f1e76d3a685145}{from\+Json}} (const rapidjson\+::\+Value \&json) override
+\begin{DoxyCompactList}\small\item\em deserialize c++ data structure from json object \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structgame_1_1data_1_1TowerAnimDefine_a6caf8fe45578e32d0879e78448106f9b}{to\+Json}} (rapidjson\+::\+Writer$<$ rapidjson\+::\+String\+Buffer $>$ $\ast$writer) override
+\begin{DoxyCompactList}\small\item\em serialize a c++ data structure to a json object \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{structgame_1_1data_1_1TowerAnimDefine_af8405490b44b211f5aff8dd72606293f}{anim\+State\+ID}}
+\item 
+int \mbox{\hyperlink{structgame_1_1data_1_1TowerAnimDefine_a6f803f525404e04948e7ca0ee7f1446c}{anim\+ID}}
+\item 
+bool \mbox{\hyperlink{structgame_1_1data_1_1TowerAnimDefine_ae8f598f3ed5576708969dae25d80cce8}{make\+Initial\+State}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+data structure to hold enemy animation data 
+
+this is the data structure to hold animation data defined in Enemy\+Define.\+json
+
+\begin{DoxyAuthor}{Author}
+Zheng Yang 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structgame_1_1data_1_1TowerAnimDefine_a3bb309224c1a48fb5125ff77534845e0}\label{structgame_1_1data_1_1TowerAnimDefine_a3bb309224c1a48fb5125ff77534845e0}} 
+\index{game::data::TowerAnimDefine@{game::data::TowerAnimDefine}!TowerAnimDefine@{TowerAnimDefine}}
+\index{TowerAnimDefine@{TowerAnimDefine}!game::data::TowerAnimDefine@{game::data::TowerAnimDefine}}
+\doxysubsubsection{\texorpdfstring{TowerAnimDefine()}{TowerAnimDefine()}}
+{\footnotesize\ttfamily game\+::data\+::\+Tower\+Anim\+Define\+::\+Tower\+Anim\+Define (\begin{DoxyParamCaption}\item[{const rapidjson\+::\+Value \&}]{json }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+\mbox{\hyperlink{structgame_1_1data_1_1TowerAnimDefine}{Tower\+Anim\+Define}} constructor. 
+
+\mbox{\hyperlink{structgame_1_1data_1_1TowerAnimDefine}{Tower\+Anim\+Define}} constructor which deserializes a json object
+
+
+\begin{DoxyParams}{Parameters}
+{\em json} & object of the tower animation data \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structgame_1_1data_1_1TowerAnimDefine_aa74d8aa4d8d6230b56f1e76d3a685145}\label{structgame_1_1data_1_1TowerAnimDefine_aa74d8aa4d8d6230b56f1e76d3a685145}} 
+\index{game::data::TowerAnimDefine@{game::data::TowerAnimDefine}!fromJson@{fromJson}}
+\index{fromJson@{fromJson}!game::data::TowerAnimDefine@{game::data::TowerAnimDefine}}
+\doxysubsubsection{\texorpdfstring{fromJson()}{fromJson()}}
+{\footnotesize\ttfamily void game\+::data\+::\+Tower\+Anim\+Define\+::from\+Json (\begin{DoxyParamCaption}\item[{const rapidjson\+::\+Value \&}]{json }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+deserialize c++ data structure from json object 
+
+this function takes a json object, and deserialize c++ data structure from it
+
+
+\begin{DoxyParams}{Parameters}
+{\em json} & serialized json object \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classgame_1_1data_1_1JsonBase_ad71ccf1cdfa32f5100ba32d208afbffa}{game\+::data\+::\+Json\+Base}}.
+
+\mbox{\Hypertarget{structgame_1_1data_1_1TowerAnimDefine_a6caf8fe45578e32d0879e78448106f9b}\label{structgame_1_1data_1_1TowerAnimDefine_a6caf8fe45578e32d0879e78448106f9b}} 
+\index{game::data::TowerAnimDefine@{game::data::TowerAnimDefine}!toJson@{toJson}}
+\index{toJson@{toJson}!game::data::TowerAnimDefine@{game::data::TowerAnimDefine}}
+\doxysubsubsection{\texorpdfstring{toJson()}{toJson()}}
+{\footnotesize\ttfamily void game\+::data\+::\+Tower\+Anim\+Define\+::to\+Json (\begin{DoxyParamCaption}\item[{rapidjson\+::\+Writer$<$ rapidjson\+::\+String\+Buffer $>$ $\ast$}]{writer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+serialize a c++ data structure to a json object 
+
+this function takes a json writer, and serialize c++ data structure to it
+
+
+\begin{DoxyParams}{Parameters}
+{\em writer} & json writer \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classgame_1_1data_1_1JsonBase_a9b0277fdcf438ded476fe08d07c2ed2d}{game\+::data\+::\+Json\+Base}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structgame_1_1data_1_1TowerAnimDefine_a6f803f525404e04948e7ca0ee7f1446c}\label{structgame_1_1data_1_1TowerAnimDefine_a6f803f525404e04948e7ca0ee7f1446c}} 
+\index{game::data::TowerAnimDefine@{game::data::TowerAnimDefine}!animID@{animID}}
+\index{animID@{animID}!game::data::TowerAnimDefine@{game::data::TowerAnimDefine}}
+\doxysubsubsection{\texorpdfstring{animID}{animID}}
+{\footnotesize\ttfamily int game\+::data\+::\+Tower\+Anim\+Define\+::anim\+ID}
+
+animation identifier \mbox{\Hypertarget{structgame_1_1data_1_1TowerAnimDefine_af8405490b44b211f5aff8dd72606293f}\label{structgame_1_1data_1_1TowerAnimDefine_af8405490b44b211f5aff8dd72606293f}} 
+\index{game::data::TowerAnimDefine@{game::data::TowerAnimDefine}!animStateID@{animStateID}}
+\index{animStateID@{animStateID}!game::data::TowerAnimDefine@{game::data::TowerAnimDefine}}
+\doxysubsubsection{\texorpdfstring{animStateID}{animStateID}}
+{\footnotesize\ttfamily int game\+::data\+::\+Tower\+Anim\+Define\+::anim\+State\+ID}
+
+animation state identifier \mbox{\Hypertarget{structgame_1_1data_1_1TowerAnimDefine_ae8f598f3ed5576708969dae25d80cce8}\label{structgame_1_1data_1_1TowerAnimDefine_ae8f598f3ed5576708969dae25d80cce8}} 
+\index{game::data::TowerAnimDefine@{game::data::TowerAnimDefine}!makeInitialState@{makeInitialState}}
+\index{makeInitialState@{makeInitialState}!game::data::TowerAnimDefine@{game::data::TowerAnimDefine}}
+\doxysubsubsection{\texorpdfstring{makeInitialState}{makeInitialState}}
+{\footnotesize\ttfamily bool game\+::data\+::\+Tower\+Anim\+Define\+::make\+Initial\+State}
+
+make this the initial animation ~\newline
+ 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Data/Tower\+Define.\+h\end{DoxyCompactItemize}

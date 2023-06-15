@@ -1,0 +1,52 @@
+\hypertarget{classgame_1_1input_1_1IPointerClick}{}\doxysection{game\+::input\+::IPointer\+Click Class Reference}
+\label{classgame_1_1input_1_1IPointerClick}\index{game::input::IPointerClick@{game::input::IPointerClick}}
+
+
+interface for pointer clicks event handlers  
+
+
+
+
+{\ttfamily \#include $<$Input\+Event\+Handler.\+h$>$}
+
+
+
+Inheritance diagram for game\+::input\+::IPointer\+Click\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classgame_1_1input_1_1IPointerClick_a324a6f26de0dedd47719372d23421007}{on\+Pointer\+Click}} ()=0
+\begin{DoxyCompactList}\small\item\em callback function for pointer click events \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+interface for pointer clicks event handlers 
+
+interface for pointer clicks event handlers when player click the pointer inside the bounding box of a gameobject(this means pointer must be clicked and released inside the same bounding box), all the components on the gameobject that implements this interface will be notified
+
+\begin{DoxyAuthor}{Author}
+Zheng Yang 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgame_1_1input_1_1IPointerClick_a324a6f26de0dedd47719372d23421007}\label{classgame_1_1input_1_1IPointerClick_a324a6f26de0dedd47719372d23421007}} 
+\index{game::input::IPointerClick@{game::input::IPointerClick}!onPointerClick@{onPointerClick}}
+\index{onPointerClick@{onPointerClick}!game::input::IPointerClick@{game::input::IPointerClick}}
+\doxysubsubsection{\texorpdfstring{onPointerClick()}{onPointerClick()}}
+{\footnotesize\ttfamily virtual void game\+::input\+::\+IPointer\+Click\+::on\+Pointer\+Click (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+callback function for pointer click events 
+
+callback function for pointer click events 
+
+Implemented in \mbox{\hyperlink{classgame_1_1components_1_1SimpleButton_ab3a5c3755ae95f8996c4e928c8b88d0a}{game\+::components\+::\+Simple\+Button}}, \mbox{\hyperlink{classgame_1_1components_1_1ShopItem_a3b39ed1750dc900d7ec804943ac79f9f}{game\+::components\+::\+Shop\+Item}}, \mbox{\hyperlink{classgame_1_1components_1_1SaveSlot_afacd09a2d5d73a918eb6d2d376f518c0}{game\+::components\+::\+Save\+Slot}}, and \mbox{\hyperlink{classgame_1_1components_1_1Button_acf110d3e0d550d4bbf4db1524110dd36}{game\+::components\+::\+Button}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Input/Input\+Event\+Handler.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,181 @@
+\hypertarget{classgame_1_1components_1_1SimpleButton}{}\doxysection{game\+::components\+::Simple\+Button Class Reference}
+\label{classgame_1_1components_1_1SimpleButton}\index{game::components::SimpleButton@{game::components::SimpleButton}}
+
+
+button class that can function as a button but does not need a button define file  
+
+
+
+
+{\ttfamily \#include $<$Simple\+Button.\+h$>$}
+
+
+
+Inheritance diagram for game\+::components\+::Simple\+Button\+:
+% FIG 0
+
+
+Collaboration diagram for game\+::components\+::Simple\+Button\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgame_1_1components_1_1SimpleButton_a2d5fe7118c0e974228140733936c0b79}{Simple\+Button}} (\mbox{\hyperlink{classgame_1_1components_1_1GameObject}{game\+::components\+::\+Game\+Object}} \&owner)
+\begin{DoxyCompactList}\small\item\em simple button constructor \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classgame_1_1components_1_1SimpleButton_aee5eb49110192e6002d73e4615730ca5}{$\sim$\+Simple\+Button}} ()
+\begin{DoxyCompactList}\small\item\em simple button destructor \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1SimpleButton_a6f799773b9a5206e3eb2560700f8e938}{on\+Enable}} () override
+\begin{DoxyCompactList}\small\item\em component lifecycle function \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1SimpleButton_ae4e912e512e7da4dac71b894cea1fd8a}{on\+Disable}} () override
+\begin{DoxyCompactList}\small\item\em component lifecycle function \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1SimpleButton_ab3a5c3755ae95f8996c4e928c8b88d0a}{on\+Pointer\+Click}} () override
+\begin{DoxyCompactList}\small\item\em callback for pointer click event \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1SimpleButton_a63af0f7e242c4725363a2e02b3a9bb95}{set\+Raycastable}} (bool is\+Raycastable)
+\begin{DoxyCompactList}\small\item\em set if button can be detected by input system and block pointer \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classgame_1_1components_1_1RenderComponent}{Render\+Component}} $\ast$ \mbox{\hyperlink{classgame_1_1components_1_1SimpleButton_a4eaeedf95b02f94550f79e6558d5f8df}{get\+Drawable}} () const
+\begin{DoxyCompactList}\small\item\em get the current button sprite \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Button\+Click\+Delegate \mbox{\hyperlink{classgame_1_1components_1_1SimpleButton_a2492953555ead7753598ce8f088efcff}{on\+Click}}
+\item 
+\mbox{\hyperlink{classgame_1_1components_1_1RenderComponent}{Render\+Component}} $\ast$ \mbox{\hyperlink{classgame_1_1components_1_1SimpleButton_a6e26a359a49b3181066cf3b020a1ccda}{m\+Drawable}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+button class that can function as a button but does not need a button define file 
+
+the button class can be attached to any gameobject with a drawable component and provide a similar functionality as the button class
+
+\begin{DoxyAuthor}{Author}
+Zheng Yang 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgame_1_1components_1_1SimpleButton_a2d5fe7118c0e974228140733936c0b79}\label{classgame_1_1components_1_1SimpleButton_a2d5fe7118c0e974228140733936c0b79}} 
+\index{game::components::SimpleButton@{game::components::SimpleButton}!SimpleButton@{SimpleButton}}
+\index{SimpleButton@{SimpleButton}!game::components::SimpleButton@{game::components::SimpleButton}}
+\doxysubsubsection{\texorpdfstring{SimpleButton()}{SimpleButton()}}
+{\footnotesize\ttfamily game\+::components\+::\+Simple\+Button\+::\+Simple\+Button (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgame_1_1components_1_1GameObject}{game\+::components\+::\+Game\+Object}} \&}]{owner }\end{DoxyParamCaption})}
+
+
+
+simple button constructor 
+
+simple button constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em owner} & owner of the component \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1components_1_1SimpleButton_aee5eb49110192e6002d73e4615730ca5}\label{classgame_1_1components_1_1SimpleButton_aee5eb49110192e6002d73e4615730ca5}} 
+\index{game::components::SimpleButton@{game::components::SimpleButton}!````~SimpleButton@{$\sim$SimpleButton}}
+\index{````~SimpleButton@{$\sim$SimpleButton}!game::components::SimpleButton@{game::components::SimpleButton}}
+\doxysubsubsection{\texorpdfstring{$\sim$SimpleButton()}{~SimpleButton()}}
+{\footnotesize\ttfamily game\+::components\+::\+Simple\+Button\+::$\sim$\+Simple\+Button (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+simple button destructor 
+
+simple button destructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgame_1_1components_1_1SimpleButton_a4eaeedf95b02f94550f79e6558d5f8df}\label{classgame_1_1components_1_1SimpleButton_a4eaeedf95b02f94550f79e6558d5f8df}} 
+\index{game::components::SimpleButton@{game::components::SimpleButton}!getDrawable@{getDrawable}}
+\index{getDrawable@{getDrawable}!game::components::SimpleButton@{game::components::SimpleButton}}
+\doxysubsubsection{\texorpdfstring{getDrawable()}{getDrawable()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgame_1_1components_1_1RenderComponent}{Render\+Component}}$\ast$ game\+::components\+::\+Simple\+Button\+::get\+Drawable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get the current button sprite 
+
+get the current button sprite
+
+\begin{DoxyReturn}{Returns}
+the button sprite 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgame_1_1components_1_1SimpleButton_ae4e912e512e7da4dac71b894cea1fd8a}\label{classgame_1_1components_1_1SimpleButton_ae4e912e512e7da4dac71b894cea1fd8a}} 
+\index{game::components::SimpleButton@{game::components::SimpleButton}!onDisable@{onDisable}}
+\index{onDisable@{onDisable}!game::components::SimpleButton@{game::components::SimpleButton}}
+\doxysubsubsection{\texorpdfstring{onDisable()}{onDisable()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Simple\+Button\+::on\+Disable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+component lifecycle function 
+
+component lifecycle function, gets called automatically when component is disabled 
+
+Reimplemented from \mbox{\hyperlink{classgame_1_1components_1_1Component_ac79cec6fc53b00f36bbde8e8f7e23c05}{game\+::components\+::\+Component}}.
+
+\mbox{\Hypertarget{classgame_1_1components_1_1SimpleButton_a6f799773b9a5206e3eb2560700f8e938}\label{classgame_1_1components_1_1SimpleButton_a6f799773b9a5206e3eb2560700f8e938}} 
+\index{game::components::SimpleButton@{game::components::SimpleButton}!onEnable@{onEnable}}
+\index{onEnable@{onEnable}!game::components::SimpleButton@{game::components::SimpleButton}}
+\doxysubsubsection{\texorpdfstring{onEnable()}{onEnable()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Simple\+Button\+::on\+Enable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+component lifecycle function 
+
+component lifecycle function, gets called automatically when component is enabled 
+
+Reimplemented from \mbox{\hyperlink{classgame_1_1components_1_1Component_a333e4242c1594bfdc5713cddafae6a23}{game\+::components\+::\+Component}}.
+
+\mbox{\Hypertarget{classgame_1_1components_1_1SimpleButton_ab3a5c3755ae95f8996c4e928c8b88d0a}\label{classgame_1_1components_1_1SimpleButton_ab3a5c3755ae95f8996c4e928c8b88d0a}} 
+\index{game::components::SimpleButton@{game::components::SimpleButton}!onPointerClick@{onPointerClick}}
+\index{onPointerClick@{onPointerClick}!game::components::SimpleButton@{game::components::SimpleButton}}
+\doxysubsubsection{\texorpdfstring{onPointerClick()}{onPointerClick()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Simple\+Button\+::on\+Pointer\+Click (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+callback for pointer click event 
+
+callback for pointer release event -\/ notify listeners of the button click event that this button is clicked 
+
+Implements \mbox{\hyperlink{classgame_1_1input_1_1IPointerClick_a324a6f26de0dedd47719372d23421007}{game\+::input\+::\+IPointer\+Click}}.
+
+\mbox{\Hypertarget{classgame_1_1components_1_1SimpleButton_a63af0f7e242c4725363a2e02b3a9bb95}\label{classgame_1_1components_1_1SimpleButton_a63af0f7e242c4725363a2e02b3a9bb95}} 
+\index{game::components::SimpleButton@{game::components::SimpleButton}!setRaycastable@{setRaycastable}}
+\index{setRaycastable@{setRaycastable}!game::components::SimpleButton@{game::components::SimpleButton}}
+\doxysubsubsection{\texorpdfstring{setRaycastable()}{setRaycastable()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Simple\+Button\+::set\+Raycastable (\begin{DoxyParamCaption}\item[{bool}]{is\+Raycastable }\end{DoxyParamCaption})}
+
+
+
+set if button can be detected by input system and block pointer 
+
+set if a button can be detected by input system and block pointer
+
+
+\begin{DoxyParams}{Parameters}
+{\em is\+Raycastable} & true if you want the button to be detected and block pointer, false otherwise \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classgame_1_1components_1_1SimpleButton_a6e26a359a49b3181066cf3b020a1ccda}\label{classgame_1_1components_1_1SimpleButton_a6e26a359a49b3181066cf3b020a1ccda}} 
+\index{game::components::SimpleButton@{game::components::SimpleButton}!mDrawable@{mDrawable}}
+\index{mDrawable@{mDrawable}!game::components::SimpleButton@{game::components::SimpleButton}}
+\doxysubsubsection{\texorpdfstring{mDrawable}{mDrawable}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgame_1_1components_1_1RenderComponent}{Render\+Component}}$\ast$ game\+::components\+::\+Simple\+Button\+::m\+Drawable}
+
+my button drawable \mbox{\Hypertarget{classgame_1_1components_1_1SimpleButton_a2492953555ead7753598ce8f088efcff}\label{classgame_1_1components_1_1SimpleButton_a2492953555ead7753598ce8f088efcff}} 
+\index{game::components::SimpleButton@{game::components::SimpleButton}!onClick@{onClick}}
+\index{onClick@{onClick}!game::components::SimpleButton@{game::components::SimpleButton}}
+\doxysubsubsection{\texorpdfstring{onClick}{onClick}}
+{\footnotesize\ttfamily Button\+Click\+Delegate game\+::components\+::\+Simple\+Button\+::on\+Click}
+
+my on click event 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Components/Simple\+Button.\+h\end{DoxyCompactItemize}

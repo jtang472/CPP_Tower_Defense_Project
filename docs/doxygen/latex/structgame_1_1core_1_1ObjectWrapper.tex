@@ -1,0 +1,142 @@
+\hypertarget{structgame_1_1core_1_1ObjectWrapper}{}\doxysection{game\+::core\+::Object\+Wrapper$<$ TObject $>$ Struct Template Reference}
+\label{structgame_1_1core_1_1ObjectWrapper}\index{game::core::ObjectWrapper$<$ TObject $>$@{game::core::ObjectWrapper$<$ TObject $>$}}
+
+
+wrapper class for object that may be referenced by object handler class  
+
+
+
+
+{\ttfamily \#include $<$Object\+Wrapper.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structgame_1_1core_1_1ObjectWrapper_a87e391e23c21e85c70b3479923cf8bb2}{Object\+Wrapper}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structgame_1_1core_1_1ObjectWrapper}{Object\+Wrapper}} default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structgame_1_1core_1_1ObjectWrapper_ab2d907a1d2163f4748ea56afabf01642}{Object\+Wrapper}} (GUID id, TObject $\ast$obj)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structgame_1_1core_1_1ObjectWrapper}{Object\+Wrapper}} constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structgame_1_1core_1_1ObjectWrapper_a4aed436458407e30d92e9d64532db7d8}\label{structgame_1_1core_1_1ObjectWrapper_a4aed436458407e30d92e9d64532db7d8}} 
+{\bfseries Object\+Wrapper} (\mbox{\hyperlink{structgame_1_1core_1_1ObjectWrapper}{Object\+Wrapper}}$<$ TObject $>$ \&other)=delete
+\item 
+\mbox{\Hypertarget{structgame_1_1core_1_1ObjectWrapper_aeb6af802aa9927b78de91ee850c56045}\label{structgame_1_1core_1_1ObjectWrapper_aeb6af802aa9927b78de91ee850c56045}} 
+{\bfseries Object\+Wrapper} (\mbox{\hyperlink{structgame_1_1core_1_1ObjectWrapper}{Object\+Wrapper}}$<$ TObject $>$ \&\&other) noexcept
+\item 
+\mbox{\hyperlink{structgame_1_1core_1_1ObjectWrapper_ad699871caeeb1306e88202695fade79d}{$\sim$\+Object\+Wrapper}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structgame_1_1core_1_1ObjectWrapper}{Object\+Wrapper}} destructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structgame_1_1core_1_1ObjectWrapper_ad1da45f791a3412ea933d7d0d703e5b4}\label{structgame_1_1core_1_1ObjectWrapper_ad1da45f791a3412ea933d7d0d703e5b4}} 
+\mbox{\hyperlink{structgame_1_1core_1_1ObjectWrapper}{Object\+Wrapper}}$<$ TObject $>$ \& {\bfseries operator=} (\mbox{\hyperlink{structgame_1_1core_1_1ObjectWrapper}{Object\+Wrapper}}$<$ TObject $>$ \&other)=delete
+\item 
+\mbox{\Hypertarget{structgame_1_1core_1_1ObjectWrapper_a792d954df61208c573f97ae9378c455a}\label{structgame_1_1core_1_1ObjectWrapper_a792d954df61208c573f97ae9378c455a}} 
+\mbox{\hyperlink{structgame_1_1core_1_1ObjectWrapper}{Object\+Wrapper}}$<$ TObject $>$ \& {\bfseries operator=} (\mbox{\hyperlink{structgame_1_1core_1_1ObjectWrapper}{Object\+Wrapper}}$<$ TObject $>$ \&\&other) noexcept
+\item 
+void \mbox{\hyperlink{structgame_1_1core_1_1ObjectWrapper_a7f18a6a762b4ea7f99458cd683a2954e}{reset}} ()
+\begin{DoxyCompactList}\small\item\em reset object wrapper to a default state \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structgame_1_1core_1_1ObjectWrapper_aa8e62ad1eecffd41f7b49ab8488ef2ee}{guid}}
+\item 
+TObject $\ast$ \mbox{\hyperlink{structgame_1_1core_1_1ObjectWrapper_a36e780e3822c2b6f873262ab18b7dff0}{object\+Ptr}}
+\item 
+bool \mbox{\hyperlink{structgame_1_1core_1_1ObjectWrapper_a5d0793cca43dee53c4ac48d11052111e}{allocated\+This\+Frame}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class TObject$>$\newline
+struct game\+::core\+::\+Object\+Wrapper$<$ TObject $>$}
+
+wrapper class for object that may be referenced by object handler class 
+
+this class is the wrapper class for object that may be referenced by object handler class
+
+\begin{DoxyAuthor}{Author}
+Zheng Yang 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structgame_1_1core_1_1ObjectWrapper_a87e391e23c21e85c70b3479923cf8bb2}\label{structgame_1_1core_1_1ObjectWrapper_a87e391e23c21e85c70b3479923cf8bb2}} 
+\index{game::core::ObjectWrapper$<$ TObject $>$@{game::core::ObjectWrapper$<$ TObject $>$}!ObjectWrapper@{ObjectWrapper}}
+\index{ObjectWrapper@{ObjectWrapper}!game::core::ObjectWrapper$<$ TObject $>$@{game::core::ObjectWrapper$<$ TObject $>$}}
+\doxysubsubsection{\texorpdfstring{ObjectWrapper()}{ObjectWrapper()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class TObject $>$ \\
+\mbox{\hyperlink{structgame_1_1core_1_1ObjectWrapper}{game\+::core\+::\+Object\+Wrapper}}$<$ TObject $>$\+::\mbox{\hyperlink{structgame_1_1core_1_1ObjectWrapper}{Object\+Wrapper}}}
+
+
+
+\mbox{\hyperlink{structgame_1_1core_1_1ObjectWrapper}{Object\+Wrapper}} default constructor. 
+
+\mbox{\hyperlink{structgame_1_1core_1_1ObjectWrapper}{Object\+Wrapper}} default constructor \mbox{\Hypertarget{structgame_1_1core_1_1ObjectWrapper_ab2d907a1d2163f4748ea56afabf01642}\label{structgame_1_1core_1_1ObjectWrapper_ab2d907a1d2163f4748ea56afabf01642}} 
+\index{game::core::ObjectWrapper$<$ TObject $>$@{game::core::ObjectWrapper$<$ TObject $>$}!ObjectWrapper@{ObjectWrapper}}
+\index{ObjectWrapper@{ObjectWrapper}!game::core::ObjectWrapper$<$ TObject $>$@{game::core::ObjectWrapper$<$ TObject $>$}}
+\doxysubsubsection{\texorpdfstring{ObjectWrapper()}{ObjectWrapper()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class TObject $>$ \\
+\mbox{\hyperlink{structgame_1_1core_1_1ObjectWrapper}{game\+::core\+::\+Object\+Wrapper}}$<$ TObject $>$\+::\mbox{\hyperlink{structgame_1_1core_1_1ObjectWrapper}{Object\+Wrapper}} (\begin{DoxyParamCaption}\item[{GUID}]{id,  }\item[{TObject $\ast$}]{obj }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{structgame_1_1core_1_1ObjectWrapper}{Object\+Wrapper}} constructor. 
+
+\mbox{\hyperlink{structgame_1_1core_1_1ObjectWrapper}{Object\+Wrapper}} constructor 
+\begin{DoxyParams}{Parameters}
+{\em id} & guid of the object \\
+\hline
+{\em obj} & actual object \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structgame_1_1core_1_1ObjectWrapper_ad699871caeeb1306e88202695fade79d}\label{structgame_1_1core_1_1ObjectWrapper_ad699871caeeb1306e88202695fade79d}} 
+\index{game::core::ObjectWrapper$<$ TObject $>$@{game::core::ObjectWrapper$<$ TObject $>$}!````~ObjectWrapper@{$\sim$ObjectWrapper}}
+\index{````~ObjectWrapper@{$\sim$ObjectWrapper}!game::core::ObjectWrapper$<$ TObject $>$@{game::core::ObjectWrapper$<$ TObject $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$ObjectWrapper()}{~ObjectWrapper()}}
+{\footnotesize\ttfamily template$<$class TObject $>$ \\
+\mbox{\hyperlink{structgame_1_1core_1_1ObjectWrapper}{game\+::core\+::\+Object\+Wrapper}}$<$ TObject $>$\+::$\sim$\mbox{\hyperlink{structgame_1_1core_1_1ObjectWrapper}{Object\+Wrapper}}}
+
+
+
+\mbox{\hyperlink{structgame_1_1core_1_1ObjectWrapper}{Object\+Wrapper}} destructor. 
+
+\mbox{\hyperlink{structgame_1_1core_1_1ObjectWrapper}{Object\+Wrapper}} destructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structgame_1_1core_1_1ObjectWrapper_a7f18a6a762b4ea7f99458cd683a2954e}\label{structgame_1_1core_1_1ObjectWrapper_a7f18a6a762b4ea7f99458cd683a2954e}} 
+\index{game::core::ObjectWrapper$<$ TObject $>$@{game::core::ObjectWrapper$<$ TObject $>$}!reset@{reset}}
+\index{reset@{reset}!game::core::ObjectWrapper$<$ TObject $>$@{game::core::ObjectWrapper$<$ TObject $>$}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily template$<$class TObject $>$ \\
+void \mbox{\hyperlink{structgame_1_1core_1_1ObjectWrapper}{game\+::core\+::\+Object\+Wrapper}}$<$ TObject $>$\+::reset}
+
+
+
+reset object wrapper to a default state 
+
+reset object wrapper to a default state 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structgame_1_1core_1_1ObjectWrapper_a5d0793cca43dee53c4ac48d11052111e}\label{structgame_1_1core_1_1ObjectWrapper_a5d0793cca43dee53c4ac48d11052111e}} 
+\index{game::core::ObjectWrapper$<$ TObject $>$@{game::core::ObjectWrapper$<$ TObject $>$}!allocatedThisFrame@{allocatedThisFrame}}
+\index{allocatedThisFrame@{allocatedThisFrame}!game::core::ObjectWrapper$<$ TObject $>$@{game::core::ObjectWrapper$<$ TObject $>$}}
+\doxysubsubsection{\texorpdfstring{allocatedThisFrame}{allocatedThisFrame}}
+{\footnotesize\ttfamily template$<$class TObject $>$ \\
+bool \mbox{\hyperlink{structgame_1_1core_1_1ObjectWrapper}{game\+::core\+::\+Object\+Wrapper}}$<$ TObject $>$\+::allocated\+This\+Frame}
+
+true if object is allocated this frame, otherwise false \mbox{\Hypertarget{structgame_1_1core_1_1ObjectWrapper_aa8e62ad1eecffd41f7b49ab8488ef2ee}\label{structgame_1_1core_1_1ObjectWrapper_aa8e62ad1eecffd41f7b49ab8488ef2ee}} 
+\index{game::core::ObjectWrapper$<$ TObject $>$@{game::core::ObjectWrapper$<$ TObject $>$}!guid@{guid}}
+\index{guid@{guid}!game::core::ObjectWrapper$<$ TObject $>$@{game::core::ObjectWrapper$<$ TObject $>$}}
+\doxysubsubsection{\texorpdfstring{guid}{guid}}
+{\footnotesize\ttfamily template$<$class TObject $>$ \\
+uint32\+\_\+t \mbox{\hyperlink{structgame_1_1core_1_1ObjectWrapper}{game\+::core\+::\+Object\+Wrapper}}$<$ TObject $>$\+::guid}
+
+object guid \mbox{\Hypertarget{structgame_1_1core_1_1ObjectWrapper_a36e780e3822c2b6f873262ab18b7dff0}\label{structgame_1_1core_1_1ObjectWrapper_a36e780e3822c2b6f873262ab18b7dff0}} 
+\index{game::core::ObjectWrapper$<$ TObject $>$@{game::core::ObjectWrapper$<$ TObject $>$}!objectPtr@{objectPtr}}
+\index{objectPtr@{objectPtr}!game::core::ObjectWrapper$<$ TObject $>$@{game::core::ObjectWrapper$<$ TObject $>$}}
+\doxysubsubsection{\texorpdfstring{objectPtr}{objectPtr}}
+{\footnotesize\ttfamily template$<$class TObject $>$ \\
+TObject$\ast$ \mbox{\hyperlink{structgame_1_1core_1_1ObjectWrapper}{game\+::core\+::\+Object\+Wrapper}}$<$ TObject $>$\+::object\+Ptr}
+
+pointer to the actual object 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Core/Object\+Wrapper.\+h\end{DoxyCompactItemize}

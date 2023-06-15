@@ -1,0 +1,152 @@
+\hypertarget{structgame_1_1data_1_1EnemySpawnRuleDefine}{}\doxysection{game\+::data\+::Enemy\+Spawn\+Rule\+Define Struct Reference}
+\label{structgame_1_1data_1_1EnemySpawnRuleDefine}\index{game::data::EnemySpawnRuleDefine@{game::data::EnemySpawnRuleDefine}}
+
+
+data structure to hold spawn rule data  
+
+
+
+
+{\ttfamily \#include $<$Enemy\+Spawn\+Rule\+Define.\+h$>$}
+
+
+
+Inheritance diagram for game\+::data\+::Enemy\+Spawn\+Rule\+Define\+:
+% FIG 0
+
+
+Collaboration diagram for game\+::data\+::Enemy\+Spawn\+Rule\+Define\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structgame_1_1data_1_1EnemySpawnRuleDefine_acd8d8fb9e8b3ae0660e3e967a3ef69d3}{Enemy\+Spawn\+Rule\+Define}} (const rapidjson\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structgame_1_1data_1_1EnemySpawnRuleDefine}{Enemy\+Spawn\+Rule\+Define}} constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structgame_1_1data_1_1EnemySpawnRuleDefine_a5dce8af9dcaab32478517167a1d80ae4}\label{structgame_1_1data_1_1EnemySpawnRuleDefine_a5dce8af9dcaab32478517167a1d80ae4}} 
+{\bfseries Enemy\+Spawn\+Rule\+Define} (const \mbox{\hyperlink{structgame_1_1data_1_1EnemySpawnRuleDefine}{Enemy\+Spawn\+Rule\+Define}} \&other)=delete
+\item 
+\mbox{\Hypertarget{structgame_1_1data_1_1EnemySpawnRuleDefine_a346b500e7b8b11bc872994b6b542e6e8}\label{structgame_1_1data_1_1EnemySpawnRuleDefine_a346b500e7b8b11bc872994b6b542e6e8}} 
+\mbox{\hyperlink{structgame_1_1data_1_1EnemySpawnRuleDefine}{Enemy\+Spawn\+Rule\+Define}} \& {\bfseries operator=} (const \mbox{\hyperlink{structgame_1_1data_1_1EnemySpawnRuleDefine}{Enemy\+Spawn\+Rule\+Define}} \&other)=delete
+\item 
+void \mbox{\hyperlink{structgame_1_1data_1_1EnemySpawnRuleDefine_ae67957502032e0c3181e5fff6132af58}{from\+Json}} (const rapidjson\+::\+Value \&json) override
+\begin{DoxyCompactList}\small\item\em deserialize c++ data structure from json object \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structgame_1_1data_1_1EnemySpawnRuleDefine_ac0d5e0920fcd1a6d2a0b1c1ea7ea7181}{to\+Json}} (rapidjson\+::\+Writer$<$ rapidjson\+::\+String\+Buffer $>$ $\ast$writer) override
+\begin{DoxyCompactList}\small\item\em serialize a c++ data structure to a json object \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{structgame_1_1data_1_1EnemySpawnRuleDefine_af3ac08354ce85aecbbd830bc3ba0f611}{t\+ID}}
+\item 
+int \mbox{\hyperlink{structgame_1_1data_1_1EnemySpawnRuleDefine_a9f748e5875d6d1de16afaac89b7a3e47}{total\+Fights}}
+\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{structgame_1_1data_1_1EnemySpawnRuleDefine_ae50d468bc7b00f1889cfda6121f6ff98}{enemy\+List}}
+\item 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{structgame_1_1data_1_1FightRuleDefine}{Fight\+Rule\+Define}} $>$ $>$ \mbox{\hyperlink{structgame_1_1data_1_1EnemySpawnRuleDefine_a62cda25f1b4ccb5aaaa203fb5e84c9d6}{fights}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+data structure to hold spawn rule data 
+
+this is the data structure to hold spawn rule data defined in Spawn\+Rule\+Define.\+json
+
+\begin{DoxyAuthor}{Author}
+Zheng Yang 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structgame_1_1data_1_1EnemySpawnRuleDefine_acd8d8fb9e8b3ae0660e3e967a3ef69d3}\label{structgame_1_1data_1_1EnemySpawnRuleDefine_acd8d8fb9e8b3ae0660e3e967a3ef69d3}} 
+\index{game::data::EnemySpawnRuleDefine@{game::data::EnemySpawnRuleDefine}!EnemySpawnRuleDefine@{EnemySpawnRuleDefine}}
+\index{EnemySpawnRuleDefine@{EnemySpawnRuleDefine}!game::data::EnemySpawnRuleDefine@{game::data::EnemySpawnRuleDefine}}
+\doxysubsubsection{\texorpdfstring{EnemySpawnRuleDefine()}{EnemySpawnRuleDefine()}}
+{\footnotesize\ttfamily game\+::data\+::\+Enemy\+Spawn\+Rule\+Define\+::\+Enemy\+Spawn\+Rule\+Define (\begin{DoxyParamCaption}\item[{const rapidjson\+::\+Value \&}]{json }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+\mbox{\hyperlink{structgame_1_1data_1_1EnemySpawnRuleDefine}{Enemy\+Spawn\+Rule\+Define}} constructor. 
+
+\mbox{\hyperlink{structgame_1_1data_1_1EnemySpawnRuleDefine}{Enemy\+Spawn\+Rule\+Define}} constructor which deserializes a json object
+
+
+\begin{DoxyParams}{Parameters}
+{\em json} & object of the spawn rule data \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structgame_1_1data_1_1EnemySpawnRuleDefine_ae67957502032e0c3181e5fff6132af58}\label{structgame_1_1data_1_1EnemySpawnRuleDefine_ae67957502032e0c3181e5fff6132af58}} 
+\index{game::data::EnemySpawnRuleDefine@{game::data::EnemySpawnRuleDefine}!fromJson@{fromJson}}
+\index{fromJson@{fromJson}!game::data::EnemySpawnRuleDefine@{game::data::EnemySpawnRuleDefine}}
+\doxysubsubsection{\texorpdfstring{fromJson()}{fromJson()}}
+{\footnotesize\ttfamily void game\+::data\+::\+Enemy\+Spawn\+Rule\+Define\+::from\+Json (\begin{DoxyParamCaption}\item[{const rapidjson\+::\+Value \&}]{json }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+deserialize c++ data structure from json object 
+
+this function takes a json object, and deserialize c++ data structure from it
+
+
+\begin{DoxyParams}{Parameters}
+{\em json} & serialized json object \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classgame_1_1data_1_1JsonBase_ad71ccf1cdfa32f5100ba32d208afbffa}{game\+::data\+::\+Json\+Base}}.
+
+\mbox{\Hypertarget{structgame_1_1data_1_1EnemySpawnRuleDefine_ac0d5e0920fcd1a6d2a0b1c1ea7ea7181}\label{structgame_1_1data_1_1EnemySpawnRuleDefine_ac0d5e0920fcd1a6d2a0b1c1ea7ea7181}} 
+\index{game::data::EnemySpawnRuleDefine@{game::data::EnemySpawnRuleDefine}!toJson@{toJson}}
+\index{toJson@{toJson}!game::data::EnemySpawnRuleDefine@{game::data::EnemySpawnRuleDefine}}
+\doxysubsubsection{\texorpdfstring{toJson()}{toJson()}}
+{\footnotesize\ttfamily void game\+::data\+::\+Enemy\+Spawn\+Rule\+Define\+::to\+Json (\begin{DoxyParamCaption}\item[{rapidjson\+::\+Writer$<$ rapidjson\+::\+String\+Buffer $>$ $\ast$}]{writer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+serialize a c++ data structure to a json object 
+
+this function takes a json writer, and serialize c++ data structure to it
+
+
+\begin{DoxyParams}{Parameters}
+{\em writer} & json writer \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classgame_1_1data_1_1JsonBase_a9b0277fdcf438ded476fe08d07c2ed2d}{game\+::data\+::\+Json\+Base}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structgame_1_1data_1_1EnemySpawnRuleDefine_ae50d468bc7b00f1889cfda6121f6ff98}\label{structgame_1_1data_1_1EnemySpawnRuleDefine_ae50d468bc7b00f1889cfda6121f6ff98}} 
+\index{game::data::EnemySpawnRuleDefine@{game::data::EnemySpawnRuleDefine}!enemyList@{enemyList}}
+\index{enemyList@{enemyList}!game::data::EnemySpawnRuleDefine@{game::data::EnemySpawnRuleDefine}}
+\doxysubsubsection{\texorpdfstring{enemyList}{enemyList}}
+{\footnotesize\ttfamily std\+::vector$<$int$>$ game\+::data\+::\+Enemy\+Spawn\+Rule\+Define\+::enemy\+List}
+
+enemy list \mbox{\Hypertarget{structgame_1_1data_1_1EnemySpawnRuleDefine_a62cda25f1b4ccb5aaaa203fb5e84c9d6}\label{structgame_1_1data_1_1EnemySpawnRuleDefine_a62cda25f1b4ccb5aaaa203fb5e84c9d6}} 
+\index{game::data::EnemySpawnRuleDefine@{game::data::EnemySpawnRuleDefine}!fights@{fights}}
+\index{fights@{fights}!game::data::EnemySpawnRuleDefine@{game::data::EnemySpawnRuleDefine}}
+\doxysubsubsection{\texorpdfstring{fights}{fights}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{structgame_1_1data_1_1FightRuleDefine}{Fight\+Rule\+Define}}$>$ $>$ game\+::data\+::\+Enemy\+Spawn\+Rule\+Define\+::fights}
+
+fights \mbox{\Hypertarget{structgame_1_1data_1_1EnemySpawnRuleDefine_af3ac08354ce85aecbbd830bc3ba0f611}\label{structgame_1_1data_1_1EnemySpawnRuleDefine_af3ac08354ce85aecbbd830bc3ba0f611}} 
+\index{game::data::EnemySpawnRuleDefine@{game::data::EnemySpawnRuleDefine}!tID@{tID}}
+\index{tID@{tID}!game::data::EnemySpawnRuleDefine@{game::data::EnemySpawnRuleDefine}}
+\doxysubsubsection{\texorpdfstring{tID}{tID}}
+{\footnotesize\ttfamily int game\+::data\+::\+Enemy\+Spawn\+Rule\+Define\+::t\+ID}
+
+identifier \mbox{\Hypertarget{structgame_1_1data_1_1EnemySpawnRuleDefine_a9f748e5875d6d1de16afaac89b7a3e47}\label{structgame_1_1data_1_1EnemySpawnRuleDefine_a9f748e5875d6d1de16afaac89b7a3e47}} 
+\index{game::data::EnemySpawnRuleDefine@{game::data::EnemySpawnRuleDefine}!totalFights@{totalFights}}
+\index{totalFights@{totalFights}!game::data::EnemySpawnRuleDefine@{game::data::EnemySpawnRuleDefine}}
+\doxysubsubsection{\texorpdfstring{totalFights}{totalFights}}
+{\footnotesize\ttfamily int game\+::data\+::\+Enemy\+Spawn\+Rule\+Define\+::total\+Fights}
+
+total fights in this game level 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Data/Enemy\+Spawn\+Rule\+Define.\+h\end{DoxyCompactItemize}

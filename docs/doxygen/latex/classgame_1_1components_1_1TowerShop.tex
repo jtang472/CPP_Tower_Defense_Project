@@ -1,0 +1,177 @@
+\hypertarget{classgame_1_1components_1_1TowerShop}{}\doxysection{game\+::components\+::Tower\+Shop Class Reference}
+\label{classgame_1_1components_1_1TowerShop}\index{game::components::TowerShop@{game::components::TowerShop}}
+
+
+controller class for in-\/game purchase of towers during gameplay  
+
+
+
+
+{\ttfamily \#include $<$Tower\+Shop.\+h$>$}
+
+
+
+Inheritance diagram for game\+::components\+::Tower\+Shop\+:
+% FIG 0
+
+
+Collaboration diagram for game\+::components\+::Tower\+Shop\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgame_1_1components_1_1TowerShop_a0f4472636a39eea4528f2ad9568e1eaf}{Tower\+Shop}} (\mbox{\hyperlink{classgame_1_1components_1_1GameObject}{Game\+Object}} \&owner, \mbox{\hyperlink{classgame_1_1grid_1_1GridSystem}{grid\+::\+Grid\+System}} $\ast$system, sf\+::\+Render\+Window $\ast$render\+Window, sf\+::\+View $\ast$game\+Camera)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classgame_1_1components_1_1TowerShop}{Tower\+Shop}} constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1TowerShop_ad1813469d417be059df1cbd094b9eefc}{tick}} (float delta\+Time) override
+\begin{DoxyCompactList}\small\item\em component lifecycle function \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1TowerShop_a9b2a0760e4123a5a03295c47bfea9c2f}{load\+Level}} (const ldtk\+::\+Level $\ast$level)
+\begin{DoxyCompactList}\small\item\em load the necessary information of towers in a certain game level \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1TowerShop_affa0c865d3f4c3ea05a3687569fe5dd6}{Buy\+Tower}} (\mbox{\hyperlink{structgame_1_1data_1_1TowerDefine}{data\+::\+Tower\+Define}} $\ast$define, \mbox{\hyperlink{classgame_1_1grid_1_1Grid}{grid\+::\+Grid}} $\ast$grid)
+\begin{DoxyCompactList}\small\item\em call this API to buy a tower \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Render\+Window $\ast$ \mbox{\hyperlink{classgame_1_1components_1_1TowerShop_ad34d1d511d6faf98ce149c122edb3c29}{m\+Game\+Window}}
+\item 
+sf\+::\+View $\ast$ \mbox{\hyperlink{classgame_1_1components_1_1TowerShop_a4b503f395ded83ba23d454cff2a04979}{m\+Game\+View}}
+\item 
+\mbox{\hyperlink{classgame_1_1grid_1_1GridSystem}{grid\+::\+Grid\+System}} $\ast$ \mbox{\hyperlink{classgame_1_1components_1_1TowerShop_afd7a32ff346c9e809ed00fd0539f9abc}{m\+Grid\+System}}
+\item 
+const ldtk\+::\+Level $\ast$ \mbox{\hyperlink{classgame_1_1components_1_1TowerShop_a4b980dfc2fbc3d355fa4032e1f0e4ecc}{m\+Game\+Level}}
+\item 
+\mbox{\hyperlink{classgame_1_1grid_1_1Grid}{grid\+::\+Grid}} $\ast$ \mbox{\hyperlink{classgame_1_1components_1_1TowerShop_ac356a6768c8aa570ca40c51f0ec0845f}{m\+Selected\+Grid}}
+\item 
+\mbox{\hyperlink{classgame_1_1components_1_1GameObject}{components\+::\+Game\+Object}} $\ast$ \mbox{\hyperlink{classgame_1_1components_1_1TowerShop_a0f75ffdd66d7917af5e8b5bd5992a4a3}{m\+Selected\+Tower\+Shop\+GO}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+controller class for in-\/game purchase of towers during gameplay 
+
+this is the controller class for in-\/game purchase of towers during gameplay
+
+\begin{DoxyAuthor}{Author}
+Zheng Yang 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgame_1_1components_1_1TowerShop_a0f4472636a39eea4528f2ad9568e1eaf}\label{classgame_1_1components_1_1TowerShop_a0f4472636a39eea4528f2ad9568e1eaf}} 
+\index{game::components::TowerShop@{game::components::TowerShop}!TowerShop@{TowerShop}}
+\index{TowerShop@{TowerShop}!game::components::TowerShop@{game::components::TowerShop}}
+\doxysubsubsection{\texorpdfstring{TowerShop()}{TowerShop()}}
+{\footnotesize\ttfamily game\+::components\+::\+Tower\+Shop\+::\+Tower\+Shop (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgame_1_1components_1_1GameObject}{Game\+Object}} \&}]{owner,  }\item[{\mbox{\hyperlink{classgame_1_1grid_1_1GridSystem}{grid\+::\+Grid\+System}} $\ast$}]{system,  }\item[{sf\+::\+Render\+Window $\ast$}]{render\+Window,  }\item[{sf\+::\+View $\ast$}]{game\+Camera }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classgame_1_1components_1_1TowerShop}{Tower\+Shop}} constructor. 
+
+\mbox{\hyperlink{classgame_1_1components_1_1TowerShop}{Tower\+Shop}} constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em owner} & owner of the component \\
+\hline
+{\em layer} & grid layer \\
+\hline
+{\em render\+Window} & game window \\
+\hline
+{\em game\+Camera} & game camera \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgame_1_1components_1_1TowerShop_affa0c865d3f4c3ea05a3687569fe5dd6}\label{classgame_1_1components_1_1TowerShop_affa0c865d3f4c3ea05a3687569fe5dd6}} 
+\index{game::components::TowerShop@{game::components::TowerShop}!BuyTower@{BuyTower}}
+\index{BuyTower@{BuyTower}!game::components::TowerShop@{game::components::TowerShop}}
+\doxysubsubsection{\texorpdfstring{BuyTower()}{BuyTower()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Tower\+Shop\+::\+Buy\+Tower (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structgame_1_1data_1_1TowerDefine}{data\+::\+Tower\+Define}} $\ast$}]{define,  }\item[{\mbox{\hyperlink{classgame_1_1grid_1_1Grid}{grid\+::\+Grid}} $\ast$}]{grid }\end{DoxyParamCaption})}
+
+
+
+call this API to buy a tower 
+
+call this API to add a tower to map \mbox{\Hypertarget{classgame_1_1components_1_1TowerShop_a9b2a0760e4123a5a03295c47bfea9c2f}\label{classgame_1_1components_1_1TowerShop_a9b2a0760e4123a5a03295c47bfea9c2f}} 
+\index{game::components::TowerShop@{game::components::TowerShop}!loadLevel@{loadLevel}}
+\index{loadLevel@{loadLevel}!game::components::TowerShop@{game::components::TowerShop}}
+\doxysubsubsection{\texorpdfstring{loadLevel()}{loadLevel()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Tower\+Shop\+::load\+Level (\begin{DoxyParamCaption}\item[{const ldtk\+::\+Level $\ast$}]{level }\end{DoxyParamCaption})}
+
+
+
+load the necessary information of towers in a certain game level 
+
+load the necessary information of towers in a certain game level
+
+
+\begin{DoxyParams}{Parameters}
+{\em level} & the new game level \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1components_1_1TowerShop_ad1813469d417be059df1cbd094b9eefc}\label{classgame_1_1components_1_1TowerShop_ad1813469d417be059df1cbd094b9eefc}} 
+\index{game::components::TowerShop@{game::components::TowerShop}!tick@{tick}}
+\index{tick@{tick}!game::components::TowerShop@{game::components::TowerShop}}
+\doxysubsubsection{\texorpdfstring{tick()}{tick()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Tower\+Shop\+::tick (\begin{DoxyParamCaption}\item[{float}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+component lifecycle function 
+
+component lifecycle function, gets called automatically every frame. This is where every component in the game gets updated
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & the time elpased between now and last frame \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classgame_1_1components_1_1Component_ac85cd99e8109eb32a97549bf437ea5ce}{game\+::components\+::\+Component}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classgame_1_1components_1_1TowerShop_a4b980dfc2fbc3d355fa4032e1f0e4ecc}\label{classgame_1_1components_1_1TowerShop_a4b980dfc2fbc3d355fa4032e1f0e4ecc}} 
+\index{game::components::TowerShop@{game::components::TowerShop}!mGameLevel@{mGameLevel}}
+\index{mGameLevel@{mGameLevel}!game::components::TowerShop@{game::components::TowerShop}}
+\doxysubsubsection{\texorpdfstring{mGameLevel}{mGameLevel}}
+{\footnotesize\ttfamily const ldtk\+::\+Level$\ast$ game\+::components\+::\+Tower\+Shop\+::m\+Game\+Level\hspace{0.3cm}{\ttfamily [private]}}
+
+cached game world data \mbox{\Hypertarget{classgame_1_1components_1_1TowerShop_a4b503f395ded83ba23d454cff2a04979}\label{classgame_1_1components_1_1TowerShop_a4b503f395ded83ba23d454cff2a04979}} 
+\index{game::components::TowerShop@{game::components::TowerShop}!mGameView@{mGameView}}
+\index{mGameView@{mGameView}!game::components::TowerShop@{game::components::TowerShop}}
+\doxysubsubsection{\texorpdfstring{mGameView}{mGameView}}
+{\footnotesize\ttfamily sf\+::\+View$\ast$ game\+::components\+::\+Tower\+Shop\+::m\+Game\+View\hspace{0.3cm}{\ttfamily [private]}}
+
+cached game camera \mbox{\Hypertarget{classgame_1_1components_1_1TowerShop_ad34d1d511d6faf98ce149c122edb3c29}\label{classgame_1_1components_1_1TowerShop_ad34d1d511d6faf98ce149c122edb3c29}} 
+\index{game::components::TowerShop@{game::components::TowerShop}!mGameWindow@{mGameWindow}}
+\index{mGameWindow@{mGameWindow}!game::components::TowerShop@{game::components::TowerShop}}
+\doxysubsubsection{\texorpdfstring{mGameWindow}{mGameWindow}}
+{\footnotesize\ttfamily sf\+::\+Render\+Window$\ast$ game\+::components\+::\+Tower\+Shop\+::m\+Game\+Window\hspace{0.3cm}{\ttfamily [private]}}
+
+cached game window \mbox{\Hypertarget{classgame_1_1components_1_1TowerShop_afd7a32ff346c9e809ed00fd0539f9abc}\label{classgame_1_1components_1_1TowerShop_afd7a32ff346c9e809ed00fd0539f9abc}} 
+\index{game::components::TowerShop@{game::components::TowerShop}!mGridSystem@{mGridSystem}}
+\index{mGridSystem@{mGridSystem}!game::components::TowerShop@{game::components::TowerShop}}
+\doxysubsubsection{\texorpdfstring{mGridSystem}{mGridSystem}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgame_1_1grid_1_1GridSystem}{grid\+::\+Grid\+System}}$\ast$ game\+::components\+::\+Tower\+Shop\+::m\+Grid\+System\hspace{0.3cm}{\ttfamily [private]}}
+
+cached grid system \mbox{\Hypertarget{classgame_1_1components_1_1TowerShop_ac356a6768c8aa570ca40c51f0ec0845f}\label{classgame_1_1components_1_1TowerShop_ac356a6768c8aa570ca40c51f0ec0845f}} 
+\index{game::components::TowerShop@{game::components::TowerShop}!mSelectedGrid@{mSelectedGrid}}
+\index{mSelectedGrid@{mSelectedGrid}!game::components::TowerShop@{game::components::TowerShop}}
+\doxysubsubsection{\texorpdfstring{mSelectedGrid}{mSelectedGrid}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgame_1_1grid_1_1Grid}{grid\+::\+Grid}}$\ast$ game\+::components\+::\+Tower\+Shop\+::m\+Selected\+Grid\hspace{0.3cm}{\ttfamily [private]}}
+
+selected grid \mbox{\Hypertarget{classgame_1_1components_1_1TowerShop_a0f75ffdd66d7917af5e8b5bd5992a4a3}\label{classgame_1_1components_1_1TowerShop_a0f75ffdd66d7917af5e8b5bd5992a4a3}} 
+\index{game::components::TowerShop@{game::components::TowerShop}!mSelectedTowerShopGO@{mSelectedTowerShopGO}}
+\index{mSelectedTowerShopGO@{mSelectedTowerShopGO}!game::components::TowerShop@{game::components::TowerShop}}
+\doxysubsubsection{\texorpdfstring{mSelectedTowerShopGO}{mSelectedTowerShopGO}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgame_1_1components_1_1GameObject}{components\+::\+Game\+Object}}$\ast$ game\+::components\+::\+Tower\+Shop\+::m\+Selected\+Tower\+Shop\+GO\hspace{0.3cm}{\ttfamily [private]}}
+
+cached tower shop go 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Components/\+Game\+Play/Tower\+Shop.\+h\end{DoxyCompactItemize}

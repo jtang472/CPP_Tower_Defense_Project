@@ -1,0 +1,540 @@
+\hypertarget{classgame_1_1core_1_1GameManager}{}\doxysection{game\+::core\+::Game\+Manager Class Reference}
+\label{classgame_1_1core_1_1GameManager}\index{game::core::GameManager@{game::core::GameManager}}
+
+
+manager class that initialize, runs, updates and closes the game window  
+
+
+
+
+{\ttfamily \#include $<$Game\+Manager.\+h$>$}
+
+
+
+Inheritance diagram for game\+::core\+::Game\+Manager\+:
+% FIG 0
+
+
+Collaboration diagram for game\+::core\+::Game\+Manager\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classgame_1_1core_1_1GameManager_a039e0a7f460121781e8bdfb3edc6a1dc}{init}} ()
+\begin{DoxyCompactList}\small\item\em initialize some configurations of the game \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1core_1_1GameManager_ab4de18091a297b31816771c6455dee47}{run}} ()
+\begin{DoxyCompactList}\small\item\em run game \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1core_1_1GameManager_a16053a2248700ce0860d0df7cd3c0847}{terminate}} ()
+\begin{DoxyCompactList}\small\item\em clean up before closing game window \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classgame_1_1core_1_1ObjectHandle}{Go\+Handle}} \mbox{\hyperlink{classgame_1_1core_1_1GameManager_a0a525b1148558fab6b4ba24a7b17656c}{instantiate\+Game\+Object}} (\mbox{\hyperlink{classgame_1_1components_1_1GameObject_a7219837ddf188469edc82e4f1f942882}{components\+::\+Game\+Object\+::\+Go\+State}} state=\mbox{\hyperlink{classgame_1_1components_1_1GameObject_a7219837ddf188469edc82e4f1f942882a18ff74f43da410c5529f7d6fca84f115}{components\+::\+Game\+Object\+::\+Go\+State\+::\+ACTIVE}})
+\begin{DoxyCompactList}\small\item\em instantiate an empty gameobject and return a handle to this gameobject to caller \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classgame_1_1renderer_1_1GameRenderer}{renderer\+::\+Game\+Renderer}} \& \mbox{\hyperlink{classgame_1_1core_1_1GameManager_aecb6b7d14797ecf4a3c161fdef17feb4}{get\+Renderer}} ()
+\begin{DoxyCompactList}\small\item\em game renderer getter \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classgame_1_1core_1_1ObjectHandle}{Go\+Handle}} \mbox{\hyperlink{classgame_1_1core_1_1GameManager_a20cfd66e1f961806886aef53ed73e289}{get\+Empty\+Go\+Handle}} ()
+\begin{DoxyCompactList}\small\item\em get an empty gameobject handle \end{DoxyCompactList}\item 
+sf\+::\+Vector2u \mbox{\hyperlink{classgame_1_1core_1_1GameManager_ab73db83e2f6b103e5f0e8d19bad359e8}{get\+Current\+Window\+Size}} ()
+\begin{DoxyCompactList}\small\item\em window size getter \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classgame_1_1core_1_1AsyncTask}{Async\+Task}} $\ast$ \mbox{\hyperlink{classgame_1_1core_1_1GameManager_a9d82a09edf69022d2604f9eeb75e5b7b}{register\+Async\+Task}} (Loading\+Task task)
+\begin{DoxyCompactList}\small\item\em register asynchronous task \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classgame_1_1core_1_1PlayerState}{Player\+State}} $\ast$ \mbox{\hyperlink{classgame_1_1core_1_1GameManager_a8ca25c116da387c9cec9773bb88832de}{get\+Player\+State}} ()
+\begin{DoxyCompactList}\small\item\em player state getter \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classgame_1_1core_1_1GameManager_aff32978a26882a8d60492fa1d5ec5b21}{get\+FPS}} ()
+\begin{DoxyCompactList}\small\item\em frame per second getter \end{DoxyCompactList}\item 
+sf\+::\+View $\ast$ \mbox{\hyperlink{classgame_1_1core_1_1GameManager_accd3c4ef0368366dd7783547dff24eeb}{get\+Game\+Camera}} ()
+\begin{DoxyCompactList}\small\item\em game camera getter \end{DoxyCompactList}\item 
+sf\+::\+Render\+Window $\ast$ \mbox{\hyperlink{classgame_1_1core_1_1GameManager_af850fa65199207d7749eec5162fe6008}{get\+Game\+Window}} ()
+\begin{DoxyCompactList}\small\item\em game window getter \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const float \mbox{\hyperlink{classgame_1_1core_1_1GameManager_a5ba133603eb02148f6d0cc758d518ff3}{Default\+Time\+Per\+Frame}}
+\item 
+static const int \mbox{\hyperlink{classgame_1_1core_1_1GameManager_a09da8e20d74407a397f38f10900b1269}{Go\+Maximum}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgame_1_1core_1_1GameManager_ac0513903e51946d03da2462245b2ed7a}{Game\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em private constructor \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classgame_1_1core_1_1GameManager_a0885ec2b4ffe345332942a533628a1a1}{$\sim$\+Game\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classgame_1_1core_1_1GameManager}{Game\+Manager}} destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1core_1_1GameManager_a00e790cfc0e2b204c63811c9ca2f8f45}{update\+FPS}} (float delta\+Time)
+\begin{DoxyCompactList}\small\item\em update the fps of the game by passing in the time elapsed between last frame and current frame \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1core_1_1GameManager_a3a8f84aec13a9dbfbe79171d773a75fa}{tick\+Logic}} (float delta\+Time)
+\begin{DoxyCompactList}\small\item\em update the game world \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1core_1_1GameManager_a0edb9a63295d7ea8e5e7776873825481}{tick\+Renderer}} ()
+\begin{DoxyCompactList}\small\item\em render the game world \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1core_1_1GameManager_a8dd828922963f6b32dc4d69c2a1248aa}{Destroy\+Game\+Object}} (\mbox{\hyperlink{classgame_1_1components_1_1GameObject}{game\+::components\+::\+Game\+Object}} $\ast$to\+Destroy)
+\begin{DoxyCompactList}\small\item\em destroy a gameobject that is marked to be destroyed \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1core_1_1GameManager_a2f84fb013e9c0b519893248a331e718f}{Destroy\+Game\+Object}} (GUID guid)
+\begin{DoxyCompactList}\small\item\em destroy a gameobject that is marked to be destroyed \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classgame_1_1core_1_1GameManager_a1dfdeca1b48579fa37184dcb43da7313}{m\+Is\+Game\+Running}}
+\item 
+bool \mbox{\hyperlink{classgame_1_1core_1_1GameManager_a09bb599fab625a3d984a8d8533448a19}{m\+Is\+Ticking\+Logic}}
+\item 
+float \mbox{\hyperlink{classgame_1_1core_1_1GameManager_a5787189dce61ec12c4b0b576c6fce11c}{m\+Time\+Per\+Frame}}
+\item 
+sf\+::\+Render\+Window \mbox{\hyperlink{classgame_1_1core_1_1GameManager_a07f2b01a471be65645f612e62ed227e9}{m\+Game\+Window}}
+\item 
+std\+::chrono\+::steady\+\_\+clock\+::time\+\_\+point \mbox{\hyperlink{classgame_1_1core_1_1GameManager_a788062000ae8df4365630ac0895a5153}{m\+Time\+Point\+For\+Last\+Tick}}
+\item 
+int \mbox{\hyperlink{classgame_1_1core_1_1GameManager_a22cea7abcfac4481dd00694857af175b}{m\+FPS}}
+\item 
+int \mbox{\hyperlink{classgame_1_1core_1_1GameManager_a61e27f52a0ed8a81cad91c4657f4e0fa}{m\+Frame\+Count}}
+\item 
+float \mbox{\hyperlink{classgame_1_1core_1_1GameManager_a65754be80d5e0c47be7512a99561f497}{m\+Time\+Elapsed\+After\+Last\+Second}}
+\item 
+float \mbox{\hyperlink{classgame_1_1core_1_1GameManager_af8540178bb97ebba09fbbcd41b4ce69c}{m\+Actual\+Time\+Elapsed\+Between\+Render}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classgame_1_1core_1_1PlayerState}{Player\+State}} $>$ \mbox{\hyperlink{classgame_1_1core_1_1GameManager_a24a208b1b72f94ab9093959e4cd9b90c}{m\+Player\+State}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structgame_1_1core_1_1ObjectWrapper}{Go\+Wrapper}} $>$ \mbox{\hyperlink{classgame_1_1core_1_1GameManager_a6b5055110bc6833618a79bb506365cd2}{m\+Active\+Go\+Queue}}
+\item 
+std\+::vector$<$ GUID $>$ \mbox{\hyperlink{classgame_1_1core_1_1GameManager_a011871f52a0f9a2e09d83fc7f96c9180}{m\+Pending\+Go\+Queue}}
+\item 
+std\+::vector$<$ GUID $>$ \mbox{\hyperlink{classgame_1_1core_1_1GameManager_a5601bb2d56ca58a3877bb8dc99bfff50}{m\+To\+Delete\+Go\+Queue}}
+\item 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classgame_1_1core_1_1AsyncTask}{Async\+Task}} $>$ $>$ \mbox{\hyperlink{classgame_1_1core_1_1GameManager_aae5cf85bb64ed271e71f942f3685c9f6}{m\+Active\+Tasks}}
+\item 
+std\+::mutex \mbox{\hyperlink{classgame_1_1core_1_1GameManager_a414a7d2b0ef1eacb22bef4b02528e5db}{m\+Lock}}
+\item 
+\mbox{\hyperlink{classgame_1_1states_1_1StateMachine}{states\+::\+State\+Machine}} \mbox{\hyperlink{classgame_1_1core_1_1GameManager_ac33956dfcfdcc174a2e66a58225d0cb2}{m\+State\+Machine}}
+\item 
+\mbox{\hyperlink{classgame_1_1renderer_1_1GameRenderer}{renderer\+::\+Game\+Renderer}} \mbox{\hyperlink{classgame_1_1core_1_1GameManager_af5e08f4a49c7316fc45dd1545ebcfcfa}{m\+Renderer}}
+\item 
+sf\+::\+View \mbox{\hyperlink{classgame_1_1core_1_1GameManager_ae185e04831d1b1f80770d8a094906d0c}{m\+Game\+Camera}}
+\item 
+sf\+::\+View \mbox{\hyperlink{classgame_1_1core_1_1GameManager_a8a37060b1c4e5bfb3f9b006a88497b35}{m\+Ui\+Camera}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classgame_1_1core_1_1GameManager_aea7e15ea69de786a42266b0f5cdd4a9c}\label{classgame_1_1core_1_1GameManager_aea7e15ea69de786a42266b0f5cdd4a9c}} 
+class {\bfseries Singleton$<$ Game\+Manager $>$}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+manager class that initialize, runs, updates and closes the game window 
+
+this is the manager class that initialize, runs, updates and closes the game window. It maintains the global lookup table for all gameobjects created during the game, and it manages all the background thread created with the \mbox{\hyperlink{classgame_1_1core_1_1AsyncTask}{Async\+Task}} class. It maintains the main game loop and it ensures the application can be closed properly when getting terminated.
+
+\begin{DoxyAuthor}{Author}
+Zheng Yang 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgame_1_1core_1_1GameManager_ac0513903e51946d03da2462245b2ed7a}\label{classgame_1_1core_1_1GameManager_ac0513903e51946d03da2462245b2ed7a}} 
+\index{game::core::GameManager@{game::core::GameManager}!GameManager@{GameManager}}
+\index{GameManager@{GameManager}!game::core::GameManager@{game::core::GameManager}}
+\doxysubsubsection{\texorpdfstring{GameManager()}{GameManager()}}
+{\footnotesize\ttfamily game\+::core\+::\+Game\+Manager\+::\+Game\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+private constructor 
+
+private constructor to ensure the singleton pattern \mbox{\Hypertarget{classgame_1_1core_1_1GameManager_a0885ec2b4ffe345332942a533628a1a1}\label{classgame_1_1core_1_1GameManager_a0885ec2b4ffe345332942a533628a1a1}} 
+\index{game::core::GameManager@{game::core::GameManager}!````~GameManager@{$\sim$GameManager}}
+\index{````~GameManager@{$\sim$GameManager}!game::core::GameManager@{game::core::GameManager}}
+\doxysubsubsection{\texorpdfstring{$\sim$GameManager()}{~GameManager()}}
+{\footnotesize\ttfamily game\+::core\+::\+Game\+Manager\+::$\sim$\+Game\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{classgame_1_1core_1_1GameManager}{Game\+Manager}} destructor. 
+
+\mbox{\hyperlink{classgame_1_1core_1_1GameManager}{Game\+Manager}} destructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgame_1_1core_1_1GameManager_a8dd828922963f6b32dc4d69c2a1248aa}\label{classgame_1_1core_1_1GameManager_a8dd828922963f6b32dc4d69c2a1248aa}} 
+\index{game::core::GameManager@{game::core::GameManager}!DestroyGameObject@{DestroyGameObject}}
+\index{DestroyGameObject@{DestroyGameObject}!game::core::GameManager@{game::core::GameManager}}
+\doxysubsubsection{\texorpdfstring{DestroyGameObject()}{DestroyGameObject()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void game\+::core\+::\+Game\+Manager\+::\+Destroy\+Game\+Object (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgame_1_1components_1_1GameObject}{game\+::components\+::\+Game\+Object}} $\ast$}]{to\+Destroy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+destroy a gameobject that is marked to be destroyed 
+
+this function gets called at the end of each logical tick to destroy all the gameobjects that are marked to be destroyed at that frame
+
+
+\begin{DoxyParams}{Parameters}
+{\em to\+Destroy} & the gameobject marked to be destroyed \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1core_1_1GameManager_a2f84fb013e9c0b519893248a331e718f}\label{classgame_1_1core_1_1GameManager_a2f84fb013e9c0b519893248a331e718f}} 
+\index{game::core::GameManager@{game::core::GameManager}!DestroyGameObject@{DestroyGameObject}}
+\index{DestroyGameObject@{DestroyGameObject}!game::core::GameManager@{game::core::GameManager}}
+\doxysubsubsection{\texorpdfstring{DestroyGameObject()}{DestroyGameObject()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void game\+::core\+::\+Game\+Manager\+::\+Destroy\+Game\+Object (\begin{DoxyParamCaption}\item[{GUID}]{guid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+destroy a gameobject that is marked to be destroyed 
+
+this function gets called at the end of each logical tick to destroy all the gameobjects that are marked to be destroyed at that frame
+
+
+\begin{DoxyParams}{Parameters}
+{\em to\+Destroy} & the guid of the gameobject marked to be destroyed \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1core_1_1GameManager_ab73db83e2f6b103e5f0e8d19bad359e8}\label{classgame_1_1core_1_1GameManager_ab73db83e2f6b103e5f0e8d19bad359e8}} 
+\index{game::core::GameManager@{game::core::GameManager}!getCurrentWindowSize@{getCurrentWindowSize}}
+\index{getCurrentWindowSize@{getCurrentWindowSize}!game::core::GameManager@{game::core::GameManager}}
+\doxysubsubsection{\texorpdfstring{getCurrentWindowSize()}{getCurrentWindowSize()}}
+{\footnotesize\ttfamily sf\+::\+Vector2u game\+::core\+::\+Game\+Manager\+::get\+Current\+Window\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+window size getter 
+
+this function returns the current game window size
+
+\begin{DoxyReturn}{Returns}
+current game window size 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgame_1_1core_1_1GameManager_a20cfd66e1f961806886aef53ed73e289}\label{classgame_1_1core_1_1GameManager_a20cfd66e1f961806886aef53ed73e289}} 
+\index{game::core::GameManager@{game::core::GameManager}!getEmptyGoHandle@{getEmptyGoHandle}}
+\index{getEmptyGoHandle@{getEmptyGoHandle}!game::core::GameManager@{game::core::GameManager}}
+\doxysubsubsection{\texorpdfstring{getEmptyGoHandle()}{getEmptyGoHandle()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgame_1_1core_1_1ObjectHandle}{Go\+Handle}} game\+::core\+::\+Game\+Manager\+::get\+Empty\+Go\+Handle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get an empty gameobject handle 
+
+this function creates a new empty gameobject handle and return it to caller
+
+\begin{DoxyReturn}{Returns}
+an empty gameobject handle 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgame_1_1core_1_1GameManager_aff32978a26882a8d60492fa1d5ec5b21}\label{classgame_1_1core_1_1GameManager_aff32978a26882a8d60492fa1d5ec5b21}} 
+\index{game::core::GameManager@{game::core::GameManager}!getFPS@{getFPS}}
+\index{getFPS@{getFPS}!game::core::GameManager@{game::core::GameManager}}
+\doxysubsubsection{\texorpdfstring{getFPS()}{getFPS()}}
+{\footnotesize\ttfamily int game\+::core\+::\+Game\+Manager\+::get\+FPS (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+frame per second getter 
+
+this function returns the current fps of the game
+
+\begin{DoxyReturn}{Returns}
+current fps of the game 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgame_1_1core_1_1GameManager_accd3c4ef0368366dd7783547dff24eeb}\label{classgame_1_1core_1_1GameManager_accd3c4ef0368366dd7783547dff24eeb}} 
+\index{game::core::GameManager@{game::core::GameManager}!getGameCamera@{getGameCamera}}
+\index{getGameCamera@{getGameCamera}!game::core::GameManager@{game::core::GameManager}}
+\doxysubsubsection{\texorpdfstring{getGameCamera()}{getGameCamera()}}
+{\footnotesize\ttfamily sf\+::\+View$\ast$ game\+::core\+::\+Game\+Manager\+::get\+Game\+Camera (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+game camera getter 
+
+this function returns the game camera
+
+\begin{DoxyReturn}{Returns}
+game camera 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgame_1_1core_1_1GameManager_af850fa65199207d7749eec5162fe6008}\label{classgame_1_1core_1_1GameManager_af850fa65199207d7749eec5162fe6008}} 
+\index{game::core::GameManager@{game::core::GameManager}!getGameWindow@{getGameWindow}}
+\index{getGameWindow@{getGameWindow}!game::core::GameManager@{game::core::GameManager}}
+\doxysubsubsection{\texorpdfstring{getGameWindow()}{getGameWindow()}}
+{\footnotesize\ttfamily sf\+::\+Render\+Window$\ast$ game\+::core\+::\+Game\+Manager\+::get\+Game\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+game window getter 
+
+this function returns the game window
+
+\begin{DoxyReturn}{Returns}
+game window 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgame_1_1core_1_1GameManager_a8ca25c116da387c9cec9773bb88832de}\label{classgame_1_1core_1_1GameManager_a8ca25c116da387c9cec9773bb88832de}} 
+\index{game::core::GameManager@{game::core::GameManager}!getPlayerState@{getPlayerState}}
+\index{getPlayerState@{getPlayerState}!game::core::GameManager@{game::core::GameManager}}
+\doxysubsubsection{\texorpdfstring{getPlayerState()}{getPlayerState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgame_1_1core_1_1PlayerState}{Player\+State}}$\ast$ game\+::core\+::\+Game\+Manager\+::get\+Player\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+player state getter 
+
+this function returns the current player state object
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{classgame_1_1core_1_1PlayerState}{Player\+State}}} & player state pointer \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1core_1_1GameManager_aecb6b7d14797ecf4a3c161fdef17feb4}\label{classgame_1_1core_1_1GameManager_aecb6b7d14797ecf4a3c161fdef17feb4}} 
+\index{game::core::GameManager@{game::core::GameManager}!getRenderer@{getRenderer}}
+\index{getRenderer@{getRenderer}!game::core::GameManager@{game::core::GameManager}}
+\doxysubsubsection{\texorpdfstring{getRenderer()}{getRenderer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgame_1_1renderer_1_1GameRenderer}{renderer\+::\+Game\+Renderer}}\& game\+::core\+::\+Game\+Manager\+::get\+Renderer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+game renderer getter 
+
+game renderer getter
+
+\begin{DoxyReturn}{Returns}
+reference to the game renderer object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgame_1_1core_1_1GameManager_a039e0a7f460121781e8bdfb3edc6a1dc}\label{classgame_1_1core_1_1GameManager_a039e0a7f460121781e8bdfb3edc6a1dc}} 
+\index{game::core::GameManager@{game::core::GameManager}!init@{init}}
+\index{init@{init}!game::core::GameManager@{game::core::GameManager}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void game\+::core\+::\+Game\+Manager\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+initialize some configurations of the game 
+
+initialize some configurations of the game and calls the initialization of other singleton managers \mbox{\Hypertarget{classgame_1_1core_1_1GameManager_a0a525b1148558fab6b4ba24a7b17656c}\label{classgame_1_1core_1_1GameManager_a0a525b1148558fab6b4ba24a7b17656c}} 
+\index{game::core::GameManager@{game::core::GameManager}!instantiateGameObject@{instantiateGameObject}}
+\index{instantiateGameObject@{instantiateGameObject}!game::core::GameManager@{game::core::GameManager}}
+\doxysubsubsection{\texorpdfstring{instantiateGameObject()}{instantiateGameObject()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgame_1_1core_1_1ObjectHandle}{Go\+Handle}} game\+::core\+::\+Game\+Manager\+::instantiate\+Game\+Object (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgame_1_1components_1_1GameObject_a7219837ddf188469edc82e4f1f942882}{components\+::\+Game\+Object\+::\+Go\+State}}}]{state = {\ttfamily \mbox{\hyperlink{classgame_1_1components_1_1GameObject_a7219837ddf188469edc82e4f1f942882a18ff74f43da410c5529f7d6fca84f115}{components\+::\+Game\+Object\+::\+Go\+State\+::\+ACTIVE}}} }\end{DoxyParamCaption})}
+
+
+
+instantiate an empty gameobject and return a handle to this gameobject to caller 
+
+this function instantiate an empty gameobject, set its states, give it a guid, and return a handle to this gameobject to caller
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & state of the new gameobject \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+handle to the newly created gameobject 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgame_1_1core_1_1GameManager_a9d82a09edf69022d2604f9eeb75e5b7b}\label{classgame_1_1core_1_1GameManager_a9d82a09edf69022d2604f9eeb75e5b7b}} 
+\index{game::core::GameManager@{game::core::GameManager}!registerAsyncTask@{registerAsyncTask}}
+\index{registerAsyncTask@{registerAsyncTask}!game::core::GameManager@{game::core::GameManager}}
+\doxysubsubsection{\texorpdfstring{registerAsyncTask()}{registerAsyncTask()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgame_1_1core_1_1AsyncTask}{Async\+Task}}$\ast$ game\+::core\+::\+Game\+Manager\+::register\+Async\+Task (\begin{DoxyParamCaption}\item[{Loading\+Task}]{task }\end{DoxyParamCaption})}
+
+
+
+register asynchronous task 
+
+this function register asynchronous task, so when game terminites the asynchronous task can be joined and destroyed properly
+
+
+\begin{DoxyParams}{Parameters}
+{\em task} & new asynchronous task \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1core_1_1GameManager_ab4de18091a297b31816771c6455dee47}\label{classgame_1_1core_1_1GameManager_ab4de18091a297b31816771c6455dee47}} 
+\index{game::core::GameManager@{game::core::GameManager}!run@{run}}
+\index{run@{run}!game::core::GameManager@{game::core::GameManager}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void game\+::core\+::\+Game\+Manager\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+run game 
+
+this is where the main loop of the game takes place at. The game terminates when this function terminates \mbox{\Hypertarget{classgame_1_1core_1_1GameManager_a16053a2248700ce0860d0df7cd3c0847}\label{classgame_1_1core_1_1GameManager_a16053a2248700ce0860d0df7cd3c0847}} 
+\index{game::core::GameManager@{game::core::GameManager}!terminate@{terminate}}
+\index{terminate@{terminate}!game::core::GameManager@{game::core::GameManager}}
+\doxysubsubsection{\texorpdfstring{terminate()}{terminate()}}
+{\footnotesize\ttfamily void game\+::core\+::\+Game\+Manager\+::terminate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+clean up before closing game window 
+
+this function gets called before game terminates to make sure all the resource are properly returned and all the threads are joined \mbox{\Hypertarget{classgame_1_1core_1_1GameManager_a3a8f84aec13a9dbfbe79171d773a75fa}\label{classgame_1_1core_1_1GameManager_a3a8f84aec13a9dbfbe79171d773a75fa}} 
+\index{game::core::GameManager@{game::core::GameManager}!tickLogic@{tickLogic}}
+\index{tickLogic@{tickLogic}!game::core::GameManager@{game::core::GameManager}}
+\doxysubsubsection{\texorpdfstring{tickLogic()}{tickLogic()}}
+{\footnotesize\ttfamily void game\+::core\+::\+Game\+Manager\+::tick\+Logic (\begin{DoxyParamCaption}\item[{float}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+update the game world 
+
+this function gets called every logical frame to update the game world. Every active entities in the game that needs to be updated every frame will be updated here
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & time elapsed between last frame and current frame \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1core_1_1GameManager_a0edb9a63295d7ea8e5e7776873825481}\label{classgame_1_1core_1_1GameManager_a0edb9a63295d7ea8e5e7776873825481}} 
+\index{game::core::GameManager@{game::core::GameManager}!tickRenderer@{tickRenderer}}
+\index{tickRenderer@{tickRenderer}!game::core::GameManager@{game::core::GameManager}}
+\doxysubsubsection{\texorpdfstring{tickRenderer()}{tickRenderer()}}
+{\footnotesize\ttfamily void game\+::core\+::\+Game\+Manager\+::tick\+Renderer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+render the game world 
+
+this function gets called every actual frame to render all the active drawable component to the game screen \mbox{\Hypertarget{classgame_1_1core_1_1GameManager_a00e790cfc0e2b204c63811c9ca2f8f45}\label{classgame_1_1core_1_1GameManager_a00e790cfc0e2b204c63811c9ca2f8f45}} 
+\index{game::core::GameManager@{game::core::GameManager}!updateFPS@{updateFPS}}
+\index{updateFPS@{updateFPS}!game::core::GameManager@{game::core::GameManager}}
+\doxysubsubsection{\texorpdfstring{updateFPS()}{updateFPS()}}
+{\footnotesize\ttfamily void game\+::core\+::\+Game\+Manager\+::update\+FPS (\begin{DoxyParamCaption}\item[{float}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+update the fps of the game by passing in the time elapsed between last frame and current frame 
+
+this function update the fps of the game by passing in the time elapsed between last frame and current frame
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & time elapsed between last frame and current frame \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classgame_1_1core_1_1GameManager_a5ba133603eb02148f6d0cc758d518ff3}\label{classgame_1_1core_1_1GameManager_a5ba133603eb02148f6d0cc758d518ff3}} 
+\index{game::core::GameManager@{game::core::GameManager}!DefaultTimePerFrame@{DefaultTimePerFrame}}
+\index{DefaultTimePerFrame@{DefaultTimePerFrame}!game::core::GameManager@{game::core::GameManager}}
+\doxysubsubsection{\texorpdfstring{DefaultTimePerFrame}{DefaultTimePerFrame}}
+{\footnotesize\ttfamily const float game\+::core\+::\+Game\+Manager\+::\+Default\+Time\+Per\+Frame\hspace{0.3cm}{\ttfamily [static]}}
+
+maximum fps allowed \mbox{\Hypertarget{classgame_1_1core_1_1GameManager_a09da8e20d74407a397f38f10900b1269}\label{classgame_1_1core_1_1GameManager_a09da8e20d74407a397f38f10900b1269}} 
+\index{game::core::GameManager@{game::core::GameManager}!GoMaximum@{GoMaximum}}
+\index{GoMaximum@{GoMaximum}!game::core::GameManager@{game::core::GameManager}}
+\doxysubsubsection{\texorpdfstring{GoMaximum}{GoMaximum}}
+{\footnotesize\ttfamily const int game\+::core\+::\+Game\+Manager\+::\+Go\+Maximum\hspace{0.3cm}{\ttfamily [static]}}
+
+maximum number of gameobjects allowed \mbox{\Hypertarget{classgame_1_1core_1_1GameManager_a6b5055110bc6833618a79bb506365cd2}\label{classgame_1_1core_1_1GameManager_a6b5055110bc6833618a79bb506365cd2}} 
+\index{game::core::GameManager@{game::core::GameManager}!mActiveGoQueue@{mActiveGoQueue}}
+\index{mActiveGoQueue@{mActiveGoQueue}!game::core::GameManager@{game::core::GameManager}}
+\doxysubsubsection{\texorpdfstring{mActiveGoQueue}{mActiveGoQueue}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structgame_1_1core_1_1ObjectWrapper}{Go\+Wrapper}}$>$ game\+::core\+::\+Game\+Manager\+::m\+Active\+Go\+Queue\hspace{0.3cm}{\ttfamily [private]}}
+
+queue of all active gameobjects \mbox{\Hypertarget{classgame_1_1core_1_1GameManager_aae5cf85bb64ed271e71f942f3685c9f6}\label{classgame_1_1core_1_1GameManager_aae5cf85bb64ed271e71f942f3685c9f6}} 
+\index{game::core::GameManager@{game::core::GameManager}!mActiveTasks@{mActiveTasks}}
+\index{mActiveTasks@{mActiveTasks}!game::core::GameManager@{game::core::GameManager}}
+\doxysubsubsection{\texorpdfstring{mActiveTasks}{mActiveTasks}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classgame_1_1core_1_1AsyncTask}{Async\+Task}}$>$ $>$ game\+::core\+::\+Game\+Manager\+::m\+Active\+Tasks\hspace{0.3cm}{\ttfamily [private]}}
+
+active asynchronous tasks \mbox{\Hypertarget{classgame_1_1core_1_1GameManager_af8540178bb97ebba09fbbcd41b4ce69c}\label{classgame_1_1core_1_1GameManager_af8540178bb97ebba09fbbcd41b4ce69c}} 
+\index{game::core::GameManager@{game::core::GameManager}!mActualTimeElapsedBetweenRender@{mActualTimeElapsedBetweenRender}}
+\index{mActualTimeElapsedBetweenRender@{mActualTimeElapsedBetweenRender}!game::core::GameManager@{game::core::GameManager}}
+\doxysubsubsection{\texorpdfstring{mActualTimeElapsedBetweenRender}{mActualTimeElapsedBetweenRender}}
+{\footnotesize\ttfamily float game\+::core\+::\+Game\+Manager\+::m\+Actual\+Time\+Elapsed\+Between\+Render\hspace{0.3cm}{\ttfamily [private]}}
+
+time elapsed from last game render to now \mbox{\Hypertarget{classgame_1_1core_1_1GameManager_a22cea7abcfac4481dd00694857af175b}\label{classgame_1_1core_1_1GameManager_a22cea7abcfac4481dd00694857af175b}} 
+\index{game::core::GameManager@{game::core::GameManager}!mFPS@{mFPS}}
+\index{mFPS@{mFPS}!game::core::GameManager@{game::core::GameManager}}
+\doxysubsubsection{\texorpdfstring{mFPS}{mFPS}}
+{\footnotesize\ttfamily int game\+::core\+::\+Game\+Manager\+::m\+FPS\hspace{0.3cm}{\ttfamily [private]}}
+
+frame count \mbox{\Hypertarget{classgame_1_1core_1_1GameManager_a61e27f52a0ed8a81cad91c4657f4e0fa}\label{classgame_1_1core_1_1GameManager_a61e27f52a0ed8a81cad91c4657f4e0fa}} 
+\index{game::core::GameManager@{game::core::GameManager}!mFrameCount@{mFrameCount}}
+\index{mFrameCount@{mFrameCount}!game::core::GameManager@{game::core::GameManager}}
+\doxysubsubsection{\texorpdfstring{mFrameCount}{mFrameCount}}
+{\footnotesize\ttfamily int game\+::core\+::\+Game\+Manager\+::m\+Frame\+Count\hspace{0.3cm}{\ttfamily [private]}}
+
+frame count \mbox{\Hypertarget{classgame_1_1core_1_1GameManager_ae185e04831d1b1f80770d8a094906d0c}\label{classgame_1_1core_1_1GameManager_ae185e04831d1b1f80770d8a094906d0c}} 
+\index{game::core::GameManager@{game::core::GameManager}!mGameCamera@{mGameCamera}}
+\index{mGameCamera@{mGameCamera}!game::core::GameManager@{game::core::GameManager}}
+\doxysubsubsection{\texorpdfstring{mGameCamera}{mGameCamera}}
+{\footnotesize\ttfamily sf\+::\+View game\+::core\+::\+Game\+Manager\+::m\+Game\+Camera\hspace{0.3cm}{\ttfamily [private]}}
+
+game world camera \mbox{\Hypertarget{classgame_1_1core_1_1GameManager_a07f2b01a471be65645f612e62ed227e9}\label{classgame_1_1core_1_1GameManager_a07f2b01a471be65645f612e62ed227e9}} 
+\index{game::core::GameManager@{game::core::GameManager}!mGameWindow@{mGameWindow}}
+\index{mGameWindow@{mGameWindow}!game::core::GameManager@{game::core::GameManager}}
+\doxysubsubsection{\texorpdfstring{mGameWindow}{mGameWindow}}
+{\footnotesize\ttfamily sf\+::\+Render\+Window game\+::core\+::\+Game\+Manager\+::m\+Game\+Window\hspace{0.3cm}{\ttfamily [private]}}
+
+game window \mbox{\Hypertarget{classgame_1_1core_1_1GameManager_a1dfdeca1b48579fa37184dcb43da7313}\label{classgame_1_1core_1_1GameManager_a1dfdeca1b48579fa37184dcb43da7313}} 
+\index{game::core::GameManager@{game::core::GameManager}!mIsGameRunning@{mIsGameRunning}}
+\index{mIsGameRunning@{mIsGameRunning}!game::core::GameManager@{game::core::GameManager}}
+\doxysubsubsection{\texorpdfstring{mIsGameRunning}{mIsGameRunning}}
+{\footnotesize\ttfamily bool game\+::core\+::\+Game\+Manager\+::m\+Is\+Game\+Running\hspace{0.3cm}{\ttfamily [private]}}
+
+true if game is runnning, false otherwise \mbox{\Hypertarget{classgame_1_1core_1_1GameManager_a09bb599fab625a3d984a8d8533448a19}\label{classgame_1_1core_1_1GameManager_a09bb599fab625a3d984a8d8533448a19}} 
+\index{game::core::GameManager@{game::core::GameManager}!mIsTickingLogic@{mIsTickingLogic}}
+\index{mIsTickingLogic@{mIsTickingLogic}!game::core::GameManager@{game::core::GameManager}}
+\doxysubsubsection{\texorpdfstring{mIsTickingLogic}{mIsTickingLogic}}
+{\footnotesize\ttfamily bool game\+::core\+::\+Game\+Manager\+::m\+Is\+Ticking\+Logic\hspace{0.3cm}{\ttfamily [private]}}
+
+true if \mbox{\hyperlink{classgame_1_1core_1_1GameManager_a3a8f84aec13a9dbfbe79171d773a75fa}{tick\+Logic()}} is running \mbox{\Hypertarget{classgame_1_1core_1_1GameManager_a414a7d2b0ef1eacb22bef4b02528e5db}\label{classgame_1_1core_1_1GameManager_a414a7d2b0ef1eacb22bef4b02528e5db}} 
+\index{game::core::GameManager@{game::core::GameManager}!mLock@{mLock}}
+\index{mLock@{mLock}!game::core::GameManager@{game::core::GameManager}}
+\doxysubsubsection{\texorpdfstring{mLock}{mLock}}
+{\footnotesize\ttfamily std\+::mutex game\+::core\+::\+Game\+Manager\+::m\+Lock\hspace{0.3cm}{\ttfamily [private]}}
+
+mutual lock \mbox{\Hypertarget{classgame_1_1core_1_1GameManager_a011871f52a0f9a2e09d83fc7f96c9180}\label{classgame_1_1core_1_1GameManager_a011871f52a0f9a2e09d83fc7f96c9180}} 
+\index{game::core::GameManager@{game::core::GameManager}!mPendingGoQueue@{mPendingGoQueue}}
+\index{mPendingGoQueue@{mPendingGoQueue}!game::core::GameManager@{game::core::GameManager}}
+\doxysubsubsection{\texorpdfstring{mPendingGoQueue}{mPendingGoQueue}}
+{\footnotesize\ttfamily std\+::vector$<$GUID$>$ game\+::core\+::\+Game\+Manager\+::m\+Pending\+Go\+Queue\hspace{0.3cm}{\ttfamily [private]}}
+
+queue of all gameobjects that just got created this frame \mbox{\Hypertarget{classgame_1_1core_1_1GameManager_a24a208b1b72f94ab9093959e4cd9b90c}\label{classgame_1_1core_1_1GameManager_a24a208b1b72f94ab9093959e4cd9b90c}} 
+\index{game::core::GameManager@{game::core::GameManager}!mPlayerState@{mPlayerState}}
+\index{mPlayerState@{mPlayerState}!game::core::GameManager@{game::core::GameManager}}
+\doxysubsubsection{\texorpdfstring{mPlayerState}{mPlayerState}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classgame_1_1core_1_1PlayerState}{Player\+State}}$>$ game\+::core\+::\+Game\+Manager\+::m\+Player\+State\hspace{0.3cm}{\ttfamily [private]}}
+
+current player state \mbox{\Hypertarget{classgame_1_1core_1_1GameManager_af5e08f4a49c7316fc45dd1545ebcfcfa}\label{classgame_1_1core_1_1GameManager_af5e08f4a49c7316fc45dd1545ebcfcfa}} 
+\index{game::core::GameManager@{game::core::GameManager}!mRenderer@{mRenderer}}
+\index{mRenderer@{mRenderer}!game::core::GameManager@{game::core::GameManager}}
+\doxysubsubsection{\texorpdfstring{mRenderer}{mRenderer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgame_1_1renderer_1_1GameRenderer}{renderer\+::\+Game\+Renderer}} game\+::core\+::\+Game\+Manager\+::m\+Renderer\hspace{0.3cm}{\ttfamily [private]}}
+
+game renderer \mbox{\Hypertarget{classgame_1_1core_1_1GameManager_ac33956dfcfdcc174a2e66a58225d0cb2}\label{classgame_1_1core_1_1GameManager_ac33956dfcfdcc174a2e66a58225d0cb2}} 
+\index{game::core::GameManager@{game::core::GameManager}!mStateMachine@{mStateMachine}}
+\index{mStateMachine@{mStateMachine}!game::core::GameManager@{game::core::GameManager}}
+\doxysubsubsection{\texorpdfstring{mStateMachine}{mStateMachine}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgame_1_1states_1_1StateMachine}{states\+::\+State\+Machine}} game\+::core\+::\+Game\+Manager\+::m\+State\+Machine\hspace{0.3cm}{\ttfamily [private]}}
+
+game state machine \mbox{\Hypertarget{classgame_1_1core_1_1GameManager_a65754be80d5e0c47be7512a99561f497}\label{classgame_1_1core_1_1GameManager_a65754be80d5e0c47be7512a99561f497}} 
+\index{game::core::GameManager@{game::core::GameManager}!mTimeElapsedAfterLastSecond@{mTimeElapsedAfterLastSecond}}
+\index{mTimeElapsedAfterLastSecond@{mTimeElapsedAfterLastSecond}!game::core::GameManager@{game::core::GameManager}}
+\doxysubsubsection{\texorpdfstring{mTimeElapsedAfterLastSecond}{mTimeElapsedAfterLastSecond}}
+{\footnotesize\ttfamily float game\+::core\+::\+Game\+Manager\+::m\+Time\+Elapsed\+After\+Last\+Second\hspace{0.3cm}{\ttfamily [private]}}
+
+time elapsed from last second to now \mbox{\Hypertarget{classgame_1_1core_1_1GameManager_a5787189dce61ec12c4b0b576c6fce11c}\label{classgame_1_1core_1_1GameManager_a5787189dce61ec12c4b0b576c6fce11c}} 
+\index{game::core::GameManager@{game::core::GameManager}!mTimePerFrame@{mTimePerFrame}}
+\index{mTimePerFrame@{mTimePerFrame}!game::core::GameManager@{game::core::GameManager}}
+\doxysubsubsection{\texorpdfstring{mTimePerFrame}{mTimePerFrame}}
+{\footnotesize\ttfamily float game\+::core\+::\+Game\+Manager\+::m\+Time\+Per\+Frame\hspace{0.3cm}{\ttfamily [private]}}
+
+current fps of game \mbox{\Hypertarget{classgame_1_1core_1_1GameManager_a788062000ae8df4365630ac0895a5153}\label{classgame_1_1core_1_1GameManager_a788062000ae8df4365630ac0895a5153}} 
+\index{game::core::GameManager@{game::core::GameManager}!mTimePointForLastTick@{mTimePointForLastTick}}
+\index{mTimePointForLastTick@{mTimePointForLastTick}!game::core::GameManager@{game::core::GameManager}}
+\doxysubsubsection{\texorpdfstring{mTimePointForLastTick}{mTimePointForLastTick}}
+{\footnotesize\ttfamily std\+::chrono\+::steady\+\_\+clock\+::time\+\_\+point game\+::core\+::\+Game\+Manager\+::m\+Time\+Point\+For\+Last\+Tick\hspace{0.3cm}{\ttfamily [private]}}
+
+the point of time when the last logical tick happens \mbox{\Hypertarget{classgame_1_1core_1_1GameManager_a5601bb2d56ca58a3877bb8dc99bfff50}\label{classgame_1_1core_1_1GameManager_a5601bb2d56ca58a3877bb8dc99bfff50}} 
+\index{game::core::GameManager@{game::core::GameManager}!mToDeleteGoQueue@{mToDeleteGoQueue}}
+\index{mToDeleteGoQueue@{mToDeleteGoQueue}!game::core::GameManager@{game::core::GameManager}}
+\doxysubsubsection{\texorpdfstring{mToDeleteGoQueue}{mToDeleteGoQueue}}
+{\footnotesize\ttfamily std\+::vector$<$GUID$>$ game\+::core\+::\+Game\+Manager\+::m\+To\+Delete\+Go\+Queue\hspace{0.3cm}{\ttfamily [private]}}
+
+queue of all gameobject that are marked to be destroyed \mbox{\Hypertarget{classgame_1_1core_1_1GameManager_a8a37060b1c4e5bfb3f9b006a88497b35}\label{classgame_1_1core_1_1GameManager_a8a37060b1c4e5bfb3f9b006a88497b35}} 
+\index{game::core::GameManager@{game::core::GameManager}!mUiCamera@{mUiCamera}}
+\index{mUiCamera@{mUiCamera}!game::core::GameManager@{game::core::GameManager}}
+\doxysubsubsection{\texorpdfstring{mUiCamera}{mUiCamera}}
+{\footnotesize\ttfamily sf\+::\+View game\+::core\+::\+Game\+Manager\+::m\+Ui\+Camera\hspace{0.3cm}{\ttfamily [private]}}
+
+GUI camera 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Core/Game\+Manager.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,173 @@
+\hypertarget{classgame_1_1states_1_1PauseState}{}\doxysection{game\+::states\+::Pause\+State Class Reference}
+\label{classgame_1_1states_1_1PauseState}\index{game::states::PauseState@{game::states::PauseState}}
+
+
+pause state  
+
+
+
+
+{\ttfamily \#include $<$Pause\+State.\+h$>$}
+
+
+
+Inheritance diagram for game\+::states\+::Pause\+State\+:
+% FIG 0
+
+
+Collaboration diagram for game\+::states\+::Pause\+State\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgame_1_1states_1_1PauseState_a5edc6d3f6c9714b687127e768a5bc54a}{Pause\+State}} (\mbox{\hyperlink{classgame_1_1states_1_1StateMachine}{State\+Machine}} $\ast$owner)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classgame_1_1states_1_1PauseState}{Pause\+State}} constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classgame_1_1states_1_1PauseState_a5777fdd9c8284f1d365682fecc9c66c5}{$\sim$\+Pause\+State}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classgame_1_1states_1_1PauseState}{Pause\+State}} destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1states_1_1PauseState_afdf38c80c0fcea18ab4efb3b42f2f9db}{init}} () override
+\begin{DoxyCompactList}\small\item\em initialization of state \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classgame_1_1states_1_1PauseState_a332b00173bdc02ab801441f5d2a1d338}{freeze\+Time}} () override
+\begin{DoxyCompactList}\small\item\em check if delta time should be set to 0 when the state is created and put to the state machine \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1states_1_1PauseState_afb0f3a61cc8b79f33c5cf6e96d896b24}{on\+Exit\+Button\+Clicked}} ()
+\begin{DoxyCompactList}\small\item\em callback for exit button click event \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1states_1_1PauseState_aaaa949855cd55ed11e0add8ca8a1e8e9}{on\+Return\+To\+Main\+Button\+Clicked}} ()
+\begin{DoxyCompactList}\small\item\em callback for main menu button click event \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1states_1_1PauseState_ae9e50757846c1981de4140f9b96010d2}{on\+Return\+To\+Game\+Button\+Clicked}} ()
+\begin{DoxyCompactList}\small\item\em callback for return game button click event \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+boost\+::signals2\+::connection \mbox{\hyperlink{classgame_1_1states_1_1PauseState_ae621da8f0a5fb724e441c8444106cbc1}{m\+Exit\+Button\+Listener}}
+\item 
+boost\+::signals2\+::connection \mbox{\hyperlink{classgame_1_1states_1_1PauseState_ab53254b3f93f54e35f900e00a46f4a8d}{m\+Return\+To\+Main\+Button\+Listener}}
+\item 
+boost\+::signals2\+::connection \mbox{\hyperlink{classgame_1_1states_1_1PauseState_aeecaa57fddec495f7f6e88b86165ee88}{m\+Return\+To\+Game\+Button\+Listener}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+pause state 
+
+this state will be pushed to state machine when player pauses game
+
+\begin{DoxyAuthor}{Author}
+Zheng Yang 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgame_1_1states_1_1PauseState_a5edc6d3f6c9714b687127e768a5bc54a}\label{classgame_1_1states_1_1PauseState_a5edc6d3f6c9714b687127e768a5bc54a}} 
+\index{game::states::PauseState@{game::states::PauseState}!PauseState@{PauseState}}
+\index{PauseState@{PauseState}!game::states::PauseState@{game::states::PauseState}}
+\doxysubsubsection{\texorpdfstring{PauseState()}{PauseState()}}
+{\footnotesize\ttfamily game\+::states\+::\+Pause\+State\+::\+Pause\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgame_1_1states_1_1StateMachine}{State\+Machine}} $\ast$}]{owner }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classgame_1_1states_1_1PauseState}{Pause\+State}} constructor. 
+
+\mbox{\hyperlink{classgame_1_1states_1_1PauseState}{Pause\+State}} constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em owner} & state machine \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1states_1_1PauseState_a5777fdd9c8284f1d365682fecc9c66c5}\label{classgame_1_1states_1_1PauseState_a5777fdd9c8284f1d365682fecc9c66c5}} 
+\index{game::states::PauseState@{game::states::PauseState}!````~PauseState@{$\sim$PauseState}}
+\index{````~PauseState@{$\sim$PauseState}!game::states::PauseState@{game::states::PauseState}}
+\doxysubsubsection{\texorpdfstring{$\sim$PauseState()}{~PauseState()}}
+{\footnotesize\ttfamily game\+::states\+::\+Pause\+State\+::$\sim$\+Pause\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classgame_1_1states_1_1PauseState}{Pause\+State}} destructor. 
+
+\mbox{\hyperlink{classgame_1_1states_1_1PauseState}{Pause\+State}} destructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgame_1_1states_1_1PauseState_a332b00173bdc02ab801441f5d2a1d338}\label{classgame_1_1states_1_1PauseState_a332b00173bdc02ab801441f5d2a1d338}} 
+\index{game::states::PauseState@{game::states::PauseState}!freezeTime@{freezeTime}}
+\index{freezeTime@{freezeTime}!game::states::PauseState@{game::states::PauseState}}
+\doxysubsubsection{\texorpdfstring{freezeTime()}{freezeTime()}}
+{\footnotesize\ttfamily bool game\+::states\+::\+Pause\+State\+::freeze\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+check if delta time should be set to 0 when the state is created and put to the state machine 
+
+check if delta time should be set to 0 when the state is created and put to the state machine 
+
+Reimplemented from \mbox{\hyperlink{classgame_1_1states_1_1State_ad66a7d869a38b0560796e1b7c4562c15}{game\+::states\+::\+State}}.
+
+\mbox{\Hypertarget{classgame_1_1states_1_1PauseState_afdf38c80c0fcea18ab4efb3b42f2f9db}\label{classgame_1_1states_1_1PauseState_afdf38c80c0fcea18ab4efb3b42f2f9db}} 
+\index{game::states::PauseState@{game::states::PauseState}!init@{init}}
+\index{init@{init}!game::states::PauseState@{game::states::PauseState}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void game\+::states\+::\+Pause\+State\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+initialization of state 
+
+initialization of state, called by state machine after state is created and put to the stack 
+
+Reimplemented from \mbox{\hyperlink{classgame_1_1states_1_1State_ab8464551e311a0621bd80f2a21a7cb4a}{game\+::states\+::\+State}}.
+
+\mbox{\Hypertarget{classgame_1_1states_1_1PauseState_afb0f3a61cc8b79f33c5cf6e96d896b24}\label{classgame_1_1states_1_1PauseState_afb0f3a61cc8b79f33c5cf6e96d896b24}} 
+\index{game::states::PauseState@{game::states::PauseState}!onExitButtonClicked@{onExitButtonClicked}}
+\index{onExitButtonClicked@{onExitButtonClicked}!game::states::PauseState@{game::states::PauseState}}
+\doxysubsubsection{\texorpdfstring{onExitButtonClicked()}{onExitButtonClicked()}}
+{\footnotesize\ttfamily void game\+::states\+::\+Pause\+State\+::on\+Exit\+Button\+Clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+callback for exit button click event 
+
+callback function for exit button click event \mbox{\Hypertarget{classgame_1_1states_1_1PauseState_ae9e50757846c1981de4140f9b96010d2}\label{classgame_1_1states_1_1PauseState_ae9e50757846c1981de4140f9b96010d2}} 
+\index{game::states::PauseState@{game::states::PauseState}!onReturnToGameButtonClicked@{onReturnToGameButtonClicked}}
+\index{onReturnToGameButtonClicked@{onReturnToGameButtonClicked}!game::states::PauseState@{game::states::PauseState}}
+\doxysubsubsection{\texorpdfstring{onReturnToGameButtonClicked()}{onReturnToGameButtonClicked()}}
+{\footnotesize\ttfamily void game\+::states\+::\+Pause\+State\+::on\+Return\+To\+Game\+Button\+Clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+callback for return game button click event 
+
+callback function for return game button click event \mbox{\Hypertarget{classgame_1_1states_1_1PauseState_aaaa949855cd55ed11e0add8ca8a1e8e9}\label{classgame_1_1states_1_1PauseState_aaaa949855cd55ed11e0add8ca8a1e8e9}} 
+\index{game::states::PauseState@{game::states::PauseState}!onReturnToMainButtonClicked@{onReturnToMainButtonClicked}}
+\index{onReturnToMainButtonClicked@{onReturnToMainButtonClicked}!game::states::PauseState@{game::states::PauseState}}
+\doxysubsubsection{\texorpdfstring{onReturnToMainButtonClicked()}{onReturnToMainButtonClicked()}}
+{\footnotesize\ttfamily void game\+::states\+::\+Pause\+State\+::on\+Return\+To\+Main\+Button\+Clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+callback for main menu button click event 
+
+callback function for main menu button click event 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classgame_1_1states_1_1PauseState_ae621da8f0a5fb724e441c8444106cbc1}\label{classgame_1_1states_1_1PauseState_ae621da8f0a5fb724e441c8444106cbc1}} 
+\index{game::states::PauseState@{game::states::PauseState}!mExitButtonListener@{mExitButtonListener}}
+\index{mExitButtonListener@{mExitButtonListener}!game::states::PauseState@{game::states::PauseState}}
+\doxysubsubsection{\texorpdfstring{mExitButtonListener}{mExitButtonListener}}
+{\footnotesize\ttfamily boost\+::signals2\+::connection game\+::states\+::\+Pause\+State\+::m\+Exit\+Button\+Listener\hspace{0.3cm}{\ttfamily [private]}}
+
+exit button click listener \mbox{\Hypertarget{classgame_1_1states_1_1PauseState_aeecaa57fddec495f7f6e88b86165ee88}\label{classgame_1_1states_1_1PauseState_aeecaa57fddec495f7f6e88b86165ee88}} 
+\index{game::states::PauseState@{game::states::PauseState}!mReturnToGameButtonListener@{mReturnToGameButtonListener}}
+\index{mReturnToGameButtonListener@{mReturnToGameButtonListener}!game::states::PauseState@{game::states::PauseState}}
+\doxysubsubsection{\texorpdfstring{mReturnToGameButtonListener}{mReturnToGameButtonListener}}
+{\footnotesize\ttfamily boost\+::signals2\+::connection game\+::states\+::\+Pause\+State\+::m\+Return\+To\+Game\+Button\+Listener\hspace{0.3cm}{\ttfamily [private]}}
+
+return game button click listener \mbox{\Hypertarget{classgame_1_1states_1_1PauseState_ab53254b3f93f54e35f900e00a46f4a8d}\label{classgame_1_1states_1_1PauseState_ab53254b3f93f54e35f900e00a46f4a8d}} 
+\index{game::states::PauseState@{game::states::PauseState}!mReturnToMainButtonListener@{mReturnToMainButtonListener}}
+\index{mReturnToMainButtonListener@{mReturnToMainButtonListener}!game::states::PauseState@{game::states::PauseState}}
+\doxysubsubsection{\texorpdfstring{mReturnToMainButtonListener}{mReturnToMainButtonListener}}
+{\footnotesize\ttfamily boost\+::signals2\+::connection game\+::states\+::\+Pause\+State\+::m\+Return\+To\+Main\+Button\+Listener\hspace{0.3cm}{\ttfamily [private]}}
+
+main menu button click listener 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+States/Pause\+State.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,336 @@
+\hypertarget{classgame_1_1data_1_1DataManager}{}\doxysection{game\+::data\+::Data\+Manager Class Reference}
+\label{classgame_1_1data_1_1DataManager}\index{game::data::DataManager@{game::data::DataManager}}
+
+
+manager class that handles all the in-\/game data serialization and deserialization  
+
+
+
+
+{\ttfamily \#include $<$Data\+Manager.\+h$>$}
+
+
+
+Inheritance diagram for game\+::data\+::Data\+Manager\+:
+% FIG 0
+
+
+Collaboration diagram for game\+::data\+::Data\+Manager\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classgame_1_1data_1_1DataManager_af64e4112cd1d8e303ed5e735b71cfb08}{init}} ()
+\begin{DoxyCompactList}\small\item\em singleton initialization \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1data_1_1DataManager_a605b57e14887c116004d42ad6bce06e5}{load\+Data}} ()
+\begin{DoxyCompactList}\small\item\em load data from json and convert to c++ data structure \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1data_1_1DataManager_a78b30177f0324a57f6d372998d463d45}{register\+Data\+Type}} (Data\+Type type, std\+::string file\+Address)
+\begin{DoxyCompactList}\small\item\em register data type with its json file address \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename TData $>$ }\\void \mbox{\hyperlink{classgame_1_1data_1_1DataManager_a56180d0d0d93877641f4967a7cd64523}{load\+Data}} (Data\+Type type)
+\begin{DoxyCompactList}\small\item\em load a specific data type from a json file file \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename TData $>$ }\\TData $\ast$ \mbox{\hyperlink{classgame_1_1data_1_1DataManager_a81ea312b5fa482f1f1eedd195b174c1c}{get}} (Data\+Type type, int tid)
+\begin{DoxyCompactList}\small\item\em get data by its type and id \end{DoxyCompactList}\item 
+std\+::unordered\+\_\+map$<$ int, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classgame_1_1data_1_1JsonBase}{data\+::\+Json\+Base}} $>$ $>$ \& \mbox{\hyperlink{classgame_1_1data_1_1DataManager_a6416b0a6d75fae24dd3cbf67e240d959}{get\+All}} (Data\+Type type)
+\begin{DoxyCompactList}\small\item\em get all of the data of a specific data type \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1data_1_1DataManager_a16cecfe33ce2fb9539012209cb8ee7c5}{load\+All\+Save\+Data}} ()
+\begin{DoxyCompactList}\small\item\em get player save data \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classgame_1_1data_1_1DataManager_a5728ac3a075d29ddd5e78389ea37de36}{get\+Current\+Player\+Index}} ()
+\begin{DoxyCompactList}\small\item\em get index of current selected save data \end{DoxyCompactList}\item 
+const std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{structgame_1_1data_1_1PlayerData}{Player\+Data}} $>$ $>$ \& \mbox{\hyperlink{classgame_1_1data_1_1DataManager_a788717a51fd58383cc6cd646d5376e1e}{get\+All\+Save\+Data}} () const
+\begin{DoxyCompactList}\small\item\em get all of player\textquotesingle{}s save data \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1data_1_1DataManager_a789f499696a88d31d41c96aa0a5bcf43}{load\+Player\+From\+Index}} (int index)
+\begin{DoxyCompactList}\small\item\em read player state from a save data \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1data_1_1DataManager_a02468721da1acf2ef4255467f6c76b5e}{save\+Player\+At\+Index}} (int index)
+\begin{DoxyCompactList}\small\item\em save player state to a save data slot \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1data_1_1DataManager_ab4c7bbc506d56d5fc456caa7d02282ee}{load\+Grid\+Project}} ()
+\begin{DoxyCompactList}\small\item\em load game world data \end{DoxyCompactList}\item 
+const ldtk\+::\+Project \& \mbox{\hyperlink{classgame_1_1data_1_1DataManager_acc2f00b534b0d0521b26c81941931b03}{get\+Grid\+Project}} () const
+\begin{DoxyCompactList}\small\item\em get game world data \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgame_1_1data_1_1DataManager_ad23a2a81cc5e0685f5bd93d0e65e2a32}{Data\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em private constructor \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classgame_1_1data_1_1DataManager_a925990dc671c13f6b912eb882807a61a}{m\+Current\+Player\+Index}}
+\item 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{structgame_1_1data_1_1PlayerData}{Player\+Data}} $>$ $>$ \mbox{\hyperlink{classgame_1_1data_1_1DataManager_a81b75eda5d3feb449a573c084b2f6a25}{m\+Saves}}
+\item 
+std\+::unordered\+\_\+map$<$ Data\+Type, std\+::string $>$ \mbox{\hyperlink{classgame_1_1data_1_1DataManager_a2444b58d3b1038b866b0b46acbdf0549}{m\+Type\+To\+File\+Mapping}}
+\item 
+std\+::unordered\+\_\+map$<$ Data\+Type, Data\+Map $>$ \mbox{\hyperlink{classgame_1_1data_1_1DataManager_ad3d1f8ec24bc85cbe23bc9eed11b417f}{m\+All\+Data}}
+\item 
+ldtk\+::\+Project \mbox{\hyperlink{classgame_1_1data_1_1DataManager_ad389e9948289fdf92756a03eb03477ef}{m\+Grid\+Project}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const std\+::string \mbox{\hyperlink{classgame_1_1data_1_1DataManager_abdefe774895a9d6ad81c5d08cb4703cf}{Player\+Save\+File\+Location}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classgame_1_1data_1_1DataManager_ace45fdd5261eb86b74076c61a9b57b89}\label{classgame_1_1data_1_1DataManager_ace45fdd5261eb86b74076c61a9b57b89}} 
+class {\bfseries Singleton$<$ Data\+Manager $>$}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+manager class that handles all the in-\/game data serialization and deserialization 
+
+manager class that handles all the in-\/game data serialization and deserialization. It loads all the data defined in game data directory and deserialize them into data structures to be used in game. It also serializes player save file as json objects and store it at certain checkpoint of game
+
+\begin{DoxyAuthor}{Author}
+Zheng Yang 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgame_1_1data_1_1DataManager_ad23a2a81cc5e0685f5bd93d0e65e2a32}\label{classgame_1_1data_1_1DataManager_ad23a2a81cc5e0685f5bd93d0e65e2a32}} 
+\index{game::data::DataManager@{game::data::DataManager}!DataManager@{DataManager}}
+\index{DataManager@{DataManager}!game::data::DataManager@{game::data::DataManager}}
+\doxysubsubsection{\texorpdfstring{DataManager()}{DataManager()}}
+{\footnotesize\ttfamily game\+::data\+::\+Data\+Manager\+::\+Data\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+private constructor 
+
+private constructor to ensure singleton pattern 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgame_1_1data_1_1DataManager_a81ea312b5fa482f1f1eedd195b174c1c}\label{classgame_1_1data_1_1DataManager_a81ea312b5fa482f1f1eedd195b174c1c}} 
+\index{game::data::DataManager@{game::data::DataManager}!get@{get}}
+\index{get@{get}!game::data::DataManager@{game::data::DataManager}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily template$<$typename TData $>$ \\
+TData $\ast$ game\+::data\+::\+Data\+Manager\+::get (\begin{DoxyParamCaption}\item[{Data\+Type}]{type,  }\item[{int}]{tid }\end{DoxyParamCaption})}
+
+
+
+get data by its type and id 
+
+get data by its type and id
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & data type \\
+\hline
+{\em tid} & unique data id \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1data_1_1DataManager_a6416b0a6d75fae24dd3cbf67e240d959}\label{classgame_1_1data_1_1DataManager_a6416b0a6d75fae24dd3cbf67e240d959}} 
+\index{game::data::DataManager@{game::data::DataManager}!getAll@{getAll}}
+\index{getAll@{getAll}!game::data::DataManager@{game::data::DataManager}}
+\doxysubsubsection{\texorpdfstring{getAll()}{getAll()}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$int, std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classgame_1_1data_1_1JsonBase}{data\+::\+Json\+Base}}$>$ $>$\& game\+::data\+::\+Data\+Manager\+::get\+All (\begin{DoxyParamCaption}\item[{Data\+Type}]{type }\end{DoxyParamCaption})}
+
+
+
+get all of the data of a specific data type 
+
+get all of the data of a specific data type
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & data type \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1data_1_1DataManager_a788717a51fd58383cc6cd646d5376e1e}\label{classgame_1_1data_1_1DataManager_a788717a51fd58383cc6cd646d5376e1e}} 
+\index{game::data::DataManager@{game::data::DataManager}!getAllSaveData@{getAllSaveData}}
+\index{getAllSaveData@{getAllSaveData}!game::data::DataManager@{game::data::DataManager}}
+\doxysubsubsection{\texorpdfstring{getAllSaveData()}{getAllSaveData()}}
+{\footnotesize\ttfamily const std\+::vector$<$std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{structgame_1_1data_1_1PlayerData}{Player\+Data}}$>$ $>$\& game\+::data\+::\+Data\+Manager\+::get\+All\+Save\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get all of player\textquotesingle{}s save data 
+
+get all of player\textquotesingle{}s save data
+
+\begin{DoxyReturn}{Returns}
+list of all player save data 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgame_1_1data_1_1DataManager_a5728ac3a075d29ddd5e78389ea37de36}\label{classgame_1_1data_1_1DataManager_a5728ac3a075d29ddd5e78389ea37de36}} 
+\index{game::data::DataManager@{game::data::DataManager}!getCurrentPlayerIndex@{getCurrentPlayerIndex}}
+\index{getCurrentPlayerIndex@{getCurrentPlayerIndex}!game::data::DataManager@{game::data::DataManager}}
+\doxysubsubsection{\texorpdfstring{getCurrentPlayerIndex()}{getCurrentPlayerIndex()}}
+{\footnotesize\ttfamily int game\+::data\+::\+Data\+Manager\+::get\+Current\+Player\+Index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get index of current selected save data 
+
+get index of current selected save data \mbox{\Hypertarget{classgame_1_1data_1_1DataManager_acc2f00b534b0d0521b26c81941931b03}\label{classgame_1_1data_1_1DataManager_acc2f00b534b0d0521b26c81941931b03}} 
+\index{game::data::DataManager@{game::data::DataManager}!getGridProject@{getGridProject}}
+\index{getGridProject@{getGridProject}!game::data::DataManager@{game::data::DataManager}}
+\doxysubsubsection{\texorpdfstring{getGridProject()}{getGridProject()}}
+{\footnotesize\ttfamily const ldtk\+::\+Project\& game\+::data\+::\+Data\+Manager\+::get\+Grid\+Project (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get game world data 
+
+get game world data define
+
+\begin{DoxyReturn}{Returns}
+game world data structure 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgame_1_1data_1_1DataManager_af64e4112cd1d8e303ed5e735b71cfb08}\label{classgame_1_1data_1_1DataManager_af64e4112cd1d8e303ed5e735b71cfb08}} 
+\index{game::data::DataManager@{game::data::DataManager}!init@{init}}
+\index{init@{init}!game::data::DataManager@{game::data::DataManager}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void game\+::data\+::\+Data\+Manager\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+singleton initialization 
+
+singleton initialization \mbox{\Hypertarget{classgame_1_1data_1_1DataManager_a16cecfe33ce2fb9539012209cb8ee7c5}\label{classgame_1_1data_1_1DataManager_a16cecfe33ce2fb9539012209cb8ee7c5}} 
+\index{game::data::DataManager@{game::data::DataManager}!loadAllSaveData@{loadAllSaveData}}
+\index{loadAllSaveData@{loadAllSaveData}!game::data::DataManager@{game::data::DataManager}}
+\doxysubsubsection{\texorpdfstring{loadAllSaveData()}{loadAllSaveData()}}
+{\footnotesize\ttfamily void game\+::data\+::\+Data\+Manager\+::load\+All\+Save\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get player save data 
+
+get player save data from a save file \mbox{\Hypertarget{classgame_1_1data_1_1DataManager_a605b57e14887c116004d42ad6bce06e5}\label{classgame_1_1data_1_1DataManager_a605b57e14887c116004d42ad6bce06e5}} 
+\index{game::data::DataManager@{game::data::DataManager}!loadData@{loadData}}
+\index{loadData@{loadData}!game::data::DataManager@{game::data::DataManager}}
+\doxysubsubsection{\texorpdfstring{loadData()}{loadData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void game\+::data\+::\+Data\+Manager\+::load\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+load data from json and convert to c++ data structure 
+
+load data from json and convert to c++ data structure \mbox{\Hypertarget{classgame_1_1data_1_1DataManager_a56180d0d0d93877641f4967a7cd64523}\label{classgame_1_1data_1_1DataManager_a56180d0d0d93877641f4967a7cd64523}} 
+\index{game::data::DataManager@{game::data::DataManager}!loadData@{loadData}}
+\index{loadData@{loadData}!game::data::DataManager@{game::data::DataManager}}
+\doxysubsubsection{\texorpdfstring{loadData()}{loadData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename TData $>$ \\
+void game\+::data\+::\+Data\+Manager\+::load\+Data (\begin{DoxyParamCaption}\item[{Data\+Type}]{type }\end{DoxyParamCaption})}
+
+
+
+load a specific data type from a json file file 
+
+load a specific data type from a json file file
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & data type \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1data_1_1DataManager_ab4c7bbc506d56d5fc456caa7d02282ee}\label{classgame_1_1data_1_1DataManager_ab4c7bbc506d56d5fc456caa7d02282ee}} 
+\index{game::data::DataManager@{game::data::DataManager}!loadGridProject@{loadGridProject}}
+\index{loadGridProject@{loadGridProject}!game::data::DataManager@{game::data::DataManager}}
+\doxysubsubsection{\texorpdfstring{loadGridProject()}{loadGridProject()}}
+{\footnotesize\ttfamily void game\+::data\+::\+Data\+Manager\+::load\+Grid\+Project (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+load game world data 
+
+load game world data from its file address \mbox{\Hypertarget{classgame_1_1data_1_1DataManager_a789f499696a88d31d41c96aa0a5bcf43}\label{classgame_1_1data_1_1DataManager_a789f499696a88d31d41c96aa0a5bcf43}} 
+\index{game::data::DataManager@{game::data::DataManager}!loadPlayerFromIndex@{loadPlayerFromIndex}}
+\index{loadPlayerFromIndex@{loadPlayerFromIndex}!game::data::DataManager@{game::data::DataManager}}
+\doxysubsubsection{\texorpdfstring{loadPlayerFromIndex()}{loadPlayerFromIndex()}}
+{\footnotesize\ttfamily void game\+::data\+::\+Data\+Manager\+::load\+Player\+From\+Index (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+read player state from a save data 
+
+read player state from a save data
+
+
+\begin{DoxyParams}{Parameters}
+{\em save} & data index \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1data_1_1DataManager_a78b30177f0324a57f6d372998d463d45}\label{classgame_1_1data_1_1DataManager_a78b30177f0324a57f6d372998d463d45}} 
+\index{game::data::DataManager@{game::data::DataManager}!registerDataType@{registerDataType}}
+\index{registerDataType@{registerDataType}!game::data::DataManager@{game::data::DataManager}}
+\doxysubsubsection{\texorpdfstring{registerDataType()}{registerDataType()}}
+{\footnotesize\ttfamily void game\+::data\+::\+Data\+Manager\+::register\+Data\+Type (\begin{DoxyParamCaption}\item[{Data\+Type}]{type,  }\item[{std\+::string}]{file\+Address }\end{DoxyParamCaption})}
+
+
+
+register data type with its json file address 
+
+register data type with its json file address
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & data type \\
+\hline
+{\em file\+Address} & json file address \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1data_1_1DataManager_a02468721da1acf2ef4255467f6c76b5e}\label{classgame_1_1data_1_1DataManager_a02468721da1acf2ef4255467f6c76b5e}} 
+\index{game::data::DataManager@{game::data::DataManager}!savePlayerAtIndex@{savePlayerAtIndex}}
+\index{savePlayerAtIndex@{savePlayerAtIndex}!game::data::DataManager@{game::data::DataManager}}
+\doxysubsubsection{\texorpdfstring{savePlayerAtIndex()}{savePlayerAtIndex()}}
+{\footnotesize\ttfamily void game\+::data\+::\+Data\+Manager\+::save\+Player\+At\+Index (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+save player state to a save data slot 
+
+save player state to a save data slot
+
+
+\begin{DoxyParams}{Parameters}
+{\em save} & data slot \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classgame_1_1data_1_1DataManager_ad3d1f8ec24bc85cbe23bc9eed11b417f}\label{classgame_1_1data_1_1DataManager_ad3d1f8ec24bc85cbe23bc9eed11b417f}} 
+\index{game::data::DataManager@{game::data::DataManager}!mAllData@{mAllData}}
+\index{mAllData@{mAllData}!game::data::DataManager@{game::data::DataManager}}
+\doxysubsubsection{\texorpdfstring{mAllData}{mAllData}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$Data\+Type, Data\+Map$>$ game\+::data\+::\+Data\+Manager\+::m\+All\+Data\hspace{0.3cm}{\ttfamily [private]}}
+
+all in-\/game data read from json files \mbox{\Hypertarget{classgame_1_1data_1_1DataManager_a925990dc671c13f6b912eb882807a61a}\label{classgame_1_1data_1_1DataManager_a925990dc671c13f6b912eb882807a61a}} 
+\index{game::data::DataManager@{game::data::DataManager}!mCurrentPlayerIndex@{mCurrentPlayerIndex}}
+\index{mCurrentPlayerIndex@{mCurrentPlayerIndex}!game::data::DataManager@{game::data::DataManager}}
+\doxysubsubsection{\texorpdfstring{mCurrentPlayerIndex}{mCurrentPlayerIndex}}
+{\footnotesize\ttfamily int game\+::data\+::\+Data\+Manager\+::m\+Current\+Player\+Index\hspace{0.3cm}{\ttfamily [private]}}
+
+index of currently selected save data \mbox{\Hypertarget{classgame_1_1data_1_1DataManager_ad389e9948289fdf92756a03eb03477ef}\label{classgame_1_1data_1_1DataManager_ad389e9948289fdf92756a03eb03477ef}} 
+\index{game::data::DataManager@{game::data::DataManager}!mGridProject@{mGridProject}}
+\index{mGridProject@{mGridProject}!game::data::DataManager@{game::data::DataManager}}
+\doxysubsubsection{\texorpdfstring{mGridProject}{mGridProject}}
+{\footnotesize\ttfamily ldtk\+::\+Project game\+::data\+::\+Data\+Manager\+::m\+Grid\+Project\hspace{0.3cm}{\ttfamily [private]}}
+
+game world data structure \mbox{\Hypertarget{classgame_1_1data_1_1DataManager_a81b75eda5d3feb449a573c084b2f6a25}\label{classgame_1_1data_1_1DataManager_a81b75eda5d3feb449a573c084b2f6a25}} 
+\index{game::data::DataManager@{game::data::DataManager}!mSaves@{mSaves}}
+\index{mSaves@{mSaves}!game::data::DataManager@{game::data::DataManager}}
+\doxysubsubsection{\texorpdfstring{mSaves}{mSaves}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{structgame_1_1data_1_1PlayerData}{Player\+Data}}$>$ $>$ game\+::data\+::\+Data\+Manager\+::m\+Saves\hspace{0.3cm}{\ttfamily [private]}}
+
+all player save data \mbox{\Hypertarget{classgame_1_1data_1_1DataManager_a2444b58d3b1038b866b0b46acbdf0549}\label{classgame_1_1data_1_1DataManager_a2444b58d3b1038b866b0b46acbdf0549}} 
+\index{game::data::DataManager@{game::data::DataManager}!mTypeToFileMapping@{mTypeToFileMapping}}
+\index{mTypeToFileMapping@{mTypeToFileMapping}!game::data::DataManager@{game::data::DataManager}}
+\doxysubsubsection{\texorpdfstring{mTypeToFileMapping}{mTypeToFileMapping}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$Data\+Type, std\+::string$>$ game\+::data\+::\+Data\+Manager\+::m\+Type\+To\+File\+Mapping\hspace{0.3cm}{\ttfamily [private]}}
+
+data type to file address mapping \mbox{\Hypertarget{classgame_1_1data_1_1DataManager_abdefe774895a9d6ad81c5d08cb4703cf}\label{classgame_1_1data_1_1DataManager_abdefe774895a9d6ad81c5d08cb4703cf}} 
+\index{game::data::DataManager@{game::data::DataManager}!PlayerSaveFileLocation@{PlayerSaveFileLocation}}
+\index{PlayerSaveFileLocation@{PlayerSaveFileLocation}!game::data::DataManager@{game::data::DataManager}}
+\doxysubsubsection{\texorpdfstring{PlayerSaveFileLocation}{PlayerSaveFileLocation}}
+{\footnotesize\ttfamily const std\+::string game\+::data\+::\+Data\+Manager\+::\+Player\+Save\+File\+Location\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+player save file location 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Data/Data\+Manager.\+h\end{DoxyCompactItemize}

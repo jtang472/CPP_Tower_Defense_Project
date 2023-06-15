@@ -1,0 +1,153 @@
+\hypertarget{classgame_1_1states_1_1GameWinState}{}\doxysection{game\+::states\+::Game\+Win\+State Class Reference}
+\label{classgame_1_1states_1_1GameWinState}\index{game::states::GameWinState@{game::states::GameWinState}}
+
+
+game win state  
+
+
+
+
+{\ttfamily \#include $<$Game\+Win\+State.\+h$>$}
+
+
+
+Inheritance diagram for game\+::states\+::Game\+Win\+State\+:
+% FIG 0
+
+
+Collaboration diagram for game\+::states\+::Game\+Win\+State\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgame_1_1states_1_1GameWinState_aafa4748604777081b703e3ea8be1bf77}{Game\+Win\+State}} (\mbox{\hyperlink{classgame_1_1states_1_1StateMachine}{State\+Machine}} $\ast$owner)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classgame_1_1states_1_1GameOverState}{Game\+Over\+State}} constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classgame_1_1states_1_1GameWinState_af4d1abce42ce2a41a32b2daa490ae207}{$\sim$\+Game\+Win\+State}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classgame_1_1states_1_1GameOverState}{Game\+Over\+State}} destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1states_1_1GameWinState_abf3efb7944e7634cab38520420c31c76}{init}} () override
+\begin{DoxyCompactList}\small\item\em initialization of state \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classgame_1_1states_1_1GameWinState_afbbbef6e48da3023173e4b78667a0a5b}{freeze\+Time}} () override
+\begin{DoxyCompactList}\small\item\em check if delta time should be set to 0 when the state is created and put to the state machine \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1states_1_1GameWinState_ac57dde8552e5f4197b331df109419c45}{on\+Return\+To\+Main\+Button\+Clicked}} ()
+\begin{DoxyCompactList}\small\item\em return to main button click event handler \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1states_1_1GameWinState_abc74d3eab73ab3851bb128c8cca08f43}{on\+Go\+To\+Next\+Level\+Clicked}} ()
+\begin{DoxyCompactList}\small\item\em return to go to next level button click event handler \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+boost\+::signals2\+::connection \mbox{\hyperlink{classgame_1_1states_1_1GameWinState_a03467c520ac7ba1375fb2075d5e53c9c}{m\+Return\+To\+Main\+Button\+Listener}}
+\item 
+boost\+::signals2\+::connection \mbox{\hyperlink{classgame_1_1states_1_1GameWinState_acbe137910773ca9dd667f511377c3b93}{m\+Goto\+Next\+Game\+Listener}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+game win state 
+
+this state will be pushed to state machine when player beats a game level
+
+\begin{DoxyAuthor}{Author}
+Zheng Yang 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgame_1_1states_1_1GameWinState_aafa4748604777081b703e3ea8be1bf77}\label{classgame_1_1states_1_1GameWinState_aafa4748604777081b703e3ea8be1bf77}} 
+\index{game::states::GameWinState@{game::states::GameWinState}!GameWinState@{GameWinState}}
+\index{GameWinState@{GameWinState}!game::states::GameWinState@{game::states::GameWinState}}
+\doxysubsubsection{\texorpdfstring{GameWinState()}{GameWinState()}}
+{\footnotesize\ttfamily game\+::states\+::\+Game\+Win\+State\+::\+Game\+Win\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgame_1_1states_1_1StateMachine}{State\+Machine}} $\ast$}]{owner }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classgame_1_1states_1_1GameOverState}{Game\+Over\+State}} constructor. 
+
+\mbox{\hyperlink{classgame_1_1states_1_1GameOverState}{Game\+Over\+State}} constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em owner} & state machine \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1states_1_1GameWinState_af4d1abce42ce2a41a32b2daa490ae207}\label{classgame_1_1states_1_1GameWinState_af4d1abce42ce2a41a32b2daa490ae207}} 
+\index{game::states::GameWinState@{game::states::GameWinState}!````~GameWinState@{$\sim$GameWinState}}
+\index{````~GameWinState@{$\sim$GameWinState}!game::states::GameWinState@{game::states::GameWinState}}
+\doxysubsubsection{\texorpdfstring{$\sim$GameWinState()}{~GameWinState()}}
+{\footnotesize\ttfamily game\+::states\+::\+Game\+Win\+State\+::$\sim$\+Game\+Win\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classgame_1_1states_1_1GameOverState}{Game\+Over\+State}} destructor. 
+
+\mbox{\hyperlink{classgame_1_1states_1_1GameOverState}{Game\+Over\+State}} destructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgame_1_1states_1_1GameWinState_afbbbef6e48da3023173e4b78667a0a5b}\label{classgame_1_1states_1_1GameWinState_afbbbef6e48da3023173e4b78667a0a5b}} 
+\index{game::states::GameWinState@{game::states::GameWinState}!freezeTime@{freezeTime}}
+\index{freezeTime@{freezeTime}!game::states::GameWinState@{game::states::GameWinState}}
+\doxysubsubsection{\texorpdfstring{freezeTime()}{freezeTime()}}
+{\footnotesize\ttfamily bool game\+::states\+::\+Game\+Win\+State\+::freeze\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+check if delta time should be set to 0 when the state is created and put to the state machine 
+
+check if delta time should be set to 0 when the state is created and put to the state machine 
+
+Reimplemented from \mbox{\hyperlink{classgame_1_1states_1_1State_ad66a7d869a38b0560796e1b7c4562c15}{game\+::states\+::\+State}}.
+
+\mbox{\Hypertarget{classgame_1_1states_1_1GameWinState_abf3efb7944e7634cab38520420c31c76}\label{classgame_1_1states_1_1GameWinState_abf3efb7944e7634cab38520420c31c76}} 
+\index{game::states::GameWinState@{game::states::GameWinState}!init@{init}}
+\index{init@{init}!game::states::GameWinState@{game::states::GameWinState}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void game\+::states\+::\+Game\+Win\+State\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+initialization of state 
+
+initialization of state, called by state machine after state is created and put to the stack 
+
+Reimplemented from \mbox{\hyperlink{classgame_1_1states_1_1State_ab8464551e311a0621bd80f2a21a7cb4a}{game\+::states\+::\+State}}.
+
+\mbox{\Hypertarget{classgame_1_1states_1_1GameWinState_abc74d3eab73ab3851bb128c8cca08f43}\label{classgame_1_1states_1_1GameWinState_abc74d3eab73ab3851bb128c8cca08f43}} 
+\index{game::states::GameWinState@{game::states::GameWinState}!onGoToNextLevelClicked@{onGoToNextLevelClicked}}
+\index{onGoToNextLevelClicked@{onGoToNextLevelClicked}!game::states::GameWinState@{game::states::GameWinState}}
+\doxysubsubsection{\texorpdfstring{onGoToNextLevelClicked()}{onGoToNextLevelClicked()}}
+{\footnotesize\ttfamily void game\+::states\+::\+Game\+Win\+State\+::on\+Go\+To\+Next\+Level\+Clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+return to go to next level button click event handler 
+
+callback function for go to next level button click event \mbox{\Hypertarget{classgame_1_1states_1_1GameWinState_ac57dde8552e5f4197b331df109419c45}\label{classgame_1_1states_1_1GameWinState_ac57dde8552e5f4197b331df109419c45}} 
+\index{game::states::GameWinState@{game::states::GameWinState}!onReturnToMainButtonClicked@{onReturnToMainButtonClicked}}
+\index{onReturnToMainButtonClicked@{onReturnToMainButtonClicked}!game::states::GameWinState@{game::states::GameWinState}}
+\doxysubsubsection{\texorpdfstring{onReturnToMainButtonClicked()}{onReturnToMainButtonClicked()}}
+{\footnotesize\ttfamily void game\+::states\+::\+Game\+Win\+State\+::on\+Return\+To\+Main\+Button\+Clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+return to main button click event handler 
+
+callback function for main button click event 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classgame_1_1states_1_1GameWinState_acbe137910773ca9dd667f511377c3b93}\label{classgame_1_1states_1_1GameWinState_acbe137910773ca9dd667f511377c3b93}} 
+\index{game::states::GameWinState@{game::states::GameWinState}!mGotoNextGameListener@{mGotoNextGameListener}}
+\index{mGotoNextGameListener@{mGotoNextGameListener}!game::states::GameWinState@{game::states::GameWinState}}
+\doxysubsubsection{\texorpdfstring{mGotoNextGameListener}{mGotoNextGameListener}}
+{\footnotesize\ttfamily boost\+::signals2\+::connection game\+::states\+::\+Game\+Win\+State\+::m\+Goto\+Next\+Game\+Listener\hspace{0.3cm}{\ttfamily [private]}}
+
+go to next game button click event listener \mbox{\Hypertarget{classgame_1_1states_1_1GameWinState_a03467c520ac7ba1375fb2075d5e53c9c}\label{classgame_1_1states_1_1GameWinState_a03467c520ac7ba1375fb2075d5e53c9c}} 
+\index{game::states::GameWinState@{game::states::GameWinState}!mReturnToMainButtonListener@{mReturnToMainButtonListener}}
+\index{mReturnToMainButtonListener@{mReturnToMainButtonListener}!game::states::GameWinState@{game::states::GameWinState}}
+\doxysubsubsection{\texorpdfstring{mReturnToMainButtonListener}{mReturnToMainButtonListener}}
+{\footnotesize\ttfamily boost\+::signals2\+::connection game\+::states\+::\+Game\+Win\+State\+::m\+Return\+To\+Main\+Button\+Listener\hspace{0.3cm}{\ttfamily [private]}}
+
+return to main button click event listener 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+States/Game\+Win\+State.\+h\end{DoxyCompactItemize}

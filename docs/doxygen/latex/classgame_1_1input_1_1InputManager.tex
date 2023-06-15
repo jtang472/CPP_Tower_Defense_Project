@@ -1,0 +1,324 @@
+\hypertarget{classgame_1_1input_1_1InputManager}{}\doxysection{game\+::input\+::Input\+Manager Class Reference}
+\label{classgame_1_1input_1_1InputManager}\index{game::input::InputManager@{game::input::InputManager}}
+
+
+player input handler  
+
+
+
+
+{\ttfamily \#include $<$Input\+Manager.\+h$>$}
+
+
+
+Inheritance diagram for game\+::input\+::Input\+Manager\+:
+% FIG 0
+
+
+Collaboration diagram for game\+::input\+::Input\+Manager\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classgame_1_1input_1_1InputManager_a8fcc4c0cb7d5bde463ee07342a00e4f9}{init}} (sf\+::\+Render\+Window $\ast$window, sf\+::\+View $\ast$ui\+Camera, sf\+::\+View $\ast$game\+Camera)
+\begin{DoxyCompactList}\small\item\em singleton class initialization method \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1input_1_1InputManager_ae6f08a570c3caf88892820feef3744f5}{tick}} ()
+\begin{DoxyCompactList}\small\item\em processes all player inputs from last frame \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structgame_1_1input_1_1PointerData}{Pointer\+Data}} \& \mbox{\hyperlink{classgame_1_1input_1_1InputManager_ae7c6d919dc76d3d5ff580c700b0ef854}{get\+Cached\+Pointer\+Data}} ()
+\begin{DoxyCompactList}\small\item\em get cached pointer data for current frame \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Game\+Window\+Resize\+Delegate \mbox{\hyperlink{classgame_1_1input_1_1InputManager_aa8f65654b09b7a07de29aa3f48c06a3b}{Game\+Window\+Resize\+Event}}
+\item 
+Game\+Window\+Close\+Delegate \mbox{\hyperlink{classgame_1_1input_1_1InputManager_abef8d0b2c98144f3dbf13d6659367e98}{Game\+Window\+Close\+Event}}
+\item 
+Game\+Key\+Pressed\+Delegate \mbox{\hyperlink{classgame_1_1input_1_1InputManager_a4174906b1ad5d5cec5a30c22d1b8b5e8}{Game\+Key\+Pressed\+Event}}
+\item 
+Game\+Mouse\+Pressed\+Delegate \mbox{\hyperlink{classgame_1_1input_1_1InputManager_ad5fbc87015dad4ff13db943f2a39bc96}{Game\+Mouse\+Pressed\+Event}}
+\item 
+Game\+Wheel\+Scrolled\+Delegate \mbox{\hyperlink{classgame_1_1input_1_1InputManager_a7f7e025dcfa4a3384ca26b0e2e93d84c}{Game\+Wheel\+Scrolled\+Event}}
+\item 
+Game\+Mouse\+Drag\+Delegate \mbox{\hyperlink{classgame_1_1input_1_1InputManager_a2712fc5cc863cd407b3ca16a25acda69}{Game\+Mouse\+Drag\+Event}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgame_1_1input_1_1InputManager_a6300d89f876443427a02ba83b35c8239}{Input\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em private constructor \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1input_1_1InputManager_a97f1ca1897a4d0b5521ffe10e25dec0f}{process\+Mouse\+Input}} (sf\+::\+View \&camera, renderer\+::\+Render\+Layer layer\+Start\+To\+Check, renderer\+::\+Render\+Layer layer\+Stop\+To\+Check)
+\begin{DoxyCompactList}\small\item\em processes mouse input every frame \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1input_1_1InputManager_a9289def58057dd15fafe6f120a196c2c}{execute\+Pointer\+Enter}} (\mbox{\hyperlink{classgame_1_1components_1_1GameObject}{components\+::\+Game\+Object}} $\ast$target)
+\begin{DoxyCompactList}\small\item\em execute pointer enter event handlers \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1input_1_1InputManager_a22b60c132bef0e00eef15aa6a344eed2}{execute\+Pointer\+Leave}} (\mbox{\hyperlink{classgame_1_1components_1_1GameObject}{components\+::\+Game\+Object}} $\ast$target)
+\begin{DoxyCompactList}\small\item\em execute pointer leave event handlers \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1input_1_1InputManager_a03fb7269b068572bf4677900be76077d}{execute\+Pointer\+Press}} (\mbox{\hyperlink{classgame_1_1components_1_1GameObject}{components\+::\+Game\+Object}} $\ast$target)
+\begin{DoxyCompactList}\small\item\em execute pointer press event handlers \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1input_1_1InputManager_ac789d008859ee25c2fd60bbcdeaa0dc0}{execute\+Pointer\+Release}} (\mbox{\hyperlink{classgame_1_1components_1_1GameObject}{components\+::\+Game\+Object}} $\ast$target)
+\begin{DoxyCompactList}\small\item\em execute pointer release event handlers \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1input_1_1InputManager_abcc2f200444ed572b0b93cbb20318941}{execute\+Pointer\+Click}} (\mbox{\hyperlink{classgame_1_1components_1_1GameObject}{components\+::\+Game\+Object}} $\ast$target)
+\begin{DoxyCompactList}\small\item\em execute pointer click event handlers \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structgame_1_1input_1_1PointerData}{Pointer\+Data}} \mbox{\hyperlink{classgame_1_1input_1_1InputManager_a47abd651dc1ffa3c2b0a1a15f224b2e8}{m\+Cached\+Pointer\+Data}}
+\item 
+sf\+::\+Render\+Window $\ast$ \mbox{\hyperlink{classgame_1_1input_1_1InputManager_a6ec2075831e9c29ea4805d8891e8ee9f}{m\+Window}}
+\item 
+sf\+::\+View $\ast$ \mbox{\hyperlink{classgame_1_1input_1_1InputManager_a94299d04710aa65eb339e3d82497127c}{m\+UICamera}}
+\item 
+sf\+::\+View $\ast$ \mbox{\hyperlink{classgame_1_1input_1_1InputManager_ae5cf578cf423b89f66e15e14810188ab}{m\+Game\+Camera}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classgame_1_1input_1_1InputManager_a66d11072af334ea886589fb16a08df50}\label{classgame_1_1input_1_1InputManager_a66d11072af334ea886589fb16a08df50}} 
+class {\bfseries Singleton$<$ Input\+Manager $>$}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+player input handler 
+
+this class processes player input every frame
+
+\begin{DoxyAuthor}{Author}
+Zheng Yang 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgame_1_1input_1_1InputManager_a6300d89f876443427a02ba83b35c8239}\label{classgame_1_1input_1_1InputManager_a6300d89f876443427a02ba83b35c8239}} 
+\index{game::input::InputManager@{game::input::InputManager}!InputManager@{InputManager}}
+\index{InputManager@{InputManager}!game::input::InputManager@{game::input::InputManager}}
+\doxysubsubsection{\texorpdfstring{InputManager()}{InputManager()}}
+{\footnotesize\ttfamily game\+::input\+::\+Input\+Manager\+::\+Input\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+private constructor 
+
+private constructor to ensure singleton pattern 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgame_1_1input_1_1InputManager_abcc2f200444ed572b0b93cbb20318941}\label{classgame_1_1input_1_1InputManager_abcc2f200444ed572b0b93cbb20318941}} 
+\index{game::input::InputManager@{game::input::InputManager}!executePointerClick@{executePointerClick}}
+\index{executePointerClick@{executePointerClick}!game::input::InputManager@{game::input::InputManager}}
+\doxysubsubsection{\texorpdfstring{executePointerClick()}{executePointerClick()}}
+{\footnotesize\ttfamily void game\+::input\+::\+Input\+Manager\+::execute\+Pointer\+Click (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgame_1_1components_1_1GameObject}{components\+::\+Game\+Object}} $\ast$}]{target }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+execute pointer click event handlers 
+
+this function execute all the components in a gameobject that implements \mbox{\hyperlink{classgame_1_1input_1_1IPointerClick}{IPointer\+Click}} interface
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & game object \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1input_1_1InputManager_a9289def58057dd15fafe6f120a196c2c}\label{classgame_1_1input_1_1InputManager_a9289def58057dd15fafe6f120a196c2c}} 
+\index{game::input::InputManager@{game::input::InputManager}!executePointerEnter@{executePointerEnter}}
+\index{executePointerEnter@{executePointerEnter}!game::input::InputManager@{game::input::InputManager}}
+\doxysubsubsection{\texorpdfstring{executePointerEnter()}{executePointerEnter()}}
+{\footnotesize\ttfamily void game\+::input\+::\+Input\+Manager\+::execute\+Pointer\+Enter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgame_1_1components_1_1GameObject}{components\+::\+Game\+Object}} $\ast$}]{target }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+execute pointer enter event handlers 
+
+this function execute all the components in a gameobject that implements \mbox{\hyperlink{classgame_1_1input_1_1IPointerEnter}{IPointer\+Enter}} interface
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & game object \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1input_1_1InputManager_a22b60c132bef0e00eef15aa6a344eed2}\label{classgame_1_1input_1_1InputManager_a22b60c132bef0e00eef15aa6a344eed2}} 
+\index{game::input::InputManager@{game::input::InputManager}!executePointerLeave@{executePointerLeave}}
+\index{executePointerLeave@{executePointerLeave}!game::input::InputManager@{game::input::InputManager}}
+\doxysubsubsection{\texorpdfstring{executePointerLeave()}{executePointerLeave()}}
+{\footnotesize\ttfamily void game\+::input\+::\+Input\+Manager\+::execute\+Pointer\+Leave (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgame_1_1components_1_1GameObject}{components\+::\+Game\+Object}} $\ast$}]{target }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+execute pointer leave event handlers 
+
+this function execute all the components in a gameobject that implements \mbox{\hyperlink{classgame_1_1input_1_1IPointerLeave}{IPointer\+Leave}} interface
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & game object \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1input_1_1InputManager_a03fb7269b068572bf4677900be76077d}\label{classgame_1_1input_1_1InputManager_a03fb7269b068572bf4677900be76077d}} 
+\index{game::input::InputManager@{game::input::InputManager}!executePointerPress@{executePointerPress}}
+\index{executePointerPress@{executePointerPress}!game::input::InputManager@{game::input::InputManager}}
+\doxysubsubsection{\texorpdfstring{executePointerPress()}{executePointerPress()}}
+{\footnotesize\ttfamily void game\+::input\+::\+Input\+Manager\+::execute\+Pointer\+Press (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgame_1_1components_1_1GameObject}{components\+::\+Game\+Object}} $\ast$}]{target }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+execute pointer press event handlers 
+
+this function execute all the components in a gameobject that implements \mbox{\hyperlink{classgame_1_1input_1_1IPointerPress}{IPointer\+Press}} interface
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & game object \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1input_1_1InputManager_ac789d008859ee25c2fd60bbcdeaa0dc0}\label{classgame_1_1input_1_1InputManager_ac789d008859ee25c2fd60bbcdeaa0dc0}} 
+\index{game::input::InputManager@{game::input::InputManager}!executePointerRelease@{executePointerRelease}}
+\index{executePointerRelease@{executePointerRelease}!game::input::InputManager@{game::input::InputManager}}
+\doxysubsubsection{\texorpdfstring{executePointerRelease()}{executePointerRelease()}}
+{\footnotesize\ttfamily void game\+::input\+::\+Input\+Manager\+::execute\+Pointer\+Release (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgame_1_1components_1_1GameObject}{components\+::\+Game\+Object}} $\ast$}]{target }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+execute pointer release event handlers 
+
+this function execute all the components in a gameobject that implements \mbox{\hyperlink{classgame_1_1input_1_1IPointerRelease}{IPointer\+Release}} interface
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & game object \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1input_1_1InputManager_ae7c6d919dc76d3d5ff580c700b0ef854}\label{classgame_1_1input_1_1InputManager_ae7c6d919dc76d3d5ff580c700b0ef854}} 
+\index{game::input::InputManager@{game::input::InputManager}!getCachedPointerData@{getCachedPointerData}}
+\index{getCachedPointerData@{getCachedPointerData}!game::input::InputManager@{game::input::InputManager}}
+\doxysubsubsection{\texorpdfstring{getCachedPointerData()}{getCachedPointerData()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structgame_1_1input_1_1PointerData}{Pointer\+Data}}\& game\+::input\+::\+Input\+Manager\+::get\+Cached\+Pointer\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get cached pointer data for current frame 
+
+this function returns the cached pointer data for current frame
+
+\begin{DoxyReturn}{Returns}
+cached pointer data for current frame 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgame_1_1input_1_1InputManager_a8fcc4c0cb7d5bde463ee07342a00e4f9}\label{classgame_1_1input_1_1InputManager_a8fcc4c0cb7d5bde463ee07342a00e4f9}} 
+\index{game::input::InputManager@{game::input::InputManager}!init@{init}}
+\index{init@{init}!game::input::InputManager@{game::input::InputManager}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void game\+::input\+::\+Input\+Manager\+::init (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window $\ast$}]{window,  }\item[{sf\+::\+View $\ast$}]{ui\+Camera,  }\item[{sf\+::\+View $\ast$}]{game\+Camera }\end{DoxyParamCaption})}
+
+
+
+singleton class initialization method 
+
+call this function before accessing any of its APIs
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & game window \\
+\hline
+{\em ui\+Camera} & ui camera \\
+\hline
+{\em game\+Camera} & game camera \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1input_1_1InputManager_a97f1ca1897a4d0b5521ffe10e25dec0f}\label{classgame_1_1input_1_1InputManager_a97f1ca1897a4d0b5521ffe10e25dec0f}} 
+\index{game::input::InputManager@{game::input::InputManager}!processMouseInput@{processMouseInput}}
+\index{processMouseInput@{processMouseInput}!game::input::InputManager@{game::input::InputManager}}
+\doxysubsubsection{\texorpdfstring{processMouseInput()}{processMouseInput()}}
+{\footnotesize\ttfamily void game\+::input\+::\+Input\+Manager\+::process\+Mouse\+Input (\begin{DoxyParamCaption}\item[{sf\+::\+View \&}]{camera,  }\item[{renderer\+::\+Render\+Layer}]{layer\+Start\+To\+Check,  }\item[{renderer\+::\+Render\+Layer}]{layer\+Stop\+To\+Check }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+processes mouse input every frame 
+
+this function gets called by \mbox{\hyperlink{classgame_1_1input_1_1InputManager_ae6f08a570c3caf88892820feef3744f5}{tick()}} every frame to handle all the mouse input events from last frame
+
+
+\begin{DoxyParams}{Parameters}
+{\em camera} & camera \\
+\hline
+{\em layer\+Start\+To\+Check} & check starts from which layer \\
+\hline
+{\em layer\+Start\+To\+Check} & check stops from which layer \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1input_1_1InputManager_ae6f08a570c3caf88892820feef3744f5}\label{classgame_1_1input_1_1InputManager_ae6f08a570c3caf88892820feef3744f5}} 
+\index{game::input::InputManager@{game::input::InputManager}!tick@{tick}}
+\index{tick@{tick}!game::input::InputManager@{game::input::InputManager}}
+\doxysubsubsection{\texorpdfstring{tick()}{tick()}}
+{\footnotesize\ttfamily void game\+::input\+::\+Input\+Manager\+::tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+processes all player inputs from last frame 
+
+this function is called by game manager every frame to handle all player inputs from last frame do not call it manually! 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classgame_1_1input_1_1InputManager_a4174906b1ad5d5cec5a30c22d1b8b5e8}\label{classgame_1_1input_1_1InputManager_a4174906b1ad5d5cec5a30c22d1b8b5e8}} 
+\index{game::input::InputManager@{game::input::InputManager}!GameKeyPressedEvent@{GameKeyPressedEvent}}
+\index{GameKeyPressedEvent@{GameKeyPressedEvent}!game::input::InputManager@{game::input::InputManager}}
+\doxysubsubsection{\texorpdfstring{GameKeyPressedEvent}{GameKeyPressedEvent}}
+{\footnotesize\ttfamily Game\+Key\+Pressed\+Delegate game\+::input\+::\+Input\+Manager\+::\+Game\+Key\+Pressed\+Event}
+
+keyboard pressing event \mbox{\Hypertarget{classgame_1_1input_1_1InputManager_a2712fc5cc863cd407b3ca16a25acda69}\label{classgame_1_1input_1_1InputManager_a2712fc5cc863cd407b3ca16a25acda69}} 
+\index{game::input::InputManager@{game::input::InputManager}!GameMouseDragEvent@{GameMouseDragEvent}}
+\index{GameMouseDragEvent@{GameMouseDragEvent}!game::input::InputManager@{game::input::InputManager}}
+\doxysubsubsection{\texorpdfstring{GameMouseDragEvent}{GameMouseDragEvent}}
+{\footnotesize\ttfamily Game\+Mouse\+Drag\+Delegate game\+::input\+::\+Input\+Manager\+::\+Game\+Mouse\+Drag\+Event}
+
+mouse drag event \mbox{\Hypertarget{classgame_1_1input_1_1InputManager_ad5fbc87015dad4ff13db943f2a39bc96}\label{classgame_1_1input_1_1InputManager_ad5fbc87015dad4ff13db943f2a39bc96}} 
+\index{game::input::InputManager@{game::input::InputManager}!GameMousePressedEvent@{GameMousePressedEvent}}
+\index{GameMousePressedEvent@{GameMousePressedEvent}!game::input::InputManager@{game::input::InputManager}}
+\doxysubsubsection{\texorpdfstring{GameMousePressedEvent}{GameMousePressedEvent}}
+{\footnotesize\ttfamily Game\+Mouse\+Pressed\+Delegate game\+::input\+::\+Input\+Manager\+::\+Game\+Mouse\+Pressed\+Event}
+
+mouse pressing event \mbox{\Hypertarget{classgame_1_1input_1_1InputManager_a7f7e025dcfa4a3384ca26b0e2e93d84c}\label{classgame_1_1input_1_1InputManager_a7f7e025dcfa4a3384ca26b0e2e93d84c}} 
+\index{game::input::InputManager@{game::input::InputManager}!GameWheelScrolledEvent@{GameWheelScrolledEvent}}
+\index{GameWheelScrolledEvent@{GameWheelScrolledEvent}!game::input::InputManager@{game::input::InputManager}}
+\doxysubsubsection{\texorpdfstring{GameWheelScrolledEvent}{GameWheelScrolledEvent}}
+{\footnotesize\ttfamily Game\+Wheel\+Scrolled\+Delegate game\+::input\+::\+Input\+Manager\+::\+Game\+Wheel\+Scrolled\+Event}
+
+mouse wheel scrolling event \mbox{\Hypertarget{classgame_1_1input_1_1InputManager_abef8d0b2c98144f3dbf13d6659367e98}\label{classgame_1_1input_1_1InputManager_abef8d0b2c98144f3dbf13d6659367e98}} 
+\index{game::input::InputManager@{game::input::InputManager}!GameWindowCloseEvent@{GameWindowCloseEvent}}
+\index{GameWindowCloseEvent@{GameWindowCloseEvent}!game::input::InputManager@{game::input::InputManager}}
+\doxysubsubsection{\texorpdfstring{GameWindowCloseEvent}{GameWindowCloseEvent}}
+{\footnotesize\ttfamily Game\+Window\+Close\+Delegate game\+::input\+::\+Input\+Manager\+::\+Game\+Window\+Close\+Event}
+
+game window close event \mbox{\Hypertarget{classgame_1_1input_1_1InputManager_aa8f65654b09b7a07de29aa3f48c06a3b}\label{classgame_1_1input_1_1InputManager_aa8f65654b09b7a07de29aa3f48c06a3b}} 
+\index{game::input::InputManager@{game::input::InputManager}!GameWindowResizeEvent@{GameWindowResizeEvent}}
+\index{GameWindowResizeEvent@{GameWindowResizeEvent}!game::input::InputManager@{game::input::InputManager}}
+\doxysubsubsection{\texorpdfstring{GameWindowResizeEvent}{GameWindowResizeEvent}}
+{\footnotesize\ttfamily Game\+Window\+Resize\+Delegate game\+::input\+::\+Input\+Manager\+::\+Game\+Window\+Resize\+Event}
+
+game window resize event \mbox{\Hypertarget{classgame_1_1input_1_1InputManager_a47abd651dc1ffa3c2b0a1a15f224b2e8}\label{classgame_1_1input_1_1InputManager_a47abd651dc1ffa3c2b0a1a15f224b2e8}} 
+\index{game::input::InputManager@{game::input::InputManager}!mCachedPointerData@{mCachedPointerData}}
+\index{mCachedPointerData@{mCachedPointerData}!game::input::InputManager@{game::input::InputManager}}
+\doxysubsubsection{\texorpdfstring{mCachedPointerData}{mCachedPointerData}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structgame_1_1input_1_1PointerData}{Pointer\+Data}} game\+::input\+::\+Input\+Manager\+::m\+Cached\+Pointer\+Data\hspace{0.3cm}{\ttfamily [private]}}
+
+cached mouse data \mbox{\Hypertarget{classgame_1_1input_1_1InputManager_ae5cf578cf423b89f66e15e14810188ab}\label{classgame_1_1input_1_1InputManager_ae5cf578cf423b89f66e15e14810188ab}} 
+\index{game::input::InputManager@{game::input::InputManager}!mGameCamera@{mGameCamera}}
+\index{mGameCamera@{mGameCamera}!game::input::InputManager@{game::input::InputManager}}
+\doxysubsubsection{\texorpdfstring{mGameCamera}{mGameCamera}}
+{\footnotesize\ttfamily sf\+::\+View$\ast$ game\+::input\+::\+Input\+Manager\+::m\+Game\+Camera\hspace{0.3cm}{\ttfamily [private]}}
+
+cached game camera \mbox{\Hypertarget{classgame_1_1input_1_1InputManager_a94299d04710aa65eb339e3d82497127c}\label{classgame_1_1input_1_1InputManager_a94299d04710aa65eb339e3d82497127c}} 
+\index{game::input::InputManager@{game::input::InputManager}!mUICamera@{mUICamera}}
+\index{mUICamera@{mUICamera}!game::input::InputManager@{game::input::InputManager}}
+\doxysubsubsection{\texorpdfstring{mUICamera}{mUICamera}}
+{\footnotesize\ttfamily sf\+::\+View$\ast$ game\+::input\+::\+Input\+Manager\+::m\+UICamera\hspace{0.3cm}{\ttfamily [private]}}
+
+cached UI camera \mbox{\Hypertarget{classgame_1_1input_1_1InputManager_a6ec2075831e9c29ea4805d8891e8ee9f}\label{classgame_1_1input_1_1InputManager_a6ec2075831e9c29ea4805d8891e8ee9f}} 
+\index{game::input::InputManager@{game::input::InputManager}!mWindow@{mWindow}}
+\index{mWindow@{mWindow}!game::input::InputManager@{game::input::InputManager}}
+\doxysubsubsection{\texorpdfstring{mWindow}{mWindow}}
+{\footnotesize\ttfamily sf\+::\+Render\+Window$\ast$ game\+::input\+::\+Input\+Manager\+::m\+Window\hspace{0.3cm}{\ttfamily [private]}}
+
+cached game window 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Input/Input\+Manager.\+h\end{DoxyCompactItemize}

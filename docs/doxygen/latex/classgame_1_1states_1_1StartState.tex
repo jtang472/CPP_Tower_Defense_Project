@@ -1,0 +1,197 @@
+\hypertarget{classgame_1_1states_1_1StartState}{}\doxysection{game\+::states\+::Start\+State Class Reference}
+\label{classgame_1_1states_1_1StartState}\index{game::states::StartState@{game::states::StartState}}
+
+
+game state  
+
+
+
+
+{\ttfamily \#include $<$Start\+State.\+h$>$}
+
+
+
+Inheritance diagram for game\+::states\+::Start\+State\+:
+% FIG 0
+
+
+Collaboration diagram for game\+::states\+::Start\+State\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgame_1_1states_1_1StartState_a6b107f1ab156bb71fa98755e0bf620c8}{Start\+State}} (\mbox{\hyperlink{classgame_1_1states_1_1StateMachine}{State\+Machine}} $\ast$owner)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classgame_1_1states_1_1StartState}{Start\+State}} constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classgame_1_1states_1_1StartState_a47f716000c51101530d54d316d9b0f24}{$\sim$\+Start\+State}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classgame_1_1states_1_1StartState}{Start\+State}} destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1states_1_1StartState_a152758b9258f0cff0182cac773baeb91}{init}} () override
+\begin{DoxyCompactList}\small\item\em initialization of state \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1states_1_1StartState_a368aee11100d4a0f796d7bbeb84dd07f}{register\+Resources}} ()
+\begin{DoxyCompactList}\small\item\em register all game resources \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1states_1_1StartState_a17810fa7c04fe7dfb9d4da4e08c8e538}{load\+Immediate\+Resources}} ()
+\begin{DoxyCompactList}\small\item\em load all the resource that needs to be used before loading other resources \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1states_1_1StartState_a399221ef1c0806510e941e1b5d4cf219}{load\+All\+Resources}} ()
+\begin{DoxyCompactList}\small\item\em asynchronous task to load all resources \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgame_1_1states_1_1StartState_a5050295b030d956f6318fa5d7e7db0fd}\label{classgame_1_1states_1_1StartState_a5050295b030d956f6318fa5d7e7db0fd}} 
+void \mbox{\hyperlink{classgame_1_1states_1_1StartState_a5050295b030d956f6318fa5d7e7db0fd}{on\+Background\+Fade\+In\+Completed}} ()
+\begin{DoxyCompactList}\small\item\em callback for fade in completed event callback function for fade in completed event \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgame_1_1states_1_1StartState_a20e4081cea803cae7b9782a245088937}\label{classgame_1_1states_1_1StartState_a20e4081cea803cae7b9782a245088937}} 
+void \mbox{\hyperlink{classgame_1_1states_1_1StartState_a20e4081cea803cae7b9782a245088937}{on\+Loading\+Complete}} ()
+\begin{DoxyCompactList}\small\item\em callback for loading completed event callback function for loading completed event \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgame_1_1states_1_1StartState_a9ae78beff224eb78c443360317986bc8}\label{classgame_1_1states_1_1StartState_a9ae78beff224eb78c443360317986bc8}} 
+void \mbox{\hyperlink{classgame_1_1states_1_1StartState_a9ae78beff224eb78c443360317986bc8}{on\+Any\+Key\+Pressed}} (sf\+::\+Keyboard\+::\+Key key\+Code)
+\begin{DoxyCompactList}\small\item\em callback for any keyboard key pressed event callback function for any keyboard key pressed event \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgame_1_1states_1_1StartState_afa3742b25bac23543dd682403dcef6d3}\label{classgame_1_1states_1_1StartState_afa3742b25bac23543dd682403dcef6d3}} 
+void \mbox{\hyperlink{classgame_1_1states_1_1StartState_afa3742b25bac23543dd682403dcef6d3}{on\+Mouse\+Pressed}} ()
+\begin{DoxyCompactList}\small\item\em callback for mouse pressed event callback function for mouse pressed event \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgame_1_1states_1_1StartState_a23ad156acf341b0881d9ba8e0d979323}\label{classgame_1_1states_1_1StartState_a23ad156acf341b0881d9ba8e0d979323}} 
+void \mbox{\hyperlink{classgame_1_1states_1_1StartState_a23ad156acf341b0881d9ba8e0d979323}{goto\+Main\+State}} ()
+\begin{DoxyCompactList}\small\item\em go to main state call this function to go to main state \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+boost\+::signals2\+::connection \mbox{\hyperlink{classgame_1_1states_1_1StartState_a75af3a0e1e4a65578f370431f5663fa9}{m\+Fade\+In\+Listener}}
+\item 
+boost\+::signals2\+::connection \mbox{\hyperlink{classgame_1_1states_1_1StartState_a2e154f651de9c1666abc83a7a3286e29}{m\+Loading\+Task\+Listener}}
+\item 
+boost\+::signals2\+::connection \mbox{\hyperlink{classgame_1_1states_1_1StartState_a540e3c715983bb26500679ad62e8f3eb}{m\+Key\+Pressed\+Listener}}
+\item 
+boost\+::signals2\+::connection \mbox{\hyperlink{classgame_1_1states_1_1StartState_a1a34784016f8d4d43b995381d4e41f30}{m\+Mouse\+Pressed\+Listener}}
+\item 
+boost\+::signals2\+::connection \mbox{\hyperlink{classgame_1_1states_1_1StartState_aadb77a26e324aba2764314381e39346b}{m\+Go\+To\+Main\+State\+Listener}}
+\item 
+\mbox{\hyperlink{classgame_1_1components_1_1Sprite}{components\+::\+Sprite}} $\ast$ \mbox{\hyperlink{classgame_1_1states_1_1StartState_a866e745839b9c05f07dfa034e50340ba}{m\+Background\+Sprite}}
+\item 
+\mbox{\hyperlink{classgame_1_1components_1_1Text}{components\+::\+Text}} $\ast$ \mbox{\hyperlink{classgame_1_1states_1_1StartState_ac20d7365eba1af54f85223bc8c12bf2c}{m\+Press\+Key\+Text}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+game state 
+
+this is the fist state to be pushed into the state machine when player opens the game application
+
+\begin{DoxyAuthor}{Author}
+Zheng Yang 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgame_1_1states_1_1StartState_a6b107f1ab156bb71fa98755e0bf620c8}\label{classgame_1_1states_1_1StartState_a6b107f1ab156bb71fa98755e0bf620c8}} 
+\index{game::states::StartState@{game::states::StartState}!StartState@{StartState}}
+\index{StartState@{StartState}!game::states::StartState@{game::states::StartState}}
+\doxysubsubsection{\texorpdfstring{StartState()}{StartState()}}
+{\footnotesize\ttfamily game\+::states\+::\+Start\+State\+::\+Start\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgame_1_1states_1_1StateMachine}{State\+Machine}} $\ast$}]{owner }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classgame_1_1states_1_1StartState}{Start\+State}} constructor. 
+
+\mbox{\hyperlink{classgame_1_1states_1_1StartState}{Start\+State}} constructor \mbox{\Hypertarget{classgame_1_1states_1_1StartState_a47f716000c51101530d54d316d9b0f24}\label{classgame_1_1states_1_1StartState_a47f716000c51101530d54d316d9b0f24}} 
+\index{game::states::StartState@{game::states::StartState}!````~StartState@{$\sim$StartState}}
+\index{````~StartState@{$\sim$StartState}!game::states::StartState@{game::states::StartState}}
+\doxysubsubsection{\texorpdfstring{$\sim$StartState()}{~StartState()}}
+{\footnotesize\ttfamily game\+::states\+::\+Start\+State\+::$\sim$\+Start\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classgame_1_1states_1_1StartState}{Start\+State}} destructor. 
+
+\mbox{\hyperlink{classgame_1_1states_1_1StartState}{Start\+State}} destructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgame_1_1states_1_1StartState_a152758b9258f0cff0182cac773baeb91}\label{classgame_1_1states_1_1StartState_a152758b9258f0cff0182cac773baeb91}} 
+\index{game::states::StartState@{game::states::StartState}!init@{init}}
+\index{init@{init}!game::states::StartState@{game::states::StartState}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void game\+::states\+::\+Start\+State\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+initialization of state 
+
+initialization of state, called by state machine after state is created and put to the stack 
+
+Reimplemented from \mbox{\hyperlink{classgame_1_1states_1_1State_ab8464551e311a0621bd80f2a21a7cb4a}{game\+::states\+::\+State}}.
+
+\mbox{\Hypertarget{classgame_1_1states_1_1StartState_a399221ef1c0806510e941e1b5d4cf219}\label{classgame_1_1states_1_1StartState_a399221ef1c0806510e941e1b5d4cf219}} 
+\index{game::states::StartState@{game::states::StartState}!loadAllResources@{loadAllResources}}
+\index{loadAllResources@{loadAllResources}!game::states::StartState@{game::states::StartState}}
+\doxysubsubsection{\texorpdfstring{loadAllResources()}{loadAllResources()}}
+{\footnotesize\ttfamily void game\+::states\+::\+Start\+State\+::load\+All\+Resources (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+asynchronous task to load all resources 
+
+asynchronous task to load all resources into game \mbox{\Hypertarget{classgame_1_1states_1_1StartState_a17810fa7c04fe7dfb9d4da4e08c8e538}\label{classgame_1_1states_1_1StartState_a17810fa7c04fe7dfb9d4da4e08c8e538}} 
+\index{game::states::StartState@{game::states::StartState}!loadImmediateResources@{loadImmediateResources}}
+\index{loadImmediateResources@{loadImmediateResources}!game::states::StartState@{game::states::StartState}}
+\doxysubsubsection{\texorpdfstring{loadImmediateResources()}{loadImmediateResources()}}
+{\footnotesize\ttfamily void game\+::states\+::\+Start\+State\+::load\+Immediate\+Resources (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+load all the resource that needs to be used before loading other resources 
+
+load all the resource that needs to be used before loading other resources for example, the loading spinner \mbox{\Hypertarget{classgame_1_1states_1_1StartState_a368aee11100d4a0f796d7bbeb84dd07f}\label{classgame_1_1states_1_1StartState_a368aee11100d4a0f796d7bbeb84dd07f}} 
+\index{game::states::StartState@{game::states::StartState}!registerResources@{registerResources}}
+\index{registerResources@{registerResources}!game::states::StartState@{game::states::StartState}}
+\doxysubsubsection{\texorpdfstring{registerResources()}{registerResources()}}
+{\footnotesize\ttfamily void game\+::states\+::\+Start\+State\+::register\+Resources (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+register all game resources 
+
+register all game resources to the resource manager 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classgame_1_1states_1_1StartState_a866e745839b9c05f07dfa034e50340ba}\label{classgame_1_1states_1_1StartState_a866e745839b9c05f07dfa034e50340ba}} 
+\index{game::states::StartState@{game::states::StartState}!mBackgroundSprite@{mBackgroundSprite}}
+\index{mBackgroundSprite@{mBackgroundSprite}!game::states::StartState@{game::states::StartState}}
+\doxysubsubsection{\texorpdfstring{mBackgroundSprite}{mBackgroundSprite}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgame_1_1components_1_1Sprite}{components\+::\+Sprite}}$\ast$ game\+::states\+::\+Start\+State\+::m\+Background\+Sprite\hspace{0.3cm}{\ttfamily [private]}}
+
+background sprite \mbox{\Hypertarget{classgame_1_1states_1_1StartState_a75af3a0e1e4a65578f370431f5663fa9}\label{classgame_1_1states_1_1StartState_a75af3a0e1e4a65578f370431f5663fa9}} 
+\index{game::states::StartState@{game::states::StartState}!mFadeInListener@{mFadeInListener}}
+\index{mFadeInListener@{mFadeInListener}!game::states::StartState@{game::states::StartState}}
+\doxysubsubsection{\texorpdfstring{mFadeInListener}{mFadeInListener}}
+{\footnotesize\ttfamily boost\+::signals2\+::connection game\+::states\+::\+Start\+State\+::m\+Fade\+In\+Listener\hspace{0.3cm}{\ttfamily [private]}}
+
+fade in animation listener \mbox{\Hypertarget{classgame_1_1states_1_1StartState_aadb77a26e324aba2764314381e39346b}\label{classgame_1_1states_1_1StartState_aadb77a26e324aba2764314381e39346b}} 
+\index{game::states::StartState@{game::states::StartState}!mGoToMainStateListener@{mGoToMainStateListener}}
+\index{mGoToMainStateListener@{mGoToMainStateListener}!game::states::StartState@{game::states::StartState}}
+\doxysubsubsection{\texorpdfstring{mGoToMainStateListener}{mGoToMainStateListener}}
+{\footnotesize\ttfamily boost\+::signals2\+::connection game\+::states\+::\+Start\+State\+::m\+Go\+To\+Main\+State\+Listener\hspace{0.3cm}{\ttfamily [private]}}
+
+go to main menu listener \mbox{\Hypertarget{classgame_1_1states_1_1StartState_a540e3c715983bb26500679ad62e8f3eb}\label{classgame_1_1states_1_1StartState_a540e3c715983bb26500679ad62e8f3eb}} 
+\index{game::states::StartState@{game::states::StartState}!mKeyPressedListener@{mKeyPressedListener}}
+\index{mKeyPressedListener@{mKeyPressedListener}!game::states::StartState@{game::states::StartState}}
+\doxysubsubsection{\texorpdfstring{mKeyPressedListener}{mKeyPressedListener}}
+{\footnotesize\ttfamily boost\+::signals2\+::connection game\+::states\+::\+Start\+State\+::m\+Key\+Pressed\+Listener\hspace{0.3cm}{\ttfamily [private]}}
+
+keyboard pressed listener \mbox{\Hypertarget{classgame_1_1states_1_1StartState_a2e154f651de9c1666abc83a7a3286e29}\label{classgame_1_1states_1_1StartState_a2e154f651de9c1666abc83a7a3286e29}} 
+\index{game::states::StartState@{game::states::StartState}!mLoadingTaskListener@{mLoadingTaskListener}}
+\index{mLoadingTaskListener@{mLoadingTaskListener}!game::states::StartState@{game::states::StartState}}
+\doxysubsubsection{\texorpdfstring{mLoadingTaskListener}{mLoadingTaskListener}}
+{\footnotesize\ttfamily boost\+::signals2\+::connection game\+::states\+::\+Start\+State\+::m\+Loading\+Task\+Listener\hspace{0.3cm}{\ttfamily [private]}}
+
+loading task listener \mbox{\Hypertarget{classgame_1_1states_1_1StartState_a1a34784016f8d4d43b995381d4e41f30}\label{classgame_1_1states_1_1StartState_a1a34784016f8d4d43b995381d4e41f30}} 
+\index{game::states::StartState@{game::states::StartState}!mMousePressedListener@{mMousePressedListener}}
+\index{mMousePressedListener@{mMousePressedListener}!game::states::StartState@{game::states::StartState}}
+\doxysubsubsection{\texorpdfstring{mMousePressedListener}{mMousePressedListener}}
+{\footnotesize\ttfamily boost\+::signals2\+::connection game\+::states\+::\+Start\+State\+::m\+Mouse\+Pressed\+Listener\hspace{0.3cm}{\ttfamily [private]}}
+
+mouse pressed listener \mbox{\Hypertarget{classgame_1_1states_1_1StartState_ac20d7365eba1af54f85223bc8c12bf2c}\label{classgame_1_1states_1_1StartState_ac20d7365eba1af54f85223bc8c12bf2c}} 
+\index{game::states::StartState@{game::states::StartState}!mPressKeyText@{mPressKeyText}}
+\index{mPressKeyText@{mPressKeyText}!game::states::StartState@{game::states::StartState}}
+\doxysubsubsection{\texorpdfstring{mPressKeyText}{mPressKeyText}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgame_1_1components_1_1Text}{components\+::\+Text}}$\ast$ game\+::states\+::\+Start\+State\+::m\+Press\+Key\+Text\hspace{0.3cm}{\ttfamily [private]}}
+
+press any key text 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+States/Start\+State.\+h\end{DoxyCompactItemize}

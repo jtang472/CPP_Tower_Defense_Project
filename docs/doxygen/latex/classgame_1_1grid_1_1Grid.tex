@@ -1,0 +1,274 @@
+\hypertarget{classgame_1_1grid_1_1Grid}{}\doxysection{game\+::grid\+::Grid Class Reference}
+\label{classgame_1_1grid_1_1Grid}\index{game::grid::Grid@{game::grid::Grid}}
+
+
+class of a single grid cell  
+
+
+
+
+{\ttfamily \#include $<$Grid.\+h$>$}
+
+
+
+Inheritance diagram for game\+::grid\+::Grid\+:
+% FIG 0
+
+
+Collaboration diagram for game\+::grid\+::Grid\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgame_1_1grid_1_1Grid_a4232521281564633bf9b4750455c8425}{Grid}} (const ldtk\+::\+Tile \&grid\+Define, sf\+::\+Texture $\ast$tile\+Map, const sf\+::\+Vector2i size, const sf\+::\+Vector2i index, renderer\+::\+Render\+Layer layer, int depth, bool repeated)
+\begin{DoxyCompactList}\small\item\em grid constructor \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classgame_1_1grid_1_1Grid_a479f7b142780d55ab0abcc486ae009d7}{$\sim$\+Grid}} ()
+\begin{DoxyCompactList}\small\item\em grid destructor \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1grid_1_1Grid_a6b22671b644582a1506d7a2054cafb5a}{set\+Active}} (bool is\+Active)
+\begin{DoxyCompactList}\small\item\em active/deactive the sprite component of the grid \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1grid_1_1Grid_a39196321cb449b7022271b627238b652}{add\+Entity}} (\mbox{\hyperlink{classgame_1_1components_1_1GridEntity}{components\+::\+Grid\+Entity}} $\ast$entity)
+\begin{DoxyCompactList}\small\item\em add grid entity to the grid \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1grid_1_1Grid_a7aa1ffb5515406d63626f3486f6a611c}{remove\+Entity}} (\mbox{\hyperlink{classgame_1_1components_1_1GridEntity}{components\+::\+Grid\+Entity}} $\ast$entity)
+\begin{DoxyCompactList}\small\item\em remove grid entity from the grid \end{DoxyCompactList}\item 
+const std\+::vector$<$ \mbox{\hyperlink{classgame_1_1components_1_1GridEntity}{components\+::\+Grid\+Entity}} $\ast$ $>$ \& \mbox{\hyperlink{classgame_1_1grid_1_1Grid_aff76352842377339440c1b29726df2ba}{get\+All\+Entities}} () const
+\begin{DoxyCompactList}\small\item\em return the list of all the grid entities currently on the grid \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classgame_1_1grid_1_1Grid_a862aaad8dcefcb10449d8cfefa2a4ab2}{get\+Entity\+Counts}} () const
+\begin{DoxyCompactList}\small\item\em return the number of grid entities in the grid \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classgame_1_1core_1_1ObjectHandle}{core\+::\+Go\+Handle}} \mbox{\hyperlink{classgame_1_1grid_1_1Grid_a2af8284991e26dfd9bc52bf990a0d244}{get\+Root}} () const
+\begin{DoxyCompactList}\small\item\em get gameobject root \end{DoxyCompactList}\item 
+sf\+::\+Vector2i \mbox{\hyperlink{classgame_1_1grid_1_1Grid_a26e14409335faee56476aab194fbbc94}{get\+Index}} () const
+\begin{DoxyCompactList}\small\item\em get grid index \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classgame_1_1components_1_1GridEntity}{components\+::\+Grid\+Entity}} $\ast$ $>$ \mbox{\hyperlink{classgame_1_1grid_1_1Grid_a7fb6df996cec5a1487a87847ff8175a8}{m\+Entities}}
+\item 
+const ldtk\+::\+Tile \& \mbox{\hyperlink{classgame_1_1grid_1_1Grid_a1dd4ec1f0455b853b66b3d57262271eb}{m\+Grid\+Define}}
+\item 
+sf\+::\+Texture $\ast$ \mbox{\hyperlink{classgame_1_1grid_1_1Grid_a94facf2af050dd8bcb5b56f82132b6dc}{m\+Tile\+Map}}
+\item 
+sf\+::\+Vector2i \mbox{\hyperlink{classgame_1_1grid_1_1Grid_aa82e6c4453947ae702c6b9c54fe57adb}{m\+Index}}
+\item 
+const renderer\+::\+Render\+Layer \mbox{\hyperlink{classgame_1_1grid_1_1Grid_a2dc3c64443f2a3a787ddf39a9d530701}{m\+Render\+Layer}}
+\item 
+const int \mbox{\hyperlink{classgame_1_1grid_1_1Grid_a2879344c16e687a54433e234763f5586}{m\+Depth}}
+\item 
+\mbox{\hyperlink{classgame_1_1core_1_1ObjectHandle}{core\+::\+Go\+Handle}} \mbox{\hyperlink{classgame_1_1grid_1_1Grid_ad6da0732b72b665f4cc324f384dcffe1}{m\+Root}}
+\item 
+bool \mbox{\hyperlink{classgame_1_1grid_1_1Grid_aec548904908447fe6a0c9c049c25e560}{m\+Is\+Repeated}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+class of a single grid cell 
+
+this is the class of a single grid cell, grids are managed by grid layers and they maintain references to all the grid entities that are currently on the grid
+
+\begin{DoxyAuthor}{Author}
+Zheng Yang 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgame_1_1grid_1_1Grid_a4232521281564633bf9b4750455c8425}\label{classgame_1_1grid_1_1Grid_a4232521281564633bf9b4750455c8425}} 
+\index{game::grid::Grid@{game::grid::Grid}!Grid@{Grid}}
+\index{Grid@{Grid}!game::grid::Grid@{game::grid::Grid}}
+\doxysubsubsection{\texorpdfstring{Grid()}{Grid()}}
+{\footnotesize\ttfamily game\+::grid\+::\+Grid\+::\+Grid (\begin{DoxyParamCaption}\item[{const ldtk\+::\+Tile \&}]{grid\+Define,  }\item[{sf\+::\+Texture $\ast$}]{tile\+Map,  }\item[{const sf\+::\+Vector2i}]{size,  }\item[{const sf\+::\+Vector2i}]{index,  }\item[{renderer\+::\+Render\+Layer}]{layer,  }\item[{int}]{depth,  }\item[{bool}]{repeated }\end{DoxyParamCaption})}
+
+
+
+grid constructor 
+
+grid constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em grid\+Define} & grid data \\
+\hline
+{\em tile\+Map} & the background texture of the grid \\
+\hline
+{\em size} & size of the grid \\
+\hline
+{\em index} & index in the grid layer \\
+\hline
+{\em layer} & render layer \\
+\hline
+{\em depth} & depth in the render layer \\
+\hline
+{\em repeated} & should the grid sprite repeat itself when the size of the grid is greater than the size of the texture \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1grid_1_1Grid_a479f7b142780d55ab0abcc486ae009d7}\label{classgame_1_1grid_1_1Grid_a479f7b142780d55ab0abcc486ae009d7}} 
+\index{game::grid::Grid@{game::grid::Grid}!````~Grid@{$\sim$Grid}}
+\index{````~Grid@{$\sim$Grid}!game::grid::Grid@{game::grid::Grid}}
+\doxysubsubsection{\texorpdfstring{$\sim$Grid()}{~Grid()}}
+{\footnotesize\ttfamily game\+::grid\+::\+Grid\+::$\sim$\+Grid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+grid destructor 
+
+grid destructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgame_1_1grid_1_1Grid_a39196321cb449b7022271b627238b652}\label{classgame_1_1grid_1_1Grid_a39196321cb449b7022271b627238b652}} 
+\index{game::grid::Grid@{game::grid::Grid}!addEntity@{addEntity}}
+\index{addEntity@{addEntity}!game::grid::Grid@{game::grid::Grid}}
+\doxysubsubsection{\texorpdfstring{addEntity()}{addEntity()}}
+{\footnotesize\ttfamily void game\+::grid\+::\+Grid\+::add\+Entity (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgame_1_1components_1_1GridEntity}{components\+::\+Grid\+Entity}} $\ast$}]{entity }\end{DoxyParamCaption})}
+
+
+
+add grid entity to the grid 
+
+call this function to add a grid entity to the grid, grid will then keep a reference of the grid entity
+
+
+\begin{DoxyParams}{Parameters}
+{\em entity} & grid entity to be added \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1grid_1_1Grid_aff76352842377339440c1b29726df2ba}\label{classgame_1_1grid_1_1Grid_aff76352842377339440c1b29726df2ba}} 
+\index{game::grid::Grid@{game::grid::Grid}!getAllEntities@{getAllEntities}}
+\index{getAllEntities@{getAllEntities}!game::grid::Grid@{game::grid::Grid}}
+\doxysubsubsection{\texorpdfstring{getAllEntities()}{getAllEntities()}}
+{\footnotesize\ttfamily const std\+::vector$<$\mbox{\hyperlink{classgame_1_1components_1_1GridEntity}{components\+::\+Grid\+Entity}}$\ast$$>$\& game\+::grid\+::\+Grid\+::get\+All\+Entities (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+return the list of all the grid entities currently on the grid 
+
+call this function to return the list of all the grid entities currently on the grid
+
+\begin{DoxyReturn}{Returns}
+the list of all the grid entities on the grid 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgame_1_1grid_1_1Grid_a862aaad8dcefcb10449d8cfefa2a4ab2}\label{classgame_1_1grid_1_1Grid_a862aaad8dcefcb10449d8cfefa2a4ab2}} 
+\index{game::grid::Grid@{game::grid::Grid}!getEntityCounts@{getEntityCounts}}
+\index{getEntityCounts@{getEntityCounts}!game::grid::Grid@{game::grid::Grid}}
+\doxysubsubsection{\texorpdfstring{getEntityCounts()}{getEntityCounts()}}
+{\footnotesize\ttfamily int game\+::grid\+::\+Grid\+::get\+Entity\+Counts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+return the number of grid entities in the grid 
+
+call this function to return the number of grid entities in the grid
+
+\begin{DoxyReturn}{Returns}
+the number of grid entities in the grid 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgame_1_1grid_1_1Grid_a26e14409335faee56476aab194fbbc94}\label{classgame_1_1grid_1_1Grid_a26e14409335faee56476aab194fbbc94}} 
+\index{game::grid::Grid@{game::grid::Grid}!getIndex@{getIndex}}
+\index{getIndex@{getIndex}!game::grid::Grid@{game::grid::Grid}}
+\doxysubsubsection{\texorpdfstring{getIndex()}{getIndex()}}
+{\footnotesize\ttfamily sf\+::\+Vector2i game\+::grid\+::\+Grid\+::get\+Index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get grid index 
+
+call this function to return grid index
+
+\begin{DoxyReturn}{Returns}
+grid index 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgame_1_1grid_1_1Grid_a2af8284991e26dfd9bc52bf990a0d244}\label{classgame_1_1grid_1_1Grid_a2af8284991e26dfd9bc52bf990a0d244}} 
+\index{game::grid::Grid@{game::grid::Grid}!getRoot@{getRoot}}
+\index{getRoot@{getRoot}!game::grid::Grid@{game::grid::Grid}}
+\doxysubsubsection{\texorpdfstring{getRoot()}{getRoot()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgame_1_1core_1_1ObjectHandle}{core\+::\+Go\+Handle}} game\+::grid\+::\+Grid\+::get\+Root (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get gameobject root 
+
+call this function to return root gameobject handle of the grid
+
+\begin{DoxyReturn}{Returns}
+root gameobject handle of the grid 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgame_1_1grid_1_1Grid_a7aa1ffb5515406d63626f3486f6a611c}\label{classgame_1_1grid_1_1Grid_a7aa1ffb5515406d63626f3486f6a611c}} 
+\index{game::grid::Grid@{game::grid::Grid}!removeEntity@{removeEntity}}
+\index{removeEntity@{removeEntity}!game::grid::Grid@{game::grid::Grid}}
+\doxysubsubsection{\texorpdfstring{removeEntity()}{removeEntity()}}
+{\footnotesize\ttfamily void game\+::grid\+::\+Grid\+::remove\+Entity (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgame_1_1components_1_1GridEntity}{components\+::\+Grid\+Entity}} $\ast$}]{entity }\end{DoxyParamCaption})}
+
+
+
+remove grid entity from the grid 
+
+call this function to remove grid entity from the grid
+
+
+\begin{DoxyParams}{Parameters}
+{\em entity} & grid entity to be added \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1grid_1_1Grid_a6b22671b644582a1506d7a2054cafb5a}\label{classgame_1_1grid_1_1Grid_a6b22671b644582a1506d7a2054cafb5a}} 
+\index{game::grid::Grid@{game::grid::Grid}!setActive@{setActive}}
+\index{setActive@{setActive}!game::grid::Grid@{game::grid::Grid}}
+\doxysubsubsection{\texorpdfstring{setActive()}{setActive()}}
+{\footnotesize\ttfamily void game\+::grid\+::\+Grid\+::set\+Active (\begin{DoxyParamCaption}\item[{bool}]{is\+Active }\end{DoxyParamCaption})}
+
+
+
+active/deactive the sprite component of the grid 
+
+active/deactive the sprite component of the grid 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classgame_1_1grid_1_1Grid_a2879344c16e687a54433e234763f5586}\label{classgame_1_1grid_1_1Grid_a2879344c16e687a54433e234763f5586}} 
+\index{game::grid::Grid@{game::grid::Grid}!mDepth@{mDepth}}
+\index{mDepth@{mDepth}!game::grid::Grid@{game::grid::Grid}}
+\doxysubsubsection{\texorpdfstring{mDepth}{mDepth}}
+{\footnotesize\ttfamily const int game\+::grid\+::\+Grid\+::m\+Depth\hspace{0.3cm}{\ttfamily [private]}}
+
+grid depth in the render layer \mbox{\Hypertarget{classgame_1_1grid_1_1Grid_a7fb6df996cec5a1487a87847ff8175a8}\label{classgame_1_1grid_1_1Grid_a7fb6df996cec5a1487a87847ff8175a8}} 
+\index{game::grid::Grid@{game::grid::Grid}!mEntities@{mEntities}}
+\index{mEntities@{mEntities}!game::grid::Grid@{game::grid::Grid}}
+\doxysubsubsection{\texorpdfstring{mEntities}{mEntities}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classgame_1_1components_1_1GridEntity}{components\+::\+Grid\+Entity}}$\ast$$>$ game\+::grid\+::\+Grid\+::m\+Entities\hspace{0.3cm}{\ttfamily [private]}}
+
+grid entities currently on the grid \mbox{\Hypertarget{classgame_1_1grid_1_1Grid_a1dd4ec1f0455b853b66b3d57262271eb}\label{classgame_1_1grid_1_1Grid_a1dd4ec1f0455b853b66b3d57262271eb}} 
+\index{game::grid::Grid@{game::grid::Grid}!mGridDefine@{mGridDefine}}
+\index{mGridDefine@{mGridDefine}!game::grid::Grid@{game::grid::Grid}}
+\doxysubsubsection{\texorpdfstring{mGridDefine}{mGridDefine}}
+{\footnotesize\ttfamily const ldtk\+::\+Tile\& game\+::grid\+::\+Grid\+::m\+Grid\+Define\hspace{0.3cm}{\ttfamily [private]}}
+
+grid data \mbox{\Hypertarget{classgame_1_1grid_1_1Grid_aa82e6c4453947ae702c6b9c54fe57adb}\label{classgame_1_1grid_1_1Grid_aa82e6c4453947ae702c6b9c54fe57adb}} 
+\index{game::grid::Grid@{game::grid::Grid}!mIndex@{mIndex}}
+\index{mIndex@{mIndex}!game::grid::Grid@{game::grid::Grid}}
+\doxysubsubsection{\texorpdfstring{mIndex}{mIndex}}
+{\footnotesize\ttfamily sf\+::\+Vector2i game\+::grid\+::\+Grid\+::m\+Index\hspace{0.3cm}{\ttfamily [private]}}
+
+cached index in the grid layer \mbox{\Hypertarget{classgame_1_1grid_1_1Grid_aec548904908447fe6a0c9c049c25e560}\label{classgame_1_1grid_1_1Grid_aec548904908447fe6a0c9c049c25e560}} 
+\index{game::grid::Grid@{game::grid::Grid}!mIsRepeated@{mIsRepeated}}
+\index{mIsRepeated@{mIsRepeated}!game::grid::Grid@{game::grid::Grid}}
+\doxysubsubsection{\texorpdfstring{mIsRepeated}{mIsRepeated}}
+{\footnotesize\ttfamily bool game\+::grid\+::\+Grid\+::m\+Is\+Repeated\hspace{0.3cm}{\ttfamily [private]}}
+
+is grid background sprite repeating \mbox{\Hypertarget{classgame_1_1grid_1_1Grid_a2dc3c64443f2a3a787ddf39a9d530701}\label{classgame_1_1grid_1_1Grid_a2dc3c64443f2a3a787ddf39a9d530701}} 
+\index{game::grid::Grid@{game::grid::Grid}!mRenderLayer@{mRenderLayer}}
+\index{mRenderLayer@{mRenderLayer}!game::grid::Grid@{game::grid::Grid}}
+\doxysubsubsection{\texorpdfstring{mRenderLayer}{mRenderLayer}}
+{\footnotesize\ttfamily const renderer\+::\+Render\+Layer game\+::grid\+::\+Grid\+::m\+Render\+Layer\hspace{0.3cm}{\ttfamily [private]}}
+
+grid render layer \mbox{\Hypertarget{classgame_1_1grid_1_1Grid_ad6da0732b72b665f4cc324f384dcffe1}\label{classgame_1_1grid_1_1Grid_ad6da0732b72b665f4cc324f384dcffe1}} 
+\index{game::grid::Grid@{game::grid::Grid}!mRoot@{mRoot}}
+\index{mRoot@{mRoot}!game::grid::Grid@{game::grid::Grid}}
+\doxysubsubsection{\texorpdfstring{mRoot}{mRoot}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgame_1_1core_1_1ObjectHandle}{core\+::\+Go\+Handle}} game\+::grid\+::\+Grid\+::m\+Root\hspace{0.3cm}{\ttfamily [private]}}
+
+grid root gameobject handle \mbox{\Hypertarget{classgame_1_1grid_1_1Grid_a94facf2af050dd8bcb5b56f82132b6dc}\label{classgame_1_1grid_1_1Grid_a94facf2af050dd8bcb5b56f82132b6dc}} 
+\index{game::grid::Grid@{game::grid::Grid}!mTileMap@{mTileMap}}
+\index{mTileMap@{mTileMap}!game::grid::Grid@{game::grid::Grid}}
+\doxysubsubsection{\texorpdfstring{mTileMap}{mTileMap}}
+{\footnotesize\ttfamily sf\+::\+Texture$\ast$ game\+::grid\+::\+Grid\+::m\+Tile\+Map\hspace{0.3cm}{\ttfamily [private]}}
+
+texture of grid background 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Grid/Grid.\+h\end{DoxyCompactItemize}

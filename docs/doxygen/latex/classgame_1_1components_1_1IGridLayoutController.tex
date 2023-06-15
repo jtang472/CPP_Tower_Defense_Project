@@ -1,0 +1,139 @@
+\hypertarget{classgame_1_1components_1_1IGridLayoutController}{}\doxysection{game\+::components\+::IGrid\+Layout\+Controller Class Reference}
+\label{classgame_1_1components_1_1IGridLayoutController}\index{game::components::IGridLayoutController@{game::components::IGridLayoutController}}
+
+
+interface that a grid layer controller should follow  
+
+
+
+
+{\ttfamily \#include $<$ILayout\+Controller.\+h$>$}
+
+
+
+Inheritance diagram for game\+::components\+::IGrid\+Layout\+Controller\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classgame_1_1components_1_1IGridLayoutController_a36ce5a66752a7d01b38b26483f5b5a61}{set\+Grid\+Element\+Size}} (int width, int height)=0
+\begin{DoxyCompactList}\small\item\em set grid element size \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classgame_1_1components_1_1IGridLayoutController_aa568aba4cf41ec00acfd4e7df5a92286}{add\+Grid\+Element}} (\mbox{\hyperlink{classgame_1_1components_1_1Transform}{Transform}} $\ast$element)=0
+\begin{DoxyCompactList}\small\item\em add a new grid element \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classgame_1_1components_1_1IGridLayoutController_a6cda780531d657a3b35aaa505af125c4}{set\+Layout\+Horizontal}} ()=0
+\begin{DoxyCompactList}\small\item\em recalculate the width of the grid system \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classgame_1_1components_1_1IGridLayoutController_adb04be7a0f7c139cbaa3ea1530b43031}{set\+Layout\+Vertical}} ()=0
+\begin{DoxyCompactList}\small\item\em recalculate the height of the grid system \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classgame_1_1components_1_1IGridLayoutController_aac85793885a95ab733a7f9bbf0889baf}{set\+Element\+Position}} (\mbox{\hyperlink{classgame_1_1components_1_1Transform}{Transform}} $\ast$element, int index)=0
+\begin{DoxyCompactList}\small\item\em set position of a grid element \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+interface that a grid layer controller should follow 
+
+this defines a interface that a grid layer controller should follow
+
+\begin{DoxyAuthor}{Author}
+Zheng Yang 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgame_1_1components_1_1IGridLayoutController_aa568aba4cf41ec00acfd4e7df5a92286}\label{classgame_1_1components_1_1IGridLayoutController_aa568aba4cf41ec00acfd4e7df5a92286}} 
+\index{game::components::IGridLayoutController@{game::components::IGridLayoutController}!addGridElement@{addGridElement}}
+\index{addGridElement@{addGridElement}!game::components::IGridLayoutController@{game::components::IGridLayoutController}}
+\doxysubsubsection{\texorpdfstring{addGridElement()}{addGridElement()}}
+{\footnotesize\ttfamily virtual void game\+::components\+::\+IGrid\+Layout\+Controller\+::add\+Grid\+Element (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgame_1_1components_1_1Transform}{Transform}} $\ast$}]{element }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+add a new grid element 
+
+call this API to add a new grid element
+
+
+\begin{DoxyParams}{Parameters}
+{\em element} & new grid element \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classgame_1_1components_1_1GridLayout_a4da5bdfabc35d730293ddad756b07b0c}{game\+::components\+::\+Grid\+Layout}}.
+
+\mbox{\Hypertarget{classgame_1_1components_1_1IGridLayoutController_aac85793885a95ab733a7f9bbf0889baf}\label{classgame_1_1components_1_1IGridLayoutController_aac85793885a95ab733a7f9bbf0889baf}} 
+\index{game::components::IGridLayoutController@{game::components::IGridLayoutController}!setElementPosition@{setElementPosition}}
+\index{setElementPosition@{setElementPosition}!game::components::IGridLayoutController@{game::components::IGridLayoutController}}
+\doxysubsubsection{\texorpdfstring{setElementPosition()}{setElementPosition()}}
+{\footnotesize\ttfamily virtual void game\+::components\+::\+IGrid\+Layout\+Controller\+::set\+Element\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgame_1_1components_1_1Transform}{Transform}} $\ast$}]{element,  }\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+set position of a grid element 
+
+set position of a grid element
+
+
+\begin{DoxyParams}{Parameters}
+{\em element} & element to be set {\ttfamily index} new index \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classgame_1_1components_1_1GridLayout_ab50b053a84228df3b1f0f97cdbc2b0b0}{game\+::components\+::\+Grid\+Layout}}.
+
+\mbox{\Hypertarget{classgame_1_1components_1_1IGridLayoutController_a36ce5a66752a7d01b38b26483f5b5a61}\label{classgame_1_1components_1_1IGridLayoutController_a36ce5a66752a7d01b38b26483f5b5a61}} 
+\index{game::components::IGridLayoutController@{game::components::IGridLayoutController}!setGridElementSize@{setGridElementSize}}
+\index{setGridElementSize@{setGridElementSize}!game::components::IGridLayoutController@{game::components::IGridLayoutController}}
+\doxysubsubsection{\texorpdfstring{setGridElementSize()}{setGridElementSize()}}
+{\footnotesize\ttfamily virtual void game\+::components\+::\+IGrid\+Layout\+Controller\+::set\+Grid\+Element\+Size (\begin{DoxyParamCaption}\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+set grid element size 
+
+call this API to reset the size of grid elements after initialization
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & new width \\
+\hline
+{\em height} & new height \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classgame_1_1components_1_1GridLayout_a7ffd2e0c47f6e2a4a3119a2d176bce8a}{game\+::components\+::\+Grid\+Layout}}.
+
+\mbox{\Hypertarget{classgame_1_1components_1_1IGridLayoutController_a6cda780531d657a3b35aaa505af125c4}\label{classgame_1_1components_1_1IGridLayoutController_a6cda780531d657a3b35aaa505af125c4}} 
+\index{game::components::IGridLayoutController@{game::components::IGridLayoutController}!setLayoutHorizontal@{setLayoutHorizontal}}
+\index{setLayoutHorizontal@{setLayoutHorizontal}!game::components::IGridLayoutController@{game::components::IGridLayoutController}}
+\doxysubsubsection{\texorpdfstring{setLayoutHorizontal()}{setLayoutHorizontal()}}
+{\footnotesize\ttfamily virtual void game\+::components\+::\+IGrid\+Layout\+Controller\+::set\+Layout\+Horizontal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+recalculate the width of the grid system 
+
+recalculate the width of the grid system; called everytime a grid layout property got updated, or new element added 
+
+Implemented in \mbox{\hyperlink{classgame_1_1components_1_1GridLayout_afa8da0861f4e62e9ce10f599a421804d}{game\+::components\+::\+Grid\+Layout}}.
+
+\mbox{\Hypertarget{classgame_1_1components_1_1IGridLayoutController_adb04be7a0f7c139cbaa3ea1530b43031}\label{classgame_1_1components_1_1IGridLayoutController_adb04be7a0f7c139cbaa3ea1530b43031}} 
+\index{game::components::IGridLayoutController@{game::components::IGridLayoutController}!setLayoutVertical@{setLayoutVertical}}
+\index{setLayoutVertical@{setLayoutVertical}!game::components::IGridLayoutController@{game::components::IGridLayoutController}}
+\doxysubsubsection{\texorpdfstring{setLayoutVertical()}{setLayoutVertical()}}
+{\footnotesize\ttfamily virtual void game\+::components\+::\+IGrid\+Layout\+Controller\+::set\+Layout\+Vertical (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+recalculate the height of the grid system 
+
+recalculate the height of the grid system; called everytime a grid layout property got updated, or new element added 
+
+Implemented in \mbox{\hyperlink{classgame_1_1components_1_1GridLayout_a7345196df9b6439fb07a0ac9a4c2b713}{game\+::components\+::\+Grid\+Layout}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Components/\+Layout/ILayout\+Controller.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,49 @@
+\hypertarget{classgame_1_1utils_1_1GuidGenerator}{}\doxysection{game\+::utils\+::Guid\+Generator Class Reference}
+\label{classgame_1_1utils_1_1GuidGenerator}\index{game::utils::GuidGenerator@{game::utils::GuidGenerator}}
+
+
+a simple runtime guid generator  
+
+
+
+
+{\ttfamily \#include $<$Guid\+Generator.\+h$>$}
+
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static GUID \mbox{\hyperlink{classgame_1_1utils_1_1GuidGenerator_abe28633d5e3dc85f8a9c1b6887d4b5ac}{generate}} ()
+\begin{DoxyCompactList}\small\item\em a simple guid generation function \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+a simple runtime guid generator 
+
+This class contains a single static method that returns a monotonically increasing integer everytime it gets called
+
+\begin{DoxyAuthor}{Author}
+Zheng Yang 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgame_1_1utils_1_1GuidGenerator_abe28633d5e3dc85f8a9c1b6887d4b5ac}\label{classgame_1_1utils_1_1GuidGenerator_abe28633d5e3dc85f8a9c1b6887d4b5ac}} 
+\index{game::utils::GuidGenerator@{game::utils::GuidGenerator}!generate@{generate}}
+\index{generate@{generate}!game::utils::GuidGenerator@{game::utils::GuidGenerator}}
+\doxysubsubsection{\texorpdfstring{generate()}{generate()}}
+{\footnotesize\ttfamily static GUID game\+::utils\+::\+Guid\+Generator\+::generate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+a simple guid generation function 
+
+this function maintains a static local variable, this variable is incremented and returned to the caller when this function gets called
+
+\begin{DoxyReturn}{Returns}
+a monotonically-\/increasing runtime guid 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Utils/Guid\+Generator.\+h\end{DoxyCompactItemize}

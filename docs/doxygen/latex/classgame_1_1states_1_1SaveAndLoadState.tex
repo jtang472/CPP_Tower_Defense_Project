@@ -1,0 +1,129 @@
+\hypertarget{classgame_1_1states_1_1SaveAndLoadState}{}\doxysection{game\+::states\+::Save\+And\+Load\+State Class Reference}
+\label{classgame_1_1states_1_1SaveAndLoadState}\index{game::states::SaveAndLoadState@{game::states::SaveAndLoadState}}
+
+
+save and load state  
+
+
+
+
+{\ttfamily \#include $<$Save\+And\+Load\+State.\+h$>$}
+
+
+
+Inheritance diagram for game\+::states\+::Save\+And\+Load\+State\+:
+% FIG 0
+
+
+Collaboration diagram for game\+::states\+::Save\+And\+Load\+State\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgame_1_1states_1_1SaveAndLoadState_aa072fe546bd5d632013ee07da9a1b86e}{Save\+And\+Load\+State}} (\mbox{\hyperlink{classgame_1_1states_1_1StateMachine}{State\+Machine}} $\ast$owner)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classgame_1_1states_1_1SaveAndLoadState}{Save\+And\+Load\+State}} constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classgame_1_1states_1_1SaveAndLoadState_ae2679e3e9751c654ff3ccb2bbdec1c51}{$\sim$\+Save\+And\+Load\+State}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classgame_1_1states_1_1SaveAndLoadState}{Save\+And\+Load\+State}} destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1states_1_1SaveAndLoadState_ae8ac697b4b2a7340cbaab9a6e61472c7}{init}} () override
+\begin{DoxyCompactList}\small\item\em initialization of state \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1states_1_1SaveAndLoadState_ab3f9dbd113a9cd99ae35d6664e86d469}{on\+Back\+Button\+Click}} ()
+\begin{DoxyCompactList}\small\item\em callback for back button click event \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1states_1_1SaveAndLoadState_adb39747822d93e41f63f54b1cbe791a1}{on\+Save\+File\+Selected}} (\mbox{\hyperlink{classgame_1_1components_1_1SaveSlot}{components\+::\+Save\+Slot}} $\ast$selected)
+\begin{DoxyCompactList}\small\item\em callback for save button click event \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+boost\+::signals2\+::connection \mbox{\hyperlink{classgame_1_1states_1_1SaveAndLoadState_a8c75b05a725de68bbcb57dad710083fb}{m\+Back\+Button\+Listener}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+save and load state 
+
+this state will be pushed to state machine when player go to the save menu
+
+\begin{DoxyAuthor}{Author}
+Zheng Yang 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgame_1_1states_1_1SaveAndLoadState_aa072fe546bd5d632013ee07da9a1b86e}\label{classgame_1_1states_1_1SaveAndLoadState_aa072fe546bd5d632013ee07da9a1b86e}} 
+\index{game::states::SaveAndLoadState@{game::states::SaveAndLoadState}!SaveAndLoadState@{SaveAndLoadState}}
+\index{SaveAndLoadState@{SaveAndLoadState}!game::states::SaveAndLoadState@{game::states::SaveAndLoadState}}
+\doxysubsubsection{\texorpdfstring{SaveAndLoadState()}{SaveAndLoadState()}}
+{\footnotesize\ttfamily game\+::states\+::\+Save\+And\+Load\+State\+::\+Save\+And\+Load\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgame_1_1states_1_1StateMachine}{State\+Machine}} $\ast$}]{owner }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classgame_1_1states_1_1SaveAndLoadState}{Save\+And\+Load\+State}} constructor. 
+
+\mbox{\hyperlink{classgame_1_1states_1_1SaveAndLoadState}{Save\+And\+Load\+State}} constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em owner} & state machine \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1states_1_1SaveAndLoadState_ae2679e3e9751c654ff3ccb2bbdec1c51}\label{classgame_1_1states_1_1SaveAndLoadState_ae2679e3e9751c654ff3ccb2bbdec1c51}} 
+\index{game::states::SaveAndLoadState@{game::states::SaveAndLoadState}!````~SaveAndLoadState@{$\sim$SaveAndLoadState}}
+\index{````~SaveAndLoadState@{$\sim$SaveAndLoadState}!game::states::SaveAndLoadState@{game::states::SaveAndLoadState}}
+\doxysubsubsection{\texorpdfstring{$\sim$SaveAndLoadState()}{~SaveAndLoadState()}}
+{\footnotesize\ttfamily game\+::states\+::\+Save\+And\+Load\+State\+::$\sim$\+Save\+And\+Load\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classgame_1_1states_1_1SaveAndLoadState}{Save\+And\+Load\+State}} destructor. 
+
+\mbox{\hyperlink{classgame_1_1states_1_1SaveAndLoadState}{Save\+And\+Load\+State}} destructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgame_1_1states_1_1SaveAndLoadState_ae8ac697b4b2a7340cbaab9a6e61472c7}\label{classgame_1_1states_1_1SaveAndLoadState_ae8ac697b4b2a7340cbaab9a6e61472c7}} 
+\index{game::states::SaveAndLoadState@{game::states::SaveAndLoadState}!init@{init}}
+\index{init@{init}!game::states::SaveAndLoadState@{game::states::SaveAndLoadState}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void game\+::states\+::\+Save\+And\+Load\+State\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+initialization of state 
+
+initialization of state, called by state machine after state is created and put to the stack 
+
+Reimplemented from \mbox{\hyperlink{classgame_1_1states_1_1State_ab8464551e311a0621bd80f2a21a7cb4a}{game\+::states\+::\+State}}.
+
+\mbox{\Hypertarget{classgame_1_1states_1_1SaveAndLoadState_ab3f9dbd113a9cd99ae35d6664e86d469}\label{classgame_1_1states_1_1SaveAndLoadState_ab3f9dbd113a9cd99ae35d6664e86d469}} 
+\index{game::states::SaveAndLoadState@{game::states::SaveAndLoadState}!onBackButtonClick@{onBackButtonClick}}
+\index{onBackButtonClick@{onBackButtonClick}!game::states::SaveAndLoadState@{game::states::SaveAndLoadState}}
+\doxysubsubsection{\texorpdfstring{onBackButtonClick()}{onBackButtonClick()}}
+{\footnotesize\ttfamily void game\+::states\+::\+Save\+And\+Load\+State\+::on\+Back\+Button\+Click (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+callback for back button click event 
+
+callback function for back button click event \mbox{\Hypertarget{classgame_1_1states_1_1SaveAndLoadState_adb39747822d93e41f63f54b1cbe791a1}\label{classgame_1_1states_1_1SaveAndLoadState_adb39747822d93e41f63f54b1cbe791a1}} 
+\index{game::states::SaveAndLoadState@{game::states::SaveAndLoadState}!onSaveFileSelected@{onSaveFileSelected}}
+\index{onSaveFileSelected@{onSaveFileSelected}!game::states::SaveAndLoadState@{game::states::SaveAndLoadState}}
+\doxysubsubsection{\texorpdfstring{onSaveFileSelected()}{onSaveFileSelected()}}
+{\footnotesize\ttfamily void game\+::states\+::\+Save\+And\+Load\+State\+::on\+Save\+File\+Selected (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgame_1_1components_1_1SaveSlot}{components\+::\+Save\+Slot}} $\ast$}]{selected }\end{DoxyParamCaption})}
+
+
+
+callback for save button click event 
+
+callback function for save button click event 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classgame_1_1states_1_1SaveAndLoadState_a8c75b05a725de68bbcb57dad710083fb}\label{classgame_1_1states_1_1SaveAndLoadState_a8c75b05a725de68bbcb57dad710083fb}} 
+\index{game::states::SaveAndLoadState@{game::states::SaveAndLoadState}!mBackButtonListener@{mBackButtonListener}}
+\index{mBackButtonListener@{mBackButtonListener}!game::states::SaveAndLoadState@{game::states::SaveAndLoadState}}
+\doxysubsubsection{\texorpdfstring{mBackButtonListener}{mBackButtonListener}}
+{\footnotesize\ttfamily boost\+::signals2\+::connection game\+::states\+::\+Save\+And\+Load\+State\+::m\+Back\+Button\+Listener\hspace{0.3cm}{\ttfamily [private]}}
+
+back button click listener 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+States/Save\+And\+Load\+State.\+h\end{DoxyCompactItemize}

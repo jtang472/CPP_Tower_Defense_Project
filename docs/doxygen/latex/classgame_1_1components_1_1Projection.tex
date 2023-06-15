@@ -1,0 +1,219 @@
+\hypertarget{classgame_1_1components_1_1Projection}{}\doxysection{game\+::components\+::Projection Class Reference}
+\label{classgame_1_1components_1_1Projection}\index{game::components::Projection@{game::components::Projection}}
+
+
+base class for all types of projections in the game  
+
+
+
+
+{\ttfamily \#include $<$Projection.\+h$>$}
+
+
+
+Inheritance diagram for game\+::components\+::Projection\+:
+% FIG 0
+
+
+Collaboration diagram for game\+::components\+::Projection\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgame_1_1components_1_1Projection_a1e4a47811297242335d97c95003ceb90}{Projection}} (\mbox{\hyperlink{classgame_1_1components_1_1GameObject}{Game\+Object}} \&owner, \mbox{\hyperlink{classgame_1_1core_1_1ObjectHandle}{core\+::\+Go\+Handle}} target, const \mbox{\hyperlink{structgame_1_1data_1_1ProjectionDefine}{data\+::\+Projection\+Define}} \&projection\+Data, const \mbox{\hyperlink{structgame_1_1data_1_1TowerDefine}{data\+::\+Tower\+Define}} \&tower\+Data)
+\begin{DoxyCompactList}\small\item\em projection constructor \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classgame_1_1components_1_1Projection_aadb7d3bf7af96c4d30bbc0afdeba2215}{$\sim$\+Projection}} ()
+\begin{DoxyCompactList}\small\item\em projection destructor \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1Projection_a0b404be917ca9c1babc4e3f23474486c}{on\+Enable}} () override
+\begin{DoxyCompactList}\small\item\em component lifecycle function \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1Projection_af8f2160d9d8950c3ea64ecf5cd0fc5bd}{on\+Disable}} () override
+\begin{DoxyCompactList}\small\item\em component lifecycle function \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1Projection_aa3724edf958323567ea6f35dc0672ddc}{tick}} (float delta\+Time) override
+\begin{DoxyCompactList}\small\item\em component lifecycle function \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classgame_1_1components_1_1Projection_a1f1341b922ef870e9b1afcf3c3664531}{get\+Distance}} (sf\+::\+Vector2f pos1, sf\+::\+Vector2f pos2)
+\begin{DoxyCompactList}\small\item\em calculate the distance between two positions \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1Projection_a16ae4f99a4b070890e7ae43d5e1e4be2}{register\+Animation}} ()
+\begin{DoxyCompactList}\small\item\em register all of the enemies animation states to its character animator \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{structgame_1_1data_1_1ProjectionDefine}{data\+::\+Projection\+Define}} \& \mbox{\hyperlink{classgame_1_1components_1_1Projection_ac740f14e4ae4d8690737d30e23ff368a}{m\+Data}}
+\item 
+const \mbox{\hyperlink{structgame_1_1data_1_1TowerDefine}{data\+::\+Tower\+Define}} \& \mbox{\hyperlink{classgame_1_1components_1_1Projection_a8c2dc59d4db8b5942abb040d1213145d}{m\+Attacker\+Data}}
+\item 
+\mbox{\hyperlink{classgame_1_1core_1_1ObjectHandle}{core\+::\+Go\+Handle}} \mbox{\hyperlink{classgame_1_1components_1_1Projection_ae729823ee809249621def75949f4298e}{m\+Target}}
+\item 
+\mbox{\hyperlink{classgame_1_1components_1_1Sprite}{Sprite}} $\ast$ \mbox{\hyperlink{classgame_1_1components_1_1Projection_a8a8c5139e114cb3181eb52d49fc57e55}{m\+Sprite}}
+\item 
+\mbox{\hyperlink{classgame_1_1components_1_1CharacterAnimator}{Character\+Animator}} $\ast$ \mbox{\hyperlink{classgame_1_1components_1_1Projection_a6cc4a3a6a280e8738103aa258497024a}{m\+Animator}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+base class for all types of projections in the game 
+
+in the current design, we do not necessarily need any derived class for projections. Instead, all projections behavior should be defined in the Projection\+Define json file. So this class should be purely data driven and should be capable of handling any projection behavior defined in the json data file
+
+\begin{DoxyAuthor}{Author}
+Zheng Yang 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgame_1_1components_1_1Projection_a1e4a47811297242335d97c95003ceb90}\label{classgame_1_1components_1_1Projection_a1e4a47811297242335d97c95003ceb90}} 
+\index{game::components::Projection@{game::components::Projection}!Projection@{Projection}}
+\index{Projection@{Projection}!game::components::Projection@{game::components::Projection}}
+\doxysubsubsection{\texorpdfstring{Projection()}{Projection()}}
+{\footnotesize\ttfamily game\+::components\+::\+Projection\+::\+Projection (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgame_1_1components_1_1GameObject}{Game\+Object}} \&}]{owner,  }\item[{\mbox{\hyperlink{classgame_1_1core_1_1ObjectHandle}{core\+::\+Go\+Handle}}}]{target,  }\item[{const \mbox{\hyperlink{structgame_1_1data_1_1ProjectionDefine}{data\+::\+Projection\+Define}} \&}]{projection\+Data,  }\item[{const \mbox{\hyperlink{structgame_1_1data_1_1TowerDefine}{data\+::\+Tower\+Define}} \&}]{tower\+Data }\end{DoxyParamCaption})}
+
+
+
+projection constructor 
+
+projections constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em owner} & owner of the component \\
+\hline
+{\em projection\+Data} & projection data \\
+\hline
+{\em tower\+Data} & tower data \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1components_1_1Projection_aadb7d3bf7af96c4d30bbc0afdeba2215}\label{classgame_1_1components_1_1Projection_aadb7d3bf7af96c4d30bbc0afdeba2215}} 
+\index{game::components::Projection@{game::components::Projection}!````~Projection@{$\sim$Projection}}
+\index{````~Projection@{$\sim$Projection}!game::components::Projection@{game::components::Projection}}
+\doxysubsubsection{\texorpdfstring{$\sim$Projection()}{~Projection()}}
+{\footnotesize\ttfamily game\+::components\+::\+Projection\+::$\sim$\+Projection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+projection destructor 
+
+projection destructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgame_1_1components_1_1Projection_a1f1341b922ef870e9b1afcf3c3664531}\label{classgame_1_1components_1_1Projection_a1f1341b922ef870e9b1afcf3c3664531}} 
+\index{game::components::Projection@{game::components::Projection}!getDistance@{getDistance}}
+\index{getDistance@{getDistance}!game::components::Projection@{game::components::Projection}}
+\doxysubsubsection{\texorpdfstring{getDistance()}{getDistance()}}
+{\footnotesize\ttfamily float game\+::components\+::\+Projection\+::get\+Distance (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{pos1,  }\item[{sf\+::\+Vector2f}]{pos2 }\end{DoxyParamCaption})}
+
+
+
+calculate the distance between two positions 
+
+calculate the distance between two positions
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos1} & position 1 \\
+\hline
+{\em pos2} & postion 2 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+distance between these two positons 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgame_1_1components_1_1Projection_af8f2160d9d8950c3ea64ecf5cd0fc5bd}\label{classgame_1_1components_1_1Projection_af8f2160d9d8950c3ea64ecf5cd0fc5bd}} 
+\index{game::components::Projection@{game::components::Projection}!onDisable@{onDisable}}
+\index{onDisable@{onDisable}!game::components::Projection@{game::components::Projection}}
+\doxysubsubsection{\texorpdfstring{onDisable()}{onDisable()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Projection\+::on\+Disable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+component lifecycle function 
+
+component lifecycle function, gets called automatically when component is disabled 
+
+Reimplemented from \mbox{\hyperlink{classgame_1_1components_1_1Component_ac79cec6fc53b00f36bbde8e8f7e23c05}{game\+::components\+::\+Component}}.
+
+\mbox{\Hypertarget{classgame_1_1components_1_1Projection_a0b404be917ca9c1babc4e3f23474486c}\label{classgame_1_1components_1_1Projection_a0b404be917ca9c1babc4e3f23474486c}} 
+\index{game::components::Projection@{game::components::Projection}!onEnable@{onEnable}}
+\index{onEnable@{onEnable}!game::components::Projection@{game::components::Projection}}
+\doxysubsubsection{\texorpdfstring{onEnable()}{onEnable()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Projection\+::on\+Enable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+component lifecycle function 
+
+component lifecycle function, gets called automatically when component is enabled 
+
+Reimplemented from \mbox{\hyperlink{classgame_1_1components_1_1Component_a333e4242c1594bfdc5713cddafae6a23}{game\+::components\+::\+Component}}.
+
+\mbox{\Hypertarget{classgame_1_1components_1_1Projection_a16ae4f99a4b070890e7ae43d5e1e4be2}\label{classgame_1_1components_1_1Projection_a16ae4f99a4b070890e7ae43d5e1e4be2}} 
+\index{game::components::Projection@{game::components::Projection}!registerAnimation@{registerAnimation}}
+\index{registerAnimation@{registerAnimation}!game::components::Projection@{game::components::Projection}}
+\doxysubsubsection{\texorpdfstring{registerAnimation()}{registerAnimation()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Projection\+::register\+Animation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+register all of the enemies animation states to its character animator 
+
+register all of the enemies animation states to its character animator \mbox{\Hypertarget{classgame_1_1components_1_1Projection_aa3724edf958323567ea6f35dc0672ddc}\label{classgame_1_1components_1_1Projection_aa3724edf958323567ea6f35dc0672ddc}} 
+\index{game::components::Projection@{game::components::Projection}!tick@{tick}}
+\index{tick@{tick}!game::components::Projection@{game::components::Projection}}
+\doxysubsubsection{\texorpdfstring{tick()}{tick()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Projection\+::tick (\begin{DoxyParamCaption}\item[{float}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+component lifecycle function 
+
+component lifecycle function, gets called automatically every frame. This is where every component in the game gets updated
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & the time elpased between now and last frame \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classgame_1_1components_1_1Component_ac85cd99e8109eb32a97549bf437ea5ce}{game\+::components\+::\+Component}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classgame_1_1components_1_1Projection_a6cc4a3a6a280e8738103aa258497024a}\label{classgame_1_1components_1_1Projection_a6cc4a3a6a280e8738103aa258497024a}} 
+\index{game::components::Projection@{game::components::Projection}!mAnimator@{mAnimator}}
+\index{mAnimator@{mAnimator}!game::components::Projection@{game::components::Projection}}
+\doxysubsubsection{\texorpdfstring{mAnimator}{mAnimator}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgame_1_1components_1_1CharacterAnimator}{Character\+Animator}}$\ast$ game\+::components\+::\+Projection\+::m\+Animator\hspace{0.3cm}{\ttfamily [private]}}
+
+my character animator \mbox{\Hypertarget{classgame_1_1components_1_1Projection_a8c2dc59d4db8b5942abb040d1213145d}\label{classgame_1_1components_1_1Projection_a8c2dc59d4db8b5942abb040d1213145d}} 
+\index{game::components::Projection@{game::components::Projection}!mAttackerData@{mAttackerData}}
+\index{mAttackerData@{mAttackerData}!game::components::Projection@{game::components::Projection}}
+\doxysubsubsection{\texorpdfstring{mAttackerData}{mAttackerData}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structgame_1_1data_1_1TowerDefine}{data\+::\+Tower\+Define}}\& game\+::components\+::\+Projection\+::m\+Attacker\+Data\hspace{0.3cm}{\ttfamily [private]}}
+
+my attacker data \mbox{\Hypertarget{classgame_1_1components_1_1Projection_ac740f14e4ae4d8690737d30e23ff368a}\label{classgame_1_1components_1_1Projection_ac740f14e4ae4d8690737d30e23ff368a}} 
+\index{game::components::Projection@{game::components::Projection}!mData@{mData}}
+\index{mData@{mData}!game::components::Projection@{game::components::Projection}}
+\doxysubsubsection{\texorpdfstring{mData}{mData}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structgame_1_1data_1_1ProjectionDefine}{data\+::\+Projection\+Define}}\& game\+::components\+::\+Projection\+::m\+Data\hspace{0.3cm}{\ttfamily [private]}}
+
+my projection data \mbox{\Hypertarget{classgame_1_1components_1_1Projection_a8a8c5139e114cb3181eb52d49fc57e55}\label{classgame_1_1components_1_1Projection_a8a8c5139e114cb3181eb52d49fc57e55}} 
+\index{game::components::Projection@{game::components::Projection}!mSprite@{mSprite}}
+\index{mSprite@{mSprite}!game::components::Projection@{game::components::Projection}}
+\doxysubsubsection{\texorpdfstring{mSprite}{mSprite}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgame_1_1components_1_1Sprite}{Sprite}}$\ast$ game\+::components\+::\+Projection\+::m\+Sprite\hspace{0.3cm}{\ttfamily [private]}}
+
+my sprite \mbox{\Hypertarget{classgame_1_1components_1_1Projection_ae729823ee809249621def75949f4298e}\label{classgame_1_1components_1_1Projection_ae729823ee809249621def75949f4298e}} 
+\index{game::components::Projection@{game::components::Projection}!mTarget@{mTarget}}
+\index{mTarget@{mTarget}!game::components::Projection@{game::components::Projection}}
+\doxysubsubsection{\texorpdfstring{mTarget}{mTarget}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgame_1_1core_1_1ObjectHandle}{core\+::\+Go\+Handle}} game\+::components\+::\+Projection\+::m\+Target\hspace{0.3cm}{\ttfamily [private]}}
+
+my target enemy 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Components/\+Game\+Play/Projection.\+h\end{DoxyCompactItemize}

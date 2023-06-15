@@ -1,0 +1,217 @@
+\hypertarget{classgame_1_1components_1_1PlayerHud}{}\doxysection{game\+::components\+::Player\+Hud Class Reference}
+\label{classgame_1_1components_1_1PlayerHud}\index{game::components::PlayerHud@{game::components::PlayerHud}}
+
+
+controller class for all the HUD UI elements displayed during gameplay  
+
+
+
+
+{\ttfamily \#include $<$Player\+Hud.\+h$>$}
+
+
+
+Inheritance diagram for game\+::components\+::Player\+Hud\+:
+% FIG 0
+
+
+Collaboration diagram for game\+::components\+::Player\+Hud\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgame_1_1components_1_1PlayerHud_a0993bbb1c297bbc2933a667e375f47e4}{Player\+Hud}} (\mbox{\hyperlink{classgame_1_1components_1_1GameObject}{Game\+Object}} \&owner, \mbox{\hyperlink{classgame_1_1prefabs_1_1PlayerHudPrefab}{prefabs\+::\+Player\+Hud\+Prefab}} prefab)
+\begin{DoxyCompactList}\small\item\em player hud constructor \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1PlayerHud_a0e473e7408b808568ab16004bace68ae}{on\+Enable}} () override
+\begin{DoxyCompactList}\small\item\em component lifecycle function \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1PlayerHud_ad236e68593e6304796471fea02ae0dbd}{on\+Disable}} () override
+\begin{DoxyCompactList}\small\item\em component lifecycle function \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1PlayerHud_a09c12fa5c3ce99ecfd89c116aeb8f2e8}{tick}} (float delta\+Time) override
+\begin{DoxyCompactList}\small\item\em component lifecycle function \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1PlayerHud_a02203f8273ff3a47c159bb02948ab1de}{show}} ()
+\begin{DoxyCompactList}\small\item\em show player hud on screen \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1PlayerHud_a4e20f983282f9e6d87b9ab50188e8bce}{hide}} ()
+\begin{DoxyCompactList}\small\item\em hide player hud from screen \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1PlayerHud_ab27a92c1fb5fb5850fdb8fd13fbf7920}{On\+Player\+Hp\+Change}} (int change\+Amount)
+\begin{DoxyCompactList}\small\item\em callback for player hp change event \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1PlayerHud_a5ec43e8aac17ba6b21d67ef6121f7c89}{On\+Player\+Point\+Change}} (int change\+Amount)
+\begin{DoxyCompactList}\small\item\em callback for player point change event \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgame_1_1prefabs_1_1PlayerHudPrefab}{prefabs\+::\+Player\+Hud\+Prefab}} \mbox{\hyperlink{classgame_1_1components_1_1PlayerHud_aa82522d21b6c3da01679db41c215435b}{m\+Prefab}}
+\item 
+\mbox{\hyperlink{classgame_1_1core_1_1PlayerState}{core\+::\+Player\+State}} $\ast$ \mbox{\hyperlink{classgame_1_1components_1_1PlayerHud_a93f8eb1e4f14c96ca1cc15f6b02508ae}{m\+Player\+State}}
+\item 
+float \mbox{\hyperlink{classgame_1_1components_1_1PlayerHud_ac19fceb922b369199af404a0b877a5e9}{m\+Time\+Elapsed}}
+\item 
+boost\+::signals2\+::connection \mbox{\hyperlink{classgame_1_1components_1_1PlayerHud_ab83f9733164952f6f2a22f84f87dac05}{m\+Player\+Hp\+Change\+Listener}}
+\item 
+boost\+::signals2\+::connection \mbox{\hyperlink{classgame_1_1components_1_1PlayerHud_aec782e5532507ec24fedbe27fc268389}{m\+Player\+Point\+Change\+Listener}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+controller class for all the HUD UI elements displayed during gameplay 
+
+this is the controller class for all the HUD UI elements displayed during gameplay player hp, gold, points... more to be added in the future!
+
+\begin{DoxyAuthor}{Author}
+Zheng Yang 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgame_1_1components_1_1PlayerHud_a0993bbb1c297bbc2933a667e375f47e4}\label{classgame_1_1components_1_1PlayerHud_a0993bbb1c297bbc2933a667e375f47e4}} 
+\index{game::components::PlayerHud@{game::components::PlayerHud}!PlayerHud@{PlayerHud}}
+\index{PlayerHud@{PlayerHud}!game::components::PlayerHud@{game::components::PlayerHud}}
+\doxysubsubsection{\texorpdfstring{PlayerHud()}{PlayerHud()}}
+{\footnotesize\ttfamily game\+::components\+::\+Player\+Hud\+::\+Player\+Hud (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgame_1_1components_1_1GameObject}{Game\+Object}} \&}]{owner,  }\item[{\mbox{\hyperlink{classgame_1_1prefabs_1_1PlayerHudPrefab}{prefabs\+::\+Player\+Hud\+Prefab}}}]{prefab }\end{DoxyParamCaption})}
+
+
+
+player hud constructor 
+
+player hud constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em owner} & owner of the component \\
+\hline
+{\em prefab} & player hud prefab \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgame_1_1components_1_1PlayerHud_a4e20f983282f9e6d87b9ab50188e8bce}\label{classgame_1_1components_1_1PlayerHud_a4e20f983282f9e6d87b9ab50188e8bce}} 
+\index{game::components::PlayerHud@{game::components::PlayerHud}!hide@{hide}}
+\index{hide@{hide}!game::components::PlayerHud@{game::components::PlayerHud}}
+\doxysubsubsection{\texorpdfstring{hide()}{hide()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Player\+Hud\+::hide (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+hide player hud from screen 
+
+call this API to hide player hud from screen \mbox{\Hypertarget{classgame_1_1components_1_1PlayerHud_ad236e68593e6304796471fea02ae0dbd}\label{classgame_1_1components_1_1PlayerHud_ad236e68593e6304796471fea02ae0dbd}} 
+\index{game::components::PlayerHud@{game::components::PlayerHud}!onDisable@{onDisable}}
+\index{onDisable@{onDisable}!game::components::PlayerHud@{game::components::PlayerHud}}
+\doxysubsubsection{\texorpdfstring{onDisable()}{onDisable()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Player\+Hud\+::on\+Disable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+component lifecycle function 
+
+component lifecycle function, gets called automatically when component is disabled 
+
+Reimplemented from \mbox{\hyperlink{classgame_1_1components_1_1Component_ac79cec6fc53b00f36bbde8e8f7e23c05}{game\+::components\+::\+Component}}.
+
+\mbox{\Hypertarget{classgame_1_1components_1_1PlayerHud_a0e473e7408b808568ab16004bace68ae}\label{classgame_1_1components_1_1PlayerHud_a0e473e7408b808568ab16004bace68ae}} 
+\index{game::components::PlayerHud@{game::components::PlayerHud}!onEnable@{onEnable}}
+\index{onEnable@{onEnable}!game::components::PlayerHud@{game::components::PlayerHud}}
+\doxysubsubsection{\texorpdfstring{onEnable()}{onEnable()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Player\+Hud\+::on\+Enable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+component lifecycle function 
+
+component lifecycle function, gets called automatically when component is enabled 
+
+Reimplemented from \mbox{\hyperlink{classgame_1_1components_1_1Component_a333e4242c1594bfdc5713cddafae6a23}{game\+::components\+::\+Component}}.
+
+\mbox{\Hypertarget{classgame_1_1components_1_1PlayerHud_ab27a92c1fb5fb5850fdb8fd13fbf7920}\label{classgame_1_1components_1_1PlayerHud_ab27a92c1fb5fb5850fdb8fd13fbf7920}} 
+\index{game::components::PlayerHud@{game::components::PlayerHud}!OnPlayerHpChange@{OnPlayerHpChange}}
+\index{OnPlayerHpChange@{OnPlayerHpChange}!game::components::PlayerHud@{game::components::PlayerHud}}
+\doxysubsubsection{\texorpdfstring{OnPlayerHpChange()}{OnPlayerHpChange()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Player\+Hud\+::\+On\+Player\+Hp\+Change (\begin{DoxyParamCaption}\item[{int}]{change\+Amount }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+callback for player hp change event 
+
+callback for player hp change event -\/ update player hp on player hud \mbox{\Hypertarget{classgame_1_1components_1_1PlayerHud_a5ec43e8aac17ba6b21d67ef6121f7c89}\label{classgame_1_1components_1_1PlayerHud_a5ec43e8aac17ba6b21d67ef6121f7c89}} 
+\index{game::components::PlayerHud@{game::components::PlayerHud}!OnPlayerPointChange@{OnPlayerPointChange}}
+\index{OnPlayerPointChange@{OnPlayerPointChange}!game::components::PlayerHud@{game::components::PlayerHud}}
+\doxysubsubsection{\texorpdfstring{OnPlayerPointChange()}{OnPlayerPointChange()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Player\+Hud\+::\+On\+Player\+Point\+Change (\begin{DoxyParamCaption}\item[{int}]{change\+Amount }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+callback for player point change event 
+
+callback for player hp change event -\/ update player point on player hud \mbox{\Hypertarget{classgame_1_1components_1_1PlayerHud_a02203f8273ff3a47c159bb02948ab1de}\label{classgame_1_1components_1_1PlayerHud_a02203f8273ff3a47c159bb02948ab1de}} 
+\index{game::components::PlayerHud@{game::components::PlayerHud}!show@{show}}
+\index{show@{show}!game::components::PlayerHud@{game::components::PlayerHud}}
+\doxysubsubsection{\texorpdfstring{show()}{show()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Player\+Hud\+::show (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+show player hud on screen 
+
+call this API to show player hud on screen \mbox{\Hypertarget{classgame_1_1components_1_1PlayerHud_a09c12fa5c3ce99ecfd89c116aeb8f2e8}\label{classgame_1_1components_1_1PlayerHud_a09c12fa5c3ce99ecfd89c116aeb8f2e8}} 
+\index{game::components::PlayerHud@{game::components::PlayerHud}!tick@{tick}}
+\index{tick@{tick}!game::components::PlayerHud@{game::components::PlayerHud}}
+\doxysubsubsection{\texorpdfstring{tick()}{tick()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Player\+Hud\+::tick (\begin{DoxyParamCaption}\item[{float}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+component lifecycle function 
+
+component lifecycle function, gets called automatically every frame. This is where every component in the game gets updated
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & the time elpased between now and last frame \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classgame_1_1components_1_1Component_ac85cd99e8109eb32a97549bf437ea5ce}{game\+::components\+::\+Component}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classgame_1_1components_1_1PlayerHud_ab83f9733164952f6f2a22f84f87dac05}\label{classgame_1_1components_1_1PlayerHud_ab83f9733164952f6f2a22f84f87dac05}} 
+\index{game::components::PlayerHud@{game::components::PlayerHud}!mPlayerHpChangeListener@{mPlayerHpChangeListener}}
+\index{mPlayerHpChangeListener@{mPlayerHpChangeListener}!game::components::PlayerHud@{game::components::PlayerHud}}
+\doxysubsubsection{\texorpdfstring{mPlayerHpChangeListener}{mPlayerHpChangeListener}}
+{\footnotesize\ttfamily boost\+::signals2\+::connection game\+::components\+::\+Player\+Hud\+::m\+Player\+Hp\+Change\+Listener\hspace{0.3cm}{\ttfamily [private]}}
+
+player hp change listener \mbox{\Hypertarget{classgame_1_1components_1_1PlayerHud_aec782e5532507ec24fedbe27fc268389}\label{classgame_1_1components_1_1PlayerHud_aec782e5532507ec24fedbe27fc268389}} 
+\index{game::components::PlayerHud@{game::components::PlayerHud}!mPlayerPointChangeListener@{mPlayerPointChangeListener}}
+\index{mPlayerPointChangeListener@{mPlayerPointChangeListener}!game::components::PlayerHud@{game::components::PlayerHud}}
+\doxysubsubsection{\texorpdfstring{mPlayerPointChangeListener}{mPlayerPointChangeListener}}
+{\footnotesize\ttfamily boost\+::signals2\+::connection game\+::components\+::\+Player\+Hud\+::m\+Player\+Point\+Change\+Listener\hspace{0.3cm}{\ttfamily [private]}}
+
+player point change listener \mbox{\Hypertarget{classgame_1_1components_1_1PlayerHud_a93f8eb1e4f14c96ca1cc15f6b02508ae}\label{classgame_1_1components_1_1PlayerHud_a93f8eb1e4f14c96ca1cc15f6b02508ae}} 
+\index{game::components::PlayerHud@{game::components::PlayerHud}!mPlayerState@{mPlayerState}}
+\index{mPlayerState@{mPlayerState}!game::components::PlayerHud@{game::components::PlayerHud}}
+\doxysubsubsection{\texorpdfstring{mPlayerState}{mPlayerState}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgame_1_1core_1_1PlayerState}{core\+::\+Player\+State}}$\ast$ game\+::components\+::\+Player\+Hud\+::m\+Player\+State\hspace{0.3cm}{\ttfamily [private]}}
+
+current player state \mbox{\Hypertarget{classgame_1_1components_1_1PlayerHud_aa82522d21b6c3da01679db41c215435b}\label{classgame_1_1components_1_1PlayerHud_aa82522d21b6c3da01679db41c215435b}} 
+\index{game::components::PlayerHud@{game::components::PlayerHud}!mPrefab@{mPrefab}}
+\index{mPrefab@{mPrefab}!game::components::PlayerHud@{game::components::PlayerHud}}
+\doxysubsubsection{\texorpdfstring{mPrefab}{mPrefab}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgame_1_1prefabs_1_1PlayerHudPrefab}{prefabs\+::\+Player\+Hud\+Prefab}} game\+::components\+::\+Player\+Hud\+::m\+Prefab\hspace{0.3cm}{\ttfamily [private]}}
+
+my prefab \mbox{\Hypertarget{classgame_1_1components_1_1PlayerHud_ac19fceb922b369199af404a0b877a5e9}\label{classgame_1_1components_1_1PlayerHud_ac19fceb922b369199af404a0b877a5e9}} 
+\index{game::components::PlayerHud@{game::components::PlayerHud}!mTimeElapsed@{mTimeElapsed}}
+\index{mTimeElapsed@{mTimeElapsed}!game::components::PlayerHud@{game::components::PlayerHud}}
+\doxysubsubsection{\texorpdfstring{mTimeElapsed}{mTimeElapsed}}
+{\footnotesize\ttfamily float game\+::components\+::\+Player\+Hud\+::m\+Time\+Elapsed\hspace{0.3cm}{\ttfamily [private]}}
+
+time elapsed from the start of the game level 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Components/\+Game\+Play/Player\+Hud.\+h\end{DoxyCompactItemize}

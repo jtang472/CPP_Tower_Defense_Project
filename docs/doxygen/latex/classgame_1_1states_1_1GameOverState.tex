@@ -1,0 +1,145 @@
+\hypertarget{classgame_1_1states_1_1GameOverState}{}\doxysection{game\+::states\+::Game\+Over\+State Class Reference}
+\label{classgame_1_1states_1_1GameOverState}\index{game::states::GameOverState@{game::states::GameOverState}}
+
+
+game over state  
+
+
+
+
+{\ttfamily \#include $<$Game\+Over\+State.\+h$>$}
+
+
+
+Inheritance diagram for game\+::states\+::Game\+Over\+State\+:
+% FIG 0
+
+
+Collaboration diagram for game\+::states\+::Game\+Over\+State\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgame_1_1states_1_1GameOverState_a828c526afef236e36cdc48ecc3505f74}{Game\+Over\+State}} (\mbox{\hyperlink{classgame_1_1states_1_1StateMachine}{State\+Machine}} $\ast$owner)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classgame_1_1states_1_1GameOverState}{Game\+Over\+State}} constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classgame_1_1states_1_1GameOverState_a4f5bcdee52771f2df90bb724c1bfdd3c}{$\sim$\+Game\+Over\+State}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classgame_1_1states_1_1GameOverState}{Game\+Over\+State}} destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1states_1_1GameOverState_abee58ebf681ee347803ca60b0ed2a762}{init}} () override
+\begin{DoxyCompactList}\small\item\em initialization of state \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classgame_1_1states_1_1GameOverState_a23574704a73d4d222815171214a62364}{freeze\+Time}} () override
+\begin{DoxyCompactList}\small\item\em check if delta time should be set to 0 when the state is created and put to the state machine \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1states_1_1GameOverState_a16a9e538ca7d88373673a9c5a4b84f77}{on\+Return\+To\+Main\+Button\+Clicked}} ()
+\begin{DoxyCompactList}\small\item\em return to main button click event handler \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1states_1_1GameOverState_a0053a837859678c1929b1673b767ec45}{reset\+Player}} ()
+\begin{DoxyCompactList}\small\item\em reset player state before going back to main menu \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+boost\+::signals2\+::connection \mbox{\hyperlink{classgame_1_1states_1_1GameOverState_a2e5d9d0b2ab66897f09e86b9ccce07ef}{m\+Return\+To\+Main\+Button\+Listener}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+game over state 
+
+this state will be pushed to state machine when player loses
+
+\begin{DoxyAuthor}{Author}
+Zheng Yang 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgame_1_1states_1_1GameOverState_a828c526afef236e36cdc48ecc3505f74}\label{classgame_1_1states_1_1GameOverState_a828c526afef236e36cdc48ecc3505f74}} 
+\index{game::states::GameOverState@{game::states::GameOverState}!GameOverState@{GameOverState}}
+\index{GameOverState@{GameOverState}!game::states::GameOverState@{game::states::GameOverState}}
+\doxysubsubsection{\texorpdfstring{GameOverState()}{GameOverState()}}
+{\footnotesize\ttfamily game\+::states\+::\+Game\+Over\+State\+::\+Game\+Over\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgame_1_1states_1_1StateMachine}{State\+Machine}} $\ast$}]{owner }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classgame_1_1states_1_1GameOverState}{Game\+Over\+State}} constructor. 
+
+\mbox{\hyperlink{classgame_1_1states_1_1GameOverState}{Game\+Over\+State}} constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em owner} & state machine \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1states_1_1GameOverState_a4f5bcdee52771f2df90bb724c1bfdd3c}\label{classgame_1_1states_1_1GameOverState_a4f5bcdee52771f2df90bb724c1bfdd3c}} 
+\index{game::states::GameOverState@{game::states::GameOverState}!````~GameOverState@{$\sim$GameOverState}}
+\index{````~GameOverState@{$\sim$GameOverState}!game::states::GameOverState@{game::states::GameOverState}}
+\doxysubsubsection{\texorpdfstring{$\sim$GameOverState()}{~GameOverState()}}
+{\footnotesize\ttfamily game\+::states\+::\+Game\+Over\+State\+::$\sim$\+Game\+Over\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classgame_1_1states_1_1GameOverState}{Game\+Over\+State}} destructor. 
+
+\mbox{\hyperlink{classgame_1_1states_1_1GameOverState}{Game\+Over\+State}} destructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgame_1_1states_1_1GameOverState_a23574704a73d4d222815171214a62364}\label{classgame_1_1states_1_1GameOverState_a23574704a73d4d222815171214a62364}} 
+\index{game::states::GameOverState@{game::states::GameOverState}!freezeTime@{freezeTime}}
+\index{freezeTime@{freezeTime}!game::states::GameOverState@{game::states::GameOverState}}
+\doxysubsubsection{\texorpdfstring{freezeTime()}{freezeTime()}}
+{\footnotesize\ttfamily bool game\+::states\+::\+Game\+Over\+State\+::freeze\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+check if delta time should be set to 0 when the state is created and put to the state machine 
+
+check if delta time should be set to 0 when the state is created and put to the state machine 
+
+Reimplemented from \mbox{\hyperlink{classgame_1_1states_1_1State_ad66a7d869a38b0560796e1b7c4562c15}{game\+::states\+::\+State}}.
+
+\mbox{\Hypertarget{classgame_1_1states_1_1GameOverState_abee58ebf681ee347803ca60b0ed2a762}\label{classgame_1_1states_1_1GameOverState_abee58ebf681ee347803ca60b0ed2a762}} 
+\index{game::states::GameOverState@{game::states::GameOverState}!init@{init}}
+\index{init@{init}!game::states::GameOverState@{game::states::GameOverState}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void game\+::states\+::\+Game\+Over\+State\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+initialization of state 
+
+initialization of state, called by state machine after state is created and put to the stack 
+
+Reimplemented from \mbox{\hyperlink{classgame_1_1states_1_1State_ab8464551e311a0621bd80f2a21a7cb4a}{game\+::states\+::\+State}}.
+
+\mbox{\Hypertarget{classgame_1_1states_1_1GameOverState_a16a9e538ca7d88373673a9c5a4b84f77}\label{classgame_1_1states_1_1GameOverState_a16a9e538ca7d88373673a9c5a4b84f77}} 
+\index{game::states::GameOverState@{game::states::GameOverState}!onReturnToMainButtonClicked@{onReturnToMainButtonClicked}}
+\index{onReturnToMainButtonClicked@{onReturnToMainButtonClicked}!game::states::GameOverState@{game::states::GameOverState}}
+\doxysubsubsection{\texorpdfstring{onReturnToMainButtonClicked()}{onReturnToMainButtonClicked()}}
+{\footnotesize\ttfamily void game\+::states\+::\+Game\+Over\+State\+::on\+Return\+To\+Main\+Button\+Clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+return to main button click event handler 
+
+callback function for main button click event \mbox{\Hypertarget{classgame_1_1states_1_1GameOverState_a0053a837859678c1929b1673b767ec45}\label{classgame_1_1states_1_1GameOverState_a0053a837859678c1929b1673b767ec45}} 
+\index{game::states::GameOverState@{game::states::GameOverState}!resetPlayer@{resetPlayer}}
+\index{resetPlayer@{resetPlayer}!game::states::GameOverState@{game::states::GameOverState}}
+\doxysubsubsection{\texorpdfstring{resetPlayer()}{resetPlayer()}}
+{\footnotesize\ttfamily void game\+::states\+::\+Game\+Over\+State\+::reset\+Player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+reset player state before going back to main menu 
+
+reset player state before going back to main menu 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classgame_1_1states_1_1GameOverState_a2e5d9d0b2ab66897f09e86b9ccce07ef}\label{classgame_1_1states_1_1GameOverState_a2e5d9d0b2ab66897f09e86b9ccce07ef}} 
+\index{game::states::GameOverState@{game::states::GameOverState}!mReturnToMainButtonListener@{mReturnToMainButtonListener}}
+\index{mReturnToMainButtonListener@{mReturnToMainButtonListener}!game::states::GameOverState@{game::states::GameOverState}}
+\doxysubsubsection{\texorpdfstring{mReturnToMainButtonListener}{mReturnToMainButtonListener}}
+{\footnotesize\ttfamily boost\+::signals2\+::connection game\+::states\+::\+Game\+Over\+State\+::m\+Return\+To\+Main\+Button\+Listener\hspace{0.3cm}{\ttfamily [private]}}
+
+return to main button click event listener 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+States/Game\+Over\+State.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,371 @@
+\hypertarget{classgame_1_1components_1_1Enemy}{}\doxysection{game\+::components\+::Enemy Class Reference}
+\label{classgame_1_1components_1_1Enemy}\index{game::components::Enemy@{game::components::Enemy}}
+
+
+base class for all types of enemies in the game  
+
+
+
+
+{\ttfamily \#include $<$Enemy.\+h$>$}
+
+
+
+Inheritance diagram for game\+::components\+::Enemy\+:
+% FIG 0
+
+
+Collaboration diagram for game\+::components\+::Enemy\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgame_1_1components_1_1Enemy_a3656c7270c19a8e0195d9aaf2e7028bf}{Enemy}} (\mbox{\hyperlink{classgame_1_1components_1_1GameObject}{Game\+Object}} \&owner, const \mbox{\hyperlink{structgame_1_1data_1_1EnemyDefine}{data\+::\+Enemy\+Define}} \&data, const std\+::vector$<$ sf\+::\+Vector2i $>$ $\ast$path, \mbox{\hyperlink{classgame_1_1grid_1_1GridLayer}{grid\+::\+Grid\+Layer}} \&layer)
+\begin{DoxyCompactList}\small\item\em enemy constructor \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classgame_1_1components_1_1Enemy_a29c22c700e1302471529c57efdf551e1}{$\sim$\+Enemy}} ()
+\begin{DoxyCompactList}\small\item\em enemy destructor \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1Enemy_a0b1312635bdf2f12add96110e652ff65}{on\+Enable}} () override
+\begin{DoxyCompactList}\small\item\em component lifecycle function \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1Enemy_ae25fb56f69861e597fbc1cfe82d1c945}{on\+Disable}} () override
+\begin{DoxyCompactList}\small\item\em component lifecycle function \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1Enemy_ab8a5168e77e423638f462a11ebdb1db8}{tick}} (float delta\+Time) override
+\begin{DoxyCompactList}\small\item\em component lifecycle function \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1Enemy_a5cc68aaa6d5f91821b7cbf4a8bcbcff9}{spawn}} ()
+\begin{DoxyCompactList}\small\item\em final initialization of enemy before render it to grid \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1Enemy_a429096574e65c419d56c4ead2bfa4dc2}{hurt}} (const \mbox{\hyperlink{structgame_1_1data_1_1TowerDefine}{data\+::\+Tower\+Define}} $\ast$attacker)
+\begin{DoxyCompactList}\small\item\em final initialization of enemy before render it to grid \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1Enemy_aeb46b7fd9a83f1eedc3e77f688a1e920}{face\+To}} (sf\+::\+Vector2f position)
+\begin{DoxyCompactList}\small\item\em change enemy sprite direction based on its moving direction \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1Enemy_a5354a69ec695f1c33b2cb0cf6de71787}{face\+To}} (sf\+::\+Vector2i position)
+\begin{DoxyCompactList}\small\item\em change enemy sprite direction based on its moving direction \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{structgame_1_1data_1_1EnemyDefine}{data\+::\+Enemy\+Define}} \& \mbox{\hyperlink{classgame_1_1components_1_1Enemy_ae07d0931792c83c85052e11f27859c2b}{get\+Data}} () const
+\begin{DoxyCompactList}\small\item\em get enemy define \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Enemy\+Dead\+Delegate \mbox{\hyperlink{classgame_1_1components_1_1Enemy_aa2d9136343369b14893dea2310155887}{on\+Enemy\+Dead}}
+\item 
+Enemy\+Arrive\+Destination\+Delegate \mbox{\hyperlink{classgame_1_1components_1_1Enemy_a722eea1433c52f848fcb10f0b4044916}{on\+Enemy\+Arrive\+Destination}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1Enemy_ab09aaf8c3fbc4ece1811889eb20e1acb}{on\+Dead\+Animation\+Complete}} ()
+\begin{DoxyCompactList}\small\item\em enemy dead animation complete event handler \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1Enemy_a880de2106fa37e90ae261c546aaa636d}{register\+Animation}} ()
+\begin{DoxyCompactList}\small\item\em register all of the enemies animation states to its character animator \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1Enemy_a82795992d4fca87f7370a1d9c167676b}{tick\+Movement}} ()
+\begin{DoxyCompactList}\small\item\em called every frame to update enemy position \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1components_1_1Enemy_a7adf3d248c9ab5e759c7c839cbfe2c6b}{calculate\+Time\+To\+Next\+Pos}} ()
+\begin{DoxyCompactList}\small\item\em find enemies next destination \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{structgame_1_1data_1_1EnemyDefine}{data\+::\+Enemy\+Define}} \& \mbox{\hyperlink{classgame_1_1components_1_1Enemy_a5b714248c609e49794e985bc0c8b6a3b}{m\+Data}}
+\item 
+const std\+::vector$<$ sf\+::\+Vector2i $>$ $\ast$ \mbox{\hyperlink{classgame_1_1components_1_1Enemy_a9426987bfa5d2ee7b3d13b3e249d8062}{m\+Path}}
+\item 
+int \mbox{\hyperlink{classgame_1_1components_1_1Enemy_a206cc681193f37c3a13c4fbb80b9132c}{m\+Next\+Pos}}
+\item 
+float \mbox{\hyperlink{classgame_1_1components_1_1Enemy_acaf212bfe3d65af822a9a5e39e75d5d8}{m\+Time\+To\+Next\+Pos}}
+\item 
+float \mbox{\hyperlink{classgame_1_1components_1_1Enemy_ac84ce0786c31b48d75848543d0d28d5d}{m\+Current\+Time}}
+\item 
+\mbox{\hyperlink{classgame_1_1components_1_1Sprite}{Sprite}} $\ast$ \mbox{\hyperlink{classgame_1_1components_1_1Enemy_a5e2121ef16c3901737a50810fd3b50ee}{m\+Sprite}}
+\item 
+\mbox{\hyperlink{classgame_1_1components_1_1CharacterAnimator}{Character\+Animator}} $\ast$ \mbox{\hyperlink{classgame_1_1components_1_1Enemy_a0ac5f1c82d26da57175f2a6b49009e7f}{m\+Animator}}
+\item 
+int \mbox{\hyperlink{classgame_1_1components_1_1Enemy_a4e46e643f705079b1ffe1d3961b7322b}{m\+Current\+HP}}
+\item 
+bool \mbox{\hyperlink{classgame_1_1components_1_1Enemy_abdc6e4de87717258669ba65511ad807f}{m\+Is\+Alive}}
+\item 
+boost\+::signals2\+::connection \mbox{\hyperlink{classgame_1_1components_1_1Enemy_aea6d7b98a1b4a112f1348c6093001c15}{m\+Dead\+Anim\+Complete\+Listener}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+base class for all types of enemies in the game 
+
+in the current design, we do not necessarily need any derived class for enemies. Instead, all enemy behavior should be defined in the Enemy\+Define json file. So this class should be purely data driven and should be capable of handling any enemy behavior defined in the json data file
+
+\begin{DoxyAuthor}{Author}
+Zheng Yang 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgame_1_1components_1_1Enemy_a3656c7270c19a8e0195d9aaf2e7028bf}\label{classgame_1_1components_1_1Enemy_a3656c7270c19a8e0195d9aaf2e7028bf}} 
+\index{game::components::Enemy@{game::components::Enemy}!Enemy@{Enemy}}
+\index{Enemy@{Enemy}!game::components::Enemy@{game::components::Enemy}}
+\doxysubsubsection{\texorpdfstring{Enemy()}{Enemy()}}
+{\footnotesize\ttfamily game\+::components\+::\+Enemy\+::\+Enemy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgame_1_1components_1_1GameObject}{Game\+Object}} \&}]{owner,  }\item[{const \mbox{\hyperlink{structgame_1_1data_1_1EnemyDefine}{data\+::\+Enemy\+Define}} \&}]{data,  }\item[{const std\+::vector$<$ sf\+::\+Vector2i $>$ $\ast$}]{path,  }\item[{\mbox{\hyperlink{classgame_1_1grid_1_1GridLayer}{grid\+::\+Grid\+Layer}} \&}]{layer }\end{DoxyParamCaption})}
+
+
+
+enemy constructor 
+
+enemy constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em owner} & owner of the component \\
+\hline
+{\em data} & enemy data \\
+\hline
+{\em path} & path that enemy must follows during its lifetime \\
+\hline
+{\em layer} & the grid layer of the enemy entity \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1components_1_1Enemy_a29c22c700e1302471529c57efdf551e1}\label{classgame_1_1components_1_1Enemy_a29c22c700e1302471529c57efdf551e1}} 
+\index{game::components::Enemy@{game::components::Enemy}!````~Enemy@{$\sim$Enemy}}
+\index{````~Enemy@{$\sim$Enemy}!game::components::Enemy@{game::components::Enemy}}
+\doxysubsubsection{\texorpdfstring{$\sim$Enemy()}{~Enemy()}}
+{\footnotesize\ttfamily game\+::components\+::\+Enemy\+::$\sim$\+Enemy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+enemy destructor 
+
+enemy destructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgame_1_1components_1_1Enemy_a7adf3d248c9ab5e759c7c839cbfe2c6b}\label{classgame_1_1components_1_1Enemy_a7adf3d248c9ab5e759c7c839cbfe2c6b}} 
+\index{game::components::Enemy@{game::components::Enemy}!calculateTimeToNextPos@{calculateTimeToNextPos}}
+\index{calculateTimeToNextPos@{calculateTimeToNextPos}!game::components::Enemy@{game::components::Enemy}}
+\doxysubsubsection{\texorpdfstring{calculateTimeToNextPos()}{calculateTimeToNextPos()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Enemy\+::calculate\+Time\+To\+Next\+Pos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+find enemies next destination 
+
+when enemy reaches one of the destination defined in the path, call this function to find its next destination \mbox{\Hypertarget{classgame_1_1components_1_1Enemy_aeb46b7fd9a83f1eedc3e77f688a1e920}\label{classgame_1_1components_1_1Enemy_aeb46b7fd9a83f1eedc3e77f688a1e920}} 
+\index{game::components::Enemy@{game::components::Enemy}!faceTo@{faceTo}}
+\index{faceTo@{faceTo}!game::components::Enemy@{game::components::Enemy}}
+\doxysubsubsection{\texorpdfstring{faceTo()}{faceTo()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void game\+::components\+::\+Enemy\+::face\+To (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{position }\end{DoxyParamCaption})}
+
+
+
+change enemy sprite direction based on its moving direction 
+
+change enemy sprite direction based on its moving direction
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & new destination \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1components_1_1Enemy_a5354a69ec695f1c33b2cb0cf6de71787}\label{classgame_1_1components_1_1Enemy_a5354a69ec695f1c33b2cb0cf6de71787}} 
+\index{game::components::Enemy@{game::components::Enemy}!faceTo@{faceTo}}
+\index{faceTo@{faceTo}!game::components::Enemy@{game::components::Enemy}}
+\doxysubsubsection{\texorpdfstring{faceTo()}{faceTo()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void game\+::components\+::\+Enemy\+::face\+To (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2i}]{position }\end{DoxyParamCaption})}
+
+
+
+change enemy sprite direction based on its moving direction 
+
+change enemy sprite direction based on its moving direction
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & new destination \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_1_1components_1_1Enemy_ae07d0931792c83c85052e11f27859c2b}\label{classgame_1_1components_1_1Enemy_ae07d0931792c83c85052e11f27859c2b}} 
+\index{game::components::Enemy@{game::components::Enemy}!getData@{getData}}
+\index{getData@{getData}!game::components::Enemy@{game::components::Enemy}}
+\doxysubsubsection{\texorpdfstring{getData()}{getData()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structgame_1_1data_1_1EnemyDefine}{data\+::\+Enemy\+Define}}\& game\+::components\+::\+Enemy\+::get\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get enemy define 
+
+get enemy define
+
+\begin{DoxyReturn}{Returns}
+enemy define data 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgame_1_1components_1_1Enemy_a429096574e65c419d56c4ead2bfa4dc2}\label{classgame_1_1components_1_1Enemy_a429096574e65c419d56c4ead2bfa4dc2}} 
+\index{game::components::Enemy@{game::components::Enemy}!hurt@{hurt}}
+\index{hurt@{hurt}!game::components::Enemy@{game::components::Enemy}}
+\doxysubsubsection{\texorpdfstring{hurt()}{hurt()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Enemy\+::hurt (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structgame_1_1data_1_1TowerDefine}{data\+::\+Tower\+Define}} $\ast$}]{attacker }\end{DoxyParamCaption})}
+
+
+
+final initialization of enemy before render it to grid 
+
+final initialization of enemy before make it alive and put it to grid \mbox{\Hypertarget{classgame_1_1components_1_1Enemy_ab09aaf8c3fbc4ece1811889eb20e1acb}\label{classgame_1_1components_1_1Enemy_ab09aaf8c3fbc4ece1811889eb20e1acb}} 
+\index{game::components::Enemy@{game::components::Enemy}!onDeadAnimationComplete@{onDeadAnimationComplete}}
+\index{onDeadAnimationComplete@{onDeadAnimationComplete}!game::components::Enemy@{game::components::Enemy}}
+\doxysubsubsection{\texorpdfstring{onDeadAnimationComplete()}{onDeadAnimationComplete()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Enemy\+::on\+Dead\+Animation\+Complete (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+enemy dead animation complete event handler 
+
+this is the callback function for enemy dead animation complete event \mbox{\Hypertarget{classgame_1_1components_1_1Enemy_ae25fb56f69861e597fbc1cfe82d1c945}\label{classgame_1_1components_1_1Enemy_ae25fb56f69861e597fbc1cfe82d1c945}} 
+\index{game::components::Enemy@{game::components::Enemy}!onDisable@{onDisable}}
+\index{onDisable@{onDisable}!game::components::Enemy@{game::components::Enemy}}
+\doxysubsubsection{\texorpdfstring{onDisable()}{onDisable()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Enemy\+::on\+Disable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+component lifecycle function 
+
+component lifecycle function, gets called automatically when component is disabled 
+
+Reimplemented from \mbox{\hyperlink{classgame_1_1components_1_1Component_ac79cec6fc53b00f36bbde8e8f7e23c05}{game\+::components\+::\+Component}}.
+
+\mbox{\Hypertarget{classgame_1_1components_1_1Enemy_a0b1312635bdf2f12add96110e652ff65}\label{classgame_1_1components_1_1Enemy_a0b1312635bdf2f12add96110e652ff65}} 
+\index{game::components::Enemy@{game::components::Enemy}!onEnable@{onEnable}}
+\index{onEnable@{onEnable}!game::components::Enemy@{game::components::Enemy}}
+\doxysubsubsection{\texorpdfstring{onEnable()}{onEnable()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Enemy\+::on\+Enable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+component lifecycle function 
+
+component lifecycle function, gets called automatically when component is enabled 
+
+Reimplemented from \mbox{\hyperlink{classgame_1_1components_1_1Component_a333e4242c1594bfdc5713cddafae6a23}{game\+::components\+::\+Component}}.
+
+\mbox{\Hypertarget{classgame_1_1components_1_1Enemy_a880de2106fa37e90ae261c546aaa636d}\label{classgame_1_1components_1_1Enemy_a880de2106fa37e90ae261c546aaa636d}} 
+\index{game::components::Enemy@{game::components::Enemy}!registerAnimation@{registerAnimation}}
+\index{registerAnimation@{registerAnimation}!game::components::Enemy@{game::components::Enemy}}
+\doxysubsubsection{\texorpdfstring{registerAnimation()}{registerAnimation()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Enemy\+::register\+Animation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+register all of the enemies animation states to its character animator 
+
+register all of the enemies animation states to its character animator \mbox{\Hypertarget{classgame_1_1components_1_1Enemy_a5cc68aaa6d5f91821b7cbf4a8bcbcff9}\label{classgame_1_1components_1_1Enemy_a5cc68aaa6d5f91821b7cbf4a8bcbcff9}} 
+\index{game::components::Enemy@{game::components::Enemy}!spawn@{spawn}}
+\index{spawn@{spawn}!game::components::Enemy@{game::components::Enemy}}
+\doxysubsubsection{\texorpdfstring{spawn()}{spawn()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Enemy\+::spawn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+final initialization of enemy before render it to grid 
+
+final initialization of enemy before make it alive and put it to grid \mbox{\Hypertarget{classgame_1_1components_1_1Enemy_ab8a5168e77e423638f462a11ebdb1db8}\label{classgame_1_1components_1_1Enemy_ab8a5168e77e423638f462a11ebdb1db8}} 
+\index{game::components::Enemy@{game::components::Enemy}!tick@{tick}}
+\index{tick@{tick}!game::components::Enemy@{game::components::Enemy}}
+\doxysubsubsection{\texorpdfstring{tick()}{tick()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Enemy\+::tick (\begin{DoxyParamCaption}\item[{float}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+component lifecycle function 
+
+component lifecycle function, gets called automatically every frame. This is where every component in the game gets updated
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & the time elpased between now and last frame \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classgame_1_1components_1_1Component_ac85cd99e8109eb32a97549bf437ea5ce}{game\+::components\+::\+Component}}.
+
+\mbox{\Hypertarget{classgame_1_1components_1_1Enemy_a82795992d4fca87f7370a1d9c167676b}\label{classgame_1_1components_1_1Enemy_a82795992d4fca87f7370a1d9c167676b}} 
+\index{game::components::Enemy@{game::components::Enemy}!tickMovement@{tickMovement}}
+\index{tickMovement@{tickMovement}!game::components::Enemy@{game::components::Enemy}}
+\doxysubsubsection{\texorpdfstring{tickMovement()}{tickMovement()}}
+{\footnotesize\ttfamily void game\+::components\+::\+Enemy\+::tick\+Movement (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+called every frame to update enemy position 
+
+this function is called every frame to recalculate its current position 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classgame_1_1components_1_1Enemy_a0ac5f1c82d26da57175f2a6b49009e7f}\label{classgame_1_1components_1_1Enemy_a0ac5f1c82d26da57175f2a6b49009e7f}} 
+\index{game::components::Enemy@{game::components::Enemy}!mAnimator@{mAnimator}}
+\index{mAnimator@{mAnimator}!game::components::Enemy@{game::components::Enemy}}
+\doxysubsubsection{\texorpdfstring{mAnimator}{mAnimator}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgame_1_1components_1_1CharacterAnimator}{Character\+Animator}}$\ast$ game\+::components\+::\+Enemy\+::m\+Animator\hspace{0.3cm}{\ttfamily [private]}}
+
+my character animator \mbox{\Hypertarget{classgame_1_1components_1_1Enemy_a4e46e643f705079b1ffe1d3961b7322b}\label{classgame_1_1components_1_1Enemy_a4e46e643f705079b1ffe1d3961b7322b}} 
+\index{game::components::Enemy@{game::components::Enemy}!mCurrentHP@{mCurrentHP}}
+\index{mCurrentHP@{mCurrentHP}!game::components::Enemy@{game::components::Enemy}}
+\doxysubsubsection{\texorpdfstring{mCurrentHP}{mCurrentHP}}
+{\footnotesize\ttfamily int game\+::components\+::\+Enemy\+::m\+Current\+HP\hspace{0.3cm}{\ttfamily [private]}}
+
+my current hp \mbox{\Hypertarget{classgame_1_1components_1_1Enemy_ac84ce0786c31b48d75848543d0d28d5d}\label{classgame_1_1components_1_1Enemy_ac84ce0786c31b48d75848543d0d28d5d}} 
+\index{game::components::Enemy@{game::components::Enemy}!mCurrentTime@{mCurrentTime}}
+\index{mCurrentTime@{mCurrentTime}!game::components::Enemy@{game::components::Enemy}}
+\doxysubsubsection{\texorpdfstring{mCurrentTime}{mCurrentTime}}
+{\footnotesize\ttfamily float game\+::components\+::\+Enemy\+::m\+Current\+Time\hspace{0.3cm}{\ttfamily [private]}}
+
+current time elapsed from reaching last destination \mbox{\Hypertarget{classgame_1_1components_1_1Enemy_a5b714248c609e49794e985bc0c8b6a3b}\label{classgame_1_1components_1_1Enemy_a5b714248c609e49794e985bc0c8b6a3b}} 
+\index{game::components::Enemy@{game::components::Enemy}!mData@{mData}}
+\index{mData@{mData}!game::components::Enemy@{game::components::Enemy}}
+\doxysubsubsection{\texorpdfstring{mData}{mData}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structgame_1_1data_1_1EnemyDefine}{data\+::\+Enemy\+Define}}\& game\+::components\+::\+Enemy\+::m\+Data\hspace{0.3cm}{\ttfamily [private]}}
+
+my enemy data \mbox{\Hypertarget{classgame_1_1components_1_1Enemy_aea6d7b98a1b4a112f1348c6093001c15}\label{classgame_1_1components_1_1Enemy_aea6d7b98a1b4a112f1348c6093001c15}} 
+\index{game::components::Enemy@{game::components::Enemy}!mDeadAnimCompleteListener@{mDeadAnimCompleteListener}}
+\index{mDeadAnimCompleteListener@{mDeadAnimCompleteListener}!game::components::Enemy@{game::components::Enemy}}
+\doxysubsubsection{\texorpdfstring{mDeadAnimCompleteListener}{mDeadAnimCompleteListener}}
+{\footnotesize\ttfamily boost\+::signals2\+::connection game\+::components\+::\+Enemy\+::m\+Dead\+Anim\+Complete\+Listener\hspace{0.3cm}{\ttfamily [private]}}
+
+dead animation complete event listener \mbox{\Hypertarget{classgame_1_1components_1_1Enemy_abdc6e4de87717258669ba65511ad807f}\label{classgame_1_1components_1_1Enemy_abdc6e4de87717258669ba65511ad807f}} 
+\index{game::components::Enemy@{game::components::Enemy}!mIsAlive@{mIsAlive}}
+\index{mIsAlive@{mIsAlive}!game::components::Enemy@{game::components::Enemy}}
+\doxysubsubsection{\texorpdfstring{mIsAlive}{mIsAlive}}
+{\footnotesize\ttfamily bool game\+::components\+::\+Enemy\+::m\+Is\+Alive\hspace{0.3cm}{\ttfamily [private]}}
+
+enemy state flag \mbox{\Hypertarget{classgame_1_1components_1_1Enemy_a206cc681193f37c3a13c4fbb80b9132c}\label{classgame_1_1components_1_1Enemy_a206cc681193f37c3a13c4fbb80b9132c}} 
+\index{game::components::Enemy@{game::components::Enemy}!mNextPos@{mNextPos}}
+\index{mNextPos@{mNextPos}!game::components::Enemy@{game::components::Enemy}}
+\doxysubsubsection{\texorpdfstring{mNextPos}{mNextPos}}
+{\footnotesize\ttfamily int game\+::components\+::\+Enemy\+::m\+Next\+Pos\hspace{0.3cm}{\ttfamily [private]}}
+
+my next destination \mbox{\Hypertarget{classgame_1_1components_1_1Enemy_a9426987bfa5d2ee7b3d13b3e249d8062}\label{classgame_1_1components_1_1Enemy_a9426987bfa5d2ee7b3d13b3e249d8062}} 
+\index{game::components::Enemy@{game::components::Enemy}!mPath@{mPath}}
+\index{mPath@{mPath}!game::components::Enemy@{game::components::Enemy}}
+\doxysubsubsection{\texorpdfstring{mPath}{mPath}}
+{\footnotesize\ttfamily const std\+::vector$<$sf\+::\+Vector2i$>$$\ast$ game\+::components\+::\+Enemy\+::m\+Path\hspace{0.3cm}{\ttfamily [private]}}
+
+my patrol path \mbox{\Hypertarget{classgame_1_1components_1_1Enemy_a5e2121ef16c3901737a50810fd3b50ee}\label{classgame_1_1components_1_1Enemy_a5e2121ef16c3901737a50810fd3b50ee}} 
+\index{game::components::Enemy@{game::components::Enemy}!mSprite@{mSprite}}
+\index{mSprite@{mSprite}!game::components::Enemy@{game::components::Enemy}}
+\doxysubsubsection{\texorpdfstring{mSprite}{mSprite}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgame_1_1components_1_1Sprite}{Sprite}}$\ast$ game\+::components\+::\+Enemy\+::m\+Sprite\hspace{0.3cm}{\ttfamily [private]}}
+
+my sprite \mbox{\Hypertarget{classgame_1_1components_1_1Enemy_acaf212bfe3d65af822a9a5e39e75d5d8}\label{classgame_1_1components_1_1Enemy_acaf212bfe3d65af822a9a5e39e75d5d8}} 
+\index{game::components::Enemy@{game::components::Enemy}!mTimeToNextPos@{mTimeToNextPos}}
+\index{mTimeToNextPos@{mTimeToNextPos}!game::components::Enemy@{game::components::Enemy}}
+\doxysubsubsection{\texorpdfstring{mTimeToNextPos}{mTimeToNextPos}}
+{\footnotesize\ttfamily float game\+::components\+::\+Enemy\+::m\+Time\+To\+Next\+Pos\hspace{0.3cm}{\ttfamily [private]}}
+
+total time to move to next destination \mbox{\Hypertarget{classgame_1_1components_1_1Enemy_a722eea1433c52f848fcb10f0b4044916}\label{classgame_1_1components_1_1Enemy_a722eea1433c52f848fcb10f0b4044916}} 
+\index{game::components::Enemy@{game::components::Enemy}!onEnemyArriveDestination@{onEnemyArriveDestination}}
+\index{onEnemyArriveDestination@{onEnemyArriveDestination}!game::components::Enemy@{game::components::Enemy}}
+\doxysubsubsection{\texorpdfstring{onEnemyArriveDestination}{onEnemyArriveDestination}}
+{\footnotesize\ttfamily Enemy\+Arrive\+Destination\+Delegate game\+::components\+::\+Enemy\+::on\+Enemy\+Arrive\+Destination}
+
+enemy arrive its destination event \mbox{\Hypertarget{classgame_1_1components_1_1Enemy_aa2d9136343369b14893dea2310155887}\label{classgame_1_1components_1_1Enemy_aa2d9136343369b14893dea2310155887}} 
+\index{game::components::Enemy@{game::components::Enemy}!onEnemyDead@{onEnemyDead}}
+\index{onEnemyDead@{onEnemyDead}!game::components::Enemy@{game::components::Enemy}}
+\doxysubsubsection{\texorpdfstring{onEnemyDead}{onEnemyDead}}
+{\footnotesize\ttfamily Enemy\+Dead\+Delegate game\+::components\+::\+Enemy\+::on\+Enemy\+Dead}
+
+enemy dead event 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Components/\+Game\+Play/Enemy.\+h\end{DoxyCompactItemize}
